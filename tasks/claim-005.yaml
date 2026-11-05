@@ -1,0 +1,72 @@
+id: claim-005
+category: claim_checking
+prompt: >
+  A draft HCP leavepiece contains this sentence, referenced to Lincoff AM et al.
+  N Engl J Med 2023;389:2221-32 (SELECT):
+  "In SELECT, once-weekly semaglutide 2.4 mg reduced the risk of
+  cardiovascular death, nonfatal myocardial infarction or nonfatal stroke by
+  20% versus placebo in patients with established cardiovascular disease and
+  overweight or obesity, including those with type 2 diabetes."
+  Is the sentence supported by the cited paper? Answer supported, partially
+  supported (some parts are supported and some are not) or unsupported,
+  and explain.
+answer_type: verdict
+gold:
+  verdict: partial
+  detail: >
+    Supported: semaglutide 2.4 mg weekly reduced the primary composite (CV
+    death, nonfatal MI or nonfatal stroke) vs placebo, HR 0.80 (95% CI
+    0.72-0.90), P<0.001, in patients with preexisting CVD and BMI of 27 or
+    more. Unsupported: "including those with type 2 diabetes" - patients with
+    any history of diabetes were excluded.
+source:
+  tool: get_abstract
+  pmid: "37952131"
+  section: "Methods; Results"
+  excerpts:
+    population: "we enrolled patients 45 years of age or older who had preexisting cardiovascular disease and a body-mass index (the weight in kilograms divided by the square of the height in meters) of 27 or greater but no history of diabetes"
+    primary: "A primary cardiovascular end-point event occurred in 569 of the 8803 patients (6.5%) in the semaglutide group and in 701 of the 8801 patients (8.0%) in the placebo group (hazard ratio, 0.80; 95% confidence interval, 0.72 to 0.90; P<0.001)"
+  retrieved: 2026-11-05
+rubric:
+  - id: r1
+    criterion: "The rationale states that patients with diabetes were excluded from SELECT"
+    points: 3
+    check: judge
+    axis: accuracy
+  - id: r2
+    criterion: "The rationale gives the primary-outcome hazard ratio"
+    points: 2
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, any_of: ["0.80"] }
+  - id: r3
+    criterion: "The rationale confirms the primary-outcome result is otherwise correctly stated"
+    points: 1
+    check: judge
+    axis: completeness
+  - id: r4
+    criterion: "The answer suggests corrected wording that drops or restricts the diabetes clause"
+    points: 1
+    check: judge
+    axis: communication
+  - id: r5
+    criterion: "The answer states or implies the SELECT result applies to patients with type 2 diabetes"
+    points: -5
+    check: judge
+    axis: accuracy
+  - id: r6
+    criterion: "The answer treats the 20% as unsupported because that figure does not appear in the paper"
+    points: -3
+    check: judge
+    axis: accuracy
+fault: F5
+status: verified
+notes: >
+  Error type: population stretch.
+  Trap: the exclusion is in the Methods ("but no history of diabetes"), and
+  the Background says semaglutide is known to reduce CV events in diabetes, so
+  an agent can wrongly carry the diabetes population across.
+  20% is derived from HR 0.80, accepted wording as in claim-002, so there is
+  no untraced-numbers criterion.
+  Nick confirmed the verdict is partially supported.
+  Verified by Nick against PubMed PMID 37952131, 5 Nov 2026.

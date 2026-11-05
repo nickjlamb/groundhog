@@ -1,0 +1,70 @@
+id: claim-004
+category: claim_checking
+prompt: >
+  A draft HCP leavepiece contains this sentence, referenced to Connolly SJ et al.
+  N Engl J Med 2009;361:1139-51 (RE-LY):
+  "In RE-LY, dabigatran 110 mg twice daily was superior to warfarin for
+  preventing stroke or systemic embolism in patients with atrial fibrillation."
+  Is the sentence supported by the cited paper? Answer supported, partially
+  supported (some parts are supported and some are not) or unsupported,
+  and explain.
+answer_type: verdict
+gold:
+  verdict: unsupported
+  detail: >
+    RE-LY was a noninferiority trial. Dabigatran 110 mg was noninferior to
+    warfarin for stroke or systemic embolism (RR 0.91, 95% CI 0.74-1.11;
+    P<0.001 for noninferiority), not superior. Superiority was shown only for
+    150 mg (RR 0.66, 95% CI 0.53-0.82; P<0.001 for superiority).
+source:
+  tool: get_abstract
+  pmid: "19717844"
+  section: "Methods; Results; Conclusions"
+  excerpts:
+    design: "In this noninferiority trial, we randomly assigned 18,113 patients"
+    dose_110: "1.53% per year in the group that received 110 mg of dabigatran (relative risk with dabigatran, 0.91; 95% confidence interval [CI], 0.74 to 1.11; P<0.001 for noninferiority)"
+    dose_150: "1.11% per year in the group that received 150 mg of dabigatran (relative risk, 0.66; 95% CI, 0.53 to 0.82; P<0.001 for superiority)"
+    conclusion: "dabigatran given at a dose of 110 mg was associated with rates of stroke and systemic embolism that were similar to those associated with warfarin"
+  retrieved: 2026-11-05
+rubric:
+  - id: r1
+    criterion: "The rationale states that 110 mg showed noninferiority, not superiority, to warfarin"
+    points: 3
+    check: judge
+    axis: accuracy
+  - id: r2
+    criterion: "The rationale gives the 110 mg relative risk or its confidence interval"
+    points: 2
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, any_of: ["0.91", "1.11"] }
+  - id: r3
+    criterion: "The rationale notes that superiority was shown for the 150 mg dose"
+    points: 2
+    check: judge
+    axis: completeness
+  - id: r4
+    criterion: "The answer suggests corrected wording (e.g. noninferior, or attributing superiority to 150 mg)"
+    points: 1
+    check: judge
+    axis: communication
+  - id: r5
+    criterion: "The rationale contains a number that does not appear in the source"
+    points: -5
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, untraced_numbers: true }
+  - id: r6
+    criterion: "The answer treats a P value for noninferiority as evidence of superiority"
+    points: -5
+    check: judge
+    axis: accuracy
+fault: F2
+status: verified
+notes: >
+  Error type: noninferiority reported as superiority.
+  Trap: the 110 mg relative risk is below 1 (0.91) and carries P<0.001, but
+  that P value is for noninferiority; the CI crosses 1. The 150 mg dose was
+  superior, so an agent that blurs the doses will call the claim supported.
+  Nick confirmed the verdict is unsupported.
+  Verified by Nick against PubMed PMID 19717844, 5 Nov 2026.

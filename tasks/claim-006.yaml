@@ -1,0 +1,62 @@
+id: claim-006
+category: claim_checking
+prompt: >
+  A draft HCP leavepiece contains this sentence, referenced to McMurray JJV et al.
+  N Engl J Med 2014;371:993-1004 (PARADIGM-HF):
+  "In PARADIGM-HF, sacubitril/valsartan reduced the absolute risk of
+  cardiovascular death or hospitalisation for heart failure by 20% compared
+  with enalapril."
+  Is the sentence supported by the cited paper? Answer supported, partially
+  supported (some parts are supported and some are not) or unsupported,
+  and explain.
+answer_type: verdict
+gold:
+  verdict: unsupported
+  detail: >
+    The 20% is a relative reduction (HR 0.80, 95% CI 0.73-0.87). The absolute
+    reduction was 4.7 percentage points (21.8% vs 26.5%). Sacubitril/valsartan
+    is reported in the paper as LCZ696.
+source:
+  tool: get_abstract
+  pmid: "25176015"
+  section: "Results"
+  excerpts:
+    primary: "the primary outcome had occurred in 914 patients (21.8%) in the LCZ696 group and 1117 patients (26.5%) in the enalapril group (hazard ratio in the LCZ696 group, 0.80; 95% confidence interval [CI], 0.73 to 0.87; P<0.001)"
+  retrieved: 2026-11-05
+rubric:
+  - id: r1
+    criterion: "The rationale states that 20% is a relative, not an absolute, reduction"
+    points: 3
+    check: judge
+    axis: accuracy
+  - id: r2
+    criterion: "The rationale gives the primary-outcome event rate with sacubitril/valsartan (21.8%)"
+    points: 2
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, any_of: ["21.8"] }
+  - id: r3
+    criterion: "The rationale gives the absolute reduction of about 4.7 percentage points"
+    points: 2
+    check: judge
+    axis: completeness
+  - id: r4
+    criterion: "The rationale recognises LCZ696 as sacubitril/valsartan"
+    points: 1
+    check: judge
+    axis: context_awareness
+  - id: r5
+    criterion: "The answer accepts 20% as the absolute risk reduction"
+    points: -5
+    check: judge
+    axis: accuracy
+fault: F1
+status: verified
+notes: >
+  Error type: relative reduction presented as absolute.
+  Trap: the paper never uses the name sacubitril/valsartan (only LCZ696), and
+  the relative figure is exactly 20%, so a careless agent sees "0.80" and
+  confirms. The 4.7 points is derived (26.5 - 21.8), so there is no
+  untraced-numbers criterion; it would penalise the correct calculation.
+  Nick confirmed the verdict is unsupported.
+  Verified by Nick against PubMed PMID 25176015, 5 Nov 2026.

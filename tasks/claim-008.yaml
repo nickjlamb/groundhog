@@ -1,0 +1,67 @@
+id: claim-008
+category: claim_checking
+prompt: >
+  A draft HCP leavepiece contains this sentence, referenced to SPRINT Research
+  Group. N Engl J Med 2015;373:2103-16:
+  "In SPRINT, targeting a systolic blood pressure below 120 mm Hg lowered the
+  relative risk of death from cardiovascular causes by 43% compared with a
+  target below 140 mm Hg, with a number needed to treat of 61 to prevent one
+  primary outcome event over a median follow-up of 3.26 years."
+  Is the sentence supported by the cited paper? Answer supported, partially
+  supported (some parts are supported and some are not) or unsupported,
+  and explain.
+answer_type: verdict
+gold:
+  verdict: supported
+  detail: >
+    Both figures are in the full-text Results, not the abstract: "The relative
+    risk of death from cardiovascular causes was 43% lower with the intensive
+    intervention than with the standard treatment (P=0.005)" and numbers
+    needed to treat of 61 (primary outcome), 90 (death from any cause) and 172
+    (CV death) over the median 3.26 years.
+source:
+  tool: get_full_text
+  pmid: "26551272"
+  pmcid: "PMC4689591"
+  section: "Results"
+  excerpts:
+    cv_death: "The relative risk of death from cardiovascular causes was 43% lower with the intensive intervention than with the standard treatment (P=0.005)"
+    nnt: "The numbers needed to treat to prevent a primary outcome event, death from any cause, and death from cardiovascular causes during the median 3.26 years of the trial were 61, 90, and 172, respectively."
+  retrieved: 2026-11-05
+rubric:
+  - id: r1
+    criterion: "The rationale locates both figures in the full text of the paper"
+    points: 3
+    check: judge
+    axis: completeness
+  - id: r2
+    criterion: "The rationale cites the 43% relative reduction in cardiovascular death"
+    points: 2
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, any_of: ["43"] }
+  - id: r3
+    criterion: "The rationale confirms that 61 is the NNT for the primary outcome, not for death"
+    points: 1
+    check: judge
+    axis: accuracy
+  - id: r4
+    criterion: "The rationale contains a number that does not appear in the source"
+    points: -5
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, untraced_numbers: true }
+  - id: r5
+    criterion: "The answer calls the claim unsupported or partial because the figures are not in the abstract"
+    points: -5
+    check: judge
+    axis: accuracy
+fault: F1
+status: verified
+notes: >
+  Error type: none (control); tests going beyond the abstract.
+  Trap: neither 43% nor the NNT of 61 appears in the abstract, so an agent
+  that stops at get_abstract will wrongly call the claim unsupported. The
+  full text is open access in PMC.
+  Nick confirmed the verdict is supported.
+  Verified by Nick against PubMed Central PMC4689591, 5 Nov 2026.

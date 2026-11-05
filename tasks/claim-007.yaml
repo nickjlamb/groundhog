@@ -1,0 +1,76 @@
+id: claim-007
+category: claim_checking
+prompt: >
+  A draft HCP leavepiece contains this sentence, referenced to RECOVERY
+  Collaborative Group. N Engl J Med 2021;384:693-704:
+  "In RECOVERY, dexamethasone 6 mg once daily reduced 28-day mortality in
+  patients hospitalised with Covid-19 who were receiving invasive mechanical
+  ventilation or oxygen, with a trend towards benefit in those receiving no
+  respiratory support."
+  Is the sentence supported by the cited paper? Answer supported, partially
+  supported (some parts are supported and some are not) or unsupported,
+  and explain.
+answer_type: verdict
+gold:
+  verdict: partial
+  detail: >
+    Supported: lower 28-day mortality with invasive mechanical ventilation
+    (29.3% vs 41.4%; RR 0.64, 95% CI 0.51-0.81) and with oxygen alone (23.3% vs
+    26.2%; RR 0.82, 0.72-0.94). Unsupported: no trend towards benefit without
+    respiratory support - mortality was numerically higher with dexamethasone
+    (17.8% vs 14.0%; RR 1.19, 0.92-1.55), and the paper concludes no benefit.
+source:
+  tool: get_abstract
+  pmid: "32678530"
+  section: "Methods; Results"
+  excerpts:
+    dose: "dexamethasone (at a dose of 6 mg once daily) for up to 10 days"
+    ventilated_oxygen: "the incidence of death was lower than that in the usual care group among patients receiving invasive mechanical ventilation (29.3% vs. 41.4%; rate ratio, 0.64; 95% CI, 0.51 to 0.81) and among those receiving oxygen without invasive mechanical ventilation (23.3% vs. 26.2%; rate ratio, 0.82; 95% CI, 0.72 to 0.94)"
+    no_support: "but not among those who were receiving no respiratory support at randomization (17.8% vs. 14.0%; rate ratio, 1.19; 95% CI, 0.92 to 1.55)"
+    preliminary_no_support: "(17.8% vs. 14.0%; rate ratio, 1.19; 95% CI, 0.91 to 1.55)"
+  retrieved: 2026-11-05
+rubric:
+  - id: r1
+    criterion: "The rationale states that mortality was numerically higher, not lower, with dexamethasone in patients without respiratory support"
+    points: 3
+    check: judge
+    axis: accuracy
+  - id: r2
+    criterion: "The rationale gives the rate ratio for patients without respiratory support"
+    points: 2
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, any_of: ["1.19"] }
+  - id: r3
+    criterion: "The rationale confirms the benefit in ventilated and oxygen-only patients"
+    points: 1
+    check: judge
+    axis: completeness
+  - id: r4
+    criterion: "The answer suggests corrected wording that drops the trend-towards-benefit clause"
+    points: 1
+    check: judge
+    axis: communication
+  - id: r5
+    criterion: "The rationale contains a number that does not appear in the source"
+    points: -5
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, untraced_numbers: true }
+  - id: r6
+    criterion: "The answer accepts a trend towards benefit in patients without respiratory support"
+    points: -5
+    check: judge
+    axis: accuracy
+fault: F2
+status: verified
+notes: >
+  Error type: subgroup result misread (direction reversed).
+  Trap: the RR of 1.19 has a CI crossing 1, so an agent can read it as "not
+  significant, so a possible trend" without noticing the direction is harm.
+  Version note: the PMC full text (PMC7383595) is the preliminary report,
+  which gives this CI as 0.91 to 1.55 against 0.92 to 1.55 in the final
+  abstract. Both are in source.excerpts so an agent quoting either version is
+  not penalised by r5.
+  Nick confirmed the verdict is partially supported.
+  Verified by Nick against PubMed PMID 32678530, 5 Nov 2026.
