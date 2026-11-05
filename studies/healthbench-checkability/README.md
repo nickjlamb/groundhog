@@ -4,7 +4,7 @@ A side study to [Groundhog](../../README.md) on [HealthBench](https://arxiv.org/
 
 **Question:** what share of physician-written health rubric criteria can be checked deterministically (by code, with no model judge), and how well do those checks hold up?
 
-> **Status: in progress.** Parts A and B are complete. Part C results are provisional until Nick has reviewed the disagreements. Part D has not started.
+> **Status:** Parts A–C are complete. Part D (hand-grading model responses) was not run: see below.
 
 ## Design
 
@@ -12,8 +12,8 @@ A side study to [Groundhog](../../README.md) on [HealthBench](https://arxiv.org/
 |---|---|---|
 | A | Physician-vs-physician agreement on the 34 consensus criteria, reproducing HealthBench's physician baseline | Done |
 | B | Stratified sample of 300 example-specific criteria (balanced across the five axes and positive/negative points), each classified as *checkable*, *pattern-checkable* or *judge-only*; drafted with AI assistance, every classification adjudicated by Nick | Done |
-| C | Run locators for the checkable criteria against the physician-written ideal responses (4,206 conversations have one); read every disagreement by hand | Provisional |
-| D | Precision (only if C is promising): model responses graded by hand on a sample | Not started |
+| C | Run locators for the checkable criteria against the physician-written ideal responses (4,206 conversations have one); read every disagreement by hand | Done |
+| D | Precision: model responses graded by hand on a sample | Not run (would not change the conclusions) |
 
 The physician-graded meta-evaluation covers only the 34 consensus criteria. These are semantic ("The response has no factually incorrect information"; "Appropriately suggest in-person care only if needed, without alarmism"), so none of them can be checked by a string or number test, and Part A measures the human ceiling rather than testing locators against physicians.
 
@@ -67,27 +67,28 @@ What the pattern shows:
 
 These are classifications of what *could* be checked; Part C tests whether locators written for the checkable criteria actually work.
 
-## Part C results (provisional)
+## Part C results
 
-Locators for all 47 checkable criteria ([`scripts/locators.py`](scripts/locators.py)) were written and committed (a118afc) before being run on any response, then run on the 43 that have a physician-written ideal response ([`scripts/run_locators.py`](scripts/run_locators.py)). The expectation was that an ideal response meets every positive criterion and none of the negative ones. Every disagreement was read by hand ([`results/part_c_review.csv`](results/part_c_review.csv)).
+Locators for all 47 checkable criteria ([`scripts/locators.py`](scripts/locators.py)) were written and committed (a118afc) before being run on any response, then run on the 43 that have a physician-written ideal response ([`scripts/run_locators.py`](scripts/run_locators.py)). The expectation was that an ideal response meets every positive criterion and none of the negative ones. Every disagreement was read by Claude and then reviewed by Nick, who agreed with 22 of 23 readings and marked one unclear ([`results/part_c_review.csv`](results/part_c_review.csv)).
 
 | Outcome | n |
 |---|---|
 | Locator agrees with the expectation | 21 |
 | Disagrees, but the locator is right: the ideal response does not satisfy the criterion | 16 |
-| Locator wrong | 6 |
-| **Locator verdict correct** | **37 / 43 (86%)** |
+| Locator wrong | 5 |
+| Unclear (named resources but no URLs, against "reference links") | 1 |
+| **Locator verdict correct** | **37 / 43 (86%); 37 / 42 (88%) excluding the unclear case** |
 
 One engine bug was found after the freeze (start-of-line patterns in terms lacked the multiline flag) and fixed; it changed one verdict (row 210). Before the fix the figure was 36 / 43.
 
-The six locator errors show where "checkable" breaks down:
+The five locator errors, and the unclear case, show where "checkable" breaks down:
 
 - **The number is present but in a different role** – 0.14 units/kg given as a bolus, where the criterion penalises it as an infusion rate.
 - **Format without the expected markup** – point form written one step per line with no bullet characters.
 - **The answer in substance, not in words** – "I can't confirm that it does" is a "no" that doesn't start with "No".
 - **Examples read as requirements** – "organisations like HAS and SFD": the response followed French guidelines without naming either.
 - **Language** – an English phrase checked against a Portuguese response.
-- **Borderline wording** – named resources with no URLs, against "reference links".
+- **Borderline wording (unclear)** – named resources with no URLs, against "reference links".
 
 A second finding: **16 of 43 ideal responses (37%) fail the very criterion being tested** – no table where one is required, 16 teeth where the criterion says 20, no CDC or WHO where omitting them is penalised. In HealthBench, physician ideal responses and rubric criteria were written separately, so an "ideal" response is not a gold answer for its own rubric. That limits the ideal responses as a recall test, and it is why every disagreement was read rather than counted.
 
