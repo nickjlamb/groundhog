@@ -18,5 +18,5 @@ results/raw/
 .vscode/
 .idea/
 
-# HealthBench data (canary-marked; not republished)
+# HealthBench data (carries a training-data canary; not republished)
 studies/*/data/

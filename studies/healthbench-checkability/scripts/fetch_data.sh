@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Download the HealthBench files this study uses into data/ and check them.
-# Source: openai/simple-evals (MIT). The files carry a canary string asking
-# that they not be republished, so data/ is git-ignored.
+# Source: openai/simple-evals (MIT). The files carry a canary string (a marker
+# for detecting benchmark leakage into training data), so data/ is git-ignored.
 set -euo pipefail
 cd "$(dirname "$0")/../data" 2>/dev/null || { mkdir -p "$(dirname "$0")/../data"; cd "$(dirname "$0")/../data"; }
 BASE=https://openaipublic.blob.core.windows.net/simple-evals/healthbench

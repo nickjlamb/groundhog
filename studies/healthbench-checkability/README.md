@@ -96,7 +96,7 @@ Limitations: the 21 agreements were not read by hand (a locator and the expectat
 
 ## Data
 
-HealthBench is MIT-licensed (code and data, via [openai/simple-evals](https://github.com/openai/simple-evals)). The data files carry a canary string asking that they not be republished, so `data/` is git-ignored: this study publishes code, conversation and criterion IDs, and our own labels only.
+HealthBench is MIT-licensed (code and data, via [openai/simple-evals](https://github.com/openai/simple-evals)). The data files carry a canary string, a marker used to detect benchmark data leaking into AI training sets, so this study does not republish them and `data/` is git-ignored: this study publishes code, conversation and criterion IDs, and our own labels only.
 
 ```bash
 ./scripts/fetch_data.sh          # downloads and checksums the two files
