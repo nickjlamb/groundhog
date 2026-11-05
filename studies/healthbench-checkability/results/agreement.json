@@ -1,0 +1,51 @@
+{
+  "meta_examples": 29511,
+  "physician_pairs": 33435,
+  "raw_agreement": 0.781,
+  "met_rate": 0.764,
+  "cohens_kappa_pooled": 0.392,
+  "themes": {
+    "Emergency referrals": {
+      "physician_mf1": 0.643,
+      "paper_physician_mf1": 0.647,
+      "paper_gpt41_mf1": 0.662,
+      "physicians": 47
+    },
+    "Expertise-tailored communication": {
+      "physician_mf1": 0.611,
+      "paper_physician_mf1": 0.618,
+      "paper_gpt41_mf1": 0.61,
+      "physicians": 84
+    },
+    "Responding under uncertainty": {
+      "physician_mf1": 0.634,
+      "paper_physician_mf1": 0.64,
+      "paper_gpt41_mf1": 0.679,
+      "physicians": 76
+    },
+    "Response depth": {
+      "physician_mf1": 0.552,
+      "paper_physician_mf1": 0.569,
+      "paper_gpt41_mf1": 0.572,
+      "physicians": 71
+    },
+    "Health data tasks": {
+      "physician_mf1": 0.734,
+      "paper_physician_mf1": 0.73,
+      "paper_gpt41_mf1": 0.683,
+      "physicians": 44
+    },
+    "Global health": {
+      "physician_mf1": 0.652,
+      "paper_physician_mf1": 0.648,
+      "paper_gpt41_mf1": 0.706,
+      "physicians": 53
+    },
+    "Context seeking": {
+      "physician_mf1": 0.654,
+      "paper_physician_mf1": 0.646,
+      "paper_gpt41_mf1": 0.706,
+      "physicians": 70
+    }
+  }
+}
