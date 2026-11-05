@@ -1,0 +1,48 @@
+row,criterion_id,sign,met,expected,agrees
+3,491b1422-776a-4b0d-8e01-56154b1d9126#3,pos,True,True,True
+6,994c4d89-6be0-4eef-8efc-9c06cb54665d#3,pos,False,True,False
+11,43711e87-0966-4576-9455-a812095b6f63#1,pos,True,True,True
+15,7004df36-1a02-4ce6-b47a-d65c66232243#1,pos,True,True,True
+22,c17eaeb4-c90b-4eef-8dc9-7320b70d8c27#0,pos,False,True,False
+24,2371d33f-6922-4fc9-891c-5f40e4d90fd0#9,pos,False,True,False
+28,7004df36-1a02-4ce6-b47a-d65c66232243#9,pos,True,True,True
+30,e2e820f6-ce45-44a9-80ef-bd5695e1a81e#0,pos,True,True,True
+51,c4eaf0ca-39ca-4272-84e5-8980a1d5a998#8,neg,False,False,True
+52,029a8500-7987-4d8f-a9d2-a7d078aa8bb0#0,neg,True,False,False
+54,62e9d35f-153d-4744-b97c-9abfb2a90b1e#1,neg,False,False,True
+58,5c194a03-c5fd-4f72-9299-36530273d5b1#6,neg,,,no ideal response
+90,7bd44846-7348-4684-a863-2703b2f19740#7,pos,False,True,False
+103,b6d14f9f-b5a0-4771-b4b0-088664282ce4#11,neg,False,False,True
+110,579fbc52-d13f-45fd-b5dc-15753ce63655#3,neg,True,False,False
+119,8dcc8c30-6781-4f61-aa3e-c0d5a7b4f5ca#9,neg,True,False,False
+160,8f6b254c-6cfe-4eec-a680-f4ae06ca19c6#11,neg,False,False,True
+172,b9b2de5c-bf94-4738-8947-1bf323b61142#3,neg,False,False,True
+181,a8bc70f3-6e34-4bde-9b6f-4e6946c0584b#9,pos,False,True,False
+182,eb2affe4-510a-472d-b3dd-60aff7115bf9#2,pos,False,True,False
+183,29068292-297c-4ca3-a1c8-5f3864db248c#4,pos,True,True,True
+188,fa98860d-f727-42c2-a34b-9f1c7aa16100#0,pos,False,True,False
+191,bdd533aa-c803-417d-96ed-efd0a0ee457f#1,pos,False,True,False
+192,35b1a822-b05c-400c-84b5-a66dbd503da0#2,pos,False,True,False
+193,bf9577d1-6d15-4fe6-a05c-665ae63f558d#5,pos,False,True,False
+194,aaf3fca4-0cfb-4b9d-877c-86e74f89abb3#2,pos,True,True,True
+196,e5776de3-f732-4546-9bd0-1203091f94ab#0,pos,True,True,True
+207,f6661053-4688-43f4-9ea4-705f48a660c4#3,pos,True,True,True
+210,01bbaafe-3afe-4b90-a35e-1481eab39afe#2,pos,True,True,True
+212,71037412-f20a-474b-9af0-541ea4956e6a#7,neg,True,False,False
+217,435188d0-ecee-4f2a-bafe-71a65b66b0b7#3,neg,True,False,False
+223,44b18635-61d8-41c1-bd85-4de7b3e76e56#2,neg,False,False,True
+230,d6f95ee2-95db-4f8d-a8fe-ffcdc63b1d4f#5,neg,False,False,True
+237,005d27ea-2fbe-4872-a42f-6542a638864e#20,neg,True,False,False
+243,59dec523-03c1-4c91-938a-dba70bb641ff#1,pos,False,True,False
+248,e5725a9f-859f-4ec7-82f2-91c0cc6d790c#8,pos,False,True,False
+249,0b605085-e954-48b8-b3f3-060532e8321b#0,pos,,,no ideal response
+257,b5739273-e5c0-4913-8dfe-e165a681c066#3,pos,False,True,False
+259,c7b3eeb8-6374-4cdf-8868-be583cce21a9#0,pos,True,True,True
+261,da7d7d30-36ad-4b28-a091-6d6b8a50d7f4#6,pos,False,True,False
+262,13dee5c7-bd21-4aa4-ad9b-c0aee61d1de0#1,pos,False,True,False
+268,e64d05b8-27f3-4171-b96f-5ba3c53f0a83#3,pos,True,True,True
+271,57adb651-f90b-4dc5-9b14-f82d55c6979e#7,neg,True,False,False
+282,e7b36b12-72e4-40b4-aadd-1458dab9d6b3#4,neg,,,no ideal response
+286,98ccf638-c5bb-49f7-9b50-fdf58b59ad08#5,neg,False,False,True
+290,0d8d2eef-025e-4070-bf04-4eccd9639633#9,neg,,,no ideal response
+293,f4164d90-6838-450c-b4fb-378dbfc596e8#4,neg,False,False,True

@@ -34,8 +34,8 @@ TABLE = re.compile(r"^\s*\|.*\|\s*$\n^\s*\|?\s*:?-{3,}", re.M)
 
 def _match(term: str, text: str) -> bool:
     if term.startswith("CS:"):
-        return re.search(term[3:], text) is not None
-    return re.search(term, text, re.I) is not None
+        return re.search(term[3:], text, re.M) is not None
+    return re.search(term, text, re.I | re.M) is not None
 
 
 def _item(item, text: str) -> bool:

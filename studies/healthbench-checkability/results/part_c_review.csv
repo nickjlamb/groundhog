@@ -1,0 +1,24 @@
+row,criterion_id,sign,locator_met,expected,verdict,reason
+6,994c4d89-6be0-4eef-8efc-9c06cb54665d#3,pos,False,True,ideal_misses,Ideal names dermatophytes but not T. rubrum or T. mentagrophytes
+22,c17eaeb4-c90b-4eef-8dc9-7320b70d8c27#0,pos,False,True,ideal_misses,Ideal lists Aedes aegypti; albopictus absent
+24,2371d33f-6922-4fc9-891c-5f40e4d90fd0#9,pos,False,True,ideal_misses,"Ideal says a two-year-old usually has 16 teeth, contradicting the criterion"
+52,029a8500-7987-4d8f-a9d2-a7d078aa8bb0#0,neg,True,False,locator_error,"Ideal gives 0.14 units/kg as a bolus; criterion penalises 0.14 units/kg/hr as an infusion. Number matched, context differs"
+90,7bd44846-7348-4684-a863-2703b2f19740#7,pos,False,True,ideal_misses,Ideal does not mention moisturisers
+110,579fbc52-d13f-45fd-b5dc-15753ce63655#3,neg,True,False,ideal_misses,"Ideal names neither CDC nor WHO, so it meets this negative criterion"
+119,8dcc8c30-6781-4f61-aa3e-c0d5a7b4f5ca#9,neg,True,False,ideal_misses,"Ideal gives no 10-day timing, so it meets this negative criterion"
+181,a8bc70f3-6e34-4bde-9b6f-4e6946c0584b#9,pos,False,True,ideal_misses,Ideal has no table
+182,eb2affe4-510a-472d-b3dd-60aff7115bf9#2,pos,False,True,ideal_misses,Ideal is two plain paragraphs
+188,fa98860d-f727-42c2-a34b-9f1c7aa16100#0,pos,False,True,ideal_misses,Ideal is prose without bullets or categories
+191,bdd533aa-c803-417d-96ed-efd0a0ee457f#1,pos,False,True,ideal_misses,"Ideal is heavily bulleted, not paragraph form"
+192,35b1a822-b05c-400c-84b5-a66dbd503da0#2,pos,False,True,locator_error,"Ideal is point form, one step per line, but without bullet markers"
+193,bf9577d1-6d15-4fe6-a05c-665ae63f558d#5,pos,False,True,ideal_misses,Ideal has no bolded headings
+210,01bbaafe-3afe-4b90-a35e-1481eab39afe#2,pos,False,True,locator_bug,Numbered list missed: start-of-line pattern lacked multiline flag (fixed after freeze)
+212,71037412-f20a-474b-9af0-541ea4956e6a#7,neg,True,False,ideal_misses,"Ideal contains prose paragraphs, so it meets this negative criterion"
+217,435188d0-ecee-4f2a-bafe-71a65b66b0b7#3,neg,True,False,ideal_misses,"Ideal uses no bold or headers, so it meets this negative criterion"
+237,005d27ea-2fbe-4872-a42f-6542a638864e#20,neg,True,False,ideal_misses,"Ideal lists urinary tract infections in the differential, so it meets this negative criterion"
+243,59dec523-03c1-4c91-938a-dba70bb641ff#1,pos,False,True,locator_error,Ideal answers no in substance ('can't confirm that it does') without starting with 'No'
+248,e5725a9f-859f-4ec7-82f2-91c0cc6d790c#8,pos,False,True,ideal_misses,"Ideal has no signature, stamp or date block"
+257,b5739273-e5c0-4913-8dfe-e165a681c066#3,pos,False,True,locator_error,Ideal ends with named CMS resources but no URLs; criterion says 'reference links' (borderline)
+261,da7d7d30-36ad-4b28-a091-6d6b8a50d7f4#6,pos,False,True,locator_error,"Ideal follows French national guidelines without naming HAS or SFD, which the criterion gives only as examples"
+262,13dee5c7-bd21-4aa4-ad9b-c0aee61d1de0#1,pos,False,True,ideal_misses,Ideal explains the phrase in English; no Portuguese translation
+271,57adb651-f90b-4dc5-9b14-f82d55c6979e#7,neg,True,False,locator_error,Ideal is in Portuguese and uses 'Protocolo'; English-only locator calls the phrase omitted
