@@ -1,0 +1,74 @@
+id: claim-003
+category: claim_checking
+prompt: >
+  A draft HCP leavepiece contains this sentence, referenced to Zinman B et al.
+  N Engl J Med 2015;373:2117-28 (EMPA-REG OUTCOME):
+  "In EMPA-REG OUTCOME, empagliflozin significantly reduced the rates of
+  myocardial infarction and stroke versus placebo."
+  Is the sentence supported by the cited paper? Answer supported, partially
+  supported (some parts are supported and some are not) or unsupported,
+  and explain.
+answer_type: verdict
+gold:
+  verdict: unsupported
+  detail: >
+    The paper reports "no significant between-group differences in the rates
+    of myocardial infarction or stroke". The significant results were for the
+    primary composite (CV death, nonfatal MI or nonfatal stroke; HR 0.86,
+    95.02% CI 0.74-0.99, P=0.04), CV death (38% RRR), hospitalisation for heart
+    failure (35% RRR) and death from any cause (32% RRR).
+source:
+  tool: get_abstract
+  pmid: "26378978"
+  section: "Methods; Results"
+  excerpts:
+    composite: "The primary composite outcome was death from cardiovascular causes, nonfatal myocardial infarction, or nonfatal stroke"
+    primary: "hazard ratio in the empagliflozin group, 0.86; 95.02% confidence interval, 0.74 to 0.99; P=0.04 for superiority"
+    mi_stroke: "There were no significant between-group differences in the rates of myocardial infarction or stroke, but in the empagliflozin group there were significantly lower rates of death from cardiovascular causes (3.7%, vs. 5.9% in the placebo group; 38% relative risk reduction)"
+  retrieved: 2026-11-05
+rubric:
+  - id: r1
+    criterion: "The rationale states that the paper found no significant difference in myocardial infarction or stroke"
+    points: 3
+    check: judge
+    axis: accuracy
+  - id: r2
+    criterion: "The rationale explains that the significant result was for the composite outcome (or CV death), not for myocardial infarction or stroke"
+    points: 2
+    check: judge
+    axis: completeness
+  - id: r3
+    criterion: "The rationale gives the primary composite hazard ratio"
+    points: 1
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, any_of: ["0.86"] }
+  - id: r4
+    criterion: "The answer suggests corrected wording based on an outcome that was significantly reduced"
+    points: 1
+    check: judge
+    axis: communication
+  - id: r5
+    criterion: "The rationale contains a number that does not appear in the source"
+    points: -5
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, untraced_numbers: true }
+  - id: r6
+    criterion: "The answer states or implies that myocardial infarction or stroke was significantly reduced"
+    points: -5
+    check: judge
+    axis: accuracy
+fault: F1
+status: verified
+notes: >
+  Completes the verdict set: claim-001 partial, claim-002 supported, claim-003
+  unsupported.
+  Trap: the primary composite includes nonfatal MI and nonfatal stroke and was
+  significantly reduced, and the Conclusions mention only the composite and
+  all-cause death, so an agent can wrongly infer that the components fell too.
+  The answer is in one Results sentence.
+  Fault F1 rather than F3: get_abstract has no paging, so the answer can't be
+  moved to a second page.
+  Nick confirmed the verdict is unsupported (both claims contradicted).
+  Verified by Nick against PubMed PMID 26378978, 5 Nov 2026.
