@@ -1,0 +1,28 @@
+id: label-001
+category: label_lookup
+prompt: >
+  According to the current UK SmPC for Glucophage (metformin) film-coated
+  tablets, below what glomerular filtration rate is metformin contraindicated?
+  Give the threshold and unit.
+answer_type: exact_value
+gold:
+  value: "30"
+  unit: "mL/min"
+  acceptable_variants: ["<30 mL/min", "GFR < 30 mL/min", "30 mL/min"]
+source:
+  tool: get_smpc
+  query: "Glucophage"
+  product: "Glucophage 500 mg film coated tablets (eMC product 987)"
+  section: "4.3"
+  excerpt: "Severe renal failure (GFR < 30 mL/min)."
+  url: "https://www.medicines.org.uk/emc/product/987/smpc"
+  truncated: false
+  retrieved: 2026-10-16
+fault: F2
+status: verified
+notes: >
+  Trap worth knowing: get_smpc("metformin") currently returns the
+  alogliptin/metformin combination SmPC (eMC 5234), which happens to give the
+  same threshold. A good agent names Glucophage or checks the product returned.
+  Process scoring could reward checking drug_name; outcome is unaffected here.
+  Verified by Nick, 16 Oct 2026.

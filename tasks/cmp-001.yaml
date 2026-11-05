@@ -1,0 +1,47 @@
+id: cmp-001
+category: us_uk_comparison
+prompt: >
+  Is montelukast (Singulair) licensed for relief of seasonal allergic rhinitis
+  in an adult who does NOT have asthma? Answer separately for the current US
+  Prescribing Information and the UK SmPC for Singulair 10 mg tablets.
+answer_type: comparison
+gold:
+  differs: true
+  us: "yes"
+  uk: "no"
+  detail: >
+    US: indicated for SAR in patients 2 years and older (and PAR from 6 months),
+    reserved for patients with an inadequate response or intolerance to
+    alternative therapies. UK: SAR relief only in asthmatic patients in whom
+    Singulair is indicated for asthma.
+  must_mention_for_full_credit: ["US use is reserved for inadequate response or intolerance to alternatives"]
+source:
+  tool: compare_labels
+  query: { drug: "montelukast", us_drug: "Singulair", uk_drug: "Singulair", sections: ["indications"] }
+  products:
+    us: "SINGULAIR (MONTELUKAST SODIUM), DailyMed setid 482dcc92-b47f-4ea6-854a-f5ac2aea7842"
+    uk: "Singulair 10 mg film-coated tablets (eMC product 198)"
+  excerpts:
+    us: >
+      SINGULAIR is indicated for the relief of symptoms of seasonal allergic
+      rhinitis in patients 2 years of age and older and perennial allergic
+      rhinitis in patients 6 months of age and older. Because the benefits of
+      SINGULAIR may not outweigh the risk of neuropsychiatric symptoms in
+      patients with allergic rhinitis [...], reserve use for patients who have
+      an inadequate response or intolerance to alternative therapies.
+    uk: >
+      In those asthmatic patients in whom Singulair is indicated in asthma,
+      Singulair can also provide symptomatic relief of seasonal allergic rhinitis.
+  retrieved: 2026-10-16
+fault: F4
+status: verified
+notes: >
+  F4 (stale source) serves a pre-2020 US label without the "reserve use"
+  restriction. A good agent notes the label date/version.
+  Scoped to adults / 10 mg on 16 Oct 2026 after Nick's check of the UK range:
+  the 5 mg chewable 4.1 has no allergic rhinitis indication at all (asthma
+  add-on, alternative to low-dose ICS in mild persistent asthma, and EIB
+  prophylaxis), and the 4 mg is discontinued in the UK. So the UK answer is
+  "no" across the range; the 10 mg is the only UK strength that mentions
+  rhinitis, and only in asthmatic patients.
+  Verified by Nick, 16 Oct 2026.

@@ -1,0 +1,35 @@
+id: label-003
+category: label_lookup
+prompt: >
+  A patient with non-valvular atrial fibrillation is starting apixaban
+  (Eliquis) for stroke prevention. They are 82 years old, weigh 58 kg and
+  have a serum creatinine of 1.2 mg/dL. According to the UK SmPC, what dose
+  should they receive?
+answer_type: exact_value
+gold:
+  value: "2.5 mg twice daily"
+  unit: "mg"
+  acceptable_variants: ["2.5 mg BID", "2.5 mg bd", "2.5 mg orally twice daily"]
+  reasoning: >
+    Two of the three dose-reduction criteria are met (age >= 80, weight <= 60 kg);
+    creatinine 1.2 mg/dL is below the 1.5 mg/dL criterion. Two criteria are enough.
+source:
+  tool: get_smpc
+  query: "Eliquis"
+  product: "Eliquis 2.5 mg film-coated tablets (eMC product 4756)"
+  section: "4.2"
+  excerpt: >
+    The recommended dose of apixaban is 2.5 mg taken orally twice daily in
+    patients with NVAF and at least two of the following characteristics:
+    age ≥ 80 years, body weight ≤ 60 kg, or serum creatinine ≥ 1.5 mg/dL
+    (133 micromole/L).
+  url: "https://www.medicines.org.uk/emc/product/4756/smpc"
+  truncated: false   # excerpt is on page 1 of a 9,090-character section
+  retrieved: 2026-10-16
+fault: F1
+status: verified
+notes: >
+  Tests applying a rule, not just finding it. Common wrong answer: 5 mg twice
+  daily (agent checks creatinine first and stops). No patient identifiers, so
+  not a privacy task.
+  Verified by Nick, 16 Oct 2026.

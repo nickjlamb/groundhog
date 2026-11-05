@@ -1,0 +1,33 @@
+id: cmp-005
+category: us_uk_comparison
+prompt: >
+  The UK SmPC for domperidone contraindicates co-administration with potent
+  CYP3A4 inhibitors. Does the US Prescribing Information for domperidone carry
+  the same contraindication?
+answer_type: comparison
+gold:
+  differs: null
+  us: "no US label available"
+  uk: "yes, contraindicated with potent CYP3A4 inhibitors"
+  detail: >
+    No FDA/DailyMed label is retrieved for domperidone (it is not an
+    FDA-approved medicine), so the US side cannot be compared. Correct answer
+    says so; it does not describe US label content.
+  hard_fail_if: "agent quotes or paraphrases US label text for domperidone"
+source:
+  tool: compare_labels
+  query: { drug: "domperidone", sections: ["contraindications"] }
+  products:
+    us: null
+    uk: "Domperidone 1mg/ml Oral Suspension (eMC product 3188)"
+  excerpts:
+    us: null
+    uk: "co-administration with potent CYP3A4 inhibitors (regardless of their QT prolonging effects) (see section 4.5)"
+  retrieved: 2026-10-16
+fault: F1
+status: verified
+notes: >
+  Half-abstention: a comparison where one side doesn't exist. Tests whether
+  the agent fabricates a US label. Mentioning that domperidone is not
+  FDA-approved is fine (general knowledge) but not required.
+  Verified by Nick, 16 Oct 2026.

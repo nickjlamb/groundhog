@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use Groundhog, please cite it as below."
+title: "Groundhog: agent reliability on medical-evidence tasks"
+abstract: >-
+  A benchmark measuring whether tool-using AI agents complete realistic
+  medical-evidence tasks consistently across repeated runs, under injected
+  tool faults, and without unsafe behaviour.
+type: software
+authors:
+  - family-names: Lamb
+    given-names: Nick
+    orcid: "https://orcid.org/0009-0009-6266-8499"
+    affiliation: PharmaTools.AI
+repository-code: "https://github.com/nickjlamb/groundhog"
+url: "https://github.com/nickjlamb/groundhog"
+license: MIT
+version: 0.1.0-dev
+date-released: "2026-10-16"
+keywords:
+  - benchmark
+  - AI agents
+  - evaluation
+  - reliability
+  - medical writing
+  - drug labelling
+  - MCP

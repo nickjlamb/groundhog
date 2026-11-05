@@ -1,0 +1,234 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/nickjlamb/groundhog/schema/task.schema.json",
+  "title": "Groundhog task",
+  "type": "object",
+  "required": [
+    "id",
+    "category",
+    "prompt",
+    "answer_type",
+    "gold",
+    "source",
+    "fault",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^(label|cmp|claim|cite|trial|conflict|abstain|privacy)-[0-9]{3}$"
+    },
+    "category": {
+      "enum": [
+        "label_lookup",
+        "us_uk_comparison",
+        "claim_checking",
+        "citation",
+        "trial_facts",
+        "conflict_detection",
+        "abstention",
+        "privacy"
+      ]
+    },
+    "prompt": {
+      "type": "string",
+      "minLength": 20
+    },
+    "answer_type": {
+      "enum": [
+        "exact_value",
+        "comparison",
+        "verdict",
+        "pmid",
+        "structured",
+        "abstain",
+        "conflict",
+        "free_text"
+      ]
+    },
+    "gold": {
+      "type": "object",
+      "minProperties": 1
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "retrieved": {
+          "type": "string",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+        },
+        "excerpt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "excerpts": {
+          "type": "object"
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "excerpt"
+          ]
+        },
+        {
+          "required": [
+            "excerpts"
+          ]
+        }
+      ],
+      "required": [
+        "retrieved"
+      ]
+    },
+    "fault": {
+      "enum": [
+        "F0",
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5"
+      ]
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "verified",
+        "dropped"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    },
+    "rubric": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/criterion"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "criterion": {
+      "type": "object",
+      "required": [
+        "id",
+        "criterion",
+        "points",
+        "check"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^r[0-9]+$"
+        },
+        "criterion": {
+          "type": "string",
+          "minLength": 10
+        },
+        "points": {
+          "type": "integer",
+          "minimum": -10,
+          "maximum": 10,
+          "not": {
+            "const": 0
+          }
+        },
+        "check": {
+          "enum": [
+            "deterministic",
+            "judge"
+          ]
+        },
+        "axis": {
+          "enum": [
+            "accuracy",
+            "completeness",
+            "communication",
+            "context_awareness",
+            "instruction_following"
+          ]
+        },
+        "locator": {
+          "$ref": "#/$defs/locator"
+        }
+      },
+      "if": {
+        "properties": {
+          "check": {
+            "const": "deterministic"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "locator"
+        ]
+      },
+      "else": {
+        "not": {
+          "required": [
+            "locator"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "locator": {
+      "type": "object",
+      "required": [
+        "field"
+      ],
+      "properties": {
+        "field": {
+          "enum": [
+            "value",
+            "unit",
+            "pmid",
+            "verdict",
+            "rationale"
+          ]
+        },
+        "any_of": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "none_of": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "untraced_numbers": {
+          "const": true
+        }
+      },
+      "oneOf": [
+        {
+          "required": [
+            "any_of"
+          ]
+        },
+        {
+          "required": [
+            "none_of"
+          ]
+        },
+        {
+          "required": [
+            "untraced_numbers"
+          ]
+        }
+      ],
+      "additionalProperties": false
+    }
+  }
+}

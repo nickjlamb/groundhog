@@ -1,0 +1,41 @@
+id: cmp-003
+category: us_uk_comparison
+prompt: >
+  A patient with type 2 diabetes has stable NYHA class II heart failure.
+  Is starting pioglitazone contraindicated under the US Prescribing
+  Information (Actos)? Under the UK SmPC?
+answer_type: comparison
+gold:
+  differs: true
+  us: "no"
+  uk: "yes"
+  detail: >
+    US: contraindicated only for initiation in established NYHA class III or
+    IV heart failure (boxed warning covers heart failure risk generally).
+    UK: contraindicated in cardiac failure or history of cardiac failure,
+    NYHA stages I to IV.
+  must_mention_for_full_credit: ["US boxed warning on heart failure still applies"]
+source:
+  tools: [compare_labels, get_smpc]
+  query:
+    us: { tool: compare_labels, drug: "pioglitazone", us_drug: "Actos", sections: ["contraindications"] }
+    uk: { tool: get_smpc, drug: "pioglitazone", sections: ["4.3"] }
+  products:
+    us: "Actos (PIOGLITAZONE), DailyMed setid d2ddc491-88a9-4063-9150-443b4fa4330c"
+    uk: "Pioglitazone 15 mg Tablets (eMC product 7407)"
+  excerpts:
+    us: "Initiation in patients with established NYHA Class III or IV heart failure [see Boxed Warning]."
+    uk: "cardiac failure or history of cardiac failure (NYHA stages I to IV)"
+  retrieved: 2026-10-16
+fault: F5
+status: verified
+notes: >
+  Retrieval trap: compare_labels with uk_drug "Actos" returns UK unavailable
+  (no eMC product under that brand). The agent has to retry with the generic.
+  Good process signal: does it give up and answer US-only, or recover?
+  Nick confirmed the full UK 4.3 list: hypersensitivity; cardiac failure or
+  history of cardiac failure (NYHA I-IV); hepatic impairment; diabetic
+  ketoacidosis; current or history of bladder cancer; uninvestigated
+  macroscopic haematuria. Bladder cancer / haematuria / hepatic impairment are
+  UK-only contraindications: candidate for a later task.
+  Verified by Nick, 16 Oct 2026.

@@ -1,0 +1,31 @@
+id: label-005
+category: label_lookup
+prompt: >
+  According to the UK SmPC for Lynparza (olaparib) tablets, what is the
+  recommended dose of olaparib, as monotherapy or in combination with other
+  agents?
+answer_type: exact_value
+gold:
+  value: "300 mg twice daily"
+  unit: "mg"
+  acceptable_variants: ["300 mg BID", "300 mg (two 150 mg tablets) twice daily", "600 mg total daily dose taken as 300 mg twice daily"]
+source:
+  tool: get_smpc
+  query: "olaparib"
+  product: "Lynparza 100mg Film-Coated Tablets (eMC product 9204)"
+  section: "4.2"
+  excerpt: >
+    The recommended dose of Lynparza in monotherapy or in combination with
+    other agents is 300 mg (two 150 mg tablets) taken twice daily, equivalent
+    to a total daily dose of 600 mg.
+  url: "https://www.medicines.org.uk/emc/product/9204/smpc"
+  truncated: true    # 12,837-character section; excerpt is on page 1 at default page size
+  retrieved: 2026-10-16
+fault: F3
+status: verified
+notes: >
+  Pre-2.7.0 PubCrawl returned only the patient-selection text and no dose, so
+  this was unanswerable before the fix. Under F3 the replay layer moves the
+  dosing paragraph past the first page: the agent must follow next_offset.
+  "600 mg" alone (without "twice daily" / per-dose split) scores as wrong.
+  Verified by Nick, 16 Oct 2026.

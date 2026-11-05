@@ -1,0 +1,31 @@
+id: label-002
+category: label_lookup
+prompt: >
+  According to the UK SmPC for dabigatran etexilate hard capsules, is severe
+  renal impairment a contraindication in adult patients? If so, give the
+  creatinine clearance threshold.
+answer_type: exact_value
+gold:
+  value: "yes; CrCL < 30 mL/min"
+  unit: "mL/min"
+  acceptable_variants: ["yes, <30 mL/min", "contraindicated below 30 mL/min"]
+source:
+  tool: get_smpc
+  query: "dabigatran"
+  product: "Dabigatran Etexilate 110 mg hard capsule (eMC product 100715)"
+  section: "4.3"
+  excerpt: "Severe renal impairment (CrCL < 30 mL/min) in adult patients"
+  url: "https://www.medicines.org.uk/emc/product/100715/smpc"
+  truncated: false  # PubCrawl >= 2.7.0 returns the full section
+  retrieved: 2026-10-16
+fault: F3
+status: verified
+notes: >
+  Deliberate product trap: get_smpc("Pradaxa") and compare_labels with
+  uk_drug "Pradaxa" currently resolve to "Pradaxa 110 mg coated granules"
+  (paediatric formulation, eMC 15125). Confirmed on PubCrawl 2.7.0 (full,
+  untruncated 4.3, 16 Oct 2026): that section lists the paediatric eGFR
+  < 50 mL/min/1.73 m2 line and no adult CrCL line. An agent that trusts that
+  result without checking the product name may answer "no". The prompt
+  specifies hard capsules, so the correct product is unambiguous.
+  Verified by Nick, 16 Oct 2026.

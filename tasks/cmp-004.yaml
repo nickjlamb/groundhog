@@ -1,0 +1,48 @@
+id: cmp-004
+category: us_uk_comparison
+prompt: >
+  Can codeine be used for pain relief in a 10-year-old child under the US
+  Prescribing Information for codeine sulfate tablets? Under the UK SmPC for
+  codeine phosphate tablets? Answer separately for each, and say which part of
+  each label the answer comes from.
+answer_type: comparison
+gold:
+  differs: false
+  us: "no – contraindicated in all children younger than 12 (section 4, Contraindications)"
+  uk: "no – should not be used in children below 12 (section 4.2, Posology)"
+  detail: >
+    No substantive difference: both labels rule out codeine in under-12s.
+    The US puts all under-12 use in Contraindications. The UK 4.3 contraindicates
+    under-12 use only for cough and/or cold; the restriction on any use in
+    under-12s is in 4.2.
+  wrong_answer_to_watch: >
+    "UK allows it / UK only restricts cough and cold": the agent read 4.3 and
+    stopped.
+source:
+  tools: [get_uspi, get_smpc]
+  query:
+    us: { tool: get_uspi, drug: "codeine", sections: ["contraindications"] }
+    uk: { tool: get_smpc, drug: "codeine phosphate tablets", sections: ["4.2", "4.3"] }
+  products:
+    us: "Codeine Sulfate (CODEINE SULFATE), DailyMed setid 5819bdf7-300e-45b8-8f3a-447b53656293"
+    uk: "Codeine Phosphate Tablets BP 15mg (eMC product 2617)"
+  excerpts:
+    us: "Codeine sulfate tablets are contraindicated for: All children younger than 12 years of age"
+    uk: >
+      [4.2] Codeine should not be used in children below the age of 12 years
+      because of the risk of opioid toxicity due to the variable and
+      unpredictable metabolism of codeine to morphine (see sections 4.3 and 4.4).
+      [4.3] In children below the age of 12 years for the symptomatic treatment
+      of cough and/or cold due to an increased risk of developing serious and
+      life-threatening adverse reactions
+  retrieved: 2026-10-16
+fault: F2
+status: verified
+notes: >
+  Reworded 16 Oct 2026 after Nick's check found the 4.2 restriction: the first
+  draft contrasted US 4 with UK 4.3 only, which overstated the difference.
+  Now tests reading beyond the contraindications section.
+  Product trap kept: compare_labels("codeine") resolves the UK side to "Boots
+  Ibuprofen and Codeine 200mg/12.8mg" (an OTC combination); the prompt names
+  codeine phosphate tablets.
+  Verified by Nick, 16 Oct 2026.
