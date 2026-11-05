@@ -4,7 +4,7 @@ A side study to [Groundhog](../../README.md) on [HealthBench](https://arxiv.org/
 
 **Question:** what share of physician-written health rubric criteria can be checked deterministically (by code, with no model judge), and how well do those checks hold up?
 
-> **Status:** Parts A–C are complete. Part D (hand-grading model responses) was not run: see below.
+> **Status:** Parts A–C are complete. Part D (hand-grading model responses) was not run, as it would not change the conclusions.
 
 ## Design
 
