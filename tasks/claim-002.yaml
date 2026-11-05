@@ -1,0 +1,75 @@
+id: claim-002
+category: claim_checking
+prompt: >
+  A draft HCP leavepiece contains this sentence, referenced to McMurray JJV et al.
+  N Engl J Med 2019;381:1995-2008 (DAPA-HF):
+  "In DAPA-HF, adding dapagliflozin 10 mg once daily to recommended therapy
+  reduced the risk of worsening heart failure or cardiovascular death by 26%
+  versus placebo in patients with heart failure with reduced ejection fraction
+  (HR 0.74; 95% CI 0.65-0.85), with similar findings in patients with and
+  without diabetes."
+  Is the sentence supported by the cited paper? Answer supported, partially
+  supported (some parts are supported and some are not) or unsupported,
+  and explain.
+answer_type: verdict
+gold:
+  verdict: supported
+  detail: >
+    Every element is in the abstract: dapagliflozin 10 mg once daily added to
+    recommended therapy; primary outcome worsening HF or CV death HR 0.74
+    (95% CI 0.65-0.85), P<0.001; "Findings in patients with diabetes were
+    similar to those in patients without diabetes." The 26% is 1 - 0.74, the
+    conventional way of expressing a hazard ratio as a risk reduction.
+source:
+  tool: get_abstract
+  pmid: "31535829"
+  section: "Methods; Results"
+  excerpts:
+    dose: "to receive either dapagliflozin (at a dose of 10 mg once daily) or placebo, in addition to recommended therapy"
+    primary: "the primary outcome occurred in 386 of 2373 patients (16.3%) in the dapagliflozin group and in 502 of 2371 patients (21.2%) in the placebo group (hazard ratio, 0.74; 95% confidence interval [CI], 0.65 to 0.85; P<0.001)"
+    diabetes: "Findings in patients with diabetes were similar to those in patients without diabetes."
+  retrieved: 2026-11-05
+rubric:
+  - id: r1
+    criterion: "The rationale gives the primary-outcome hazard ratio"
+    points: 2
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, any_of: ["0.74"] }
+  - id: r2
+    criterion: "The rationale explains that the 26% corresponds to the hazard ratio of 0.74"
+    points: 2
+    check: judge
+    axis: accuracy
+  - id: r3
+    criterion: "The rationale confirms the paper reports similar findings with and without diabetes"
+    points: 2
+    check: judge
+    axis: completeness
+  - id: r4
+    criterion: "The rationale confirms the dose and that dapagliflozin was added to recommended therapy"
+    points: 1
+    check: judge
+    axis: completeness
+  - id: r5
+    criterion: "The answer treats the 26% as unsupported because that figure does not appear in the paper"
+    points: -5
+    check: judge
+    axis: accuracy
+  - id: r6
+    criterion: "The answer reports a discrepancy between the sentence and the paper that is not there"
+    points: -5
+    check: judge
+    axis: accuracy
+fault: F2
+status: verified
+notes: >
+  Control task: the right answer is "supported". Tests whether agents invent
+  problems with a sound claim (as cmp-002 does for comparisons).
+  Trap: "26%" is derived (1 - HR) and appears nowhere in the paper, so an
+  over-literal agent may call the claim partial or unsupported.
+  No untraced-numbers criterion here, deliberately: it would penalise an agent
+  for correctly restating 26%. A locator allow-list for derived figures is a
+  possible later schema change.
+  Nick confirmed "reduced the risk by 26%" from HR 0.74 is acceptable wording.
+  Verified by Nick against PubMed PMID 31535829, 5 Nov 2026.
