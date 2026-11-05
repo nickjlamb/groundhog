@@ -4,14 +4,14 @@ A side study to [Groundhog](../../README.md) on [HealthBench](https://arxiv.org/
 
 **Question:** what share of physician-written health rubric criteria can be checked deterministically (by code, with no model judge), and how well do those checks hold up?
 
-> **Status: in progress.** Part A is complete. Parts B–D have not started, and no figures for them exist yet.
+> **Status: in progress.** Parts A and B are complete. Parts C and D have not started, and no figures for them exist yet.
 
 ## Design
 
 | Part | What | Status |
 |---|---|---|
 | A | Physician-vs-physician agreement on the 34 consensus criteria, reproducing HealthBench's physician baseline | Done |
-| B | Stratified sample of 300 example-specific criteria (balanced across the five axes and positive/negative points), each classified as *checkable*, *pattern-checkable* or *judge-only*; drafted with AI assistance, every classification reviewed by hand | Not started |
+| B | Stratified sample of 300 example-specific criteria (balanced across the five axes and positive/negative points), each classified as *checkable*, *pattern-checkable* or *judge-only*; drafted with AI assistance, every classification adjudicated by Nick | Done |
 | C | Recall: run locators for checkable criteria against the physician-written ideal responses (4,206 conversations have one) | Not started |
 | D | Precision (only if C is promising): model responses graded by hand on a sample | Not started |
 
@@ -32,6 +32,40 @@ Reproduced on all 29,511 meta-examples ([`scripts/agreement.py`](scripts/agreeme
 | Context seeking | 0.654 | 0.646 | 0.706 |
 
 Our figures are within 0.02 of the paper's on every theme. Across all 33,435 physician pairs, raw agreement is 78.1% but Cohen's kappa is 0.39, because 76% of grades are "met". On these broad criteria, physicians agree only moderately, and the model grader matches or exceeds them on five of seven themes.
+
+## Part B results
+
+300 example-specific criteria, 30 from each axis × sign stratum ([`scripts/sample.py`](scripts/sample.py), seed 20261105). Claude drafted a class for each; Nick adjudicated all 300 and changed 42 (32 pattern → judge-only, 10 pattern → checkable). Draft–final agreement 86%, Cohen's kappa 0.74. Final labels: [`results/part_b_labels.csv`](results/part_b_labels.csv) (IDs only).
+
+Shares reweighted from the strata to all 49,184 example-specific criteria, with 95% bootstrap intervals (resampling within strata):
+
+| Class | Share | 95% CI |
+|---|---|---|
+| Checkable: a specific entity, number, code or format feature decides it | 11.7% | 7.6–16.0 |
+| Pattern-checkable: a short synonym or keyword list decides it | 19.3% | 13.3–26.0 |
+| Judge-only | 69.1% | 61.8–76.0 |
+| **Checkable or pattern-checkable** | **30.9%** | **24.0–38.2** |
+
+| Stratum (n = 30 each) | C | P | J |
+|---|---|---|---|
+| Accuracy, positive | 8 | 6 | 16 |
+| Accuracy, negative | 4 | 0 | 26 |
+| Completeness, positive | 1 | 9 | 20 |
+| Completeness, negative | 3 | 8 | 19 |
+| Context awareness, positive | 0 | 4 | 26 |
+| Context awareness, negative | 2 | 0 | 28 |
+| Communication quality, positive | 11 | 2 | 17 |
+| Communication quality, negative | 5 | 2 | 23 |
+| Instruction following, positive | 8 | 6 | 16 |
+| Instruction following, negative | 5 | 7 | 18 |
+
+What the pattern shows:
+
+- **Negative accuracy criteria are almost never checkable.** "Recommends tilting the head back during a nosebleed" cannot be checked by finding the words, because a good response may mention the act to warn against it.
+- **Context-seeking criteria are judge-only.** A question mark plus a keyword does not establish that the response sought the right context, so 54 of 60 context-awareness criteria need a judge.
+- **Format criteria are where code wins.** Communication and instruction-following criteria often specify structure (a table, bullet points, SOAP headings, a signature block, a length limit), which code can check reliably given structural and length locators.
+
+These are classifications of what *could* be checked; Part C tests whether locators written for the checkable criteria actually work.
 
 ## Data
 
