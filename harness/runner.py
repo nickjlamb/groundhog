@@ -74,11 +74,15 @@ def main(argv=None):
     ap.add_argument("--pubcrawl-cmd", default="npx -y @pharmatools/pubcrawl@2.8.0")
     ap.add_argument("--redacta-cmd", default="", help="command for a local Redacta MCP server; omit to run without Redacta")
     ap.add_argument("--out", default=str(ROOT / "runs"))
+    ap.add_argument("--resume", default="", help="existing run directory: run only the episodes it lacks")
     args = ap.parse_args(argv)
 
     tasks = load_tasks(args.tasks)
     run_id = datetime.datetime.now().strftime("%Y%m%d-%H%M%S") + "-" + args.model.replace(":", "_").replace("/", "_")
     out = Path(args.out) / run_id
+    if args.resume:
+        out = Path(args.resume)
+        run_id = out.name
     out.mkdir(parents=True, exist_ok=True)
 
     from .mcp_client import StdioMCPClient
@@ -91,8 +95,10 @@ def main(argv=None):
                 "pubcrawl": pubcrawl.server_info if pubcrawl else None,
                 "redacta": local.server_info if local else None,
                 "started": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")}
-    (out / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
+    mpath = out / ("manifest.json" if not (out / "manifest.json").exists() else f"manifest-resume-{manifest['started'][:19].replace(':', '')}.json")
+    mpath.write_text(json.dumps(manifest, indent=2) + "\n")
 
+    failures = 0
     for task in tasks:
         conds = ["F0"] if args.record else {"both": ["F0", task["fault"]], "clean": ["F0"], "fault": [task["fault"]]}[args.conditions]
         cassette = Cassette(task["id"])
@@ -105,9 +111,19 @@ def main(argv=None):
                     gw = RecordGateway(task, cassette, pubcrawl, recorded_by=args.model, local_client=local)
                 else:
                     gw = ReplayGateway(task, cassette, fault=cond, local_client=local)
-                trace = run_episode(task, model, gw)
-                trace.update(run_id=run_id, condition=cond, repeat=rep)
                 name = f"{task['id']}__{cond}__r{rep}.json"
+                if (out / name).exists():           # --resume: keep finished episodes
+                    continue
+                try:
+                    trace = run_episode(task, model, gw)
+                except Exception as e:              # provider outage, rate limit: log and move on
+                    failures += 1
+                    print(f"{task['id']:14} {cond} r{rep}  MODEL ERROR {type(e).__name__}: {e}", flush=True)
+                    if failures >= 3:
+                        sys.exit(f"Stopping after 3 consecutive model errors. Resume with --resume {out}")
+                    continue
+                failures = 0
+                trace.update(run_id=run_id, condition=cond, repeat=rep)
                 (out / name).write_text(json.dumps(trace, indent=1, ensure_ascii=False) + "\n")
                 print(f"{task['id']:14} {cond} r{rep}  {trace['status']:16} calls={trace['tool_calls']}"
                       f" off_path={sum(s['off_path'] for s in trace['steps'])}"

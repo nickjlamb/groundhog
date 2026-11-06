@@ -1,4 +1,218 @@
 {
+ "NCT00799604": {
+  "nct_id": "NCT00799604",
+  "title": "Clevidipine Bolus Administration in the Treatment of Hypertensive Patients Undergoing Cardiac Surgery (SPRINT)",
+  "status": "COMPLETED",
+  "phase": "PHASE2",
+  "conditions": [
+   "Hypertension"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "clevidipine"
+   }
+  ],
+  "enrollment": 30,
+  "sponsor": "The Medicines Company",
+  "start_date": "2008-11",
+  "completion_date": "2009-10",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT00799604"
+ },
+ "NCT01206062": {
+  "nct_id": "NCT01206062",
+  "title": "Systolic Blood Pressure Intervention Trial",
+  "status": "COMPLETED",
+  "phase": "NA",
+  "conditions": [
+   "Hypertension"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "Intensive control of SBP"
+   },
+   {
+    "type": "DRUG",
+    "name": "Standard control of SBP"
+   }
+  ],
+  "enrollment": 9361,
+  "sponsor": "National Heart, Lung, and Blood Institute (NHLBI)",
+  "start_date": "2010-10",
+  "completion_date": "2019-03",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT01206062"
+ },
+ "NCT01509339": {
+  "nct_id": "NCT01509339",
+  "title": "Pharmacokinetics of Vancomycin for Inhalation in Cystic Fibrosis",
+  "status": "WITHDRAWN",
+  "phase": "PHASE1",
+  "conditions": [
+   "Cystic Fibrosis",
+   "Methicillin-resistant Staphylococcus Aureus"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "Vancomycin"
+   }
+  ],
+  "enrollment": 0,
+  "sponsor": "Case Western Reserve University",
+  "start_date": "2012-01",
+  "completion_date": "2021-12-23",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT01509339"
+ },
+ "NCT01835249": {
+  "nct_id": "NCT01835249",
+  "title": "Effect of Intense vs. Standard Hypertension Management on Nighttime Blood Pressure - an Ancillary Study to SPRINT",
+  "status": "COMPLETED",
+  "phase": "NA",
+  "conditions": [
+   "Hypertension"
+  ],
+  "interventions": [
+   {
+    "type": "OTHER",
+    "name": "Intensive BP Arm"
+   },
+   {
+    "type": "OTHER",
+    "name": "Standard BP arm"
+   }
+  ],
+  "enrollment": 897,
+  "sponsor": "University of Minnesota",
+  "start_date": "2013-06",
+  "completion_date": "2017-07",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT01835249"
+ },
+ "NCT02077179": {
+  "nct_id": "NCT02077179",
+  "title": "Health Improvement After Pregnancy (HIP) Program Randomized Control Trial",
+  "status": "TERMINATED",
+  "phase": "NA",
+  "conditions": [
+   "Metabolic Cardiovascular Syndrome"
+  ],
+  "interventions": [
+   {
+    "type": "BEHAVIORAL",
+    "name": "HIP Program"
+   }
+  ],
+  "enrollment": 43,
+  "sponsor": "Queen's University",
+  "start_date": "2014-09",
+  "completion_date": "2016-04",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT02077179"
+ },
+ "NCT02172196": {
+  "nct_id": "NCT02172196",
+  "title": "Bioavailability of BI 10773 and Sitagliptin in Healthy Male Volunteers",
+  "status": "COMPLETED",
+  "phase": "PHASE1",
+  "conditions": [
+   "Healthy"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "BI 10773"
+   },
+   {
+    "type": "DRUG",
+    "name": "Sitagliptin"
+   }
+  ],
+  "enrollment": 16,
+  "sponsor": "Boehringer Ingelheim",
+  "start_date": "2009-05",
+  "completion_date": "",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT02172196"
+ },
+ "NCT02401880": {
+  "nct_id": "NCT02401880",
+  "title": "Effects of Linagliptin in Addition to Empagliflozin on Islet Cell Physiology",
+  "status": "COMPLETED",
+  "phase": "PHASE4",
+  "conditions": [
+   "Type 2 Diabetes Mellitus"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "Linagliptin"
+   },
+   {
+    "type": "OTHER",
+    "name": "Placebo"
+   },
+   {
+    "type": "DRUG",
+    "name": "Empagliflozin"
+   }
+  ],
+  "enrollment": 89,
+  "sponsor": "Profil Institut für Stoffwechselforschung GmbH",
+  "start_date": "2015-05",
+  "completion_date": "2015-12",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT02401880"
+ },
+ "NCT02709265": {
+  "nct_id": "NCT02709265",
+  "title": "Open-Label Phase 1 Study of Aerosolized Amikacin and Fosfomycin in Healthy Volunteers",
+  "status": "COMPLETED",
+  "phase": "PHASE1",
+  "conditions": [
+   "Healthy"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "amikacin/fosfomycin"
+   }
+  ],
+  "enrollment": 30,
+  "sponsor": "Cardeas Pharma",
+  "start_date": "2016-04",
+  "completion_date": "2016-07",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT02709265"
+ },
+ "NCT03036124": {
+  "nct_id": "NCT03036124",
+  "title": "Study to Evaluate the Effect of Dapagliflozin on the Incidence of Worsening Heart Failure or Cardiovascular Death in Patients With Chronic Heart Failure",
+  "status": "COMPLETED",
+  "phase": "PHASE3",
+  "conditions": [
+   "Chronic Heart Failure With Reduced Ejection Fraction (HFrEF)"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "Dapagliflozin"
+   },
+   {
+    "type": "DRUG",
+    "name": "Placebo"
+   }
+  ],
+  "enrollment": 4744,
+  "sponsor": "AstraZeneca",
+  "start_date": "2017-02-08",
+  "completion_date": "2019-07-17",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT03036124"
+ },
  "NCT03057951": {
   "nct_id": "NCT03057951",
   "title": "EMPagliflozin outcomE tRial in Patients With chrOnic heaRt Failure With Preserved Ejection Fraction (EMPEROR-Preserved)",
@@ -99,6 +313,484 @@
   "study_type": "INTERVENTIONAL",
   "url": "https://clinicaltrials.gov/study/NCT03128528"
  },
+ "NCT03454178": {
+  "nct_id": "NCT03454178",
+  "title": "Accuracy of AOBP in a Chinese Population",
+  "status": "COMPLETED",
+  "phase": "N/A",
+  "conditions": [
+   "Hypertension"
+  ],
+  "interventions": [
+   {
+    "type": "DIAGNOSTIC_TEST",
+    "name": "WatchBP Office (BP measurement machine)"
+   }
+  ],
+  "enrollment": 149,
+  "sponsor": "Chinese University of Hong Kong",
+  "start_date": "2018-06-30",
+  "completion_date": "2019-12-29",
+  "study_type": "OBSERVATIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT03454178"
+ },
+ "NCT03457168": {
+  "nct_id": "NCT03457168",
+  "title": "Treatment of Hypertension During Sleep",
+  "status": "RECRUITING",
+  "phase": "NA",
+  "conditions": [
+   "Hypertension",
+   "Hypertension, Systolic"
+  ],
+  "interventions": [
+   {
+    "type": "PROCEDURE",
+    "name": "Treatment of elevated asleep SBP mean"
+   }
+  ],
+  "enrollment": 5320,
+  "sponsor": "University of Vigo",
+  "start_date": "2019-02-01",
+  "completion_date": "2032-12-31",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT03457168"
+ },
+ "NCT03473262": {
+  "nct_id": "NCT03473262",
+  "title": "Empagliflozin-based Quadruple Combination vs Insulin Glarine-based Combination Therapy in Patients With Type 2 Diabetes",
+  "status": "COMPLETED",
+  "phase": "N/A",
+  "conditions": [
+   "Diabetes Mellitus, Type 2"
+  ],
+  "interventions": [],
+  "enrollment": 200,
+  "sponsor": "Chungbuk National University Hospital",
+  "start_date": "2017-01-01",
+  "completion_date": "2018-07-18",
+  "study_type": "OBSERVATIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT03473262"
+ },
+ "NCT03483662": {
+  "nct_id": "NCT03483662",
+  "title": "Implementation of Multifaceted Patient-Centered Treatment Strategies for Intensive Blood Pressure Control (IMPACTS)",
+  "status": "COMPLETED",
+  "phase": "NA",
+  "conditions": [
+   "Hypertension",
+   "Blood Pressure"
+  ],
+  "interventions": [
+   {
+    "type": "BEHAVIORAL",
+    "name": "Multicomponent Intervention"
+   },
+   {
+    "type": "BEHAVIORAL",
+    "name": "Enhanced Usual Care"
+   }
+  ],
+  "enrollment": 1272,
+  "sponsor": "Tulane University",
+  "start_date": "2018-06-27",
+  "completion_date": "2024-02-15",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT03483662"
+ },
+ "NCT03556696": {
+  "nct_id": "NCT03556696",
+  "title": "Automatic Remifentanil Administration Guided by ANI During Propofol Anesthesia",
+  "status": "COMPLETED",
+  "phase": "NA",
+  "conditions": [
+   "Nociceptive Pain",
+   "Surgical Procedure, Unspecified"
+  ],
+  "interventions": [
+   {
+    "type": "DEVICE",
+    "name": "ANI-REMI-loop"
+   },
+   {
+    "type": "DEVICE",
+    "name": "remifentanil pK/pD target administration device"
+   },
+   {
+    "type": "DRUG",
+    "name": "Remifentanil"
+   },
+   {
+    "type": "DRUG",
+    "name": "Propofol"
+   },
+   {
+    "type": "DEVICE",
+    "name": "ANI monitor"
+   }
+  ],
+  "enrollment": 52,
+  "sponsor": "University Hospital, Lille",
+  "start_date": "2018-06-27",
+  "completion_date": "2022-11-22",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT03556696"
+ },
+ "NCT03682991": {
+  "nct_id": "NCT03682991",
+  "title": "Reversal of Atrial Substrate to Prevent Atrial",
+  "status": "ACTIVE_NOT_RECRUITING",
+  "phase": "NA",
+  "conditions": [
+   "Atrial Fibrillation"
+  ],
+  "interventions": [
+   {
+    "type": "OTHER",
+    "name": "Aggressive Risk Factor Control"
+   },
+   {
+    "type": "OTHER",
+    "name": "Standard of Care"
+   }
+  ],
+  "enrollment": 509,
+  "sponsor": "Nova Scotia Health Authority",
+  "start_date": "2019-07-01",
+  "completion_date": "2027-12-31",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT03682991"
+ },
+ "NCT03683069": {
+  "nct_id": "NCT03683069",
+  "title": "Mineralocorticoid Receptor (MR) Antagonist (Eplerenone) vs Amlodipine and STRIATIN",
+  "status": "COMPLETED",
+  "phase": "PHASE4",
+  "conditions": [
+   "Hypertension",
+   "Genetics Hypertension"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "Eplerenone vs Amlodipine"
+   }
+  ],
+  "enrollment": 90,
+  "sponsor": "Brigham and Women's Hospital",
+  "start_date": "2019-01-15",
+  "completion_date": "2024-01-31",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT03683069"
+ },
+ "NCT03803800": {
+  "nct_id": "NCT03803800",
+  "title": "Periodized Rehabilitation and Beta-alanine Supplementation in Multiple Sclerosis",
+  "status": "COMPLETED",
+  "phase": "NA",
+  "conditions": [
+   "Multiple Sclerosis"
+  ],
+  "interventions": [
+   {
+    "type": "OTHER",
+    "name": "Classic, progressive endurance training"
+   },
+   {
+    "type": "OTHER",
+    "name": "Periodized exercise training"
+   },
+   {
+    "type": "DIETARY_SUPPLEMENT",
+    "name": "beta-alanine"
+   }
+  ],
+  "enrollment": 31,
+  "sponsor": "Hasselt University",
+  "start_date": "2019-01-09",
+  "completion_date": "2019-12-09",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT03803800"
+ },
+ "NCT03821805": {
+  "nct_id": "NCT03821805",
+  "title": "Acute Effect of Foot Reflexology Massage on Heart Rate Variability and Arterial Pulse Waveform",
+  "status": "COMPLETED",
+  "phase": "NA",
+  "conditions": [
+   "Massage",
+   "Anaerobic Exercise",
+   "Aerobic Exercise"
+  ],
+  "interventions": [
+   {
+    "type": "OTHER",
+    "name": "Foot reflexology massage"
+   }
+  ],
+  "enrollment": 28,
+  "sponsor": "University of Taipei",
+  "start_date": "2016-12-22",
+  "completion_date": "2017-06-13",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT03821805"
+ },
+ "NCT03973060": {
+  "nct_id": "NCT03973060",
+  "title": "Effectiveness of Muscular Work and Genetic Variants in Strength Gain of Ischiofemoral and Quadriceps",
+  "status": "COMPLETED",
+  "phase": "NA",
+  "conditions": [
+   "Muscle Strength",
+   "Genetics"
+  ],
+  "interventions": [
+   {
+    "type": "DEVICE",
+    "name": "Concentric-eccentric muscular work"
+   },
+   {
+    "type": "GENETIC",
+    "name": "Genetic polymorphism"
+   }
+  ],
+  "enrollment": 80,
+  "sponsor": "Universidad Francisco de Vitoria",
+  "start_date": "2015-10-01",
+  "completion_date": "2017-07-12",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT03973060"
+ },
+ "NCT04018365": {
+  "nct_id": "NCT04018365",
+  "title": "A Study of Empagliflozin in Patients With Refractory Diabetes Mellitus With Insulin Resistance",
+  "status": "UNKNOWN",
+  "phase": "PHASE3",
+  "conditions": [
+   "Insulin Resistance - Type A",
+   "Insulin Resistance - Type B",
+   "Lipoatrophic Diabetes Mellitus",
+   "Insulin Resistance Syndrome"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "Empagliflozin Tablets"
+   }
+  ],
+  "enrollment": 8,
+  "sponsor": "Kobe University",
+  "start_date": "2019-09-01",
+  "completion_date": "2021-10-30",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT04018365"
+ },
+ "NCT04027023": {
+  "nct_id": "NCT04027023",
+  "title": "Evaluation of the Impact of Intensive Short-Term Drug Therapy in Patients With Type 2 Diabetes Mellitus",
+  "status": "UNKNOWN",
+  "phase": "PHASE4",
+  "conditions": [
+   "Diabetes Mellitus, Type 2"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "Diabetes mellitus Type 2 De-escalation treatment (DET)"
+   }
+  ],
+  "enrollment": 9,
+  "sponsor": "Sciema UG",
+  "start_date": "2019-10-30",
+  "completion_date": "2021-05-31",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT04027023"
+ },
+ "NCT04138251": {
+  "nct_id": "NCT04138251",
+  "title": "Safety, Efficacy Evaluation of Empagliflozin Administration for Neutropenia in Glycogenosis Type 1b and G6PC3 Deficiency",
+  "status": "UNKNOWN",
+  "phase": "PHASE2",
+  "conditions": [
+   "Glycogen Storage Disease Type I",
+   "Glucose 6 Phosphatase Deficiency"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "Empagliflozin"
+   }
+  ],
+  "enrollment": 5,
+  "sponsor": "Cliniques universitaires Saint-Luc- Université Catholique de Louvain",
+  "start_date": "2019-06-20",
+  "completion_date": "2020-06-30",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT04138251"
+ },
+ "NCT04217759": {
+  "nct_id": "NCT04217759",
+  "title": "Healthy Lifestyle Intervention on Diabetes Risk Reduction Among Bruneian Young Adults",
+  "status": "COMPLETED",
+  "phase": "NA",
+  "conditions": [
+   "Overweight and Obesity",
+   "Risk Reduction",
+   "Diabetes Mellitus, Type 2"
+  ],
+  "interventions": [
+   {
+    "type": "BEHAVIORAL",
+    "name": "Healthy lifestyle intervention"
+   }
+  ],
+  "enrollment": 71,
+  "sponsor": "Universiti Brunei Darussalam",
+  "start_date": "2017-10-01",
+  "completion_date": "2018-02-27",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT04217759"
+ },
+ "NCT04578288": {
+  "nct_id": "NCT04578288",
+  "title": "Individualized Blood Pressure Management During Endovascular Stroke Treatment",
+  "status": "COMPLETED",
+  "phase": "NA",
+  "conditions": [
+   "Acute Ischemic Stroke"
+  ],
+  "interventions": [
+   {
+    "type": "PROCEDURE",
+    "name": "INDIVIDUALIZED BLOOD PRESSURE MANAGEMENT DURING ENDOVASCULAR TREATMENT OF ACUTE ISCHEMIC STROKE UNDER PROCEDURAL SEDATION"
+   }
+  ],
+  "enrollment": 250,
+  "sponsor": "University Hospital Heidelberg",
+  "start_date": "2020-10-01",
+  "completion_date": "2022-10-21",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT04578288"
+ },
+ "NCT04635982": {
+  "nct_id": "NCT04635982",
+  "title": "Kinesiotape on Quadriceps and Gluteus in Counter Movement Jump and Sprint in Soccer Players",
+  "status": "COMPLETED",
+  "phase": "NA",
+  "conditions": [
+   "Sports Physical Therapy",
+   "Athletics",
+   "Performance"
+  ],
+  "interventions": [
+   {
+    "type": "OTHER",
+    "name": "Kinesiotape of the physical performance"
+   }
+  ],
+  "enrollment": 37,
+  "sponsor": "Universidad de Murcia",
+  "start_date": "2017-11-02",
+  "completion_date": "2018-03-02",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT04635982"
+ },
+ "NCT04647292": {
+  "nct_id": "NCT04647292",
+  "title": "European Blood Pressure Intensive Control After Stroke",
+  "status": "UNKNOWN",
+  "phase": "PHASE2",
+  "conditions": [
+   "Ischemic Stroke",
+   "Transient Ischemic Attack"
+  ],
+  "interventions": [
+   {
+    "type": "OTHER",
+    "name": "anti-hypertensive, home blood pressure measurement, telemonitoring and medication titration"
+   },
+   {
+    "type": "OTHER",
+    "name": "Standard of Care Blood Pressure Management with Antihypertensives"
+   }
+  ],
+  "enrollment": 142,
+  "sponsor": "University College Dublin",
+  "start_date": "2024-05-02",
+  "completion_date": "2026-03",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT04647292"
+ },
+ "NCT04735042": {
+  "nct_id": "NCT04735042",
+  "title": "SGLT-2 and DPP-4 Inhibition, Subclinical Inflammation of the Genito-urinary Tract and Risk of Infections.",
+  "status": "COMPLETED",
+  "phase": "N/A",
+  "conditions": [
+   "Type 2 Diabetes",
+   "Urinary Tract Infections"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "Empagliflozin / Linagliptin or Dapagliflozin/Saxagliptin Pill"
+   },
+   {
+    "type": "DRUG",
+    "name": "Empagliflozin or Dapagliflozin Pill"
+   }
+  ],
+  "enrollment": 60,
+  "sponsor": "University of Pisa",
+  "start_date": "2020-10-07",
+  "completion_date": "2022-04-07",
+  "study_type": "OBSERVATIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT04735042"
+ },
+ "NCT04797403": {
+  "nct_id": "NCT04797403",
+  "title": "Implementation of Multifaceted Patient-Centered Treatment Strategies for Intensive Blood Pressure Control in Minimize Cognitive Decline",
+  "status": "ACTIVE_NOT_RECRUITING",
+  "phase": "NA",
+  "conditions": [
+   "Hypertension",
+   "Cognitive Decline"
+  ],
+  "interventions": [
+   {
+    "type": "BEHAVIORAL",
+    "name": "Stepped-care protocol adapted from the SPRINT intensive-treatment algorithm"
+   }
+  ],
+  "enrollment": 1306,
+  "sponsor": "Tulane University",
+  "start_date": "2019-10-22",
+  "completion_date": "2026-10",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT04797403"
+ },
+ "NCT04822480": {
+  "nct_id": "NCT04822480",
+  "title": "Evaluation of a Telehealth DPP With Medicare Patients at the University of Mississippi Medical Center",
+  "status": "UNKNOWN",
+  "phase": "N/A",
+  "conditions": [
+   "PreDiabetes",
+   "Prediabetic State"
+  ],
+  "interventions": [
+   {
+    "type": "BEHAVIORAL",
+    "name": "Diabetes Prevention Program (DPP)"
+   }
+  ],
+  "enrollment": 500,
+  "sponsor": "University of Mississippi Medical Center",
+  "start_date": "2020-02-01",
+  "completion_date": "2024-12-31",
+  "study_type": "OBSERVATIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT04822480"
+ },
  "NCT04937816": {
   "nct_id": "NCT04937816",
   "title": "This Study Combines Data From 3 Other Studies Testing Empagliflozin in Patients With Diabetes or With Chronic Heart Failure. The Study Looks at the Numbers of Patients Who Had Lower Limb Amputations",
@@ -123,6 +815,74 @@
   "completion_date": "2021-07-13",
   "study_type": "OBSERVATIONAL",
   "url": "https://clinicaltrials.gov/study/NCT04937816"
+ },
+ "NCT05013021": {
+  "nct_id": "NCT05013021",
+  "title": "Sprint Interval Training on the Endurance, Strength and Velocity Capacities of Healthy Sedentary Subjects",
+  "status": "COMPLETED",
+  "phase": "NA",
+  "conditions": [
+   "Sedentary Behavior"
+  ],
+  "interventions": [
+   {
+    "type": "OTHER",
+    "name": "Sprint Interval Training"
+   }
+  ],
+  "enrollment": 23,
+  "sponsor": "Centre Hospitalier Universitaire de Saint Etienne",
+  "start_date": "2021-09-27",
+  "completion_date": "2023-03-29",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT05013021"
+ },
+ "NCT05044936": {
+  "nct_id": "NCT05044936",
+  "title": "Topical Cannabidiol Cream and Post-exercise Recovery",
+  "status": "WITHDRAWN",
+  "phase": "EARLY_PHASE1",
+  "conditions": [
+   "Muscle Damage"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "Cannabidiol Oil"
+   },
+   {
+    "type": "OTHER",
+    "name": "Resistance Exercise"
+   }
+  ],
+  "enrollment": 0,
+  "sponsor": "University of New Mexico",
+  "start_date": "2023-05-15",
+  "completion_date": "2023-05-15",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT05044936"
+ },
+ "NCT05047237": {
+  "nct_id": "NCT05047237",
+  "title": "Electronic Frailty Index (eFI)Cacious-Diabetes Care",
+  "status": "COMPLETED",
+  "phase": "NA",
+  "conditions": [
+   "Diabetes",
+   "Type2 Diabetes"
+  ],
+  "interventions": [
+   {
+    "type": "BEHAVIORAL",
+    "name": "Pharmacist-Led Optimization Intervention"
+   }
+  ],
+  "enrollment": 42,
+  "sponsor": "Wake Forest University Health Sciences",
+  "start_date": "2021-10-29",
+  "completion_date": "2025-05-31",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT05047237"
  },
  "NCT05050500": {
   "nct_id": "NCT05050500",
@@ -176,6 +936,92 @@
   "study_type": "INTERVENTIONAL",
   "url": "https://clinicaltrials.gov/study/NCT05129722"
  },
+ "NCT05164718": {
+  "nct_id": "NCT05164718",
+  "title": "The Norwegian Exercise in Atrial Fibrillation Trial",
+  "status": "COMPLETED",
+  "phase": "NA",
+  "conditions": [
+   "Atrial Fibrillation"
+  ],
+  "interventions": [
+   {
+    "type": "BEHAVIORAL",
+    "name": "Supervised home-based exercise"
+   },
+   {
+    "type": "OTHER",
+    "name": "Usual care"
+   }
+  ],
+  "enrollment": 300,
+  "sponsor": "Norwegian University of Science and Technology",
+  "start_date": "2022-02-04",
+  "completion_date": "2025-09-17",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT05164718"
+ },
+ "NCT05273203": {
+  "nct_id": "NCT05273203",
+  "title": "The Influence of Football Training as a medicine_FIM_UTH",
+  "status": "COMPLETED",
+  "phase": "NA",
+  "conditions": [
+   "Soccer Training",
+   "Body Composition",
+   "Physical Activity",
+   "Healthy"
+  ],
+  "interventions": [
+   {
+    "type": "BEHAVIORAL",
+    "name": "FIM-1"
+   },
+   {
+    "type": "BEHAVIORAL",
+    "name": "FIM-2"
+   },
+   {
+    "type": "BEHAVIORAL",
+    "name": "FIM-3"
+   },
+   {
+    "type": "BEHAVIORAL",
+    "name": "Control"
+   }
+  ],
+  "enrollment": 48,
+  "sponsor": "University of Thessaly",
+  "start_date": "2022-01-31",
+  "completion_date": "2023-12-31",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT05273203"
+ },
+ "NCT05523674": {
+  "nct_id": "NCT05523674",
+  "title": "Effects of Warm-up Intensity and Blood Flow Restriction",
+  "status": "COMPLETED",
+  "phase": "NA",
+  "conditions": [
+   "Healthy Men"
+  ],
+  "interventions": [
+   {
+    "type": "OTHER",
+    "name": "Warm-up exercise"
+   },
+   {
+    "type": "OTHER",
+    "name": "Warm-up exercise with Blood Flow Restriction"
+   }
+  ],
+  "enrollment": 108,
+  "sponsor": "Paulista University",
+  "start_date": "2024-03-15",
+  "completion_date": "2024-12-15",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT05523674"
+ },
  "NCT05556044": {
   "nct_id": "NCT05556044",
   "title": "Empagliflozin for New On-set Heart Failure Study Regardless of Ejection Fraction",
@@ -196,6 +1042,105 @@
   "completion_date": "2024-05-31",
   "study_type": "INTERVENTIONAL",
   "url": "https://clinicaltrials.gov/study/NCT05556044"
+ },
+ "NCT05660226": {
+  "nct_id": "NCT05660226",
+  "title": "Telemonitoring and E-Coaching in Hypertension",
+  "status": "UNKNOWN",
+  "phase": "NA",
+  "conditions": [
+   "Hypertension"
+  ],
+  "interventions": [
+   {
+    "type": "OTHER",
+    "name": "Home blood pressure monitoring (telemonitoring)"
+   },
+   {
+    "type": "OTHER",
+    "name": "Standard care"
+   }
+  ],
+  "enrollment": 400,
+  "sponsor": "Maasstad Hospital",
+  "start_date": "2023-04-01",
+  "completion_date": "2026-03",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT05660226"
+ },
+ "NCT05678738": {
+  "nct_id": "NCT05678738",
+  "title": "Acquiring and Targeting Heat Exposures Necessary for Action",
+  "status": "COMPLETED",
+  "phase": "NA",
+  "conditions": [
+   "Heat Intolerance",
+   "Heat Stress",
+   "Fatigue; Heat"
+  ],
+  "interventions": [
+   {
+    "type": "DIETARY_SUPPLEMENT",
+    "name": "Antioxidant Berry Supplementation"
+   },
+   {
+    "type": "OTHER",
+    "name": "Acute and Chronic Exercise-Heat Stress"
+   },
+   {
+    "type": "DIETARY_SUPPLEMENT",
+    "name": "Placebo (non-juice) Supplementation"
+   }
+  ],
+  "enrollment": 108,
+  "sponsor": "University of Connecticut",
+  "start_date": "2021-09-16",
+  "completion_date": "2024-04-17",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT05678738"
+ },
+ "NCT05897060": {
+  "nct_id": "NCT05897060",
+  "title": "Braindex Cerebral Tissue Oxygen Saturation (SctO2) Measurement Algorithm Assessment and Improvement",
+  "status": "UNKNOWN",
+  "phase": "NA",
+  "conditions": [
+   "Post-Operative Confusion"
+  ],
+  "interventions": [
+   {
+    "type": "DEVICE",
+    "name": "Venus Jugular O2 Saturation optical fiber"
+   }
+  ],
+  "enrollment": 40,
+  "sponsor": "Braindex",
+  "start_date": "2023-05-11",
+  "completion_date": "2023-10-30",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT05897060"
+ },
+ "NCT05901142": {
+  "nct_id": "NCT05901142",
+  "title": "Prehabilitation and RecOVERy From Surgery for Breast Cancer Study",
+  "status": "UNKNOWN",
+  "phase": "NA",
+  "conditions": [
+   "Exercise",
+   "Breast Neoplasm Female"
+  ],
+  "interventions": [
+   {
+    "type": "BEHAVIORAL",
+    "name": "Exercise-based multi-phasic, multi-modal intervention"
+   }
+  ],
+  "enrollment": 34,
+  "sponsor": "University Hospitals of Derby and Burton NHS Foundation Trust",
+  "start_date": "2023-06-16",
+  "completion_date": "2024-12",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT05901142"
  },
  "NCT05967156": {
   "nct_id": "NCT05967156",
@@ -218,6 +1163,31 @@
   "completion_date": "2025-06-03",
   "study_type": "INTERVENTIONAL",
   "url": "https://clinicaltrials.gov/study/NCT05967156"
+ },
+ "NCT06059911": {
+  "nct_id": "NCT06059911",
+  "title": "Pre-workout Supplementation and Basketball",
+  "status": "UNKNOWN",
+  "phase": "NA",
+  "conditions": [
+   "Sport Performance"
+  ],
+  "interventions": [
+   {
+    "type": "DIETARY_SUPPLEMENT",
+    "name": "Multi-ingredient dietary supplement (caffeine, creatine monohydrate, β-alanine, citrulline malate, BCAA)"
+   },
+   {
+    "type": "DIETARY_SUPPLEMENT",
+    "name": "Placebo dietary supplement (97% maltodextrin)"
+   }
+  ],
+  "enrollment": 36,
+  "sponsor": "Athanasios Z. Jamurtas",
+  "start_date": "2022-06-15",
+  "completion_date": "2024-06-15",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT06059911"
  },
  "NCT06091475": {
   "nct_id": "NCT06091475",
@@ -242,6 +1212,58 @@
   "completion_date": "2026-09-15",
   "study_type": "INTERVENTIONAL",
   "url": "https://clinicaltrials.gov/study/NCT06091475"
+ },
+ "NCT06146036": {
+  "nct_id": "NCT06146036",
+  "title": "Effects of Different ''Exercise Snacking'' Modalities on Glycemic Control in Patients With Type 2 Diabetes",
+  "status": "UNKNOWN",
+  "phase": "NA",
+  "conditions": [
+   "Diabetes Mellitus, Type 2",
+   "Overweight or Obesity"
+  ],
+  "interventions": [
+   {
+    "type": "BEHAVIORAL",
+    "name": "HIIT snacks"
+   },
+   {
+    "type": "BEHAVIORAL",
+    "name": "Sprint snacks"
+   },
+   {
+    "type": "OTHER",
+    "name": "Control"
+   }
+  ],
+  "enrollment": 20,
+  "sponsor": "University of Nis",
+  "start_date": "2024-01-20",
+  "completion_date": "2024-03-15",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT06146036"
+ },
+ "NCT06430996": {
+  "nct_id": "NCT06430996",
+  "title": "Caffeinated Chewing Gum on 400-meter Performance",
+  "status": "COMPLETED",
+  "phase": "NA",
+  "conditions": [
+   "Caffeine",
+   "Placebo"
+  ],
+  "interventions": [
+   {
+    "type": "DIETARY_SUPPLEMENT",
+    "name": "caffeine"
+   }
+  ],
+  "enrollment": 19,
+  "sponsor": "Chih-Hui Chiu",
+  "start_date": "2024-04-08",
+  "completion_date": "2024-07-01",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT06430996"
  },
  "NCT06528262": {
   "nct_id": "NCT06528262",
@@ -293,6 +1315,31 @@
   "study_type": "INTERVENTIONAL",
   "url": "https://clinicaltrials.gov/study/NCT06632561"
  },
+ "NCT06658509": {
+  "nct_id": "NCT06658509",
+  "title": "Regulation of Different IT on Vascular Function of Overweight Female University Students",
+  "status": "COMPLETED",
+  "phase": "NA",
+  "conditions": [
+   "Overweight"
+  ],
+  "interventions": [
+   {
+    "type": "BEHAVIORAL",
+    "name": "HIIT"
+   },
+   {
+    "type": "BEHAVIORAL",
+    "name": "SIT"
+   }
+  ],
+  "enrollment": 26,
+  "sponsor": "Beijing Sport University",
+  "start_date": "2021-04-15",
+  "completion_date": "2021-12-30",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT06658509"
+ },
  "NCT06697353": {
   "nct_id": "NCT06697353",
   "title": "An Observational Study to Learn More About the Real-world Outcomes in Patients With Heart Failure Who Initiate Treatment With Vericiguat in Japan",
@@ -314,6 +1361,32 @@
   "completion_date": "2025-09-19",
   "study_type": "OBSERVATIONAL",
   "url": "https://clinicaltrials.gov/study/NCT06697353"
+ },
+ "NCT06849453": {
+  "nct_id": "NCT06849453",
+  "title": "Effects of Exercise Snacks and Sprint Interval Training in Overweight Adults",
+  "status": "NOT_YET_RECRUITING",
+  "phase": "NA",
+  "conditions": [
+   "Cardiovascular Function",
+   "Cardiorespiratory Fitness"
+  ],
+  "interventions": [
+   {
+    "type": "BEHAVIORAL",
+    "name": "Exercise snacks group"
+   },
+   {
+    "type": "BEHAVIORAL",
+    "name": "Sprint interval training group"
+   }
+  ],
+  "enrollment": 45,
+  "sponsor": "Beijing Sport University",
+  "start_date": "2025-02-24",
+  "completion_date": "2025-10-31",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT06849453"
  },
  "NCT06915870": {
   "nct_id": "NCT06915870",
@@ -366,6 +1439,31 @@
   "study_type": "INTERVENTIONAL",
   "url": "https://clinicaltrials.gov/study/NCT07112274"
  },
+ "NCT07229196": {
+  "nct_id": "NCT07229196",
+  "title": "Clinical Trial in Hypertensive Patients Comparing Two Cardiorespiratory Exercise Protocols, Low-volume Sprint Interval Training (SIT) Versus Moderate-intensity Continuous Training (MICT), to Evaluate Decreases in Ambulatory Blood Pressure and Other Clinical Variables.",
+  "status": "RECRUITING",
+  "phase": "NA",
+  "conditions": [
+   "Hypertension (HTN)"
+  ],
+  "interventions": [
+   {
+    "type": "BEHAVIORAL",
+    "name": "SIT group: 2-4 maximal 20-30-second cycling sprints (≥100% VO₂max) with recovery intervals (2-4 min), total duration ≤15 minutes per session."
+   },
+   {
+    "type": "BEHAVIORAL",
+    "name": "MICT group: Continuous cycling at 50-70% of VO₂max, 15-30 minutes per session."
+   }
+  ],
+  "enrollment": 20,
+  "sponsor": "Unidad Enfermedades Cardiometabolicas- Hospital Interzonal General Agudos San Martin de La Plata",
+  "start_date": "2025-04-29",
+  "completion_date": "2027-01",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT07229196"
+ },
  "NCT07471802": {
   "nct_id": "NCT07471802",
   "title": "Monitoring of the Sympathetic/Vagal Balance Through Multiparametric Analysis of Heart Rate Variability (HRV)",
@@ -389,6 +1487,35 @@
   "completion_date": "2031-09-01",
   "study_type": "OBSERVATIONAL",
   "url": "https://clinicaltrials.gov/study/NCT07471802"
+ },
+ "NCT07486856": {
+  "nct_id": "NCT07486856",
+  "title": "Motor-Cognitive Integrated Intervention for Children With Developmental Coordination Disorder",
+  "status": "COMPLETED",
+  "phase": "NA",
+  "conditions": [
+   "Developmental Coordination Disorder"
+  ],
+  "interventions": [
+   {
+    "type": "BEHAVIORAL",
+    "name": "Action Observation and Motor Imagery (AOMI) Training"
+   },
+   {
+    "type": "BEHAVIORAL",
+    "name": "Fundamental Movement Skills (FMS) Training"
+   },
+   {
+    "type": "BEHAVIORAL",
+    "name": "General Physical Activities"
+   }
+  ],
+  "enrollment": 20,
+  "sponsor": "Shanghai University of Sport",
+  "start_date": "2025-03-01",
+  "completion_date": "2025-06-30",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT07486856"
  },
  "NCT07599345": {
   "nct_id": "NCT07599345",
@@ -415,5 +1542,120 @@
   "completion_date": "2026-06-15",
   "study_type": "OBSERVATIONAL",
   "url": "https://clinicaltrials.gov/study/NCT07599345"
+ },
+ "NCT07664475": {
+  "nct_id": "NCT07664475",
+  "title": "Effects of Drop Jump During Warm-up on Athletic Performance and Ankle Stability in Young Basketball Players",
+  "status": "COMPLETED",
+  "phase": "NA",
+  "conditions": [
+   "Athletes",
+   "Performance"
+  ],
+  "interventions": [
+   {
+    "type": "OTHER",
+    "name": "Drop Jump"
+   }
+  ],
+  "enrollment": 22,
+  "sponsor": "University of Palermo",
+  "start_date": "2026-03-02",
+  "completion_date": "2026-04-27",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT07664475"
+ },
+ "NCT07803640": {
+  "nct_id": "NCT07803640",
+  "title": "Effects of 8-Week TRX Suspension Training on Body Composition, Anaerobic Power, and Biomotor Abilities in Young Male Volleyball Players",
+  "status": "COMPLETED",
+  "phase": "NA",
+  "conditions": [
+   "Athletic Performance",
+   "Physical Fitness"
+  ],
+  "interventions": [
+   {
+    "type": "OTHER",
+    "name": "TRX Suspension Training Program"
+   },
+   {
+    "type": "OTHER",
+    "name": "Standard Volleyball Training"
+   }
+  ],
+  "enrollment": 26,
+  "sponsor": "Bitlis Eren University",
+  "start_date": "2024-12-10",
+  "completion_date": "2025-06-17",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT07803640"
+ },
+ "NCT07823140": {
+  "nct_id": "NCT07823140",
+  "title": "Effects of Kudzu Root (Gegen) on Drug-Metabolizing Enzymes and Blood Clotting in Healthy Volunteers",
+  "status": "COMPLETED",
+  "phase": "PHASE1",
+  "conditions": [
+   "Herb-drug Interactions"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "Arm 1: Radix Puerariae lobatae (Gegen)"
+   },
+   {
+    "type": "DRUG",
+    "name": "Arm 1: Six-probe drug cocktail"
+   },
+   {
+    "type": "DRUG",
+    "name": "Arm 2: Radix Puerariae lobatae (Gegen)"
+   },
+   {
+    "type": "DRUG",
+    "name": "Arm 2: Six-probe drug cocktail"
+   }
+  ],
+  "enrollment": 56,
+  "sponsor": "Chinese University of Hong Kong",
+  "start_date": "2022-08-08",
+  "completion_date": "2023-04-28",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT07823140"
+ },
+ "NCT07872904": {
+  "nct_id": "NCT07872904",
+  "title": "FutureShape Family",
+  "status": "RECRUITING",
+  "phase": "PHASE4",
+  "conditions": [
+   "Obesity",
+   "Overweight"
+  ],
+  "interventions": [
+   {
+    "type": "BEHAVIORAL",
+    "name": "Family Care"
+   },
+   {
+    "type": "BEHAVIORAL",
+    "name": "Standard Care"
+   },
+   {
+    "type": "DRUG",
+    "name": "Semaglutide (administered by PDS290 pen-injector)"
+   },
+   {
+    "type": "DRUG",
+    "name": "Placebo (administered by PDS290 pen-injector)"
+   }
+  ],
+  "enrollment": 400,
+  "sponsor": "Signe Torekov",
+  "start_date": "2026-10-01",
+  "completion_date": "2031-01-31",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT07872904"
  }
 }

@@ -59,7 +59,9 @@ def parse_response(body: dict) -> dict:
     return {"text": "".join(text), "tool_calls": calls, "usage": usage, "model_served": body.get("model")}
 
 
-RETRY_WAITS = (5, 15, 30, 60, 120, None)   # rate limits are per minute
+RETRY_WAITS = (10, 30, 60, 120, 180, 300, None)   # rate limits are per minute
+MIN_INTERVAL = 2.5   # seconds between requests; keeps under ~33 requests a minute
+_last_request = [0.0]
 
 
 class PerplexityModel:
@@ -76,6 +78,10 @@ class PerplexityModel:
         req = urllib.request.Request(ENDPOINT, data=json.dumps(payload).encode(), method="POST",
                                      headers={"Authorization": f"Bearer {self.key}", "Content-Type": "application/json"})
         for attempt, wait in enumerate(RETRY_WAITS):
+            gap = time.time() - _last_request[0]
+            if gap < MIN_INTERVAL:
+                time.sleep(MIN_INTERVAL - gap)
+            _last_request[0] = time.time()
             try:
                 with urllib.request.urlopen(req, timeout=self.timeout) as r:
                     return parse_response(json.loads(r.read()))

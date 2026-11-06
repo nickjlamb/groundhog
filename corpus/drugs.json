@@ -1,1 +1,954 @@
-{}
+{
+ "actoplus": {
+  "inputType": "brand",
+  "inputName": "Actoplus Met",
+  "genericName": "Metformin / Pioglitazone",
+  "brandNames": null,
+  "drugClass": "Insulin Receptor Agonists",
+  "uses": [
+   "Diabetes Mellitus, Type 2"
+  ],
+  "rxcui": "602411",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "actoplus met": {
+  "inputType": "brand",
+  "inputName": "Actoplus Met",
+  "genericName": "Metformin / Pioglitazone",
+  "brandNames": null,
+  "drugClass": "Insulin Receptor Agonists",
+  "uses": [
+   "Diabetes Mellitus, Type 2"
+  ],
+  "rxcui": "602411",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "actos": {
+  "inputType": "brand",
+  "inputName": "Actos",
+  "genericName": "Pioglitazone",
+  "brandNames": null,
+  "drugClass": "Insulin Receptor Agonists",
+  "uses": [
+   "Diabetes Mellitus, Type 2"
+  ],
+  "rxcui": "261442",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "actos pioglitazone": {
+  "inputType": "generic",
+  "inputName": "Pioglitazone Oral Tablet [Actos]",
+  "genericName": "Pioglitazone",
+  "brandNames": [
+   "Actos"
+  ],
+  "drugClass": "Insulin Receptor Agonists",
+  "uses": [
+   "Diabetes Mellitus, Type 2"
+  ],
+  "rxcui": "368230",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "actos pioglitazone tablets": {
+  "inputType": "generic",
+  "inputName": "Pioglitazone Oral Tablet [Actos]",
+  "genericName": "Pioglitazone",
+  "brandNames": [
+   "Actos"
+  ],
+  "drugClass": "Insulin Receptor Agonists",
+  "uses": [
+   "Diabetes Mellitus, Type 2"
+  ],
+  "rxcui": "368230",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "actos pioglitazone tablets takeda": {
+  "inputType": "generic",
+  "inputName": "Pioglitazone Oral Tablet [Actos]",
+  "genericName": "Pioglitazone",
+  "brandNames": [
+   "Actos"
+  ],
+  "drugClass": "Insulin Receptor Agonists",
+  "uses": [
+   "Diabetes Mellitus, Type 2"
+  ],
+  "rxcui": "368230",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "alogliptin": {
+  "inputType": "generic",
+  "inputName": "Alogliptin",
+  "genericName": "Alogliptin",
+  "brandNames": [
+   "Nesina"
+  ],
+  "drugClass": "Dipeptidyl Peptidase 4 Inhibitors",
+  "uses": [
+   "Diabetes Mellitus, Type 2"
+  ],
+  "rxcui": "1368001",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "apixaban": {
+  "inputType": "generic",
+  "inputName": "Apixaban",
+  "genericName": "Apixaban",
+  "brandNames": [
+   "Eliquis"
+  ],
+  "drugClass": "Antithrombins",
+  "uses": [
+   "Pulmonary Embolism",
+   "Venous Thrombosis"
+  ],
+  "rxcui": "1364430",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "codeine": {
+  "inputType": "generic",
+  "inputName": "Codeine",
+  "genericName": "Codeine",
+  "brandNames": [
+   "Ambifed CD",
+   "Ambifed-G CD",
+   "Ascomp",
+   "Biotussin",
+   "BroveX CB",
+   "Brovex PBC",
+   "Cheratussin",
+   "Fioricet with Codeine",
+   "Lortuss EX",
+   "M-Clear WC",
+   "M-End Max D",
+   "M-End PE",
+   "Mar-cof BP",
+   "Mar-cof CG",
+   "Maxiphen CDX",
+   "Ninjacof XG",
+   "Tuxarin",
+   "Tylenol with Codeine",
+   "Zodryl AC",
+   "Zodryl DAC",
+   "Zodryl DEC"
+  ],
+  "drugClass": "Monoamine Oxidase Inhibitors",
+  "uses": [
+   "Cough",
+   "Pain"
+  ],
+  "rxcui": "2670",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "codeine phosphate": {
+  "inputType": "generic",
+  "inputName": "Codeine Phosphate",
+  "genericName": "Codeine / Dexbrompheniramine / Pseudoephedrine",
+  "brandNames": [
+   "Ambifed CD",
+   "Ambifed-G CD",
+   "Ascomp",
+   "Biotussin",
+   "BroveX CB",
+   "Brovex PBC",
+   "Cheratussin",
+   "Fioricet with Codeine",
+   "Lortuss EX",
+   "M-Clear WC",
+   "M-End Max D",
+   "M-End PE",
+   "Mar-cof BP",
+   "Mar-cof CG",
+   "Maxiphen CDX",
+   "Ninjacof XG",
+   "Tuxarin",
+   "Tylenol with Codeine",
+   "Zodryl AC",
+   "Zodryl DAC",
+   "Zodryl DEC"
+  ],
+  "drugClass": "Monoamine Oxidase Inhibitors",
+  "uses": [
+   "Cough",
+   "Pain"
+  ],
+  "rxcui": "2672",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "codeine phosphate tablets": {
+  "inputType": "generic",
+  "inputName": "Codeine Phosphate Oral Tablet",
+  "genericName": "Codeine",
+  "brandNames": [],
+  "drugClass": "Monoamine Oxidase Inhibitors",
+  "uses": [
+   "Cough",
+   "Pain"
+  ],
+  "rxcui": "2645763",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "codeine phosphate tablets bp 15mg": {
+  "inputType": "generic",
+  "inputName": "Codeine Phosphate 15 Mg",
+  "genericName": "Acetaminophen / Codeine",
+  "brandNames": [],
+  "drugClass": "Monoamine Oxidase Inhibitors",
+  "uses": [
+   "Cough",
+   "Pain"
+  ],
+  "rxcui": "993769",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "codeine sulfate": {
+  "inputType": "generic",
+  "inputName": "Codeine Sulfate",
+  "genericName": "Codeine",
+  "brandNames": [],
+  "drugClass": "Monoamine Oxidase Inhibitors",
+  "uses": [
+   "Cough",
+   "Pain"
+  ],
+  "rxcui": "91104",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "codeine sulfate codeine sulfate": {
+  "inputType": "generic",
+  "inputName": "Codeine Sulfate",
+  "genericName": "Codeine",
+  "brandNames": [],
+  "drugClass": "Monoamine Oxidase Inhibitors",
+  "uses": [
+   "Cough",
+   "Pain"
+  ],
+  "rxcui": "91104",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "codeine sulfate tablets": {
+  "inputType": "generic",
+  "inputName": "Codeine Sulfate Oral Tablet",
+  "genericName": "Codeine",
+  "brandNames": [],
+  "drugClass": "Monoamine Oxidase Inhibitors",
+  "uses": [
+   "Cough",
+   "Pain"
+  ],
+  "rxcui": "2646508",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "dabigatran": {
+  "inputType": "generic",
+  "inputName": "Dabigatran",
+  "genericName": "Dabigatran",
+  "brandNames": [],
+  "drugClass": "Dabigatran",
+  "uses": [],
+  "rxcui": "1546356",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "dabigatran etexilate": {
+  "inputType": "generic",
+  "inputName": "Dabigatran Etexilate",
+  "genericName": "Dabigatran Etexilate",
+  "brandNames": [
+   "Pradaxa"
+  ],
+  "drugClass": "Thrombin Inhibitors",
+  "uses": [
+   "Pulmonary Embolism",
+   "Venous Thrombosis"
+  ],
+  "rxcui": "1037042",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "dabigatran etexilate 110 mg hard capsule": {
+  "inputType": "generic",
+  "inputName": "Dabigatran Etexilate 110 Mg",
+  "genericName": "Dabigatran Etexilate",
+  "brandNames": [
+   "Pradaxa"
+  ],
+  "drugClass": "Thrombin Inhibitors",
+  "uses": [
+   "Pulmonary Embolism",
+   "Venous Thrombosis"
+  ],
+  "rxcui": "1723475",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "deruxtecan": {
+  "inputType": "generic",
+  "inputName": "Trastuzumab Deruxtecan",
+  "genericName": "Trastuzumab",
+  "brandNames": [],
+  "drugClass": "HER2/Neu/cerbB2 Antagonists",
+  "uses": [
+   "Breast Neoplasms",
+   "Gastrointestinal Neoplasms"
+  ],
+  "rxcui": "2267582",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "domperidone": {
+  "inputType": "generic",
+  "inputName": "Domperidone",
+  "genericName": "Domperidone",
+  "brandNames": [
+   "Equidone"
+  ],
+  "drugClass": "Dopamine D2 Antagonists",
+  "uses": [],
+  "rxcui": "3626",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "duetact": {
+  "inputType": "brand",
+  "inputName": "Duetact",
+  "genericName": "Glimepiride / Pioglitazone",
+  "brandNames": null,
+  "drugClass": "Insulin Receptor Agonists",
+  "uses": [
+   "Diabetes Mellitus, Type 2"
+  ],
+  "rxcui": "647208",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "duetact pioglitazone glimepiride": {
+  "inputType": "generic",
+  "inputName": "Glimepiride / Pioglitazone Oral Tablet [Duetact]",
+  "genericName": "Glimepiride / Pioglitazone",
+  "brandNames": [
+   "Duetact"
+  ],
+  "drugClass": "Insulin Receptor Agonists",
+  "uses": [
+   "Diabetes Mellitus, Type 2"
+  ],
+  "rxcui": "731462",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "eliquis": {
+  "inputType": "brand",
+  "inputName": "Eliquis",
+  "genericName": "Apixaban",
+  "brandNames": null,
+  "drugClass": "Antithrombins",
+  "uses": [
+   "Pulmonary Embolism",
+   "Venous Thrombosis"
+  ],
+  "rxcui": "1364436",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "eliquis 2 5 mg film coated tablets": {
+  "inputType": "brand",
+  "inputName": "Apixaban 2.5 Mg Oral Tablet [Eliquis]",
+  "genericName": "Apixaban",
+  "brandNames": null,
+  "drugClass": "Antithrombins",
+  "uses": [
+   "Pulmonary Embolism",
+   "Venous Thrombosis"
+  ],
+  "rxcui": "1364441",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "eliquis 5 mg film coated tablets": {
+  "inputType": "brand",
+  "inputName": "Apixaban 5 Mg Oral Tablet [Eliquis]",
+  "genericName": "Apixaban",
+  "brandNames": null,
+  "drugClass": "Antithrombins",
+  "uses": [
+   "Pulmonary Embolism",
+   "Venous Thrombosis"
+  ],
+  "rxcui": "1364447",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "eliquis 5 mg film coated tablets apixaban": {
+  "inputType": "brand",
+  "inputName": "Apixaban 5 Mg Oral Tablet [Eliquis]",
+  "genericName": "Apixaban",
+  "brandNames": null,
+  "drugClass": "Antithrombins",
+  "uses": [
+   "Pulmonary Embolism",
+   "Venous Thrombosis"
+  ],
+  "rxcui": "1364447",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "eliquis apixaban": {
+  "inputType": "generic",
+  "inputName": "Apixaban Oral Tablet [Eliquis]",
+  "genericName": "Apixaban",
+  "brandNames": [
+   "Eliquis"
+  ],
+  "drugClass": "Antithrombins",
+  "uses": [
+   "Pulmonary Embolism",
+   "Venous Thrombosis"
+  ],
+  "rxcui": "1364438",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "empagliflozin": {
+  "inputType": "generic",
+  "inputName": "Empagliflozin",
+  "genericName": "Empagliflozin",
+  "brandNames": [
+   "Jardiance"
+  ],
+  "drugClass": "Sodium-Glucose Transporter 2 Inhibitors",
+  "uses": [
+   "Diabetes Mellitus, Type 2"
+  ],
+  "rxcui": "1545653",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "enhertu": {
+  "inputType": "brand",
+  "inputName": "Enhertu",
+  "genericName": "Trastuzumab",
+  "brandNames": null,
+  "drugClass": "HER2/Neu/cerbB2 Antagonists",
+  "uses": [
+   "Breast Neoplasms",
+   "Gastrointestinal Neoplasms",
+   "Stomach Neoplasms"
+  ],
+  "rxcui": "2267577",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "enhertu 100 mg powder for concentrate": {
+  "inputType": "brand",
+  "inputName": "Fam-trastuzumab Deruxtecan-nxki 100 Mg Injection [Enhertu]",
+  "genericName": "Trastuzumab",
+  "brandNames": null,
+  "drugClass": "HER2/Neu/cerbB2 Antagonists",
+  "uses": [
+   "Breast Neoplasms",
+   "Gastrointestinal Neoplasms",
+   "Stomach Neoplasms"
+  ],
+  "rxcui": "2267581",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "enhertu fam trastuzumab deruxtecan nxki": {
+  "inputType": "generic",
+  "inputName": "Fam-trastuzumab Deruxtecan-nxki Injection [Enhertu]",
+  "genericName": "Trastuzumab",
+  "brandNames": [
+   "Enhertu"
+  ],
+  "drugClass": "HER2/Neu/cerbB2 Antagonists",
+  "uses": [
+   "Breast Neoplasms",
+   "Gastrointestinal Neoplasms"
+  ],
+  "rxcui": "2657010",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "forxiga": {
+  "inputType": "brand",
+  "inputName": "Farxiga",
+  "genericName": "Dapagliflozin",
+  "brandNames": null,
+  "drugClass": "Sodium-Glucose Transporter 2 Inhibitors",
+  "uses": [
+   "Diabetes Mellitus, Type 2",
+   "Heart Failure"
+  ],
+  "rxcui": "1486972",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "forxiga 10 mg film coated tablets": {
+  "inputType": "brand",
+  "inputName": "Dapagliflozin 10 Mg Oral Tablet [Farxiga]",
+  "genericName": "Dapagliflozin",
+  "brandNames": null,
+  "drugClass": "Sodium-Glucose Transporter 2 Inhibitors",
+  "uses": [
+   "Diabetes Mellitus, Type 2",
+   "Heart Failure"
+  ],
+  "rxcui": "1486977",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "givlaari": {
+  "inputType": "brand",
+  "inputName": "Givlaari",
+  "genericName": "Givosiran",
+  "brandNames": null,
+  "drugClass": "Acetylgalactosamine",
+  "uses": [
+   "Porphyrias, Hepatic"
+  ],
+  "rxcui": "2265717",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "givlaari 189 mg ml solution for injection": {
+  "inputType": "brand",
+  "inputName": "1 Ml Givosiran 189 Mg/ml Injection [Givlaari]",
+  "genericName": "Givosiran",
+  "brandNames": null,
+  "drugClass": "Acetylgalactosamine",
+  "uses": [
+   "Porphyrias, Hepatic"
+  ],
+  "rxcui": "2265721",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "glimepiride": {
+  "inputType": "generic",
+  "inputName": "Glimepiride",
+  "genericName": "Glimepiride",
+  "brandNames": [
+   "Duetact"
+  ],
+  "drugClass": "Insulin Receptor Agonists",
+  "uses": [
+   "Diabetes Mellitus, Type 2"
+  ],
+  "rxcui": "25789",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "glucophage": {
+  "inputType": "brand",
+  "inputName": "Glucophage",
+  "genericName": "Metformin",
+  "brandNames": null,
+  "drugClass": "Insulin Receptor Agonists",
+  "uses": [
+   "Diabetes Mellitus, Type 2"
+  ],
+  "rxcui": "151827",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "glucophage 500 mg film coated tablets": null,
+ "glucophage metformin film coated tablets": {
+  "inputType": "generic",
+  "inputName": "Metformin Oral Tablet [Glucophage]",
+  "genericName": "Metformin",
+  "brandNames": [
+   "Glucophage"
+  ],
+  "drugClass": "Insulin Receptor Agonists",
+  "uses": [
+   "Diabetes Mellitus, Type 2"
+  ],
+  "rxcui": "368254",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "healthcare": {
+  "inputType": "generic",
+  "inputName": "Healthcare",
+  "genericName": "Aluminum Chloride",
+  "brandNames": [
+   "Gibson Healthcare Buffered Hemostatic Solution"
+  ],
+  "drugClass": null,
+  "uses": [],
+  "rxcui": null,
+  "source": "openFDA",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "healthcare professionals smpc": null,
+ "jardiance": {
+  "inputType": "brand",
+  "inputName": "Jardiance",
+  "genericName": "Empagliflozin",
+  "brandNames": null,
+  "drugClass": "Sodium-Glucose Transporter 2 Inhibitors",
+  "uses": [
+   "Diabetes Mellitus, Type 2"
+  ],
+  "rxcui": "1545659",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "lynparza": {
+  "inputType": "brand",
+  "inputName": "Lynparza",
+  "genericName": "Olaparib",
+  "brandNames": null,
+  "drugClass": "Poly(ADP-Ribose) Polymerase Inhibitors",
+  "uses": [
+   "Ovarian Neoplasms"
+  ],
+  "rxcui": "1597588",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "lynparza 100mg film coated tablets": {
+  "inputType": "brand",
+  "inputName": "Olaparib 100 Mg Oral Tablet [Lynparza]",
+  "genericName": "Olaparib",
+  "brandNames": null,
+  "drugClass": "Poly(ADP-Ribose) Polymerase Inhibitors",
+  "uses": [
+   "Ovarian Neoplasms"
+  ],
+  "rxcui": "1942485",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "metformin": {
+  "inputType": "generic",
+  "inputName": "Metformin",
+  "genericName": "Metformin",
+  "brandNames": [
+   "Glucophage",
+   "Glumetza",
+   "Riomet"
+  ],
+  "drugClass": "Insulin Receptor Agonists",
+  "uses": [
+   "Diabetes Mellitus, Type 2"
+  ],
+  "rxcui": "6809",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "metformin hydrochloride": {
+  "inputType": "generic",
+  "inputName": "Metformin Hydrochloride",
+  "genericName": "Metformin / Saxagliptin",
+  "brandNames": [
+   "Glucophage",
+   "Glumetza",
+   "Riomet"
+  ],
+  "drugClass": "Insulin Receptor Agonists",
+  "uses": [
+   "Diabetes Mellitus, Type 2"
+  ],
+  "rxcui": "235743",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "montelukast": {
+  "inputType": "generic",
+  "inputName": "Montelukast",
+  "genericName": "Montelukast",
+  "brandNames": [
+   "Singulair"
+  ],
+  "drugClass": "Leukotriene Receptor Antagonists",
+  "uses": [
+   "Asthma",
+   "Rhinitis, Allergic, Perennial"
+  ],
+  "rxcui": "88249",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "nxki": {
+  "inputType": "generic",
+  "inputName": "Fam-trastuzumab Deruxtecan-nxki Injection [Enhertu]",
+  "genericName": "Trastuzumab",
+  "brandNames": [
+   "Enhertu"
+  ],
+  "drugClass": "HER2/Neu/cerbB2 Antagonists",
+  "uses": [
+   "Breast Neoplasms",
+   "Gastrointestinal Neoplasms"
+  ],
+  "rxcui": "2657010",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "olaparib": {
+  "inputType": "generic",
+  "inputName": "Olaparib",
+  "genericName": "Olaparib",
+  "brandNames": [
+   "Lynparza"
+  ],
+  "drugClass": "Poly(ADP-Ribose) Polymerase Inhibitors",
+  "uses": [
+   "Ovarian Neoplasms"
+  ],
+  "rxcui": "1597582",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "oseni": {
+  "inputType": "brand",
+  "inputName": "Oseni",
+  "genericName": "Alogliptin / Pioglitazone",
+  "brandNames": null,
+  "drugClass": "Dipeptidyl Peptidase 4 Inhibitors",
+  "uses": [
+   "Diabetes Mellitus, Type 2"
+  ],
+  "rxcui": "1372717",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "oseni alogliptin pioglitazone": {
+  "inputType": "generic",
+  "inputName": "Alogliptin / Pioglitazone Oral Tablet [Oseni]",
+  "genericName": "Alogliptin / Pioglitazone",
+  "brandNames": [
+   "Oseni"
+  ],
+  "drugClass": "Dipeptidyl Peptidase 4 Inhibitors",
+  "uses": [
+   "Diabetes Mellitus, Type 2"
+  ],
+  "rxcui": "1368434",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "ozempic": {
+  "inputType": "brand",
+  "inputName": "Ozempic",
+  "genericName": "Semaglutide",
+  "brandNames": null,
+  "drugClass": "Semaglutide",
+  "uses": [],
+  "rxcui": "1991307",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "ozempic 0 25 mg solution for injection in pre filled pen": null,
+ "pioglitazone": {
+  "inputType": "generic",
+  "inputName": "Pioglitazone",
+  "genericName": "Pioglitazone",
+  "brandNames": [
+   "Actos"
+  ],
+  "drugClass": "Insulin Receptor Agonists",
+  "uses": [
+   "Diabetes Mellitus, Type 2"
+  ],
+  "rxcui": "33738",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "pioglitazone 15 mg tablets": {
+  "inputType": "generic",
+  "inputName": "Pioglitazone 15 Mg",
+  "genericName": "Alogliptin / Pioglitazone",
+  "brandNames": [
+   "Actos"
+  ],
+  "drugClass": "Insulin Receptor Agonists",
+  "uses": [
+   "Diabetes Mellitus, Type 2"
+  ],
+  "rxcui": "332435",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "pioglitazone and metformin": {
+  "inputType": "generic",
+  "inputName": "Metformin / Pioglitazone",
+  "genericName": "Metformin / Pioglitazone",
+  "brandNames": [
+   "Actoplus Met"
+  ],
+  "drugClass": "Insulin Receptor Agonists",
+  "uses": [
+   "Diabetes Mellitus, Type 2"
+  ],
+  "rxcui": "607999",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "pioglitazone hydrochloride": {
+  "inputType": "generic",
+  "inputName": "Pioglitazone Hydrochloride",
+  "genericName": "Pioglitazone",
+  "brandNames": [],
+  "drugClass": "Insulin Receptor Agonists",
+  "uses": [
+   "Diabetes Mellitus, Type 2"
+  ],
+  "rxcui": "259319",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "pioglitazone hydrochloride tablets": {
+  "inputType": "generic",
+  "inputName": "Pioglitazone Hydrochloride",
+  "genericName": "Pioglitazone",
+  "brandNames": [],
+  "drugClass": "Insulin Receptor Agonists",
+  "uses": [
+   "Diabetes Mellitus, Type 2"
+  ],
+  "rxcui": "259319",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "pioglitazone pioglitazone": {
+  "inputType": "generic",
+  "inputName": "Pioglitazone",
+  "genericName": "Pioglitazone",
+  "brandNames": [
+   "Actos"
+  ],
+  "drugClass": "Insulin Receptor Agonists",
+  "uses": [
+   "Diabetes Mellitus, Type 2"
+  ],
+  "rxcui": "33738",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "pioglitazone tablets": {
+  "inputType": "generic",
+  "inputName": "Pioglitazone Oral Tablet",
+  "genericName": "Pioglitazone",
+  "brandNames": [
+   "Actos"
+  ],
+  "drugClass": "Insulin Receptor Agonists",
+  "uses": [
+   "Diabetes Mellitus, Type 2"
+  ],
+  "rxcui": "374606",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "pradaxa": {
+  "inputType": "brand",
+  "inputName": "Pradaxa",
+  "genericName": "Dabigatran Etexilate",
+  "brandNames": null,
+  "drugClass": "Thrombin Inhibitors",
+  "uses": [
+   "Pulmonary Embolism",
+   "Venous Thrombosis"
+  ],
+  "rxcui": "1037046",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "pradaxa 150 mg hard capsules": {
+  "inputType": "brand",
+  "inputName": "Dabigatran Etexilate 150 Mg Oral Capsule [Pradaxa]",
+  "genericName": "Dabigatran Etexilate",
+  "brandNames": null,
+  "drugClass": "Thrombin Inhibitors",
+  "uses": [
+   "Pulmonary Embolism",
+   "Venous Thrombosis"
+  ],
+  "rxcui": "1037049",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "professionals": {
+  "inputType": "generic",
+  "inputName": "Professionals",
+  "genericName": "Meradimate, Octinoxate, Octisalate, Oxybenzone",
+  "brandNames": [
+   "PRO-TECT SUNSCREEN FOR PROFESSIONALS"
+  ],
+  "drugClass": null,
+  "uses": [],
+  "rxcui": null,
+  "source": "openFDA",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "singulair": {
+  "inputType": "brand",
+  "inputName": "Singulair",
+  "genericName": "Montelukast",
+  "brandNames": null,
+  "drugClass": "Leukotriene Receptor Antagonists",
+  "uses": [
+   "Asthma",
+   "Rhinitis, Allergic, Perennial"
+  ],
+  "rxcui": "153889",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "takeda": {
+  "inputType": "generic",
+  "inputName": "Loblolly Pine Pollen Extract",
+  "genericName": "Loblolly Pine Pollen Extract",
+  "brandNames": [],
+  "drugClass": null,
+  "uses": [],
+  "rxcui": "900770",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ },
+ "trastuzumab": {
+  "inputType": "generic",
+  "inputName": "Trastuzumab",
+  "genericName": "Trastuzumab",
+  "brandNames": [
+   "Enhertu",
+   "Herceptin",
+   "Hercessi",
+   "Herzuma",
+   "KADCYLA",
+   "Kanjinti",
+   "Ogivri",
+   "Ontruzant",
+   "Trazimera"
+  ],
+  "drugClass": "HER2/Neu/cerbB2 Antagonists",
+  "uses": [
+   "Breast Neoplasms",
+   "Gastrointestinal Neoplasms",
+   "Stomach Neoplasms"
+  ],
+  "rxcui": "224905",
+  "source": "RxNorm (NLM)",
+  "regionNote": "Brand names shown are those registered in the United States."
+ }
+}
