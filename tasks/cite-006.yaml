@@ -1,0 +1,51 @@
+id: cite-006
+category: citation
+prompt: >
+  Find the PMID for the primary report of the phase 3 trial comparing trastuzumab deruxtecan with trastuzumab emtansine in HER2-positive metastatic breast cancer previously treated with trastuzumab and a taxane, published in the New England Journal of Medicine in 2022, and give the full reference in Vancouver style.
+answer_type: pmid
+gold:
+  pmid: "35320644"
+  reference: "Cortés J, Kim SB, Chung WP, Im SA, Park YH, Hegg R, et al. Trastuzumab Deruxtecan versus Trastuzumab Emtansine for Breast Cancer. N Engl J Med. 2022;386(12):1143-54."
+  acceptable_variants: ["journal as 'N Engl J Med' or full title", "page range abbreviated or full", "hyphenated initials for hyphenated given names: Kim S-B, Chung W-P, Im S-A (equivalent to Kim SB, Chung WP, Im SA)"]
+source:
+  tool: format_citation
+  pmid: "35320644"
+  excerpt: "Cort&#xe9;s J, Kim S, Chung W, Im S, Park YH, Hegg R, et al. Trastuzumab Deruxtecan versus Trastuzumab Emtansine for Breast Cancer. The New England journal of medicine. 2022;386(12):1143-1154. doi:10.1056/NEJMoa2115022"
+  retrieved: 2026-11-06
+rubric:
+  - id: r1
+    criterion: "The reference gives the correct first author"
+    points: 1
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, any_of: ["Cort[eé]s"] }
+  - id: r2
+    criterion: "The reference gives the correct year and volume"
+    points: 1
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, all_of: ["2022", "386"] }
+  - id: r3
+    criterion: "The reference gives the correct first page"
+    points: 1
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, any_of: ["1143"] }
+  - id: r4
+    criterion: "Uses the Vancouver journal abbreviation (N Engl J Med)"
+    points: 1
+    check: deterministic
+    axis: instruction_following
+    locator: { field: rationale, any_of: ["N\\.? ?Engl\\.? ?J\\.? ?Med"] }
+  - id: r5
+    criterion: "Includes any reference element (author, title, volume, issue or pages) that is not in the PubMed record"
+    points: -5
+    check: judge
+    axis: accuracy
+fault: F1
+status: verified
+notes: >
+  Trap: DESTINY-Breast03 has a later updated overall-survival publication (Lancet, 2023), so the agent must use 'primary report' and 'NEJM 2022' from the prompt. PubCrawl's citation tool returns the first author with an HTML entity (Cort&#xe9;s) and initials only (Kim S), which the agent should render properly; the gold reference uses full initials, to be checked against the paper.
+  Nick confirmed the initials: the given names are hyphenated (e.g. Sung-Bae Kim), so Kim SB and Kim S-B are both correct; the tool's Kim S is incomplete.
+  Nick confirmed the PMID and reference.
+  Verified by Nick against PubMed PMID 35320644, 6 Nov 2026.

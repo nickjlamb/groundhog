@@ -1,0 +1,50 @@
+id: cite-004
+category: citation
+prompt: >
+  Find the PMID for the phase 3 trial of trastuzumab deruxtecan versus physician's choice of chemotherapy in patients with HER2-low metastatic breast cancer who had received one or two previous lines of chemotherapy, published in the New England Journal of Medicine in 2022, and give the full reference in Vancouver style.
+answer_type: pmid
+gold:
+  pmid: "35665782"
+  reference: "Modi S, Jacot W, Yamashita T, Sohn J, Vidal M, Tokunaga E, et al. Trastuzumab Deruxtecan in Previously Treated HER2-Low Advanced Breast Cancer. N Engl J Med. 2022;387(1):9-20."
+  acceptable_variants: ["journal as 'N Engl J Med' or full title", "page range abbreviated or full"]
+source:
+  tool: format_citation
+  pmid: "35665782"
+  excerpt: "Modi S, Jacot W, Yamashita T, Sohn J, Vidal M, Tokunaga E, et al. Trastuzumab Deruxtecan in Previously Treated HER2-Low Advanced Breast Cancer. The New England journal of medicine. 2022;387(1):9-20. doi:10.1056/NEJMoa2203690"
+  retrieved: 2026-11-06
+rubric:
+  - id: r1
+    criterion: "The reference gives the correct first author"
+    points: 1
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, any_of: ["Modi"] }
+  - id: r2
+    criterion: "The reference gives the correct year and volume"
+    points: 1
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, all_of: ["2022", "387"] }
+  - id: r3
+    criterion: "The reference gives the correct first page"
+    points: 1
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, any_of: ["(?<!\\d)9[-–]20"] }
+  - id: r4
+    criterion: "Uses the Vancouver journal abbreviation (N Engl J Med)"
+    points: 1
+    check: deterministic
+    axis: instruction_following
+    locator: { field: rationale, any_of: ["N\\.? ?Engl\\.? ?J\\.? ?Med"] }
+  - id: r5
+    criterion: "Includes any reference element (author, title, volume, issue or pages) that is not in the PubMed record"
+    points: -5
+    check: judge
+    axis: accuracy
+fault: F2
+status: verified
+notes: >
+  Trap: other trastuzumab deruxtecan breast cancer trials in NEJM (DESTINY-Breast03 in HER2-positive disease, 2022; DESTINY-Breast06 in chemotherapy-naive HER2-low and HER2-ultralow disease, 2024) are close neighbours. The first page is 9, so the page locator matches the range 9-20 rather than a bare 9.
+  Nick confirmed the PMID and reference.
+  Verified by Nick against PubMed PMID 35665782, 6 Nov 2026.
