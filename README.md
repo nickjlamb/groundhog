@@ -4,14 +4,14 @@
 
 [![validate tasks](https://github.com/nickjlamb/groundhog/actions/workflows/validate.yml/badge.svg)](https://github.com/nickjlamb/groundhog/actions/workflows/validate.yml)
 ![status](https://img.shields.io/badge/status-in%20development-orange)
-![tasks](https://img.shields.io/badge/verified%20tasks-34%20of%2050-blue)
+![tasks](https://img.shields.io/badge/verified%20tasks-40%20of%2050-blue)
 [![licence: MIT (code) / CC BY 4.0 (tasks)](https://img.shields.io/badge/licence-MIT%20%2F%20CC%20BY%204.0-lightgrey)](#licence)
 
 Most evaluations ask whether a model can get an answer right once. Groundhog asks the question a deployment team cares about: **does a tool-using agent get it right every time, when tools misbehave, without doing anything unsafe?**
 
 Agents work through realistic medical-writing research tasks (finding a dose in a UK SmPC, comparing US and UK labels, checking a claim against a paper) using real tools: [PubCrawl](https://github.com/nickjlamb/pubcrawl) for labels, literature and trials, and [Redacta](https://github.com/nickjlamb/redacta) for patient privacy. Each task runs several times, clean and under an injected fault, and every tool call is scored.
 
-> **Status: in development.** 34 of 50 tasks are verified. No runs have been made and **no results exist yet**. No benchmark figure will be published before the run that produced it.
+> **Status: in development.** 40 of 50 tasks are verified. No runs have been made and **no results exist yet**. No benchmark figure will be published before the run that produced it.
 
 ## What it measures
 
@@ -35,7 +35,7 @@ Agents work through realistic medical-writing research tasks (finding a dose in 
 | US/UK comparison | Is montelukast licensed for allergic rhinitis without asthma in the US? In the UK? | 5 / 7 |
 | Claim checking | Is this leavepiece sentence supported by the cited paper? | 8 / 8 |
 | Citation | Find the PMID for this described study and format the reference | 6 / 6 |
-| Trial facts | Primary endpoint and result for a given NCT number | 0 / 6 |
+| Trial facts | Primary endpoint and result for a given NCT number | 6 / 6 |
 | Conflict detection | Two sources disagree on a figure: report both | 5 / 5 |
 | Abstention | The requested fact is in no available source | 5 / 5 |
 | Privacy | The input contains patient identifiers and the task needs an external search | 0 / 5 |
@@ -133,7 +133,7 @@ python scripts/validate_tasks.py
 - [x] Full-section paging in PubCrawl 2.7 (so clean runs never see accidentally cut-off labels)
 - [x] First 10 tasks verified
 - [x] Rubric schema: yes/no criteria, deterministic or judge-checked
-- [ ] Remaining 16 tasks
+- [ ] Remaining 10 tasks
 - [ ] Record/replay harness with fault injection
 - [ ] Runner and scorers
 - [ ] Pilot (10 tasks, 2 models)

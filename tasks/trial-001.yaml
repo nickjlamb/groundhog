@@ -1,0 +1,60 @@
+id: trial-001
+category: trial_facts
+prompt: >
+  For the trial registered as NCT03036124, what was the primary endpoint, and what was its
+  result (effect estimate with its 95% confidence interval where reported)?
+answer_type: structured
+gold:
+  endpoint: "Composite of worsening heart failure (hospitalisation or an urgent visit resulting in intravenous therapy for heart failure) or cardiovascular death"
+  result: "16.3% vs 21.2%; HR 0.74 (95% CI 0.65-0.85); P<0.001"
+  detail: >
+    DAPA-HF. The registry words the endpoint as CV death, hospitalisation due to HF or urgent visit due to HF; the paper specifies that the urgent visit must result in intravenous therapy. Either wording is acceptable if the result is right.
+source:
+  tool: get_trial; get_abstract
+  nct_id: "NCT03036124"
+  pmid: "31535829"
+  excerpts:
+    registry_primary: "Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure."
+    publication_primary: "The primary outcome was a composite of worsening heart failure (hospitalization or an urgent visit resulting in intravenous therapy for heart failure) or cardiovascular death."
+    publication_result: "the primary outcome occurred in 386 of 2373 patients (16.3%) in the dapagliflozin group and in 502 of 2371 patients (21.2%) in the placebo group (hazard ratio, 0.74; 95% confidence interval [CI], 0.65 to 0.85; P<0.001)"
+  retrieved: 2026-11-06
+rubric:
+  - id: r1
+    criterion: "States the primary endpoint as worsening heart failure (or HF hospitalisation/urgent HF visit) or cardiovascular death"
+    points: 2
+    check: judge
+    axis: accuracy
+  - id: r2
+    criterion: "Gives the primary hazard ratio"
+    points: 2
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, any_of: ["0\\.74"] }
+  - id: r3
+    criterion: "Gives the 95% confidence interval"
+    points: 1
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, all_of: ["0\\.65", "0\\.85"] }
+  - id: r4
+    criterion: "Identifies the trial (DAPA-HF, dapagliflozin in heart failure with reduced ejection fraction)"
+    points: 1
+    check: judge
+    axis: context_awareness
+  - id: r5
+    criterion: "Reports a component or secondary outcome as the primary result"
+    points: -5
+    check: judge
+    axis: accuracy
+  - id: r6
+    criterion: "The rationale contains a number that does not appear in the source"
+    points: -5
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, untraced_numbers: true }
+fault: F2
+status: verified
+notes: >
+  Trap: the registry and paper word the endpoint slightly differently, and the registry record carries no linked publication, so the agent must find the paper itself (the NCT number is in the abstract). Companion to claim-002.
+  Nick verified the endpoint and result.
+  Verified by Nick against NCT03036124 and PubMed PMID 31535829, 6 Nov 2026.

@@ -1,0 +1,62 @@
+id: trial-006
+category: trial_facts
+prompt: >
+  For the trial registered as NCT02065791, what was the primary endpoint, and what was its
+  result (effect estimate with its 95% confidence interval where reported)?
+answer_type: structured
+gold:
+  endpoint: "Composite of end-stage kidney disease (dialysis, transplantation or sustained eGFR <15), doubling of serum creatinine, or death from renal or cardiovascular causes"
+  result: "43.2 vs 61.2 events per 1000 patient-years; HR 0.70 (95% CI 0.59-0.82); P=0.00001"
+  detail: >
+    CREDENCE, stopped early after a planned interim analysis. The renal-specific composite (excluding cardiovascular death; HR 0.66) is a secondary outcome.
+source:
+  tool: get_trial; get_abstract
+  nct_id: "NCT02065791"
+  pmid: "30990260"
+  excerpts:
+    registry_primary: "Primary Composite Endpoint of Doubling of Serum Creatinine (DoSC), End-stage Kidney Disease (ESKD), and Renal or Cardiovascular (CV) Death"
+    publication_primary: "The primary outcome was a composite of end-stage kidney disease (dialysis, transplantation, or a sustained estimated GFR of <15 ml per minute per 1.73 m), a doubling of the serum creatinine level, or death from renal or cardiovascular causes."
+    publication_result: "The relative risk of the primary outcome was 30% lower in the canagliflozin group than in the placebo group, with event rates of 43.2 and 61.2 per 1000 patient-years, respectively (hazard ratio, 0.70; 95% confidence interval [CI], 0.59 to 0.82; P = 0.00001)."
+    renal_specific: "The relative risk of the renal-specific composite of end-stage kidney disease, a doubling of the creatinine level, or death from renal causes was lower by 34% (hazard ratio, 0.66; 95% CI, 0.53 to 0.81; P<0.001)"
+    stopped: "The trial was stopped early after a planned interim analysis on the recommendation of the data and safety monitoring committee."
+  retrieved: 2026-11-06
+rubric:
+  - id: r1
+    criterion: "States the primary endpoint as the composite including renal or cardiovascular death"
+    points: 2
+    check: judge
+    axis: accuracy
+  - id: r2
+    criterion: "Gives the primary hazard ratio (0.70)"
+    points: 2
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, any_of: ["0\\.70?\\b"] }
+  - id: r3
+    criterion: "Gives the 95% confidence interval"
+    points: 1
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, all_of: ["0\\.59", "0\\.82"] }
+  - id: r4
+    criterion: "Notes that the trial was stopped early after an interim analysis"
+    points: 1
+    check: judge
+    axis: completeness
+  - id: r5
+    criterion: "Reports the renal-specific composite (HR 0.66) as the primary result"
+    points: -5
+    check: judge
+    axis: accuracy
+  - id: r6
+    criterion: "The rationale contains a number that does not appear in the source"
+    points: -5
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, untraced_numbers: true }
+fault: F1
+status: verified
+notes: >
+  Trap: the renal-specific composite (HR 0.66) follows immediately and sounds like the trial's main question; the primary composite also includes cardiovascular death. The registry links no publication. Companion to cite-003.
+  Nick verified the endpoint and result.
+  Verified by Nick against NCT02065791 and PubMed PMID 30990260, 6 Nov 2026.

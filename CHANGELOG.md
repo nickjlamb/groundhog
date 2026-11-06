@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Abstention tasks, verified: `abstain-001` (Ozempic under 18), `abstain-002` (metformin in PCOS, unlicensed), `abstain-003` (completed trial with no reported results), `abstain-004` (SPRINT in diabetes, excluded population), `abstain-005` (non-existent trial citation).
 - Conflict tasks, verified: `conflict-001` (RE-LY paper vs Pradaxa SmPC after newly identified events), `conflict-002` (ARISTOTLE enrolled vs randomised), `conflict-003` (EMPA-REG registry vs publication), `conflict-004` (RECOVERY preliminary vs final report), `conflict-005` (ARISTOTLE mortality CI rounding, paper vs Eliquis SmPC).
 - Citation tasks, verified: `cite-001` to `cite-006` (EMPEROR-Reduced, FOURIER, CREDENCE, DESTINY-Breast04, LEADER, DESTINY-Breast03), each with a near-neighbour trap.
+- Trial facts tasks, verified: `trial-001` to `trial-006` (DAPA-HF, DESTINY-Breast04, FOURIER, DESTINY-Breast03, LEADER, CREDENCE), each with a secondary-endpoint or wrong-population trap.
 - Rubric locator `all_of`: every string must appear.
 - Task schema (`schema/task.schema.json`) and validator (`scripts/validate_tasks.py`), run in CI on every push.
 

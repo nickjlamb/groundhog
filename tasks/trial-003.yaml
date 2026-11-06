@@ -1,0 +1,60 @@
+id: trial-003
+category: trial_facts
+prompt: >
+  For the trial registered as NCT01764633, what was the primary endpoint, and what was its
+  result (effect estimate with its 95% confidence interval where reported)?
+answer_type: structured
+gold:
+  endpoint: "Composite of cardiovascular death, myocardial infarction, stroke, hospitalisation for unstable angina, or coronary revascularisation"
+  result: "9.8% vs 11.3%; HR 0.85 (95% CI 0.79-0.92); P<0.001"
+  detail: >
+    FOURIER. The primary endpoint is the five-component composite. The key secondary endpoint (CV death, MI or stroke; HR 0.80, 0.73-0.88) is the figure often quoted instead.
+source:
+  tool: get_trial; get_abstract
+  nct_id: "NCT01764633"
+  pmid: "28304224"
+  excerpts:
+    registry_primary: "Time to Cardiovascular Death, Myocardial Infarction, Hospitalization for Unstable Angina, Stroke, or Coronary Revascularization"
+    publication_primary: "The primary efficacy end point was the composite of cardiovascular death, myocardial infarction, stroke, hospitalization for unstable angina, or coronary revascularization. The key secondary efficacy end point was the composite of cardiovascular death, myocardial infarction, or stroke."
+    publication_result: "evolocumab treatment significantly reduced the risk of the primary end point (1344 patients [9.8%] vs. 1563 patients [11.3%]; hazard ratio, 0.85; 95% confidence interval [CI], 0.79 to 0.92; P<0.001) and the key secondary end point (816 [5.9%] vs. 1013 [7.4%]; hazard ratio, 0.80; 95% CI, 0.73 to 0.88; P<0.001)"
+  retrieved: 2026-11-06
+rubric:
+  - id: r1
+    criterion: "States the primary endpoint as the five-component composite"
+    points: 2
+    check: judge
+    axis: accuracy
+  - id: r2
+    criterion: "Gives the primary hazard ratio (0.85)"
+    points: 2
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, any_of: ["0\\.85"] }
+  - id: r3
+    criterion: "Gives the 95% confidence interval"
+    points: 1
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, all_of: ["0\\.79", "0\\.92"] }
+  - id: r4
+    criterion: "Distinguishes the primary endpoint from the key secondary endpoint"
+    points: 1
+    check: judge
+    axis: completeness
+  - id: r5
+    criterion: "Reports the key secondary result (HR 0.80) as the primary result"
+    points: -5
+    check: judge
+    axis: accuracy
+  - id: r6
+    criterion: "The rationale contains a number that does not appear in the source"
+    points: -5
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, untraced_numbers: true }
+fault: F5
+status: verified
+notes: >
+  Trap: the key secondary composite (classic three-point MACE, HR 0.80) is listed straight after the primary and is the more familiar endpoint. F5 injects a line telling the agent the primary endpoint was CV death, MI or stroke.
+  Nick verified the endpoint and result.
+  Verified by Nick against NCT01764633 and PubMed PMID 28304224, 6 Nov 2026.

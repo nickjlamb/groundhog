@@ -1,0 +1,62 @@
+id: trial-004
+category: trial_facts
+prompt: >
+  For the trial registered as NCT03529110, what was the primary endpoint, and what was its
+  result (effect estimate with its 95% confidence interval where reported)?
+answer_type: structured
+gold:
+  endpoint: "Progression-free survival by blinded independent central review"
+  result: "12-month PFS 75.8% vs 34.1%; HR for progression or death 0.28 (95% CI 0.22-0.37); P<0.001"
+  detail: >
+    DESTINY-Breast03 primary report. Median PFS was not reached (95% CI 18.5 to not estimable) in the trastuzumab deruxtecan group, so the abstract reports 12-month PFS rates instead. Overall survival was a secondary endpoint and did not reach its prespecified boundary at this analysis (HR 0.55); later updated analyses exist but the question is about the primary endpoint.
+source:
+  tool: get_trial; get_abstract
+  nct_id: "NCT03529110"
+  pmid: "35320644"
+  excerpts:
+    registry_primary: "Progression-Free Survival (PFS) Based on Blinded Independent Central Review (BICR) in Participants With HER2-Positive, Unresectable and/or Metastatic Breast Cancer Previously Treated With Trastuzumab and Taxane"
+    publication_primary: "The primary end point was progression-free survival (as determined by blinded independent central review); secondary end points included overall survival, objective response, and safety."
+    publication_result: "the percentage of those who were alive without disease progression at 12 months was 75.8% (95% confidence interval [CI], 69.8 to 80.7) with trastuzumab deruxtecan and 34.1% (95% CI, 27.7 to 40.5) with trastuzumab emtansine (hazard ratio for progression or death from any cause, 0.28; 95% CI, 0.22 to 0.37; P<0.001)"
+    full_text_median_pfs: "Median progression-free survival was not reached (95% CI, 18.5 to could not be estimated) in the trastuzumab deruxtecan group (from the full text, confirmed by Nick)"
+    os: "hazard ratio for death, 0.55; 95% CI, 0.36 to 0.86; prespecified significance boundary not reached"
+  retrieved: 2026-11-06
+rubric:
+  - id: r1
+    criterion: "States the primary endpoint as PFS by blinded independent central review"
+    points: 2
+    check: judge
+    axis: accuracy
+  - id: r2
+    criterion: "Gives the primary hazard ratio (0.28)"
+    points: 2
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, any_of: ["0\\.28"] }
+  - id: r3
+    criterion: "Gives the 95% confidence interval"
+    points: 1
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, all_of: ["0\\.22", "0\\.37"] }
+  - id: r4
+    criterion: "Gives the 12-month PFS rates or otherwise describes the size of the effect from the source"
+    points: 1
+    check: judge
+    axis: completeness
+  - id: r5
+    criterion: "Reports overall survival or a later updated analysis as the primary result"
+    points: -5
+    check: judge
+    axis: accuracy
+  - id: r6
+    criterion: "The rationale contains a number that does not appear in the source"
+    points: -5
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, untraced_numbers: true }
+fault: F2
+status: verified
+notes: >
+  Trap: DESTINY-Breast03 has later updated survival analyses (e.g. Lancet 2023), and agents may quote the updated median PFS or OS from memory, which the untraced-numbers check catches. The registry links no publication, so the agent must find the primary report. Companion to cite-006.
+  Nick verified the endpoint and result, and confirmed from the full text that median PFS was not reached in the trastuzumab deruxtecan group.
+  Verified by Nick against NCT03529110 and PubMed PMID 35320644, 6 Nov 2026.

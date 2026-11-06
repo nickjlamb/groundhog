@@ -1,0 +1,67 @@
+id: trial-002
+category: trial_facts
+prompt: >
+  For the trial registered as NCT03734029, what was the primary endpoint, and what was its
+  result (effect estimate with its 95% confidence interval where reported)? Use the
+  full text of the primary publication where it is available, not only the abstract.
+answer_type: structured
+gold:
+  endpoint: "Progression-free survival by blinded independent central review in the hormone receptor-positive cohort"
+  result: "Median PFS 10.1 vs 5.4 months; HR for progression or death 0.51 (95% CI 0.40-0.64); P<0.001"
+  detail: >
+    DESTINY-Breast04. The primary endpoint is restricted to the hormone receptor-positive cohort (494 of 557 patients). PFS in all patients (9.9 vs 5.1 months, HR 0.50) is a key secondary endpoint.
+source:
+  tool: get_trial; get_abstract; get_full_text
+  nct_id: "NCT03734029"
+  pmid: "35665782"
+  pmcid: "PMC10561652"
+  excerpts:
+    registry_primary: "Progression-free Survival (PFS) Based on Blinded Independent Central Review (BICR) in the Hormone Receptor-Positive Cohort in Participants With HER2-low Breast Cancer"
+    publication_primary: "The primary end point was progression-free survival in the hormone receptor-positive cohort. The key secondary end points were progression-free survival among all patients and overall survival in the hormone receptor-positive cohort and among all patients."
+    publication_result: "In the hormone receptor-positive cohort, the median progression-free survival was 10.1 months in the trastuzumab deruxtecan group and 5.4 months in the physician's choice group (hazard ratio for disease progression or death, 0.51; P<0.001)"
+    all_patients: "Among all patients, the median progression-free survival was 9.9 months in the trastuzumab deruxtecan group and 5.1 months in the physician's choice group (hazard ratio for disease progression or death, 0.50; P<0.001)"
+    full_text_result: "the median progression-free survival in the hormone receptor\u2013positive cohort was 10.1 months (95% CI, 9.5 to 11.5) in the trastuzumab deruxtecan group and 5.4 months (95% CI, 4.4 to 7.1) in the physician\u2019s choice group (hazard ratio for disease progression or death, 0.51; 95% CI, 0.40 to 0.64; P<0.001)"
+    full_text_all_patients: "Among all patients, the median progression-free survival was 9.9 months (95% CI, 9.0 to 11.3) in the trastuzumab deruxtecan group and 5.1 months (95% CI, 4.2 to 6.8) in the physician\u2019s choice group (hazard ratio for disease progression or death, 0.50; 95% CI, 0.40 to 0.63; P<0.001)"
+    cohorts: "Of 557 patients who underwent randomization, 494 (88.7%) had hormone receptor-positive disease and 63 (11.3%) had hormone receptor-negative disease."
+  retrieved: 2026-11-06
+rubric:
+  - id: r1
+    criterion: "States that the primary endpoint is PFS in the hormone receptor-positive cohort"
+    points: 3
+    check: judge
+    axis: accuracy
+  - id: r2
+    criterion: "Gives the primary hazard ratio (0.51)"
+    points: 2
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, any_of: ["0\\.51"] }
+  - id: r3
+    criterion: "Gives the median PFS in both arms for the HR-positive cohort"
+    points: 1
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, all_of: ["10\\.1", "5\\.4"] }
+  - id: r4
+    criterion: "Gives the 95% confidence interval for the primary hazard ratio from the full text"
+    points: 1
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, all_of: ["0\\.40", "0\\.64"] }
+  - id: r5
+    criterion: "Reports the all-patient PFS (HR 0.50) as the primary result"
+    points: -5
+    check: judge
+    axis: accuracy
+  - id: r6
+    criterion: "The rationale contains a number that does not appear in the source"
+    points: -5
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, untraced_numbers: true }
+fault: F1
+status: verified
+notes: >
+  Trap: the all-patient PFS result (HR 0.50) sits in the same paragraph and is the figure most often quoted. The abstract gives no 95% CI for the primary HR; the full text (open access, PMC10561652) does, so an agent that stops at the abstract cannot give it. Prompt points to the full text at Nick's request: in medcomms, claims are checked against the main text, not the abstract.
+  Nick verified the endpoint and result, and asked for the prompt to point to the full text where available.
+  Verified by Nick against NCT03734029 and PubMed PMID 35665782, 6 Nov 2026.

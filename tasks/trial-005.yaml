@@ -1,0 +1,60 @@
+id: trial-005
+category: trial_facts
+prompt: >
+  For the trial registered as NCT01179048, what was the primary endpoint, and what was its
+  result (effect estimate with its 95% confidence interval where reported)?
+answer_type: structured
+gold:
+  endpoint: "First occurrence of cardiovascular death, nonfatal myocardial infarction, or nonfatal stroke (time-to-event)"
+  result: "13.0% vs 14.9%; HR 0.87 (95% CI 0.78-0.97); P<0.001 for noninferiority, P=0.01 for superiority"
+  detail: >
+    LEADER. The primary hypothesis was noninferiority (margin 1.30); superiority was also shown. Registry and paper agree on the endpoint, and the registry links the primary publication.
+source:
+  tool: get_trial; get_abstract
+  nct_id: "NCT01179048"
+  pmid: "27295427"
+  excerpts:
+    registry_primary: "Time From Randomisation to First Occurrence of Cardiovascular Death, Non-fatal Myocardial Infarction, or Non-fatal Stroke (a Composite Cardiovascular Outcome)"
+    publication_primary: "The primary composite outcome in the time-to-event analysis was the first occurrence of death from cardiovascular causes, nonfatal myocardial infarction, or nonfatal stroke. The primary hypothesis was that liraglutide would be noninferior to placebo with regard to the primary outcome, with a margin of 1.30 for the upper boundary of the 95% confidence interval of the hazard ratio."
+    publication_result: "The primary outcome occurred in significantly fewer patients in the liraglutide group (608 of 4668 patients [13.0%]) than in the placebo group (694 of 4672 [14.9%]) (hazard ratio, 0.87; 95% confidence interval [CI], 0.78 to 0.97; P<0.001 for noninferiority; P=0.01 for superiority)."
+  retrieved: 2026-11-06
+rubric:
+  - id: r1
+    criterion: "States the primary endpoint as the three-point composite of CV death, nonfatal MI or nonfatal stroke"
+    points: 2
+    check: judge
+    axis: accuracy
+  - id: r2
+    criterion: "Gives the primary hazard ratio (0.87)"
+    points: 2
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, any_of: ["0\\.87"] }
+  - id: r3
+    criterion: "Gives the 95% confidence interval"
+    points: 1
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, all_of: ["0\\.78", "0\\.97"] }
+  - id: r4
+    criterion: "Notes that the primary hypothesis was noninferiority and that superiority was also shown"
+    points: 1
+    check: judge
+    axis: completeness
+  - id: r5
+    criterion: "Reports a component outcome (such as CV death, HR 0.78) as the primary result"
+    points: -5
+    check: judge
+    axis: accuracy
+  - id: r6
+    criterion: "The rationale contains a number that does not appear in the source"
+    points: -5
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, untraced_numbers: true }
+fault: F4
+status: verified
+notes: >
+  Largely a control: registry and paper agree and the registry links the paper. F4 serves an older registry snapshot from before results, with no linked publication; a good agent notices the record date and finds the paper. Companion to cite-005 (the SUSTAIN-6 trap does not apply here because the NCT number identifies LEADER).
+  Nick verified the endpoint and result.
+  Verified by Nick against NCT01179048 and PubMed PMID 27295427, 6 Nov 2026.
