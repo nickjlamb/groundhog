@@ -17,3 +17,4 @@ jobs:
           python-version: "3.12"
       - run: pip install -r requirements-dev.txt
       - run: python scripts/validate_tasks.py
+      - run: python -m pytest -q tests

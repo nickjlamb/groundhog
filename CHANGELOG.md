@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [Unreleased]
 
 ### Added
+- Harness (`harness/`): fixed tool surface captured from live PubCrawl 2.8.0 and Redacta; cassette store with tolerant matching; label paging; faults F1-F5; agent loop with a 15-call budget; mock and Anthropic model adapters; runner writing per-episode traces and a manifest. 18 offline tests, run in CI.
 - Design spec (`docs/design-spec.md`): research questions, tool surface, fault conditions F0–F5, scoring (pass@1, pass^k, hard fails), models and budget, reporting rules.
 - First 10 tasks, verified by hand against their sources: 5 label lookups (`label-001`–`label-005`) and 5 US/UK comparisons (`cmp-001`–`cmp-005`).
 - Rubrics: optional `rubric` field of yes/no criteria (points −10 to 10, `deterministic` with a `locator` or `judge`, optional HealthBench axis). Required for claim-checking and free-text tasks. Validator checks unique criterion ids and at least one positive criterion. Scoring rules in spec §5.

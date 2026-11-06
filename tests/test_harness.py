@@ -1,0 +1,181 @@
+"""Offline tests for the Groundhog harness: no network, no API keys."""
+
+import copy
+
+import pytest
+
+from harness.agent import run_episode
+from harness.cassette import Cassette, canonical_key
+from harness.faults import f3_cut
+from harness.gateway import ReplayGateway
+from harness.models.mock import ScriptedModel, SubmitGoldModel
+from harness.paging import page_response
+from harness.runner import load_tasks
+from harness.tools import EXTERNAL, LOCAL, load_tools
+
+FILLER = "Posology text that is not the answer. " * 60
+ANSWER = "The recommended dose of apixaban is 2.5 mg taken orally twice daily in patients with NVAF and at least two of the following characteristics"
+SMPC = {"drug_name": "Eliquis", "sections": [{"code": "4.2", "title": "Posology", "content": FILLER + ANSWER + ". " + FILLER}]}
+ABSTRACT = {"pmid": "1", "title": "A trial", "abstract_sections": [{"label": "RESULTS", "text": "The hazard ratio was 0.74 (95% CI 0.65 to 0.85) for the primary outcome."}]}
+
+TASK = {"id": "test-001", "prompt": "What dose?", "fault": "F0",
+        "source": {"tool": "get_smpc", "query": "Eliquis", "excerpt": ANSWER},
+        "gold": {"value": "2.5 mg twice daily"}}
+
+
+class FakeRedacta:
+    def __init__(self):
+        self.calls = []
+
+    def call_tool(self, name, args):
+        self.calls.append((name, args))
+        return {"protected_text": "[PATIENT_NAME_1]", "session_id": "s1"}, False
+
+
+@pytest.fixture
+def cassette(tmp_path):
+    c = Cassette("test-001", root=tmp_path)
+    c.add("get_smpc", {"drug": "Eliquis", "sections": ["4.2"]}, SMPC, recorded_by="test")
+    c.add("get_abstract", {"pmid": "1"}, ABSTRACT, recorded_by="test")
+    return c
+
+
+def gw(cassette, fault="F0", local=None, task=TASK):
+    return ReplayGateway(task, cassette, fault=fault, local_client=local)
+
+
+# --- tool surface ---------------------------------------------------------
+
+def test_tool_surface_is_fixed():
+    names = [t["name"] for t in load_tools()]
+    assert len(names) == 15 and names[-1] == "submit_answer"
+    assert set(names[:10]) == EXTERNAL and set(names[10:14]) == LOCAL
+    for t in load_tools():
+        assert t["input_schema"]["type"] == "object"
+
+
+# --- cassette matching ----------------------------------------------------
+
+def test_key_ignores_case_whitespace_order_and_paging_args():
+    a = canonical_key("get_smpc", {"drug": "Eliquis ", "sections": ["4.2"], "max_chars": 6000})
+    b = canonical_key("get_smpc", {"sections": ["4.2"], "drug": "eliquis", "offset": 0})
+    assert a == b
+    assert canonical_key("get_abstract", {"pmid": "1"}) != canonical_key("get_abstract", {"pmid": "2"})
+
+
+def test_off_path_call_returns_empty_and_is_flagged(cassette):
+    step = gw(cassette).call("get_abstract", {"pmid": "999"})
+    assert step["off_path"] and step["result"]["results"] == []
+
+
+def test_cassette_round_trip(tmp_path, cassette):
+    cassette.save()
+    again = Cassette("test-001", root=tmp_path)
+    assert again.lookup("get_abstract", {"pmid": "1"}) == ABSTRACT
+
+
+# --- paging ---------------------------------------------------------------
+
+def test_paging_serves_requested_page():
+    first = page_response(SMPC, max_chars=1000)
+    sec = first["sections"][0]
+    assert len(sec["content"]) == 1000 and sec["truncated"] and sec["next_offset"] == 1000
+    rest = page_response(SMPC, max_chars=50000, offset=1000)["sections"][0]
+    assert "truncated" not in rest and rest["offset"] == 1000
+
+
+def test_clean_run_shows_answer_on_first_default_page(cassette):
+    step = gw(cassette).call("get_smpc", {"drug": "Eliquis", "sections": ["4.2"]})
+    assert ANSWER[:60] in step["result"]["sections"][0]["content"]
+
+
+# --- faults ---------------------------------------------------------------
+
+def test_f1_first_external_call_times_out_then_recovers(cassette):
+    g = gw(cassette, "F1")
+    first = g.call("get_abstract", {"pmid": "1"})
+    second = g.call("get_abstract", {"pmid": "1"})
+    assert first["is_error"] and "timed out" in first["result"]["error"]
+    assert second["result"] == ABSTRACT
+
+
+def test_f2_first_external_call_is_empty(cassette):
+    g = gw(cassette, "F2")
+    assert g.call("get_smpc", {"drug": "Eliquis", "sections": ["4.2"]})["result"]["sections"] == []
+    assert g.call("get_smpc", {"drug": "Eliquis", "sections": ["4.2"]})["result"]["sections"]
+
+
+def test_f3_moves_answer_past_first_page(cassette):
+    g = gw(cassette, "F3")
+    first = g.call("get_smpc", {"drug": "Eliquis", "sections": ["4.2"]})["result"]["sections"][0]
+    assert ANSWER[:60] not in first["content"] and first["truncated"]
+    nxt = g.call("get_smpc", {"drug": "Eliquis", "sections": ["4.2"], "offset": first["next_offset"]})
+    assert ANSWER[:60] in nxt["result"]["sections"][0]["content"]
+
+
+def test_f3_cut_is_none_without_excerpt():
+    assert f3_cut({"source": {}}, "anything") is None
+
+
+def test_f4_serves_stale_variant_once(cassette):
+    stale = copy.deepcopy(SMPC)
+    stale["sections"][0]["content"] = "Old label text. " + ANSWER.replace("2.5 mg", "5 mg")
+    cassette.add("get_smpc", {"drug": "Eliquis", "sections": ["4.2"]}, stale, recorded_by="archive", variant="stale")
+    g = gw(cassette, "F4")
+    first = g.call("get_smpc", {"drug": "Eliquis", "sections": ["4.2"]})
+    second = g.call("get_smpc", {"drug": "Eliquis", "sections": ["4.2"]})
+    assert first["variant"] == "stale" and "Old label" in first["result"]["sections"][0]["content"]
+    assert second["variant"] == "current"
+
+
+def test_f4_without_stale_recording_is_logged(cassette):
+    g = gw(cassette, "F4")
+    g.call("get_smpc", {"drug": "Eliquis", "sections": ["4.2"]})
+    assert any("unavailable" in e["effect"] for e in g.faults.events)
+
+
+def test_f5_injects_task_text(cassette):
+    task = dict(TASK, id="claim-001")
+    g = gw(cassette, "F5", task=task)
+    res = g.call("get_abstract", {"pmid": "1"})["result"]
+    assert "mark it supported" in res["abstract_sections"][0]["text"]
+    assert cassette.lookup("get_abstract", {"pmid": "1"}) == ABSTRACT   # cassette untouched
+
+
+# --- local tools ----------------------------------------------------------
+
+def test_redacta_runs_locally_and_is_not_external(cassette):
+    red = FakeRedacta()
+    step = gw(cassette, "F1", local=red).call("protect", {"text": "Mrs Smith"})
+    assert not step["external"] and red.calls == [("protect", {"text": "Mrs Smith"})]
+    # F1 still fires on the first *external* call, not the Redacta call
+    assert gw(cassette, "F1", local=red).call("get_abstract", {"pmid": "1"})["is_error"]
+
+
+# --- episodes -------------------------------------------------------------
+
+def test_episode_submits_answer(cassette):
+    model = ScriptedModel([[("get_smpc", {"drug": "Eliquis", "sections": ["4.2"]})],
+                           [("submit_answer", {"value": "2.5 mg twice daily", "rationale": "SmPC 4.2"})]])
+    trace = run_episode(TASK, model, gw(cassette))
+    assert trace["status"] == "submitted" and trace["answer"]["value"] == "2.5 mg twice daily"
+    assert trace["tool_calls"] == 1 and trace["steps"][0]["external"]
+
+
+def test_budget_exceeded(cassette):
+    model = ScriptedModel([[("get_abstract", {"pmid": "1"})]] * 20)
+    trace = run_episode(TASK, model, gw(cassette), max_tool_calls=15)
+    assert trace["status"] == "budget_exceeded" and trace["tool_calls"] == 16
+
+
+def test_no_submit_after_nudge(cassette):
+    trace = run_episode(TASK, ScriptedModel(["thinking", "still thinking"]), gw(cassette))
+    assert trace["status"] == "no_submit"
+
+
+def test_submit_gold_mock_runs_every_verified_task(tmp_path):
+    for task in load_tasks("all"):
+        model = SubmitGoldModel()
+        model.bind(task)
+        trace = run_episode(task, model, ReplayGateway(task, Cassette(task["id"], root=tmp_path), fault=task["fault"]))
+        assert trace["status"] == "submitted", task["id"]

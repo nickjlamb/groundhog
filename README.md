@@ -120,7 +120,7 @@ scripts/         validate_tasks.py
 docs/            design-spec.md: full design, scoring and reporting rules
 ```
 
-Still to come: the record/replay harness, runner, scorers and analysis.
+The record/replay harness and runner are in [`harness/`](harness/) (see [`docs/harness.md`](docs/harness.md)). Still to come: recorded cassettes, scorers and analysis.
 
 ```bash
 pip install -r requirements-dev.txt
@@ -134,8 +134,9 @@ python scripts/validate_tasks.py
 - [x] First 10 tasks verified
 - [x] Rubric schema: yes/no criteria, deterministic or judge-checked
 - [x] All 50 tasks verified
-- [ ] Record/replay harness with fault injection
-- [ ] Runner and scorers
+- [x] Record/replay harness with fault injection, and runner (offline-tested)
+- [ ] Cassettes recorded (including stale label versions for F4)
+- [ ] Scorers
 - [ ] Pilot (10 tasks, 2 models)
 - [ ] Full run, failure taxonomy, results and preprint
 
