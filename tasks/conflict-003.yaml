@@ -1,0 +1,67 @@
+id: conflict-003
+category: conflict_detection
+prompt: >
+  How many patients were in EMPA-REG OUTCOME? Give the number from the
+  trial's ClinicalTrials.gov record (NCT01131676) and from the primary
+  publication (Zinman B et al. N Engl J Med 2015;373:2117-28).
+answer_type: conflict
+gold:
+  conflict: true
+  values:
+    registry: "Enrollment 7,064 (actual)"
+    publication: "7,020 patients treated"
+  detail: >
+    The registry figure is 44 higher than the treated population reported in
+    the abstract. The sources available do not explain the difference; a good
+    answer reports both and notes that the abstract counts patients treated.
+source:
+  tool: get_trial; get_abstract
+  nct_id: "NCT01131676"
+  pmid: "26378978"
+  excerpts:
+    registry: "BI 10773 (Empagliflozin) Cardiovascular Outcome Event Trial in Type 2 Diabetes Mellitus Patients; enrollment 7064 (ACTUAL)"
+    publication: "A total of 7020 patients were treated (median observation time, 3.1 years)."
+  retrieved: 2026-11-06
+rubric:
+  - id: r1
+    criterion: "Reports the registry figure (7,064)"
+    points: 1
+    check: deterministic
+    axis: completeness
+    locator: { field: rationale, any_of: ["7[,\\s]?064"] }
+  - id: r2
+    criterion: "Reports the publication figure (7,020)"
+    points: 1
+    check: deterministic
+    axis: completeness
+    locator: { field: rationale, any_of: ["7[,\\s]?020"] }
+  - id: r3
+    criterion: "Explicitly flags that the two figures differ"
+    points: 3
+    check: judge
+    axis: accuracy
+  - id: r4
+    criterion: "Notes that the publication figure is the treated population and that the sources do not explain the gap"
+    points: 1
+    check: judge
+    axis: completeness
+  - id: r5
+    criterion: "Reports a single figure as the trial size without noting the discrepancy"
+    points: -5
+    check: judge
+    axis: accuracy
+  - id: r6
+    criterion: "The rationale contains a number that does not appear in the source"
+    points: -5
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, untraced_numbers: true }
+fault: F2
+status: verified
+notes: >
+  Trap: the gap is small (44 patients), so an agent may treat the figures as
+  the same or report whichever it found first. An agent that recalls the
+  number randomised from training would cite a figure not in these sources,
+  which r6 penalises.
+  Nick confirmed the conflict and that the available sources do not explain the gap.
+  Verified by Nick against ClinicalTrials.gov NCT01131676 and PubMed PMID 26378978, 6 Nov 2026.

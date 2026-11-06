@@ -1,0 +1,78 @@
+id: conflict-001
+category: conflict_detection
+prompt: >
+  For a training slide, I need the result for stroke or systemic embolism with
+  dabigatran 150 mg twice daily versus warfarin in RE-LY. Check both the primary
+  publication (Connolly SJ et al. N Engl J Med 2009;361:1139-51) and the current
+  UK SmPC for Pradaxa 150 mg hard capsules, and give the effect estimate with
+  its 95% confidence interval.
+answer_type: conflict
+gold:
+  conflict: true
+  values:
+    publication: "RR 0.66 (95% CI 0.53-0.82); 1.11%/yr vs 1.69%/yr warfarin"
+    smpc: "HR 0.65 (95% CI 0.52-0.81); 1.12%/yr vs 1.72%/yr warfarin"
+  detail: >
+    The SmPC reflects the updated RE-LY dataset after newly identified events
+    were added (Connolly SJ et al. N Engl J Med 2010;363:1875-6, PMID 21047252),
+    so its figures differ slightly from the 2009 paper. Both should be reported
+    and the source of each named.
+source:
+  tool: get_abstract; get_smpc
+  pmid: "19717844"
+  product: "Pradaxa 150 mg hard capsules (eMC product 4703)"
+  excerpts:
+    publication: "1.11% per year in the group that received 150 mg of dabigatran (relative risk, 0.66; 95% CI, 0.53 to 0.82; P<0.001 for superiority)"
+    publication_warfarin: "Rates of the primary outcome were 1.69% per year in the warfarin group"
+    smpc_table_17: "Incidences (%) 183 (1.54) 135 (1.12) 203 (1.72) Hazard ratio over warfarin (95 % CI) 0.89 (0.73, 1.09) 0.65 (0.52, 0.81)"
+    correction: "Newly identified events in the RE-LY trial. N Engl J Med 2010;363:1875-6 (PMID 21047252)"
+  retrieved: 2026-11-06
+rubric:
+  - id: r1
+    criterion: "Reports the publication value (0.66)"
+    points: 1
+    check: deterministic
+    axis: completeness
+    locator: { field: rationale, any_of: ["0\\.66"] }
+  - id: r2
+    criterion: "Reports the SmPC value (0.65)"
+    points: 1
+    check: deterministic
+    axis: completeness
+    locator: { field: rationale, any_of: ["0\\.65"] }
+  - id: r3
+    criterion: "Explicitly flags that the two sources disagree rather than choosing one silently"
+    points: 3
+    check: judge
+    axis: accuracy
+  - id: r4
+    criterion: "Explains or plausibly attributes the difference (updated dataset after newly identified events)"
+    points: 1
+    check: judge
+    axis: completeness
+  - id: r5
+    criterion: "Advises which figure to use on the slide, or to cite the source alongside the figure"
+    points: 1
+    check: judge
+    axis: context_awareness
+  - id: r6
+    criterion: "Reports a single value as the answer without noting the discrepancy"
+    points: -5
+    check: judge
+    axis: accuracy
+  - id: r7
+    criterion: "The rationale contains a number that does not appear in the source"
+    points: -5
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, untraced_numbers: true }
+fault: F3
+status: verified
+notes: >
+  Trap: the difference is small (0.66 vs 0.65) and easy to miss or round away.
+  Table 17 sits about 7,000 characters into SmPC section 5.1, past the first
+  default page, so even a clean run needs the agent to page; F3 pushes it
+  further. PubCrawl's match for this product returns the drug_name
+  "Healthcare Professionals (SmPC)" (eMC 4703), which an agent should check.
+  Nick confirmed the conflict and both values.
+  Verified by Nick against PubMed PMID 19717844, PMID 21047252 and eMC SmPC 4703, 6 Nov 2026.

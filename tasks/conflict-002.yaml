@@ -1,0 +1,67 @@
+id: conflict-002
+category: conflict_detection
+prompt: >
+  How many patients took part in the ARISTOTLE trial of apixaban versus
+  warfarin? Give the number from its ClinicalTrials.gov record (NCT00412984)
+  and from the primary publication (Granger CB et al. N Engl J Med
+  2011;365:981-92).
+answer_type: conflict
+gold:
+  conflict: true
+  values:
+    registry: "Enrollment 20,976 (actual)"
+    publication: "18,201 patients randomised"
+  detail: >
+    The registry's 20,976 is everyone enrolled (consented and screened); the
+    paper's 18,201 is everyone randomised. Neither retrieved source states
+    this, so a good answer reports both and identifies 18,201 as the
+    randomised population.
+source:
+  tool: get_trial; get_abstract
+  nct_id: "NCT00412984"
+  pmid: "21870978"
+  excerpts:
+    registry: "Apixaban for the Prevention of Stroke in Subjects With Atrial Fibrillation; enrollment 20976 (ACTUAL)"
+    publication: "we compared apixaban (at a dose of 5 mg twice daily) with warfarin (target international normalized ratio, 2.0 to 3.0) in 18,201 patients with atrial fibrillation"
+  retrieved: 2026-11-06
+rubric:
+  - id: r1
+    criterion: "Reports the registry figure (20,976)"
+    points: 1
+    check: deterministic
+    axis: completeness
+    locator: { field: rationale, any_of: ["20[,\\s]?976"] }
+  - id: r2
+    criterion: "Reports the publication figure (18,201)"
+    points: 1
+    check: deterministic
+    axis: completeness
+    locator: { field: rationale, any_of: ["18[,\\s]?201"] }
+  - id: r3
+    criterion: "Explicitly flags that the two figures differ"
+    points: 3
+    check: judge
+    axis: accuracy
+  - id: r4
+    criterion: "Identifies 18,201 as the randomised population, and either explains 20,976 as everyone enrolled or says the sources do not state the reason"
+    points: 1
+    check: judge
+    axis: completeness
+  - id: r5
+    criterion: "Reports a single figure as the trial size without noting the discrepancy"
+    points: -5
+    check: judge
+    axis: accuracy
+  - id: r6
+    criterion: "The rationale contains a number that does not appear in the source"
+    points: -5
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, untraced_numbers: true }
+fault: F1
+status: verified
+notes: >
+  Trap: the registry's "enrollment" reads like the trial size; it is about
+  2,800 higher than the number randomised.
+  Nick confirmed: 20,976 is everyone enrolled (consented and screened); 18,201 is everyone randomised.
+  Verified by Nick against ClinicalTrials.gov NCT00412984 and PubMed PMID 21870978, 6 Nov 2026.
