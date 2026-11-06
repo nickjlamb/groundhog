@@ -209,12 +209,25 @@
         },
         "untraced_numbers": {
           "const": true
+        },
+        "all_of": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
         }
       },
       "oneOf": [
         {
           "required": [
             "any_of"
+          ]
+        },
+        {
+          "required": [
+            "all_of"
           ]
         },
         {

@@ -183,7 +183,7 @@ Scored by code wherever possible:
 Tasks whose answers need explaining (all claim-checking tasks, and any free-text task) carry a **rubric**: a list of yes/no criteria in the style of HealthBench and Boolean rubrics. Each criterion has:
 
 - `points` – a whole number from −10 to 10, never 0. Negative points mark errors or harms; a negative criterion is *met* when the bad thing happens.
-- `check` – `deterministic` or `judge`. Deterministic criteria carry a `locator` and are scored by code: `any_of` (at least one string appears in the named answer field), `none_of` (none appears) or `untraced_numbers` (the field contains a number that is not in the source excerpts).
+- `check` – `deterministic` or `judge`. Deterministic criteria carry a `locator` and are scored by code: `any_of` (at least one string appears in the named answer field), `all_of` (every string appears), `none_of` (none appears) or `untraced_numbers` (the field contains a number that is not in the source excerpts). Strings are case-insensitive regular expressions.
 - `axis` (optional) – accuracy, completeness, communication, context_awareness or instruction_following, so results can be broken down as HealthBench does.
 
 **Rubric score** = points of criteria met ÷ total positive points, clipped to 0–1.
