@@ -1,0 +1,419 @@
+{
+ "NCT03057951": {
+  "nct_id": "NCT03057951",
+  "title": "EMPagliflozin outcomE tRial in Patients With chrOnic heaRt Failure With Preserved Ejection Fraction (EMPEROR-Preserved)",
+  "status": "COMPLETED",
+  "phase": "PHASE3",
+  "conditions": [
+   "Heart Failure"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "Empagliflozin"
+   },
+   {
+    "type": "DRUG",
+    "name": "Placebo"
+   }
+  ],
+  "enrollment": 5988,
+  "sponsor": "Boehringer Ingelheim",
+  "start_date": "2017-03-02",
+  "completion_date": "2021-04-26",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT03057951"
+ },
+ "NCT03057977": {
+  "nct_id": "NCT03057977",
+  "title": "EMPagliflozin outcomE tRial in Patients With chrOnic heaRt Failure With Reduced Ejection Fraction (EMPEROR-Reduced)",
+  "status": "COMPLETED",
+  "phase": "PHASE3",
+  "conditions": [
+   "Heart Failure"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "Empagliflozin"
+   },
+   {
+    "type": "DRUG",
+    "name": "Placebo"
+   }
+  ],
+  "enrollment": 3730,
+  "sponsor": "Boehringer Ingelheim",
+  "start_date": "2017-03-06",
+  "completion_date": "2020-05-28",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT03057977"
+ },
+ "NCT03087773": {
+  "nct_id": "NCT03087773",
+  "title": "Impact of EMpagliflozin on Cardiac Function and Biomarkers of Heart Failure in Patients With Acute MYocardial Infarction",
+  "status": "COMPLETED",
+  "phase": "PHASE3",
+  "conditions": [
+   "Acute Myocardial Infarction"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "Empagliflozin 10 mg"
+   },
+   {
+    "type": "DRUG",
+    "name": "Placebo Oral Tablet"
+   }
+  ],
+  "enrollment": 476,
+  "sponsor": "Medical University of Graz",
+  "start_date": "2017-05-11",
+  "completion_date": "2022-05-17",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT03087773"
+ },
+ "NCT03128528": {
+  "nct_id": "NCT03128528",
+  "title": "Analysing the Effect of Empagliflozin on Reduction of Tissue Sodium Content in Patients With Chronic Heart Failure",
+  "status": "COMPLETED",
+  "phase": "PHASE2",
+  "conditions": [
+   "Chronic Heart Failure"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "Empagliflozin 10mg"
+   },
+   {
+    "type": "DRUG",
+    "name": "Placebo Oral Tablet"
+   }
+  ],
+  "enrollment": 84,
+  "sponsor": "University of Erlangen-Nürnberg Medical School",
+  "start_date": "2017-07-01",
+  "completion_date": "2020-04-30",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT03128528"
+ },
+ "NCT04937816": {
+  "nct_id": "NCT04937816",
+  "title": "This Study Combines Data From 3 Other Studies Testing Empagliflozin in Patients With Diabetes or With Chronic Heart Failure. The Study Looks at the Numbers of Patients Who Had Lower Limb Amputations",
+  "status": "COMPLETED",
+  "phase": "N/A",
+  "conditions": [
+   "Diabetes Mellitus, Type 2"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "Placebo"
+   },
+   {
+    "type": "DRUG",
+    "name": "Empagliflozin"
+   }
+  ],
+  "enrollment": 16746,
+  "sponsor": "Boehringer Ingelheim",
+  "start_date": "2021-06-01",
+  "completion_date": "2021-07-13",
+  "study_type": "OBSERVATIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT04937816"
+ },
+ "NCT05050500": {
+  "nct_id": "NCT05050500",
+  "title": "Effects of Dapagliflozin on Inflammatory Factorslevel and Prognosis in Type 2 Diabetes With Acute Myocardial Infarction",
+  "status": "COMPLETED",
+  "phase": "PHASE4",
+  "conditions": [
+   "Myocardial Infarction",
+   "Diabete Type 2",
+   "Glucose Intolerance"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "Dapagliflozin 10mg/Tab"
+   },
+   {
+    "type": "DRUG",
+    "name": "control group"
+   }
+  ],
+  "enrollment": 143,
+  "sponsor": "Qingdao Central Hospital",
+  "start_date": "2023-05-08",
+  "completion_date": "2024-12-30",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT05050500"
+ },
+ "NCT05129722": {
+  "nct_id": "NCT05129722",
+  "title": "Polydiuretic Therapy for HFpEF, a Randomised Controlled Trial",
+  "status": "TERMINATED",
+  "phase": "PHASE4",
+  "conditions": [
+   "Heart Failure With Preserved Ejection Fraction"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "Low dose combination polydiuretic therapy"
+   },
+   {
+    "type": "DRUG",
+    "name": "Comparator monotherapy empagliflozin"
+   }
+  ],
+  "enrollment": 3,
+  "sponsor": "The George Institute",
+  "start_date": "2022-10-01",
+  "completion_date": "2024-05-01",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT05129722"
+ },
+ "NCT05556044": {
+  "nct_id": "NCT05556044",
+  "title": "Empagliflozin for New On-set Heart Failure Study Regardless of Ejection Fraction",
+  "status": "UNKNOWN",
+  "phase": "PHASE3",
+  "conditions": [
+   "Acute Heart Failure"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "Empagliflozin 10 MG"
+   }
+  ],
+  "enrollment": 200,
+  "sponsor": "Chinese University of Hong Kong",
+  "start_date": "2022-09-27",
+  "completion_date": "2024-05-31",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT05556044"
+ },
+ "NCT05967156": {
+  "nct_id": "NCT05967156",
+  "title": "Empagliflozin in Heart Failure Dialysis Patients",
+  "status": "COMPLETED",
+  "phase": "NA",
+  "conditions": [
+   "Heart Failure",
+   "Hemodialysis"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "Empagliflozin10Mg Tab"
+   }
+  ],
+  "enrollment": 30,
+  "sponsor": "Shahid Beheshti University of Medical Sciences",
+  "start_date": "2023-06-01",
+  "completion_date": "2025-06-03",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT05967156"
+ },
+ "NCT06091475": {
+  "nct_id": "NCT06091475",
+  "title": "Therapy to Maintain Remission in Dilated Cardiomyopathy",
+  "status": "UNKNOWN",
+  "phase": "NA",
+  "conditions": [
+   "Heart Failure",
+   "Cardiomyopathy, Dilated",
+   "Cardiomyopathies",
+   "Heart Diseases"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "Other"
+   }
+  ],
+  "enrollment": 50,
+  "sponsor": "Imperial College London",
+  "start_date": "2023-12-02",
+  "completion_date": "2026-09-15",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT06091475"
+ },
+ "NCT06528262": {
+  "nct_id": "NCT06528262",
+  "title": "Effect of Enavogliflozin on Recurrence of Atrial Fibrillation After Catheter Ablation",
+  "status": "RECRUITING",
+  "phase": "PHASE4",
+  "conditions": [
+   "Atrial Fibrillation"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "Enavogliflozin"
+   },
+   {
+    "type": "DRUG",
+    "name": "Placebo"
+   }
+  ],
+  "enrollment": 390,
+  "sponsor": "Yonsei University",
+  "start_date": "2025-04-03",
+  "completion_date": "2027-05-31",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT06528262"
+ },
+ "NCT06632561": {
+  "nct_id": "NCT06632561",
+  "title": "Benefits of Empagliflozin in Patients With Heart Failure and Reduced Ejection Fraction Without Diabetes Mellitus",
+  "status": "COMPLETED",
+  "phase": "PHASE4",
+  "conditions": [
+   "Heart Failure With Reduced Ejection Fraction"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "Empagliflozin 10 mg"
+   },
+   {
+    "type": "DRUG",
+    "name": "Placebo"
+   }
+  ],
+  "enrollment": 74,
+  "sponsor": "Ashraf Wasfy Beshay Aziz",
+  "start_date": "2021-07-26",
+  "completion_date": "2022-03-14",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT06632561"
+ },
+ "NCT06697353": {
+  "nct_id": "NCT06697353",
+  "title": "An Observational Study to Learn More About the Real-world Outcomes in Patients With Heart Failure Who Initiate Treatment With Vericiguat in Japan",
+  "status": "COMPLETED",
+  "phase": "N/A",
+  "conditions": [
+   "Chronic Heart Failure",
+   "Chronic Heart Failure With Reduced Ejection Fraction"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "vericiguat (BAY 1021189)"
+   }
+  ],
+  "enrollment": 4936,
+  "sponsor": "Bayer",
+  "start_date": "2024-11-01",
+  "completion_date": "2025-09-19",
+  "study_type": "OBSERVATIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT06697353"
+ },
+ "NCT06915870": {
+  "nct_id": "NCT06915870",
+  "title": "Comparison of Empagliflozin and Dapagliflozin in Patients With Heart Failure Taking Standard Treatment",
+  "status": "COMPLETED",
+  "phase": "NA",
+  "conditions": [
+   "Diabetes Mellitus",
+   "Heart Failure"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "Dapagliflozin 10 mg daily"
+   },
+   {
+    "type": "DRUG",
+    "name": "Empagliflozin 10 MG OD"
+   }
+  ],
+  "enrollment": 108,
+  "sponsor": "Fatima Maqsood",
+  "start_date": "2024-07-12",
+  "completion_date": "2025-01-13",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT06915870"
+ },
+ "NCT07112274": {
+  "nct_id": "NCT07112274",
+  "title": "Empagliflozin on Patients With Preserved Heart Failure",
+  "status": "COMPLETED",
+  "phase": "NA",
+  "conditions": [
+   "Heart Failure"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "Empagliflozin 10 MG"
+   },
+   {
+    "type": "OTHER",
+    "name": "Placebo Tablet"
+   }
+  ],
+  "enrollment": 50,
+  "sponsor": "Damanhour University",
+  "start_date": "2022-10-01",
+  "completion_date": "2025-07-30",
+  "study_type": "INTERVENTIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT07112274"
+ },
+ "NCT07471802": {
+  "nct_id": "NCT07471802",
+  "title": "Monitoring of the Sympathetic/Vagal Balance Through Multiparametric Analysis of Heart Rate Variability (HRV)",
+  "status": "ACTIVE_NOT_RECRUITING",
+  "phase": "N/A",
+  "conditions": [
+   "Diabete Type 2",
+   "Heart Failure",
+   "Kidney Disease, Chronic",
+   "Cardiorenal Syndrome"
+  ],
+  "interventions": [
+   {
+    "type": "DIAGNOSTIC_TEST",
+    "name": "HOLTER ECG monitoring"
+   }
+  ],
+  "enrollment": 150,
+  "sponsor": "Fondazione Policlinico Universitario Agostino Gemelli IRCCS",
+  "start_date": "2026-05-20",
+  "completion_date": "2031-09-01",
+  "study_type": "OBSERVATIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT07471802"
+ },
+ "NCT07599345": {
+  "nct_id": "NCT07599345",
+  "title": "Emulation of the EMPEROR-Reduced Trial Using Healthcare Claims Data",
+  "status": "COMPLETED",
+  "phase": "N/A",
+  "conditions": [
+   "Heart Failure With Reduced Ejection Fraction",
+   "Chronic Heart Failure"
+  ],
+  "interventions": [
+   {
+    "type": "DRUG",
+    "name": "Empagliflozin"
+   },
+   {
+    "type": "DRUG",
+    "name": "Sitagliptin"
+   }
+  ],
+  "enrollment": 23955,
+  "sponsor": "Brigham and Women's Hospital",
+  "start_date": "2024-10-13",
+  "completion_date": "2026-06-15",
+  "study_type": "OBSERVATIONAL",
+  "url": "https://clinicaltrials.gov/study/NCT07599345"
+ }
+}

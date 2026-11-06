@@ -94,8 +94,8 @@
     ],
     "pmc_id": ""
    },
-   "recorded_by": "mock:submit-gold",
-   "recorded_at": "2026-11-06T15:43:22+00:00"
+   "recorded_by": "anthropic:claude-sonnet-5-5",
+   "recorded_at": "2026-11-06T18:13:32+00:00"
   },
   {
    "key": "get_trial {\"nctId\": \"nct00412984\"}",
@@ -305,8 +305,186 @@
      "21870978"
     ]
    },
-   "recorded_by": "mock:submit-gold",
-   "recorded_at": "2026-11-06T15:43:22+00:00"
+   "recorded_by": "anthropic:claude-sonnet-5-5",
+   "recorded_at": "2026-11-06T18:13:30+00:00"
+  },
+  {
+   "key": "search_pubmed {\"maxResults\": 5, \"query\": \"apixaban versus warfarin in patients with atrial fibrillation granger n engl j med 2011\"}",
+   "tool": "search_pubmed",
+   "args": {
+    "query": "Apixaban versus warfarin in patients with atrial fibrillation Granger N Engl J Med 2011",
+    "maxResults": 5
+   },
+   "variant": "current",
+   "response": {
+    "results": [],
+    "total_count": 0
+   },
+   "recorded_by": "anthropic:claude-sonnet-5-5",
+   "recorded_at": "2026-11-06T18:13:30+00:00"
+  },
+  {
+   "key": "search_pubmed {\"maxResults\": 5, \"query\": \"granger apixaban versus warfarin in patients with atrial fibrillation aristotle\"}",
+   "tool": "search_pubmed",
+   "args": {
+    "query": "Granger Apixaban versus warfarin in patients with atrial fibrillation ARISTOTLE",
+    "maxResults": 5
+   },
+   "variant": "current",
+   "response": {
+    "results": [
+     {
+      "pmid": "21870978",
+      "title": "Apixaban versus warfarin in patients with atrial fibrillation.",
+      "authors": [
+       "Granger CB",
+       "Alexander JH",
+       "McMurray JJ",
+       "Lopes RD",
+       "Hylek EM",
+       "Hanna M",
+       "Al-Khalidi HR",
+       "Ansell J",
+       "Atar D",
+       "Avezum A",
+       "Bahit MC",
+       "Diaz R",
+       "Easton JD",
+       "Ezekowitz JA",
+       "Flaker G",
+       "Garcia D",
+       "Geraldes M",
+       "Gersh BJ",
+       "Golitsyn S",
+       "Goto S",
+       "Hermosillo AG",
+       "Hohnloser SH",
+       "Horowitz J",
+       "Mohan P",
+       "Jansky P",
+       "Lewis BS",
+       "Lopez-Sendon JL",
+       "Pais P",
+       "Parkhomenko A",
+       "Verheugt FW",
+       "Zhu J",
+       "Wallentin L",
+       "ARISTOTLE Committees and Investigators"
+      ],
+      "journal": "The New England journal of medicine",
+      "year": "2011",
+      "doi": "10.1056/NEJMoa1107039"
+     },
+     {
+      "pmid": "34985309",
+      "title": "Direct Oral Anticoagulants Versus Warfarin in Patients With Atrial Fibrillation: Patient-Level Network Meta-Analyses of Randomized Clinical Trials With Interaction Testing by Age and Sex.",
+      "authors": [
+       "Carnicelli AP",
+       "Hong H",
+       "Connolly SJ",
+       "Eikelboom J",
+       "Giugliano RP",
+       "Morrow DA",
+       "Patel MR",
+       "Wallentin L",
+       "Alexander JH",
+       "Cecilia Bahit M",
+       "Benz AP",
+       "Bohula EA",
+       "Chao TF",
+       "Dyal L",
+       "Ezekowitz M",
+       "A A Fox K",
+       "Gencer B",
+       "Halperin JL",
+       "Hijazi Z",
+       "Hohnloser SH",
+       "Hua K",
+       "Hylek E",
+       "Toda Kato E",
+       "Kuder J",
+       "Lopes RD",
+       "Mahaffey KW",
+       "Oldgren J",
+       "Piccini JP",
+       "Ruff CT",
+       "Steffel J",
+       "Wojdyla D",
+       "Granger CB",
+       "COMBINE AF (A Collaboration Between Multiple Institutions to Better Investigate Non-Vitamin K Antagonist Oral Anticoagulant Use in Atrial Fibrillation) Investigators"
+      ],
+      "journal": "Circulation",
+      "year": "2022",
+      "doi": "10.1161/CIRCULATIONAHA.121.056355"
+     },
+     {
+      "pmid": "32160801",
+      "title": "Apixaban Versus Warfarin in Patients With Atrial Fibrillation and Advanced Chronic Kidney Disease.",
+      "authors": [
+       "Stanifer JW",
+       "Pokorney SD",
+       "Chertow GM",
+       "Hohnloser SH",
+       "Wojdyla DM",
+       "Garonzik S",
+       "Byon W",
+       "Hijazi Z",
+       "Lopes RD",
+       "Alexander JH",
+       "Wallentin L",
+       "Granger CB"
+      ],
+      "journal": "Circulation",
+      "year": "2020",
+      "doi": "10.1161/CIRCULATIONAHA.119.044059"
+     },
+     {
+      "pmid": "30579505",
+      "title": "Outcomes of apixaban versus warfarin in patients with atrial fibrillation and multi-morbidity: Insights from the ARISTOTLE trial.",
+      "authors": [
+       "Alexander KP",
+       "Brouwer MA",
+       "Mulder H",
+       "Vinereanu D",
+       "Lopes RD",
+       "Proietti M",
+       "Al-Khatib SM",
+       "Hijazi Z",
+       "Halvorsen S",
+       "Hylek EM",
+       "Verheugt FWA",
+       "Alexander JH",
+       "Wallentin L",
+       "Granger CB",
+       "ARISTOTLE Investigators"
+      ],
+      "journal": "American heart journal",
+      "year": "2019",
+      "doi": "10.1016/j.ahj.2018.09.017"
+     },
+     {
+      "pmid": "33657831",
+      "title": "Apixaban Versus Warfarin in Patients With Atrial Fibrillation and Left Ventricular Hypertrophy: Insights From the ARISTOTLE Trial.",
+      "authors": [
+       "Al-Khatib SM",
+       "Mulder H",
+       "Wojdyla D",
+       "Lopes RD",
+       "Wallentin L",
+       "Alexander JH",
+       "Hijazi Z",
+       "Goto S",
+       "Granger CB"
+      ],
+      "journal": "Circulation. Arrhythmia and electrophysiology",
+      "year": "2021",
+      "doi": "10.1161/CIRCEP.120.009614"
+     }
+    ],
+    "total_count": 29
+   },
+   "recorded_by": "anthropic:claude-sonnet-5-5",
+   "recorded_at": "2026-11-06T18:13:24+00:00"
   }
  ]
 }

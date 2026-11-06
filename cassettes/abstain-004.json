@@ -75,8 +75,359 @@
     ],
     "pmc_id": "PMC4689591"
    },
-   "recorded_by": "anthropic:claude-sonnet-5-5",
-   "recorded_at": "2026-11-06T17:51:42+00:00"
+   "recorded_by": "perplexity:google/gemini-3.5-flash",
+   "recorded_at": "2026-11-06T18:15:07+00:00"
+  },
+  {
+   "key": "get_abstract {\"pmid\": \"30371182\"}",
+   "tool": "get_abstract",
+   "args": {
+    "pmid": "30371182"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "30371182",
+    "title": "Effects of Intensive Systolic Blood Pressure Lowering on Cardiovascular Events and Mortality in Patients With Type 2 Diabetes Mellitus on Standard Glycemic Control and in Those Without Diabetes Mellitus: Reconciling Results From ACCORD BP and SPRINT.",
+    "authors": [
+     "Beddhu Srinivasan",
+     "Chertow Glenn M",
+     "Greene Tom",
+     "Whelton Paul K",
+     "Ambrosius Walter T",
+     "Cheung Alfred K",
+     "Cutler Jeffrey",
+     "Fine Lawrence",
+     "Boucher Robert",
+     "Wei Guo",
+     "Zhang Chong",
+     "Kramer Holly",
+     "Bress Adam P",
+     "Kimmel Paul L",
+     "Oparil Suzanne",
+     "Lewis Cora E",
+     "Rahman Mahboob",
+     "Cushman William C"
+    ],
+    "journal": "Journal of the American Heart Association",
+    "year": "2018",
+    "doi": "10.1161/JAHA.118.009326",
+    "volume": "7",
+    "issue": "18",
+    "pages": "e009326",
+    "abstract_sections": [
+     {
+      "label": "",
+      "text": "Background Intensive systolic blood pressure ( SBP ) lowering significantly reduced cardiovascular disease ( CVD ) events in SPRINT (Systolic Blood Pressure Intervention Trial) but not in ACCORD BP (Action to Control Cardiovascular Risk in Diabetes Blood Pressure). Methods and Results SPRINT tested the effects of intensive (<120&#xa0;mm&#xa0;Hg) versus standard (<140&#xa0;mm&#xa0;Hg) SBP goals on CVD events and all-cause mortality. Using 2&#xd7;2 factorial design, ACCORD BP tested the same SBP intervention in addition to an intensive versus standard glycemia intervention. We compared the effects of intensive SBP lowering on the composite CVD end point and all-cause mortality in SPRINT with its effects within each of the glycemia arms in ACCORD BP . Intensive SBP lowering decreased the hazard of the composite CVD end point similarly in SPRINT (hazard ratio: 0.75; 95% confidence interval, 0.64-0.89) and in the ACCORD BP standard glycemia arm (hazard ratio: 0.77; 95% confidence interval, 0.63-0.95; interaction P=0.87). However, the effect of intensive SBP lowering on the composite CVD end point in the ACCORD BP intensive glycemia arm (hazard ratio: 1.04; 95% confidence interval, 0.83-1.29) was significantly different from SPRINT (interaction P=0.023). Patterns were similar for all-cause mortality. Conclusions The effects of intensive SBP control on CVD events and all-cause mortality were similar in patients without diabetes mellitus and in those with diabetes mellitus on standard glycemic control. An interaction between intensive SBP lowering and intensive glycemic control may have masked beneficial effects of intensive SBP lowering in ACCORD BP . Clinical Trial Registration URL : http://www.clinicaltrials.gov . Unique identifiers: NCT 01206062, NCT 00000620."
+     }
+    ],
+    "keywords": [
+     "cardiovascular outcomes",
+     "diabetes mellitus",
+     "high blood pressure",
+     "hypertension"
+    ],
+    "mesh_terms": [
+     "Aged",
+     "Antihypertensive Agents",
+     "Blood Glucose",
+     "Blood Pressure",
+     "Cardiovascular Diseases",
+     "Diabetes Mellitus, Type 2",
+     "Dose-Response Relationship, Drug",
+     "Drug Therapy, Combination",
+     "Female",
+     "Fenofibrate",
+     "Humans",
+     "Hydroxymethylglutaryl-CoA Reductase Inhibitors",
+     "Hypolipidemic Agents",
+     "Incidence",
+     "Male",
+     "Middle Aged",
+     "Prognosis",
+     "Risk Factors",
+     "Simvastatin",
+     "Survival Rate",
+     "Treatment Outcome",
+     "United States"
+    ],
+    "pmc_id": "PMC6222943"
+   },
+   "recorded_by": "perplexity:google/gemini-3.5-flash",
+   "recorded_at": "2026-11-06T18:15:18+00:00"
+  },
+  {
+   "key": "get_full_text {\"pmcid\": \"pmc4689591\", \"sections\": [\"introduction\", \"methods\"]}",
+   "tool": "get_full_text",
+   "args": {
+    "pmcid": "PMC4689591",
+    "sections": [
+     "Introduction",
+     "Methods"
+    ]
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "",
+    "pmcid": "PMC4689591",
+    "title": "A Randomized Trial of Intensive versus Standard Blood-Pressure Control",
+    "sections": [
+     {
+      "title": "METHODS",
+      "content": "\n### STUDY DESIGN AND OVERSIGHT\n\nSPRINT was a randomized, controlled, open-label trial that was conducted at 102 clinical sites (organized into 5 clinical center networks) in the United States, including Puerto Rico (see the, available with the full text of this article at NEJM.org). A trial coordinating center served as a data and biostatistical core center and supervised the central laboratory, the electrocardiography reading center, the magnetic resonance imaging reading center, and the drug-distribution center. The rationale and protocol for the trial are publicly available,and the protocol is available at NEJM.org.\n\nSPRINT was sponsored by the NHLBI, with cosponsorship by the National Institute of Diabetes and Digestive and Kidney Diseases, the National Institute of Neurological Disorders and Stroke, and the National Institute on Aging. An independent data and safety monitoring board monitored unblinded trial results and safety events. The study was approved by the institutional review board at each participating study site. The steering committee designed the study, gathered the data (in collaboration with investigators at the clinics and other study units), made the decision to submit the manuscript for publication, and vouches for the fidelity of the study to the protocol. The writing committee wrote the manuscript and vouches for the completeness and accuracy of the data and analysis. The coordinating center was responsible for analyzing the data. Scientists at the National Institutes of Health participated in the design of the study and as a group had one vote on the steering committee of the trial.\n\n\n### STUDY POPULATION\n\nParticipants were required to meet all the following criteria: an age of at least 50 years, a systolic blood pressure of 130 to 180 mm Hg (see the), and an increased risk of cardiovascular events. Increased cardiovascular risk was defined by one or more of the following: clinical or subclinical cardiovascular disease other than stroke; chronic kidney disease, excluding polycystic kidney disease, with an estimated glomerular filtration rate (eGFR) of 20 to less than 60 ml per minute per 1.73 mof body-surface area, calculated with the use of the four-variable Modification of Diet in Renal Disease equation; a 10-year risk of cardiovascular disease of 15% or greater on the basis of the Framing-ham risk score; or an age of 75 years or older. Patients with diabetes mellitus or prior stroke were excluded. Detailed inclusion and exclusion criteria are listed in the. All participants provided written informed consent.\n\n\n### RANDOMIZATION AND INTERVENTIONS\n\nEligible participants were assigned to a systolic blood-pressure target of either less than 140 mm Hg (the standard-treatment group) or less than 120 mm Hg (the intensive-treatment group). Randomization was stratified according to clinical site. Participants and study personnel were aware of the study-group assignments, but outcome adjudicators were not.\n\nAfter the participants underwent randomization, their baseline antihypertensive regimens were adjusted on the basis of the study-group assignment. The treatment algorithms were similar to those used in the Action to Control Cardiovascular Risk in Diabetes (ACCORD) trial.These algorithms and our formulary are listed inand. All major classes of antihypertensive agents were included in the formulary and were provided at no cost to the participants. SPRINT investigators could also prescribe other antihypertensive medications (not provided by the study). The protocol encouraged, but did not mandate, the use of drug classes with the strongest evidence for reduction in cardiovascular outcomes, including thiazide-type diuretics (encouraged as the first-line agent), loop diuretics (for participants with advanced chronic kidney disease), and beta-adrenergic blockers (for those with coronary artery disease).Chlorthalidone was encouraged as the primary thiazide-type diuretic, and amlodipine as the preferred calcium-channel blocker.Azilsartan and azilsartan combined with chlorthalidone were donated by Takeda Pharmaceuticals International and Arbor Pharmaceuticals; neither company had any other role in the study.\n\nParticipants were seen monthly for the first 3 months and every 3 months thereafter. Medications for participants in the intensive-treatment group were adjusted on a monthly basis to target a systolic blood pressure of less than 120 mm Hg. For participants in the standard-treatment group, medications were adjusted to target a systolic blood pressure of 135 to 139 mm Hg, and the dose was reduced if systolic blood pressure was less than 130 mm Hg on a single visit or less than 135 mm Hg on two consecutive visits. Dose adjustment was based on a mean of three blood-pressure measurements at an office visit while the patient was seated and after 5 minutes of quiet rest; the measurements were made with the use of an automated measurement system (Model 907, Omron Healthcare). Lifestyle modification was encouraged as part of the management strategy. Retention in the study and adherence to treatment were monitored prospectively and routinely throughout the trial.\n\n\n### STUDY MEASUREMENTS\n\nDemographic data were collected at baseline. Clinical and laboratory data were obtained at baseline and every 3 months thereafter. A structured interview was used in both groups every 3 months to obtain self-reported cardiovascular disease outcomes. Although the interviewers were aware of the study-group assignments, they used the same format for interviews in the two groups to minimize ascertainment bias. Medical records and electrocardiograms were obtained for documentation of events. Whenever clinical-site staff became aware of a death, a standard protocol was used to obtain information on the event.\n\nSerious adverse events were defined as events that were fatal or life-threatening, that resulted in clinically significant or persistent disability, that required or prolonged a hospitalization, or that were judged by the investigator to represent a clinically significant hazard or harm to the participant that might require medical or surgical intervention to prevent one of the other events listed above.A short list of monitored conditions were reported as adverse events if they were evaluated in an emergency department: hypotension, syncope, injurious falls, electrolyte abnormalities, and bradycardia. We also monitored occurrences of acute kidney injury or acute renal failure if they were noted on admission or occurred during a hospitalization and were reported in the hospital discharge summary as a primary or main secondary diagnosis. Thewas used to classify the safety events. Coding was performed at the coordinating center, and up to three codes were assigned to each safety event. The relationship of serious adverse events to the intervention was assessed by the trial safety officer and reviewed monthly by the safety committee.\n\n\n### STUDY OUTCOMES\n\nDefinitions of study outcomes are outlined in the. A committee whose members were unaware of the study-group assignments adjudicated the clinical outcomes specified in the protocol. The primary hypothesis was that treatment to reach a systolic blood-pressure target of less than 120 mm Hg, as compared with a target of less than 140 mm Hg, would result in a lower rate of the composite outcome of myocardial infarction, acute coronary syndrome not resulting in myocardial infarction, stroke, acute decompensated heart failure, or death from cardiovascular causes. Secondary outcomes included the individual components of the primary composite outcome, death from any cause, and the composite of the primary outcome or death from any cause.\n\nWe also assessed renal outcomes, using a different definition for patients with chronic kidney disease (eGFR <60 ml per minute per 1.73 m) at baseline and those without it. The renal outcome in participants with chronic kidney disease at baseline was a composite of a decrease in the eGFR of 50% or more (confirmed by a subsequent laboratory test) or the development of ESRD requiring long-term dialysis or kidney transplantation. In participants without chronic kidney disease at baseline, the renal outcome was defined by a decrease in the eGFR of 30% or more to a value of less than 60 ml per minute per 1.73 m. Incident albuminuria, defined for all study participants by a doubling of the ratio of urinary albumin (in milligrams) to creatinine (in grams) from less than 10 at baseline to greater than 10 during follow-up, was also a prespecified renal outcome.\n\nPrespecified subgroups of interest for all outcomes were defined according to status with respect to cardiovascular disease at baseline (yes vs. no), status with respect to chronic kidney disease at baseline (yes vs. no), sex, race (black vs. non-black), age (<75 vs. ≥75 years), and baseline systolic blood pressure in three levels (≤132 mm Hg, >132 to <145 mm Hg, and ≥145 mm Hg). We also planned a comparison of the effects of systolic blood-pressure targets on incident dementia, changes in cognitive function, and cerebral small-vessel ischemic disease; these results are not presented here.\n\n\n### STATISTICAL ANALYSIS\n\nWe planned a 2-year recruitment period, with a maximum follow-up of 6 years, and anticipated a loss to follow-up of 2% per year. With an enrollment target of 9250 participants, we estimated that the trial would have 88.7% power to detect a 20% effect with respect to the primary outcome, assuming an event rate of 2.2% per year in the standard-treatment group.\n\nOur primary analysis compared the time to the first occurrence of a primary outcome event between the two study groups with the use of the intention-to-treat approach for all randomly assigned participants; for this analysis, we used Cox proportional-hazards regression with two-sided tests at the 5% level of significance, with stratification according to clinic. Follow-up time was censored on the date of last event ascertainment. Interactions between treatment effect and prespecified subgroups were assessed with a likelihood-ratio test for the interaction with the use of Hommel-adjusted P values.Interim analyses were performed for each meeting of the data and safety monitoring board, with group-sequential stopping boundaries defined with the use of the Lan–DeMets method with an O’Brien–Fleming–type spending function.The Fine–Gray model for the competing risk of death was used as a sensitivity analysis."
+     }
+    ],
+    "figure_captions": [],
+    "table_captions": [],
+    "reference_count": 39
+   },
+   "recorded_by": "perplexity:google/gemini-3.5-flash",
+   "recorded_at": "2026-11-06T18:15:14+00:00"
+  },
+  {
+   "key": "get_trial {\"nctId\": \"nct01206062\"}",
+   "tool": "get_trial",
+   "args": {
+    "nctId": "NCT01206062"
+   },
+   "variant": "current",
+   "response": {
+    "nct_id": "NCT01206062",
+    "title": "Systolic Blood Pressure Intervention Trial",
+    "status": "COMPLETED",
+    "phase": "NA",
+    "conditions": [
+     "Hypertension"
+    ],
+    "interventions": [
+     {
+      "type": "DRUG",
+      "name": "Intensive control of SBP"
+     },
+     {
+      "type": "DRUG",
+      "name": "Standard control of SBP"
+     }
+    ],
+    "enrollment": 9361,
+    "sponsor": "National Heart, Lung, and Blood Institute (NHLBI)",
+    "start_date": "2010-10",
+    "completion_date": "2019-03",
+    "study_type": "INTERVENTIONAL",
+    "url": "https://clinicaltrials.gov/study/NCT01206062",
+    "official_title": "Systolic Blood Pressure Intervention Trial",
+    "summary": "Elevated blood pressure (BP) is an important public health concern. It is highly prevalent, the prevalence may be increasing, and it is a risk factor for several adverse health outcomes, especially coronary heart disease, stroke, heart failure, chronic kidney disease, and decline in cognitive function. The Systolic Blood Pressure Intervention Trial (SPRINT) is a 2-arm, multicenter, randomized clinical trial designed to test whether a treatment program aimed at reducing systolic blood pressure (SBP) to a lower goal than currently recommended will reduce cardiovascular disease (CVD) risk.",
+    "eligibility": {
+     "criteria": "Inclusion Criteria:\n\n* At least 50 years old\n\nSystolic blood pressure of\n\n* 130 - 180 mm Hg on 0 or 1 medication\n* 130 - 170 mm Hg on up to 2 medications\n* 130 - 160 mm Hg on up to 3 medications\n* 130 - 150 mm Hg on up to 4 medications\n\nRisk (one or more of the following)\n\n1. Presence of clinical or subclinical cardiovascular disease other than stroke\n2. CKD, defined as eGFR 20 - 59 ml/min/1.73m2\n3. A Framingham Risk Score for 10-year CVD risk ≥ 15%\n4. Age greater than 75 years\n\nExclusion Criteria:\n\n* An indication for a specific BP lowering medication that the person is not taking and the person has not been documented to be intolerant of the medication class.\n* Known secondary cause of hypertension that causes concern regarding safety of the protocol.\n* One minute standing SBP \\< 110 mm Hg.\n* Proteinuria in the following ranges (based on a measurement within the past 6 months)\n\n  * 24 hour urinary protein excretion ≥1 g/day, or\n  * 24 hour urinary albumin excretion ≥ 600 mg/day, or\n  * spot urine protein/creatinine ratio ≥ 1 g/g creatinine, or\n  * spot urine albumin/creatinine ratio ≥ 600 mg/g creatinine, or\n  * urine dipstick ≥ 2+ protein\n* Arm circumference too large or small to allow accurate blood pressure measurement with available devices\n* Diabetes mellitus,\n* History of stroke (not CE or stenting)\n* Diagnosis of polycystic kidney disease\n* Glomerulonephritis treated with or likely to be treated with immunosuppressive therapy\n* eGFR \\< 20 ml/min /1.73m2 or end-stage renal disease (ESRD)\n* Cardiovascular event or procedure (as defined above as clinical CVD for study entry) or hospitalization for unstable angina within last 3 months\n* Symptomatic heart failure within the past 6 months or left ventricular ejection fraction (by any method) \\< 35%\n* A medical condition likely to limit survival to less than 3 years or a malignancy other than non-melanoma skin cancer within the last 2 years\n* Any factors judged by the clinic team to be likely to limit adherence to interventions.\n* Failure to obtain informed consent from participant\n* Currently participating in another clinical trial (intervention study). Note: Patient must wait until the completion of his/her activities or the completion of the other trial before being screened for SPRINT.\n* Living in the same household as an already randomized SPRINT participant\n* Any organ transplant\n* Unintentional weight loss \\> 10% in last 6 months\n* Pregnancy, currently trying to become pregnant, or of child-bearing potential and not using birth control.",
+     "gender": "ALL",
+     "minimum_age": "50 Years",
+     "maximum_age": "",
+     "healthy_volunteers": "true"
+    },
+    "design": {
+     "allocation": "RANDOMIZED",
+     "intervention_model": "PARALLEL",
+     "primary_purpose": "TREATMENT",
+     "masking": "SINGLE",
+     "who_masked": [
+      "OUTCOMES_ASSESSOR"
+     ]
+    },
+    "arms": [
+     {
+      "label": "Intensive Control of SBP",
+      "type": "EXPERIMENTAL",
+      "description": "Participants randomized into the Intensive BP arm will have a goal of SBP \\<120 mm Hg. 2-drug therapy initiated in most Intensive participants; age ≥75 years and SBP 130-139 mm Hg on 0-1 drug; may begin with 1 drug, but add second at 1 month if SBP ≥130 mm Hg; drugs added and/or titrated at each visit (monthly) to achieve SBP \\<120 mm Hg; at periodic \"milepost\" visits: addition of another drug \"required\" if not at goal.",
+      "intervention_names": [
+       "Drug: Intensive control of SBP"
+      ]
+     },
+     {
+      "label": "Standard Control of SBP",
+      "type": "ACTIVE_COMPARATOR",
+      "description": "Participants randomized into the Standard arm will have a goal of SBP \\<140 mm Hg. Intensify therapy if SBP ≥160 mm Hg @ 1 visit; ≥140 mm Hg @ 2 consecutive visits; Down-titration if SBP \\<130 mm Hg @ 1 visit; \\<135 mm Hg @ 2 consecutive visits",
+      "intervention_names": [
+       "Drug: Standard control of SBP"
+      ]
+     }
+    ],
+    "primary_outcomes": [
+     {
+      "measure": "Number of Participants With First Occurrence of a Myocardial Infarction (MI), Acute Coronary Syndrome (ACS), Stroke, Heart Failure (HF), or CVD Death",
+      "description": "",
+      "time_frame": "6 years"
+     }
+    ],
+    "secondary_outcomes": [
+     {
+      "measure": "Number of Participants With All-cause Mortality",
+      "description": "",
+      "time_frame": "6 years"
+     },
+     {
+      "measure": "Number of CKD Participants Who Experienced a 50% Decline From Baseline eGFR",
+      "description": "",
+      "time_frame": "6 years"
+     },
+     {
+      "measure": "Participants Who Developed End Stage Renal Disease",
+      "description": "",
+      "time_frame": "6 years"
+     },
+     {
+      "measure": "Number of Patients With All-cause Dementia",
+      "description": "A 3-step process was used ascertain incident cases of all-cause dementia. First, to identify possible cases of dementia a brief Cognition Screening Battery was administered to all participants. Participants who score below the pre-designated screening cut-point for possible cognitive impairment during follow-up were administered a more comprehensive and detailed neurocognitive test battery (the Extended Cognitive Assessment Battery) plus the Functional Assessment Questionnaire (FAQ) which assesses impairments in daily living skills as a result of cognitive impairments. Last, all the above available tests and questionnaire data were submitted to a centralized, web-based system for adjudication by a panel of dementia experts who assigned final study classifications of probable dementia (PD), mild cognitive impairment (MCI) or no impairment (NI).",
+      "time_frame": "6 years"
+     },
+     {
+      "measure": "Small Vessel Cerebral Ischemic Disease",
+      "description": "Change over 4 years in total white matter lesion volume from baseline Change over 4 years in total brain volume from baseline\n\nBecause of the skewed distribution for WML volume, we first applied an inverse hyperbolic sine transformation (asinh), which is similar to a log transformation but can accommodate values of zero. Linear mixed models, including random effects for participant and MRI facility, were used to estimate the change in WML volume and TBV between the treatment groups, including time since randomization (in days) and intracranial volume as covariates. Because the inverse hyperbolic sine transformation is nonlinear, and given the context of a mixed-effects model, back-transformation to the original scale of cm3 is difficult",
+      "time_frame": "4 years"
+     }
+    ],
+    "locations_count": 1,
+    "lead_investigator": "David M. Reboussin, PhD",
+    "associated_pmids": [
+     "24902920",
+     "26911833",
+     "26551272",
+     "42693262",
+     "42614618",
+     "42587350",
+     "41965144",
+     "41903707",
+     "41609319",
+     "41540116",
+     "41293821",
+     "41064861",
+     "40751458",
+     "40741171",
+     "40260539",
+     "40160598",
+     "40094181",
+     "39947193",
+     "39819096",
+     "39686614",
+     "39497947",
+     "39359164",
+     "39078712",
+     "39077655",
+     "38946010",
+     "38881460",
+     "38842100",
+     "38706284",
+     "38690929",
+     "38306042",
+     "38164752",
+     "38084941",
+     "37916517",
+     "37774646",
+     "37646208",
+     "37589154",
+     "37345754",
+     "37301768",
+     "37288570",
+     "37204788",
+     "37165869",
+     "37133829",
+     "36974773",
+     "36968629",
+     "36865252",
+     "36857053",
+     "36688305",
+     "36568559",
+     "36519451",
+     "36448621",
+     "36398903",
+     "36223105",
+     "35945470",
+     "35766041",
+     "35640916",
+     "35285922",
+     "35254390",
+     "35089798",
+     "35006243",
+     "34935407",
+     "34902012",
+     "34823375",
+     "34786815",
+     "34601970",
+     "34543687",
+     "34468696",
+     "34216524",
+     "34055403",
+     "34010531",
+     "33955229",
+     "33888247",
+     "33786851",
+     "33775127",
+     "33683313",
+     "33448580",
+     "33404789",
+     "33245323",
+     "33100049",
+     "33098800",
+     "33044494",
+     "32905623",
+     "32853332",
+     "32815661",
+     "32722801",
+     "32362231",
+     "32362229",
+     "32223381",
+     "32163578",
+     "32101262",
+     "31983312",
+     "31865790",
+     "31840813",
+     "31779925",
+     "31778222",
+     "31755625",
+     "31637971",
+     "31548621",
+     "31529024",
+     "31408137",
+     "31378102",
+     "31257407",
+     "31256717",
+     "31066177",
+     "30857410",
+     "30744452",
+     "30688979",
+     "30444838",
+     "30256784",
+     "29685860",
+     "29567858",
+     "29531173",
+     "29493562",
+     "29421687",
+     "29370333",
+     "29212825",
+     "29162340",
+     "29044764",
+     "29021322",
+     "28985268",
+     "28939617",
+     "28869987",
+     "28834483",
+     "28834469",
+     "28760939",
+     "28512184",
+     "28373269",
+     "28364091",
+     "28166324",
+     "28111758",
+     "27555505",
+     "27513312",
+     "27195814",
+     "27032074",
+     "26920359",
+     "26865200",
+     "26553234",
+     "26506129"
+    ]
+   },
+   "recorded_by": "perplexity:google/gemini-3.5-flash",
+   "recorded_at": "2026-11-06T18:14:36+00:00"
   },
   {
    "key": "search_pubmed {\"maxResults\": 3, \"query\": \"effects of intensive blood-pressure control in type 2 diabetes mellitus accord\"}",
@@ -334,7 +685,7 @@
     "total_count": 57
    },
    "recorded_by": "anthropic:claude-sonnet-5-5",
-   "recorded_at": "2026-11-06T17:51:41+00:00"
+   "recorded_at": "2026-11-06T18:10:43+00:00"
   },
   {
    "key": "search_pubmed {\"maxResults\": 5, \"query\": \"sprint randomized trial of intensive versus standard blood-pressure control n engl j med 2015 wright\"}",
@@ -408,6 +759,1053 @@
    },
    "recorded_by": "anthropic:claude-sonnet-5-5",
    "recorded_at": "2026-11-06T17:51:32+00:00"
+  },
+  {
+   "key": "search_pubmed {\"maxResults\": 5, \"query\": \"sprint randomized trial of intensive versus standard blood-pressure control n engl j med 2015\"}",
+   "tool": "search_pubmed",
+   "args": {
+    "query": "SPRINT randomized trial of intensive versus standard blood-pressure control N Engl J Med 2015",
+    "maxResults": 5
+   },
+   "variant": "current",
+   "response": {
+    "results": [
+     {
+      "pmid": "26551272",
+      "title": "A Randomized Trial of Intensive versus Standard Blood-Pressure Control.",
+      "authors": [
+       "SPRINT Research Group",
+       "Wright JT Jr",
+       "Williamson JD",
+       "Whelton PK",
+       "Snyder JK",
+       "Sink KM",
+       "Rocco MV",
+       "Reboussin DM",
+       "Rahman M",
+       "Oparil S",
+       "Lewis CE",
+       "Kimmel PL",
+       "Johnson KC",
+       "Goff DC Jr",
+       "Fine LJ",
+       "Cutler JA",
+       "Cushman WC",
+       "Cheung AK",
+       "Ambrosius WT"
+      ],
+      "journal": "The New England journal of medicine",
+      "year": "2015",
+      "doi": "10.1056/NEJMoa1511939"
+     },
+     {
+      "pmid": "34010531",
+      "title": "Final Report of a Trial of Intensive versus Standard Blood-Pressure Control.",
+      "authors": [
+       "SPRINT Research Group",
+       "Lewis CE",
+       "Fine LJ",
+       "Beddhu S",
+       "Cheung AK",
+       "Cushman WC",
+       "Cutler JA",
+       "Evans GW",
+       "Johnson KC",
+       "Kitzman DW",
+       "Oparil S",
+       "Rahman M",
+       "Reboussin DM",
+       "Rocco MV",
+       "Sink KM",
+       "Snyder JK",
+       "Whelton PK",
+       "Williamson JD",
+       "Wright JT Jr",
+       "Ambrosius WT"
+      ],
+      "journal": "The New England journal of medicine",
+      "year": "2021",
+      "doi": "10.1056/NEJMoa1901281"
+     }
+    ],
+    "total_count": 2
+   },
+   "recorded_by": "anthropic:claude-sonnet-5-5",
+   "recorded_at": "2026-11-06T18:10:51+00:00"
+  },
+  {
+   "key": "search_pubmed {\"query\": \"\\\"accord-bp\\\" \\\"sprint\\\" \\\"diabetes\\\" \\\"hazard ratio\\\"\"}",
+   "tool": "search_pubmed",
+   "args": {
+    "query": "\"ACCORD-BP\" \"SPRINT\" \"diabetes\" \"hazard ratio\""
+   },
+   "variant": "current",
+   "response": {
+    "results": [
+     {
+      "pmid": "36787937",
+      "title": "Effects of Intensive Systolic Blood Pressure Lowering on End-Stage Kidney Disease and Kidney Function Decline in Adults With Type 2 Diabetes Mellitus and Cardiovascular Risk Factors: A Post Hoc Analysis of ACCORD-BP and SPRINT.",
+      "authors": [
+       "Tawfik YMK",
+       "Van Tassell BW",
+       "Dixon DL",
+       "Baker WL",
+       "Fanikos J",
+       "Buckley LF"
+      ],
+      "journal": "Diabetes care",
+      "year": "2023",
+      "doi": "10.2337/dc22-2040"
+     },
+     {
+      "pmid": "36307193",
+      "title": "Individualising intensive systolic blood pressure reduction in hypertension using computational trial phenomaps and machine learning: a post-hoc analysis of randomised clinical trials.",
+      "authors": [
+       "Oikonomou EK",
+       "Spatz ES",
+       "Suchard MA",
+       "Khera R"
+      ],
+      "journal": "The Lancet. Digital health",
+      "year": "2022",
+      "doi": "10.1016/S2589-7500(22)00170-4"
+     },
+     {
+      "pmid": "30477321",
+      "title": "A data-zone scoring system to assess the generalizability of clinical trial results to individual patients.",
+      "authors": [
+       "Laffin LJ",
+       "Besser SA",
+       "Alenghat FJ"
+      ],
+      "journal": "European journal of preventive cardiology",
+      "year": "2019",
+      "doi": "10.1177/2047487318815967"
+     },
+     {
+      "pmid": "33595663",
+      "title": "Evaluation of Optimal Diastolic Blood Pressure Range Among Adults With Treated Systolic Blood Pressure Less Than 130 mm Hg.",
+      "authors": [
+       "Li J",
+       "Somers VK",
+       "Gao X",
+       "Chen Z",
+       "Ju J",
+       "Lin Q",
+       "Mohamed EA",
+       "Karim S",
+       "Xu H",
+       "Zhang L"
+      ],
+      "journal": "JAMA network open",
+      "year": "2021",
+      "doi": "10.1001/jamanetworkopen.2020.37554"
+     },
+     {
+      "pmid": "34668944",
+      "title": "Association Between Baseline Diastolic Blood Pressure and the Efficacy of Intensive vs Standard Blood Pressure-Lowering Therapy.",
+      "authors": [
+       "Foy AJ",
+       "Filippone EJ",
+       "Schaefer E",
+       "Nudy M",
+       "Ruzieh M",
+       "Dyer AM",
+       "Chinchilli VM",
+       "Naccarelli GV"
+      ],
+      "journal": "JAMA network open",
+      "year": "2021",
+      "doi": "10.1001/jamanetworkopen.2021.28980"
+     },
+     {
+      "pmid": "28947569",
+      "title": "Intensive Versus Standard Blood Pressure Control in SPRINT-Eligible Participants of ACCORD-BP.",
+      "authors": [
+       "Buckley LF",
+       "Dixon DL",
+       "Wohlford GF 4th",
+       "Wijesinghe DS",
+       "Baker WL",
+       "Van Tassell BW"
+      ],
+      "journal": "Diabetes care",
+      "year": "2017",
+      "doi": "10.2337/dc17-1366"
+     },
+     {
+      "pmid": "34950321",
+      "title": "Effect of Intensive Blood Pressure Lowering on Incident Atrial Fibrillation: A Systematic Review and Meta-Analysis.",
+      "authors": [
+       "J Singleton M",
+       "Y Chen L",
+       "Whalen SP",
+       "D Bhave P",
+       "H Beaty E",
+       "Yeboah J",
+       "Z Soliman E"
+      ],
+      "journal": "Journal of atrial fibrillation",
+      "year": "2020",
+      "doi": "10.4022/jafib.2401"
+     },
+     {
+      "pmid": "39285217",
+      "title": "Association between intensive blood pressure lowering and stroke-free survival among patients with and without Diabetes.",
+      "authors": [
+       "Zhang Z",
+       "Nie Z",
+       "Chen K",
+       "Shi R",
+       "Wu Z",
+       "Li C",
+       "Zhang S",
+       "Chen T"
+      ],
+      "journal": "Scientific reports",
+      "year": "2024",
+      "doi": "10.1038/s41598-024-72211-7"
+     },
+     {
+      "pmid": "30371182",
+      "title": "Effects of Intensive Systolic Blood Pressure Lowering on Cardiovascular Events and Mortality in Patients With Type 2 Diabetes Mellitus on Standard Glycemic Control and in Those Without Diabetes Mellitus: Reconciling Results From ACCORD BP and SPRINT.",
+      "authors": [
+       "Beddhu S",
+       "Chertow GM",
+       "Greene T",
+       "Whelton PK",
+       "Ambrosius WT",
+       "Cheung AK",
+       "Cutler J",
+       "Fine L",
+       "Boucher R",
+       "Wei G",
+       "Zhang C",
+       "Kramer H",
+       "Bress AP",
+       "Kimmel PL",
+       "Oparil S",
+       "Lewis CE",
+       "Rahman M",
+       "Cushman WC"
+      ],
+      "journal": "Journal of the American Heart Association",
+      "year": "2018",
+      "doi": "10.1161/JAHA.118.009326"
+     },
+     {
+      "pmid": "29212825",
+      "title": "Intensive Blood Pressure Lowering in Patients With and Patients Without Type 2 Diabetes: A Pooled Analysis From Two Randomized Trials.",
+      "authors": [
+       "Brouwer TF",
+       "Vehmeijer JT",
+       "Kalkman DN",
+       "Berger WR",
+       "van den Born BH",
+       "Peters RJ",
+       "Knops RE"
+      ],
+      "journal": "Diabetes care",
+      "year": "2018",
+      "doi": "10.2337/dc17-1722"
+     }
+    ],
+    "total_count": 13
+   },
+   "recorded_by": "perplexity:google/gemini-3.5-flash",
+   "recorded_at": "2026-11-06T18:15:16+00:00"
+  },
+  {
+   "key": "search_pubmed {\"query\": \"\\\"sprint trial\\\" diabetes \\\"primary outcome\\\"\"}",
+   "tool": "search_pubmed",
+   "args": {
+    "query": "\"SPRINT trial\" diabetes \"primary outcome\""
+   },
+   "variant": "current",
+   "response": {
+    "results": [
+     {
+      "pmid": "38966681",
+      "title": "Chronic Kidney Disease Stage and Cardiovascular and Mortality Events Among Older Adults: The SPRINT Trial.",
+      "authors": [
+       "Turbay-Caballero V",
+       "Ricardo AC",
+       "Chen J",
+       "Missikpode C",
+       "Lash JP",
+       "Aroca-Martinez G",
+       "Musso CG"
+      ],
+      "journal": "Kidney medicine",
+      "year": "2024",
+      "doi": "10.1016/j.xkme.2024.100845"
+     },
+     {
+      "pmid": "35502662",
+      "title": "Effect of Intensive Blood Pressure Control on Incident Stroke Risk in Patients With Mild Cognitive Impairment.",
+      "authors": [
+       "de Havenon A",
+       "Sharma R",
+       "Falcone GJ",
+       "Prabhakaran S",
+       "Sheth KN"
+      ],
+      "journal": "Stroke",
+      "year": "2022",
+      "doi": "10.1161/STROKEAHA.122.038818"
+     },
+     {
+      "pmid": "27722961",
+      "title": "Treatment of Hypertension: Which Goal for Which Patient?",
+      "authors": [
+       "Jarraya F"
+      ],
+      "journal": "Advances in experimental medicine and biology",
+      "year": "2017",
+      "doi": "10.1007/5584_2016_97"
+     },
+     {
+      "pmid": "42115521",
+      "title": "Prediabetes, Malignant Ventricular Hypertrophy and Stroke: The SPRINT Trial.",
+      "authors": [
+       "Kaze AD",
+       "Juraschek SP",
+       "Cohen JB",
+       "Singh S",
+       "Ndumele CE",
+       "Ballantyne CM",
+       "Berry JD",
+       "Echouffo-Tcheugui JB"
+      ],
+      "journal": "Diabetes, obesity & metabolism",
+      "year": "2026",
+      "doi": "10.1111/dom.70858"
+     },
+     {
+      "pmid": "36568559",
+      "title": "CVD risk in non-albuminuric chronic kidney disease in hypertensive, non-diabetic subjects: A post-hoc analysis from SPRINT.",
+      "authors": [
+       "Sheng CS",
+       "Wang D",
+       "Yuan J",
+       "Cheng Y",
+       "Sun S",
+       "Yang Y",
+       "Miao Y",
+       "Wang W",
+       "Tian J",
+       "Bloomgarden ZT"
+      ],
+      "journal": "Frontiers in cardiovascular medicine",
+      "year": "2022",
+      "doi": "10.3389/fcvm.2022.977938"
+     },
+     {
+      "pmid": "30256671",
+      "title": "Effect of intensive blood pressure lowering on cardiovascular outcomes based on cardiovascular risk: A secondary analysis of the SPRINT trial.",
+      "authors": [
+       "Attar A",
+       "Sayadi M",
+       "Jannati M"
+      ],
+      "journal": "European journal of preventive cardiology",
+      "year": "2019",
+      "doi": "10.1177/2047487318800741"
+     },
+     {
+      "pmid": "37204788",
+      "title": "Identifying Patients for Intensive Blood Pressure Treatment Based on Cognitive Benefit: A Secondary Analysis of the SPRINT Randomized Clinical Trial.",
+      "authors": [
+       "Ghazi L",
+       "Shen J",
+       "Ying J",
+       "Derington CG",
+       "Cohen JB",
+       "Marcum ZA",
+       "Herrick JS",
+       "King JB",
+       "Cheung AK",
+       "Williamson JD",
+       "Pajewski NM",
+       "Bryan N",
+       "Supiano M",
+       "Sonnen J",
+       "Weintraub WS",
+       "Greene TH",
+       "Bress AP"
+      ],
+      "journal": "JAMA network open",
+      "year": "2023",
+      "doi": "10.1001/jamanetworkopen.2023.14443"
+     },
+     {
+      "pmid": "29040268",
+      "title": "Benefit and harm of intensive blood pressure treatment: Derivation and validation of risk models using data from the SPRINT and ACCORD trials.",
+      "authors": [
+       "Basu S",
+       "Sussman JB",
+       "Rigdon J",
+       "Steimle L",
+       "Denton BT",
+       "Hayward RA"
+      ],
+      "journal": "PLoS medicine",
+      "year": "2017",
+      "doi": "10.1371/journal.pmed.1002410"
+     }
+    ],
+    "total_count": 8
+   },
+   "recorded_by": "perplexity:google/gemini-3.5-flash",
+   "recorded_at": "2026-11-06T18:14:40+00:00"
+  },
+  {
+   "key": "search_pubmed {\"query\": \"\\\"sprint\\\" \\\"diabetes\\\" exclusion\"}",
+   "tool": "search_pubmed",
+   "args": {
+    "query": "\"SPRINT\" \"diabetes\" exclusion"
+   },
+   "variant": "current",
+   "response": {
+    "results": [
+     {
+      "pmid": "31257407",
+      "title": "Influence of Prediabetes on the Effects of Intensive Systolic Blood Pressure Control on Kidney Events.",
+      "authors": [
+       "Rathi N",
+       "Whelton PK",
+       "Chertow GM",
+       "Cushman WC",
+       "Cheung AK",
+       "Wei G",
+       "Boucher R",
+       "Kimmel PL",
+       "Bress AP",
+       "Kramer HJ",
+       "Al-Marji C",
+       "Greene T",
+       "Beddhu S"
+      ],
+      "journal": "American journal of hypertension",
+      "year": "2019",
+      "doi": "10.1093/ajh/hpz105"
+     },
+     {
+      "pmid": "26562046",
+      "title": "Generalizability of SPRINT Results to the U.S. Adult Population.",
+      "authors": [
+       "Bress AP",
+       "Tanner RM",
+       "Hess R",
+       "Colantonio LD",
+       "Shimbo D",
+       "Muntner P"
+      ],
+      "journal": "Journal of the American College of Cardiology",
+      "year": "2016",
+      "doi": "10.1016/j.jacc.2015.10.037"
+     },
+     {
+      "pmid": "38533947",
+      "title": "Representation of Real-World Adults With Chronic Kidney Disease in Clinical Trials Supporting Blood Pressure Treatment Targets.",
+      "authors": [
+       "Li J",
+       "An J",
+       "Huang M",
+       "Zhou M",
+       "Montez-Rath ME",
+       "Niu F",
+       "Sim JJ",
+       "Pao AC",
+       "Charu V",
+       "Odden MC",
+       "Kurella Tamura M"
+      ],
+      "journal": "Journal of the American Heart Association",
+      "year": "2024",
+      "doi": "10.1161/JAHA.123.031742"
+     },
+     {
+      "pmid": "29427012",
+      "title": "[Blood pressure targets : The lower the better does not suit all].",
+      "authors": [
+       "Hoffmann U"
+      ],
+      "journal": "Der Internist",
+      "year": "2018",
+      "doi": "10.1007/s00108-018-0388-3"
+     },
+     {
+      "pmid": "30477321",
+      "title": "A data-zone scoring system to assess the generalizability of clinical trial results to individual patients.",
+      "authors": [
+       "Laffin LJ",
+       "Besser SA",
+       "Alenghat FJ"
+      ],
+      "journal": "European journal of preventive cardiology",
+      "year": "2019",
+      "doi": "10.1177/2047487318815967"
+     },
+     {
+      "pmid": "31865790",
+      "title": "Blood Pressure Control and the Association With Diabetes Mellitus Incidence: Results From SPRINT Randomized Trial.",
+      "authors": [
+       "Roumie CL",
+       "Hung AM",
+       "Russell GB",
+       "Basile J",
+       "Kreider KE",
+       "Nord J",
+       "Ramsey TM",
+       "Rastogi A",
+       "Sweeney ME",
+       "Tamariz L",
+       "Kostis WJ",
+       "Williams JS",
+       "Zias A",
+       "Cushman WC",
+       "SPRINT Research Group"
+      ],
+      "journal": "Hypertension (Dallas, Tex. : 1979)",
+      "year": "2020",
+      "doi": "10.1161/HYPERTENSIONAHA.118.12572"
+     },
+     {
+      "pmid": "27865822",
+      "title": "Ambulatory blood pressure in hypertensive patients with inclusion criteria for the SPRINT trial.",
+      "authors": [
+       "de la Sierra A",
+       "Banegas JR",
+       "Divisón JA",
+       "Gorostidi M",
+       "Vinyoles E",
+       "de la Cruz JJ",
+       "Segura J",
+       "Ruilope LM"
+      ],
+      "journal": "Journal of the American Society of Hypertension : JASH",
+      "year": "2016",
+      "doi": "10.1016/j.jash.2016.10.013"
+     },
+     {
+      "pmid": "28602550",
+      "title": "Examining the applicability of SPRINT in patients with subclinical or established atherothrombotic disease: A REACH registry analysis.",
+      "authors": [
+       "Varshney A",
+       "Steg PG",
+       "Elbez Y",
+       "Sorbets E",
+       "Eagle KA",
+       "Bhatt DL"
+      ],
+      "journal": "International journal of cardiology",
+      "year": "2017",
+      "doi": "10.1016/j.ijcard.2017.05.104"
+     },
+     {
+      "pmid": "29480390",
+      "title": "Heart failure and the discrepancy between trials of intensive blood pressure management: an analysis of individual patient data.",
+      "authors": [
+       "Aggarwal R",
+       "Mirzan H",
+       "Chiu N",
+       "Steinkamp J"
+      ],
+      "journal": "Clinical research in cardiology : official journal of the German Cardiac Society",
+      "year": "2018",
+      "doi": "10.1007/s00392-018-1218-2"
+     },
+     {
+      "pmid": "30291012",
+      "title": "Effects of Intensive Blood Pressure Lowering on Kidney Tubule Injury in CKD: A Longitudinal Subgroup Analysis in SPRINT.",
+      "authors": [
+       "Malhotra R",
+       "Craven T",
+       "Ambrosius WT",
+       "Killeen AA",
+       "Haley WE",
+       "Cheung AK",
+       "Chonchol M",
+       "Sarnak M",
+       "Parikh CR",
+       "Shlipak MG",
+       "Ix JH",
+       "SPRINT Research Group"
+      ],
+      "journal": "American journal of kidney diseases : the official journal of the National Kidney Foundation",
+      "year": "2019",
+      "doi": "10.1053/j.ajkd.2018.07.015"
+     }
+    ],
+    "total_count": 12
+   },
+   "recorded_by": "perplexity:google/gemini-3.5-flash",
+   "recorded_at": "2026-11-06T18:15:11+00:00"
+  },
+  {
+   "key": "search_pubmed {\"query\": \"\\\"sprint\\\" \\\"type 2 diabetes\\\" \\\"exclusion\\\"\"}",
+   "tool": "search_pubmed",
+   "args": {
+    "query": "\"SPRINT\" \"type 2 diabetes\" \"exclusion\""
+   },
+   "variant": "current",
+   "response": {
+    "results": [],
+    "total_count": 0
+   },
+   "recorded_by": "perplexity:google/gemini-3.5-flash",
+   "recorded_at": "2026-11-06T18:14:44+00:00"
+  },
+  {
+   "key": "search_pubmed {\"query\": \"\\\"systolic blood pressure intervention trial\\\" 2015 2103\"}",
+   "tool": "search_pubmed",
+   "args": {
+    "query": "\"Systolic Blood Pressure Intervention Trial\" 2015 2103"
+   },
+   "variant": "current",
+   "response": {
+    "results": [],
+    "total_count": 0
+   },
+   "recorded_by": "perplexity:google/gemini-3.5-flash",
+   "recorded_at": "2026-11-06T18:14:58+00:00"
+  },
+  {
+   "key": "search_pubmed {\"query\": \"sprint \\\"blood pressure\\\" 2015 \\\"new england journal\\\"\"}",
+   "tool": "search_pubmed",
+   "args": {
+    "query": "SPRINT \"blood pressure\" 2015 \"New England Journal\""
+   },
+   "variant": "current",
+   "response": {
+    "results": [
+     {
+      "pmid": "38319196",
+      "title": "My Experience as a SPRINT Clinical Trial Participant.",
+      "authors": [
+       "Taylor M"
+      ],
+      "journal": "NEJM evidence",
+      "year": "2022",
+      "doi": "10.1056/EVIDpp2100029"
+     }
+    ],
+    "total_count": 1
+   },
+   "recorded_by": "perplexity:google/gemini-3.5-flash",
+   "recorded_at": "2026-11-06T18:15:01+00:00"
+  },
+  {
+   "key": "search_pubmed {\"query\": \"sprint \\\"intensive\\\" \\\"standard\\\" diabetes\"}",
+   "tool": "search_pubmed",
+   "args": {
+    "query": "SPRINT \"intensive\" \"standard\" diabetes"
+   },
+   "variant": "current",
+   "response": {
+    "results": [
+     {
+      "pmid": "26551272",
+      "title": "A Randomized Trial of Intensive versus Standard Blood-Pressure Control.",
+      "authors": [
+       "SPRINT Research Group",
+       "Wright JT Jr",
+       "Williamson JD",
+       "Whelton PK",
+       "Snyder JK",
+       "Sink KM",
+       "Rocco MV",
+       "Reboussin DM",
+       "Rahman M",
+       "Oparil S",
+       "Lewis CE",
+       "Kimmel PL",
+       "Johnson KC",
+       "Goff DC Jr",
+       "Fine LJ",
+       "Cutler JA",
+       "Cushman WC",
+       "Cheung AK",
+       "Ambrosius WT"
+      ],
+      "journal": "The New England journal of medicine",
+      "year": "2015",
+      "doi": "10.1056/NEJMoa1511939"
+     },
+     {
+      "pmid": "34010531",
+      "title": "Final Report of a Trial of Intensive versus Standard Blood-Pressure Control.",
+      "authors": [
+       "SPRINT Research Group",
+       "Lewis CE",
+       "Fine LJ",
+       "Beddhu S",
+       "Cheung AK",
+       "Cushman WC",
+       "Cutler JA",
+       "Evans GW",
+       "Johnson KC",
+       "Kitzman DW",
+       "Oparil S",
+       "Rahman M",
+       "Reboussin DM",
+       "Rocco MV",
+       "Sink KM",
+       "Snyder JK",
+       "Whelton PK",
+       "Williamson JD",
+       "Wright JT Jr",
+       "Ambrosius WT"
+      ],
+      "journal": "The New England journal of medicine",
+      "year": "2021",
+      "doi": "10.1056/NEJMoa1901281"
+     },
+     {
+      "pmid": "30688979",
+      "title": "Effect of Intensive vs Standard Blood Pressure Control on Probable Dementia: A Randomized Clinical Trial.",
+      "authors": [
+       "SPRINT MIND Investigators for the SPRINT Research Group",
+       "Williamson JD",
+       "Pajewski NM",
+       "Auchus AP",
+       "Bryan RN",
+       "Chelune G",
+       "Cheung AK",
+       "Cleveland ML",
+       "Coker LH",
+       "Crowe MG",
+       "Cushman WC",
+       "Cutler JA",
+       "Davatzikos C",
+       "Desiderio L",
+       "Erus G",
+       "Fine LJ",
+       "Gaussoin SA",
+       "Harris D",
+       "Hsieh MK",
+       "Johnson KC",
+       "Kimmel PL",
+       "Tamura MK",
+       "Launer LJ",
+       "Lerner AJ",
+       "Lewis CE",
+       "Martindale-Adams J",
+       "Moy CS",
+       "Nasrallah IM",
+       "Nichols LO",
+       "Oparil S",
+       "Ogrocki PK",
+       "Rahman M",
+       "Rapp SR",
+       "Reboussin DM",
+       "Rocco MV",
+       "Sachs BC",
+       "Sink KM",
+       "Still CH",
+       "Supiano MA",
+       "Snyder JK",
+       "Wadley VG",
+       "Walker J",
+       "Weiner DE",
+       "Whelton PK",
+       "Wilson VM",
+       "Woolard N",
+       "Wright JT Jr",
+       "Wright CB"
+      ],
+      "journal": "JAMA",
+      "year": "2019",
+      "doi": "10.1001/jama.2018.21442"
+     },
+     {
+      "pmid": "27195814",
+      "title": "Intensive vs Standard Blood Pressure Control and Cardiovascular Disease Outcomes in Adults Aged ≥75 Years: A Randomized Clinical Trial.",
+      "authors": [
+       "Williamson JD",
+       "Supiano MA",
+       "Applegate WB",
+       "Berlowitz DR",
+       "Campbell RC",
+       "Chertow GM",
+       "Fine LJ",
+       "Haley WE",
+       "Hawfield AT",
+       "Ix JH",
+       "Kitzman DW",
+       "Kostis JB",
+       "Krousel-Wood MA",
+       "Launer LJ",
+       "Oparil S",
+       "Rodriguez CJ",
+       "Roumie CL",
+       "Shorr RI",
+       "Sink KM",
+       "Wadley VG",
+       "Whelton PK",
+       "Whittle J",
+       "Woolard NF",
+       "Wright JT Jr",
+       "Pajewski NM",
+       "SPRINT Research Group"
+      ],
+      "journal": "JAMA",
+      "year": "2016",
+      "doi": "10.1001/jama.2016.7050"
+     },
+     {
+      "pmid": "28642330",
+      "title": "Effects of Intensive BP Control in CKD.",
+      "authors": [
+       "Cheung AK",
+       "Rahman M",
+       "Reboussin DM",
+       "Craven TE",
+       "Greene T",
+       "Kimmel PL",
+       "Cushman WC",
+       "Hawfield AT",
+       "Johnson KC",
+       "Lewis CE",
+       "Oparil S",
+       "Rocco MV",
+       "Sink KM",
+       "Whelton PK",
+       "Wright JT Jr",
+       "Basile J",
+       "Beddhu S",
+       "Bhatt U",
+       "Chang TI",
+       "Chertow GM",
+       "Chonchol M",
+       "Freedman BI",
+       "Haley W",
+       "Ix JH",
+       "Katz LA",
+       "Killeen AA",
+       "Papademetriou V",
+       "Ricardo AC",
+       "Servilla K",
+       "Wall B",
+       "Wolfgram D",
+       "Yee J",
+       "SPRINT Research Group"
+      ],
+      "journal": "Journal of the American Society of Nephrology : JASN",
+      "year": "2017",
+      "doi": "10.1681/ASN.2017020148"
+     },
+     {
+      "pmid": "31408137",
+      "title": "Association of Intensive vs Standard Blood Pressure Control With Cerebral White Matter Lesions.",
+      "authors": [
+       "SPRINT MIND Investigators for the SPRINT Research Group",
+       "Nasrallah IM",
+       "Pajewski NM",
+       "Auchus AP",
+       "Chelune G",
+       "Cheung AK",
+       "Cleveland ML",
+       "Coker LH",
+       "Crowe MG",
+       "Cushman WC",
+       "Cutler JA",
+       "Davatzikos C",
+       "Desiderio L",
+       "Doshi J",
+       "Erus G",
+       "Fine LJ",
+       "Gaussoin SA",
+       "Harris D",
+       "Johnson KC",
+       "Kimmel PL",
+       "Kurella Tamura M",
+       "Launer LJ",
+       "Lerner AJ",
+       "Lewis CE",
+       "Martindale-Adams J",
+       "Moy CS",
+       "Nichols LO",
+       "Oparil S",
+       "Ogrocki PK",
+       "Rahman M",
+       "Rapp SR",
+       "Reboussin DM",
+       "Rocco MV",
+       "Sachs BC",
+       "Sink KM",
+       "Still CH",
+       "Supiano MA",
+       "Snyder JK",
+       "Wadley VG",
+       "Walker J",
+       "Weiner DE",
+       "Whelton PK",
+       "Wilson VM",
+       "Woolard N",
+       "Wright JT Jr",
+       "Wright CB",
+       "Williamson JD",
+       "Bryan RN"
+      ],
+      "journal": "JAMA",
+      "year": "2019",
+      "doi": "10.1001/jama.2019.10551"
+     },
+     {
+      "pmid": "35254390",
+      "title": "Association of Intensive vs Standard Blood Pressure Control With Cerebral Blood Flow: Secondary Analysis of the SPRINT MIND Randomized Clinical Trial.",
+      "authors": [
+       "Dolui S",
+       "Detre JA",
+       "Gaussoin SA",
+       "Herrick JS",
+       "Wang DJJ",
+       "Tamura MK",
+       "Cho ME",
+       "Haley WE",
+       "Launer LJ",
+       "Punzi HA",
+       "Rastogi A",
+       "Still CH",
+       "Weiner DE",
+       "Wright JT Jr",
+       "Williamson JD",
+       "Wright CB",
+       "Bryan RN",
+       "Bress AP",
+       "Pajewski NM",
+       "Nasrallah IM"
+      ],
+      "journal": "JAMA neurology",
+      "year": "2022",
+      "doi": "10.1001/jamaneurol.2022.0074"
+     },
+     {
+      "pmid": "29915129",
+      "title": "Erratum. Intensive Versus Standard Blood Pressure Control in SPRINT-Eligible Participants of ACCORD-BP. Diabetes Care 2017;40:1733-1738.",
+      "authors": [
+       "Buckley LF",
+       "Dixon DL",
+       "Wohlford GF 4th",
+       "Wijesinghe DS",
+       "Baker WL",
+       "Van Tassell BW"
+      ],
+      "journal": "Diabetes care",
+      "year": "2018",
+      "doi": "10.2337/dc18-er09"
+     },
+     {
+      "pmid": "35919535",
+      "title": "Effect of Intensive versus Standard BP Control on AKI and Subsequent Cardiovascular Outcomes and Mortality: Findings from the SPRINT EHR Study.",
+      "authors": [
+       "Drawz PE",
+       "Rai NK",
+       "Lenoir KM",
+       "Suarez M",
+       "Powell JR",
+       "Raj DS",
+       "Beddhu S",
+       "Agarwal AK",
+       "Soman S",
+       "Whelton PK",
+       "Lash J",
+       "Rahbari-Oskoui FF",
+       "Dobre M",
+       "Parkulo MA",
+       "Rocco MV",
+       "McWilliams A",
+       "Dwyer JP",
+       "Thomas G",
+       "Rahman M",
+       "Oparil S",
+       "Horwitz E",
+       "Pajewski NM",
+       "Ishani A"
+      ],
+      "journal": "Kidney360",
+      "year": "2022",
+      "doi": "10.34067/KID.0001572022"
+     },
+     {
+      "pmid": "36787937",
+      "title": "Effects of Intensive Systolic Blood Pressure Lowering on End-Stage Kidney Disease and Kidney Function Decline in Adults With Type 2 Diabetes Mellitus and Cardiovascular Risk Factors: A Post Hoc Analysis of ACCORD-BP and SPRINT.",
+      "authors": [
+       "Tawfik YMK",
+       "Van Tassell BW",
+       "Dixon DL",
+       "Baker WL",
+       "Fanikos J",
+       "Buckley LF"
+      ],
+      "journal": "Diabetes care",
+      "year": "2023",
+      "doi": "10.2337/dc22-2040"
+     }
+    ],
+    "total_count": 120
+   },
+   "recorded_by": "perplexity:google/gemini-3.5-flash",
+   "recorded_at": "2026-11-06T18:15:04+00:00"
+  },
+  {
+   "key": "search_pubmed {\"query\": \"sprint trial \\\"n engl j med\\\" 2015 373 2103\"}",
+   "tool": "search_pubmed",
+   "args": {
+    "query": "SPRINT trial \"N Engl J Med\" 2015 373 2103"
+   },
+   "variant": "current",
+   "response": {
+    "results": [
+     {
+      "pmid": "26551272",
+      "title": "A Randomized Trial of Intensive versus Standard Blood-Pressure Control.",
+      "authors": [
+       "SPRINT Research Group",
+       "Wright JT Jr",
+       "Williamson JD",
+       "Whelton PK",
+       "Snyder JK",
+       "Sink KM",
+       "Rocco MV",
+       "Reboussin DM",
+       "Rahman M",
+       "Oparil S",
+       "Lewis CE",
+       "Kimmel PL",
+       "Johnson KC",
+       "Goff DC Jr",
+       "Fine LJ",
+       "Cutler JA",
+       "Cushman WC",
+       "Cheung AK",
+       "Ambrosius WT"
+      ],
+      "journal": "The New England journal of medicine",
+      "year": "2015",
+      "doi": "10.1056/NEJMoa1511939"
+     }
+    ],
+    "total_count": 1
+   },
+   "recorded_by": "perplexity:google/gemini-3.5-flash",
+   "recorded_at": "2026-11-06T18:14:29+00:00"
+  },
+  {
+   "key": "search_pubmed {\"query\": \"sprint trial diabetes exclusion \\\"n engl j med 2015\\\"\"}",
+   "tool": "search_pubmed",
+   "args": {
+    "query": "SPRINT trial diabetes exclusion \"N Engl J Med 2015\""
+   },
+   "variant": "current",
+   "response": {
+    "results": [],
+    "total_count": 0
+   },
+   "recorded_by": "perplexity:google/gemini-3.5-flash",
+   "recorded_at": "2026-11-06T18:14:55+00:00"
   }
  ]
 }

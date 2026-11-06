@@ -12,6 +12,8 @@ Needs PERPLEXITY_API_KEY. Uses only the standard library.
 
 import json
 import os
+import time
+import urllib.error
 import urllib.request
 
 ENDPOINT = "https://api.perplexity.ai/v1/agent"
@@ -57,6 +59,9 @@ def parse_response(body: dict) -> dict:
     return {"text": "".join(text), "tool_calls": calls, "usage": usage, "model_served": body.get("model")}
 
 
+RETRY_WAITS = (5, 15, 30, 60, 120, None)   # rate limits are per minute
+
+
 class PerplexityModel:
     def __init__(self, model_id: str, max_output_tokens: int = 4096, timeout: int = 180):
         self.model_id = model_id
@@ -70,5 +75,16 @@ class PerplexityModel:
                    "tools": to_tools(tools), "max_output_tokens": self.max_output_tokens, "store": False}
         req = urllib.request.Request(ENDPOINT, data=json.dumps(payload).encode(), method="POST",
                                      headers={"Authorization": f"Bearer {self.key}", "Content-Type": "application/json"})
-        with urllib.request.urlopen(req, timeout=self.timeout) as r:
-            return parse_response(json.loads(r.read()))
+        for attempt, wait in enumerate(RETRY_WAITS):
+            try:
+                with urllib.request.urlopen(req, timeout=self.timeout) as r:
+                    return parse_response(json.loads(r.read()))
+            except urllib.error.HTTPError as e:
+                if e.code not in (429, 500, 502, 503, 504) or wait is None:
+                    raise
+                retry_after = e.headers.get("Retry-After") if e.headers else None
+                time.sleep(float(retry_after) if retry_after and retry_after.isdigit() else wait)
+            except (urllib.error.URLError, TimeoutError):
+                if wait is None:
+                    raise
+                time.sleep(wait)

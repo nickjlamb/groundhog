@@ -95,7 +95,7 @@
     "pmc_id": ""
    },
    "recorded_by": "anthropic:claude-sonnet-5-5",
-   "recorded_at": "2026-11-06T17:52:15+00:00"
+   "recorded_at": "2026-11-06T18:11:24+00:00"
   },
   {
    "key": "search_pubmed {\"maxResults\": 3, \"query\": \"granger apixaban versus warfarin in patients with atrial fibrillation aristotle\"}",
@@ -274,7 +274,7 @@
     "total_count": 1
    },
    "recorded_by": "anthropic:claude-sonnet-5-5",
-   "recorded_at": "2026-11-06T17:52:14+00:00"
+   "recorded_at": "2026-11-06T18:11:23+00:00"
   }
  ]
 }

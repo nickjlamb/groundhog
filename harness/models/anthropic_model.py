@@ -11,7 +11,7 @@ import os
 class AnthropicModel:
     def __init__(self, model_id: str, max_tokens: int = 2048):
         import anthropic  # imported lazily so offline runs need no SDK
-        self.client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+        self.client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"], max_retries=6)
         self.model_id = model_id
         self.max_tokens = max_tokens
         self.name = f"anthropic:{model_id}"

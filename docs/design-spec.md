@@ -42,6 +42,7 @@ Live sources change, so runs must replay frozen responses.
 1. **Record:** during the pilot, run several models live against PubCrawl and Redacta and capture every tool call and response into a per-task *cassette*.
 2. **Freeze:** cassettes are versioned in the repo; full runs replay them only.
 3. **Off-cassette calls:** return a neutral empty result and are logged as `off_path`. Recording from several models' pilot runs reduces the chance that a legitimate alternative route gets penalised; any task where valid routes are being blocked is fixed or dropped before the full run.
+4. **Searches use a frozen corpus** (revised after the pilot, Nov 2026): free-text search and drug-name tools are answered from a shared corpus built from live results, because models reword queries on every run and exact replay of searches blocked most legitimate routes. Label requests are matched by product identity. See `docs/harness.md`.
 
 ### Fault conditions
 

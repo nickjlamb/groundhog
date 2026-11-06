@@ -53,8 +53,8 @@
    "key": "format_citation {\"pmid\": \"32865377\", \"style\": \"vancouver\"}",
    "tool": "format_citation",
    "args": {
-    "pmid": "32865377",
-    "style": "vancouver"
+    "style": "vancouver",
+    "pmid": "32865377"
    },
    "variant": "current",
    "response": {
@@ -62,8 +62,8 @@
     "style": "vancouver",
     "citation": "Packer M, Anker SD, Butler J, Filippatos G, Pocock SJ, Carson P, et al. Cardiovascular and Renal Outcomes with Empagliflozin in Heart Failure. The New England journal of medicine. 2020;383(15):1413-1424. doi:10.1056/NEJMoa2022190"
    },
-   "recorded_by": "anthropic:claude-sonnet-5-5",
-   "recorded_at": "2026-11-06T17:51:58+00:00"
+   "recorded_by": "perplexity:google/gemini-3.5-flash",
+   "recorded_at": "2026-11-06T18:15:51+00:00"
   },
   {
    "key": "format_citation {\"pmid\": \"32865377\"}",
@@ -79,6 +79,108 @@
    },
    "recorded_by": "mock:submit-gold",
    "recorded_at": "2026-11-06T15:46:58+00:00"
+  },
+  {
+   "key": "get_abstract {\"pmid\": \"32865377\"}",
+   "tool": "get_abstract",
+   "args": {
+    "pmid": "32865377"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "32865377",
+    "title": "Cardiovascular and Renal Outcomes with Empagliflozin in Heart Failure.",
+    "authors": [
+     "Packer Milton",
+     "Anker Stefan D",
+     "Butler Javed",
+     "Filippatos Gerasimos",
+     "Pocock Stuart J",
+     "Carson Peter",
+     "Januzzi James",
+     "Verma Subodh",
+     "Tsutsui Hiroyuki",
+     "Brueckmann Martina",
+     "Jamal Waheed",
+     "Kimura Karen",
+     "Schnee Janet",
+     "Zeller Cordula",
+     "Cotton Daniel",
+     "Bocchi Edimar",
+     "B&#xf6;hm Michael",
+     "Choi Dong-Ju",
+     "Chopra Vijay",
+     "Chuquiure Eduardo",
+     "Giannetti Nadia",
+     "Janssens Stefan",
+     "Zhang Jian",
+     "Gonzalez Juanatey Jose R",
+     "Kaul Sanjay",
+     "Brunner-La Rocca Hans-Peter",
+     "Merkely Bela",
+     "Nicholls Stephen J",
+     "Perrone Sergio",
+     "Pina Ileana",
+     "Ponikowski Piotr",
+     "Sattar Naveed",
+     "Senni Michele",
+     "Seronde Marie-France",
+     "Spinar Jindrich",
+     "Squire Iain",
+     "Taddei Stefano",
+     "Wanner Christoph",
+     "Zannad Faiez",
+     "EMPEROR-Reduced Trial Investigators"
+    ],
+    "journal": "The New England journal of medicine",
+    "year": "2020",
+    "doi": "10.1056/NEJMoa2022190",
+    "volume": "383",
+    "issue": "15",
+    "pages": "1413-1424",
+    "abstract_sections": [
+     {
+      "label": "BACKGROUND",
+      "text": "Sodium-glucose cotransporter 2 (SGLT2) inhibitors reduce the risk of hospitalization for heart failure in patients regardless of the presence or absence of diabetes. More evidence is needed regarding the effects of these drugs in patients across the broad spectrum of heart failure, including those with a markedly reduced ejection fraction."
+     },
+     {
+      "label": "METHODS",
+      "text": "In this double-blind trial, we randomly assigned 3730 patients with class II, III, or IV heart failure and an ejection fraction of 40% or less to receive empagliflozin (10 mg once daily) or placebo, in addition to recommended therapy. The primary outcome was a composite of cardiovascular death or hospitalization for worsening heart failure."
+     },
+     {
+      "label": "RESULTS",
+      "text": "During a median of 16 months, a primary outcome event occurred in 361 of 1863 patients (19.4%) in the empagliflozin group and in 462 of 1867 patients (24.7%) in the placebo group (hazard ratio for cardiovascular death or hospitalization for heart failure, 0.75; 95% confidence interval [CI], 0.65 to 0.86; P<0.001). The effect of empagliflozin on the primary outcome was consistent in patients regardless of the presence or absence of diabetes. The total number of hospitalizations for heart failure was lower in the empagliflozin group than in the placebo group (hazard ratio, 0.70; 95% CI, 0.58 to 0.85; P<0.001). The annual rate of decline in the estimated glomerular filtration rate was slower in the empagliflozin group than in the placebo group (-0.55 vs. -2.28 ml per minute per 1.73 mof body-surface area per year, P<0.001), and empagliflozin-treated patients had a lower risk of serious renal outcomes. Uncomplicated genital tract infection was reported more frequently with empagliflozin."
+     },
+     {
+      "label": "CONCLUSIONS",
+      "text": "Among patients receiving recommended therapy for heart failure, those in the empagliflozin group had a lower risk of cardiovascular death or hospitalization for heart failure than those in the placebo group, regardless of the presence or absence of diabetes. (Funded by Boehringer Ingelheim and Eli Lilly; EMPEROR-Reduced ClinicalTrials.gov number, NCT03057977.)."
+     }
+    ],
+    "keywords": [],
+    "mesh_terms": [
+     "Aged",
+     "Benzhydryl Compounds",
+     "Cardiovascular Diseases",
+     "Diabetes Mellitus, Type 2",
+     "Disease Progression",
+     "Double-Blind Method",
+     "Female",
+     "Glomerular Filtration Rate",
+     "Glucosides",
+     "Heart Failure",
+     "Hospitalization",
+     "Humans",
+     "Male",
+     "Middle Aged",
+     "Proportional Hazards Models",
+     "Renal Insufficiency, Chronic",
+     "Sodium-Glucose Transporter 2 Inhibitors",
+     "Stroke Volume"
+    ],
+    "pmc_id": ""
+   },
+   "recorded_by": "perplexity:google/gemini-3.5-flash",
+   "recorded_at": "2026-11-06T18:15:49+00:00"
   },
   {
    "key": "search_pubmed {\"dateFrom\": \"2020/01/01\", \"dateTo\": \"2020/12/31\", \"maxResults\": 10, \"query\": \"empagliflozin heart failure reduced ejection fraction emperor-reduced new england journal of medicine\"}",
@@ -146,6 +248,702 @@
    },
    "recorded_by": "anthropic:claude-sonnet-5-5",
    "recorded_at": "2026-11-06T17:51:57+00:00"
+  },
+  {
+   "key": "search_pubmed {\"dateFrom\": \"2020/01/01\", \"dateTo\": \"2020/12/31\", \"query\": \"empagliflozin \\\"heart failure\\\" \\\"new england journal of medicine\\\" 2020\"}",
+   "tool": "search_pubmed",
+   "args": {
+    "query": "empagliflozin \"heart failure\" \"New England Journal of Medicine\" 2020",
+    "dateTo": "2020/12/31",
+    "dateFrom": "2020/01/01"
+   },
+   "variant": "current",
+   "response": {
+    "results": [],
+    "total_count": 0
+   },
+   "recorded_by": "perplexity:google/gemini-3.5-flash",
+   "recorded_at": "2026-11-06T18:15:24+00:00"
+  },
+  {
+   "key": "search_pubmed {\"dateFrom\": \"2020/01/01\", \"dateTo\": \"2020/12/31\", \"query\": \"empagliflozin and \\\"heart failure\\\"\"}",
+   "tool": "search_pubmed",
+   "args": {
+    "dateTo": "2020/12/31",
+    "dateFrom": "2020/01/01",
+    "query": "empagliflozin AND \"heart failure\""
+   },
+   "variant": "current",
+   "response": {
+    "results": [
+     {
+      "pmid": "32865377",
+      "title": "Cardiovascular and Renal Outcomes with Empagliflozin in Heart Failure.",
+      "authors": [
+       "Packer M",
+       "Anker SD",
+       "Butler J",
+       "Filippatos G",
+       "Pocock SJ",
+       "Carson P",
+       "Januzzi J",
+       "Verma S",
+       "Tsutsui H",
+       "Brueckmann M",
+       "Jamal W",
+       "Kimura K",
+       "Schnee J",
+       "Zeller C",
+       "Cotton D",
+       "Bocchi E",
+       "Böhm M",
+       "Choi DJ",
+       "Chopra V",
+       "Chuquiure E",
+       "Giannetti N",
+       "Janssens S",
+       "Zhang J",
+       "Gonzalez Juanatey JR",
+       "Kaul S",
+       "Brunner-La Rocca HP",
+       "Merkely B",
+       "Nicholls SJ",
+       "Perrone S",
+       "Pina I",
+       "Ponikowski P",
+       "Sattar N",
+       "Senni M",
+       "Seronde MF",
+       "Spinar J",
+       "Squire I",
+       "Taddei S",
+       "Wanner C",
+       "Zannad F",
+       "EMPEROR-Reduced Trial Investigators"
+      ],
+      "journal": "The New England journal of medicine",
+      "year": "2020",
+      "doi": "10.1056/NEJMoa2022190"
+     },
+     {
+      "pmid": "32877652",
+      "title": "SGLT2 inhibitors in patients with heart failure with reduced ejection fraction: a meta-analysis of the EMPEROR-Reduced and DAPA-HF trials.",
+      "authors": [
+       "Zannad F",
+       "Ferreira JP",
+       "Pocock SJ",
+       "Anker SD",
+       "Butler J",
+       "Filippatos G",
+       "Brueckmann M",
+       "Ofstad AP",
+       "Pfarr E",
+       "Jamal W",
+       "Packer M"
+      ],
+      "journal": "Lancet (London, England)",
+      "year": "2020",
+      "doi": "10.1016/S0140-6736(20)31824-9"
+     },
+     {
+      "pmid": "32598218",
+      "title": "Comparative Effectiveness of Glucose-Lowering Drugs for Type 2 Diabetes: A Systematic Review and Network Meta-analysis.",
+      "authors": [
+       "Tsapas A",
+       "Avgerinos I",
+       "Karagiannis T",
+       "Malandris K",
+       "Manolopoulos A",
+       "Andreadis P",
+       "Liakos A",
+       "Matthews DR",
+       "Bekiari E"
+      ],
+      "journal": "Annals of internal medicine",
+      "year": "2020",
+      "doi": "10.7326/M20-0864"
+     },
+     {
+      "pmid": "33197559",
+      "title": "Randomized Trial of Empagliflozin in Nondiabetic Patients With Heart Failure and Reduced Ejection Fraction.",
+      "authors": [
+       "Santos-Gallego CG",
+       "Vargas-Delgado AP",
+       "Requena-Ibanez JA",
+       "Garcia-Ropero A",
+       "Mancini D",
+       "Pinney S",
+       "Macaluso F",
+       "Sartori S",
+       "Roque M",
+       "Sabatel-Perez F",
+       "Rodriguez-Cordero A",
+       "Zafar MU",
+       "Fergus I",
+       "Atallah-Lajam F",
+       "Contreras JP",
+       "Varley C",
+       "Moreno PR",
+       "Abascal VM",
+       "Lala A",
+       "Tamler R",
+       "Sanz J",
+       "Fuster V",
+       "Badimon JJ",
+       "EMPA-TROPISM (ATRU-4) Investigators"
+      ],
+      "journal": "Journal of the American College of Cardiology",
+      "year": "2021",
+      "doi": "10.1016/j.jacc.2020.11.008"
+     },
+     {
+      "pmid": "33081531",
+      "title": "Effect of Empagliflozin on the Clinical Stability of Patients With Heart Failure and a Reduced Ejection Fraction: The EMPEROR-Reduced Trial.",
+      "authors": [
+       "Packer M",
+       "Anker SD",
+       "Butler J",
+       "Filippatos G",
+       "Ferreira JP",
+       "Pocock SJ",
+       "Carson P",
+       "Anand I",
+       "Doehner W",
+       "Haass M",
+       "Komajda M",
+       "Miller A",
+       "Pehrson S",
+       "Teerlink JR",
+       "Brueckmann M",
+       "Jamal W",
+       "Zeller C",
+       "Schnaidt S",
+       "Zannad F"
+      ],
+      "journal": "Circulation",
+      "year": "2021",
+      "doi": "10.1161/CIRCULATIONAHA.120.051783"
+     },
+     {
+      "pmid": "33186500",
+      "title": "Effect of Empagliflozin on Left Ventricular Volumes in Patients With Type 2 Diabetes, or Prediabetes, and Heart Failure With Reduced Ejection Fraction (SUGAR-DM-HF).",
+      "authors": [
+       "Lee MMY",
+       "Brooksbank KJM",
+       "Wetherall K",
+       "Mangion K",
+       "Roditi G",
+       "Campbell RT",
+       "Berry C",
+       "Chong V",
+       "Coyle L",
+       "Docherty KF",
+       "Dreisbach JG",
+       "Labinjoh C",
+       "Lang NN",
+       "Lennie V",
+       "McConnachie A",
+       "Murphy CL",
+       "Petrie CJ",
+       "Petrie JR",
+       "Speirits IA",
+       "Sourbron S",
+       "Welsh P",
+       "Woodward R",
+       "Radjenovic A",
+       "Mark PB",
+       "McMurray JJV",
+       "Jhund PS",
+       "Petrie MC",
+       "Sattar N"
+      ],
+      "journal": "Circulation",
+      "year": "2021",
+      "doi": "10.1161/CIRCULATIONAHA.120.052186"
+     },
+     {
+      "pmid": "32414364",
+      "title": "Empagliflozin prevents doxorubicin-induced myocardial dysfunction.",
+      "authors": [
+       "Sabatino J",
+       "De Rosa S",
+       "Tammè L",
+       "Iaconetti C",
+       "Sorrentino S",
+       "Polimeni A",
+       "Mignogna C",
+       "Amorosi A",
+       "Spaccarotella C",
+       "Yasuda M",
+       "Indolfi C"
+      ],
+      "journal": "Cardiovascular diabetology",
+      "year": "2020",
+      "doi": "10.1186/s12933-020-01040-5"
+     },
+     {
+      "pmid": "33175585",
+      "title": "Effect of Empagliflozin on Cardiovascular and Renal Outcomes in Patients With Heart Failure by Baseline Diabetes Status: Results From the EMPEROR-Reduced Trial.",
+      "authors": [
+       "Anker SD",
+       "Butler J",
+       "Filippatos G",
+       "Khan MS",
+       "Marx N",
+       "Lam CSP",
+       "Schnaidt S",
+       "Ofstad AP",
+       "Brueckmann M",
+       "Jamal W",
+       "Bocchi EA",
+       "Ponikowski P",
+       "Perrone SV",
+       "Januzzi JL",
+       "Verma S",
+       "Böhm M",
+       "Ferreira JP",
+       "Pocock SJ",
+       "Zannad F",
+       "Packer M"
+      ],
+      "journal": "Circulation",
+      "year": "2021",
+      "doi": "10.1161/CIRCULATIONAHA.120.051824"
+     },
+     {
+      "pmid": "31912605",
+      "title": "Randomized, double-blind, placebo-controlled, multicentre pilot study on the effects of empagliflozin on clinical outcomes in patients with acute decompensated heart failure (EMPA-RESPONSE-AHF).",
+      "authors": [
+       "Damman K",
+       "Beusekamp JC",
+       "Boorsma EM",
+       "Swart HP",
+       "Smilde TDJ",
+       "Elvan A",
+       "van Eck JWM",
+       "Heerspink HJL",
+       "Voors AA"
+      ],
+      "journal": "European journal of heart failure",
+      "year": "2020",
+      "doi": "10.1002/ejhf.1713"
+     },
+     {
+      "pmid": "32578353",
+      "title": "Rationale and design of the EMPYREAN study.",
+      "authors": [
+       "Motoki H",
+       "Masuda I",
+       "Yasuno S",
+       "Oba K",
+       "Shoin W",
+       "Usami S",
+       "Saito Y",
+       "Waki M",
+       "Komatsu M",
+       "Ueshima K",
+       "Nakagawa Y",
+       "Son C",
+       "Yonemitsu S",
+       "Hiramitsu S",
+       "Konda M",
+       "Onishi K",
+       "Kuwahara K"
+      ],
+      "journal": "ESC heart failure",
+      "year": "2020",
+      "doi": "10.1002/ehf2.12825"
+     }
+    ],
+    "total_count": 143
+   },
+   "recorded_by": "perplexity:google/gemini-3.5-flash",
+   "recorded_at": "2026-11-06T18:15:27+00:00"
+  },
+  {
+   "key": "search_pubmed {\"maxResults\": 10, \"query\": \"empagliflozin heart failure reduced ejection fraction emperor-reduced n engl j med 2020\"}",
+   "tool": "search_pubmed",
+   "args": {
+    "query": "empagliflozin heart failure reduced ejection fraction EMPEROR-Reduced N Engl J Med 2020",
+    "maxResults": 10
+   },
+   "variant": "current",
+   "response": {
+    "results": [
+     {
+      "pmid": "32865377",
+      "title": "Cardiovascular and Renal Outcomes with Empagliflozin in Heart Failure.",
+      "authors": [
+       "Packer M",
+       "Anker SD",
+       "Butler J",
+       "Filippatos G",
+       "Pocock SJ",
+       "Carson P",
+       "Januzzi J",
+       "Verma S",
+       "Tsutsui H",
+       "Brueckmann M",
+       "Jamal W",
+       "Kimura K",
+       "Schnee J",
+       "Zeller C",
+       "Cotton D",
+       "Bocchi E",
+       "Böhm M",
+       "Choi DJ",
+       "Chopra V",
+       "Chuquiure E",
+       "Giannetti N",
+       "Janssens S",
+       "Zhang J",
+       "Gonzalez Juanatey JR",
+       "Kaul S",
+       "Brunner-La Rocca HP",
+       "Merkely B",
+       "Nicholls SJ",
+       "Perrone S",
+       "Pina I",
+       "Ponikowski P",
+       "Sattar N",
+       "Senni M",
+       "Seronde MF",
+       "Spinar J",
+       "Squire I",
+       "Taddei S",
+       "Wanner C",
+       "Zannad F",
+       "EMPEROR-Reduced Trial Investigators"
+      ],
+      "journal": "The New England journal of medicine",
+      "year": "2020",
+      "doi": "10.1056/NEJMoa2022190"
+     }
+    ],
+    "total_count": 1
+   },
+   "recorded_by": "anthropic:claude-sonnet-5-5",
+   "recorded_at": "2026-11-06T18:10:59+00:00"
+  },
+  {
+   "key": "search_pubmed {\"maxResults\": 5, \"query\": \"empagliflozin heart failure reduced ejection fraction emperor-reduced n engl j med 2020\"}",
+   "tool": "search_pubmed",
+   "args": {
+    "query": "empagliflozin heart failure reduced ejection fraction EMPEROR-Reduced N Engl J Med 2020",
+    "maxResults": 5
+   },
+   "variant": "current",
+   "response": {
+    "results": [
+     {
+      "pmid": "32865377",
+      "title": "Cardiovascular and Renal Outcomes with Empagliflozin in Heart Failure.",
+      "authors": [
+       "Packer M",
+       "Anker SD",
+       "Butler J",
+       "Filippatos G",
+       "Pocock SJ",
+       "Carson P",
+       "Januzzi J",
+       "Verma S",
+       "Tsutsui H",
+       "Brueckmann M",
+       "Jamal W",
+       "Kimura K",
+       "Schnee J",
+       "Zeller C",
+       "Cotton D",
+       "Bocchi E",
+       "Böhm M",
+       "Choi DJ",
+       "Chopra V",
+       "Chuquiure E",
+       "Giannetti N",
+       "Janssens S",
+       "Zhang J",
+       "Gonzalez Juanatey JR",
+       "Kaul S",
+       "Brunner-La Rocca HP",
+       "Merkely B",
+       "Nicholls SJ",
+       "Perrone S",
+       "Pina I",
+       "Ponikowski P",
+       "Sattar N",
+       "Senni M",
+       "Seronde MF",
+       "Spinar J",
+       "Squire I",
+       "Taddei S",
+       "Wanner C",
+       "Zannad F",
+       "EMPEROR-Reduced Trial Investigators"
+      ],
+      "journal": "The New England journal of medicine",
+      "year": "2020",
+      "doi": "10.1056/NEJMoa2022190"
+     }
+    ],
+    "total_count": 1
+   },
+   "recorded_by": "anthropic:claude-sonnet-5-5",
+   "recorded_at": "2026-11-06T18:11:06+00:00"
+  },
+  {
+   "key": "search_pubmed {\"query\": \"\\\"emperor-reduced\\\" 2020\"}",
+   "tool": "search_pubmed",
+   "args": {
+    "query": "\"EMPEROR-Reduced\" 2020"
+   },
+   "variant": "current",
+   "response": {
+    "results": [
+     {
+      "pmid": "32877652",
+      "title": "SGLT2 inhibitors in patients with heart failure with reduced ejection fraction: a meta-analysis of the EMPEROR-Reduced and DAPA-HF trials.",
+      "authors": [
+       "Zannad F",
+       "Ferreira JP",
+       "Pocock SJ",
+       "Anker SD",
+       "Butler J",
+       "Filippatos G",
+       "Brueckmann M",
+       "Ofstad AP",
+       "Pfarr E",
+       "Jamal W",
+       "Packer M"
+      ],
+      "journal": "Lancet (London, England)",
+      "year": "2020",
+      "doi": "10.1016/S0140-6736(20)31824-9"
+     },
+     {
+      "pmid": "32865377",
+      "title": "Cardiovascular and Renal Outcomes with Empagliflozin in Heart Failure.",
+      "authors": [
+       "Packer M",
+       "Anker SD",
+       "Butler J",
+       "Filippatos G",
+       "Pocock SJ",
+       "Carson P",
+       "Januzzi J",
+       "Verma S",
+       "Tsutsui H",
+       "Brueckmann M",
+       "Jamal W",
+       "Kimura K",
+       "Schnee J",
+       "Zeller C",
+       "Cotton D",
+       "Bocchi E",
+       "Böhm M",
+       "Choi DJ",
+       "Chopra V",
+       "Chuquiure E",
+       "Giannetti N",
+       "Janssens S",
+       "Zhang J",
+       "Gonzalez Juanatey JR",
+       "Kaul S",
+       "Brunner-La Rocca HP",
+       "Merkely B",
+       "Nicholls SJ",
+       "Perrone S",
+       "Pina I",
+       "Ponikowski P",
+       "Sattar N",
+       "Senni M",
+       "Seronde MF",
+       "Spinar J",
+       "Squire I",
+       "Taddei S",
+       "Wanner C",
+       "Zannad F",
+       "EMPEROR-Reduced Trial Investigators"
+      ],
+      "journal": "The New England journal of medicine",
+      "year": "2020",
+      "doi": "10.1056/NEJMoa2022190"
+     },
+     {
+      "pmid": "33081531",
+      "title": "Effect of Empagliflozin on the Clinical Stability of Patients With Heart Failure and a Reduced Ejection Fraction: The EMPEROR-Reduced Trial.",
+      "authors": [
+       "Packer M",
+       "Anker SD",
+       "Butler J",
+       "Filippatos G",
+       "Ferreira JP",
+       "Pocock SJ",
+       "Carson P",
+       "Anand I",
+       "Doehner W",
+       "Haass M",
+       "Komajda M",
+       "Miller A",
+       "Pehrson S",
+       "Teerlink JR",
+       "Brueckmann M",
+       "Jamal W",
+       "Zeller C",
+       "Schnaidt S",
+       "Zannad F"
+      ],
+      "journal": "Circulation",
+      "year": "2021",
+      "doi": "10.1161/CIRCULATIONAHA.120.051783"
+     },
+     {
+      "pmid": "33507655",
+      "title": "[Cardiology].",
+      "authors": [
+       "Kilani N",
+       "Haddad C",
+       "Lu H",
+       "Ghanbari F",
+       "Domenichini G",
+       "Pavon AG",
+       "Tzimas G",
+       "Fournier S",
+       "Hullin R",
+       "Pascale P",
+       "Eeckhout E",
+       "Schwitter J",
+       "Pruvot E",
+       "Bouchardy J",
+       "Monney P",
+       "Muller O",
+       "Rutz T"
+      ],
+      "journal": "Revue medicale suisse",
+      "year": "2021",
+      "doi": ""
+     },
+     {
+      "pmid": "33175585",
+      "title": "Effect of Empagliflozin on Cardiovascular and Renal Outcomes in Patients With Heart Failure by Baseline Diabetes Status: Results From the EMPEROR-Reduced Trial.",
+      "authors": [
+       "Anker SD",
+       "Butler J",
+       "Filippatos G",
+       "Khan MS",
+       "Marx N",
+       "Lam CSP",
+       "Schnaidt S",
+       "Ofstad AP",
+       "Brueckmann M",
+       "Jamal W",
+       "Bocchi EA",
+       "Ponikowski P",
+       "Perrone SV",
+       "Januzzi JL",
+       "Verma S",
+       "Böhm M",
+       "Ferreira JP",
+       "Pocock SJ",
+       "Zannad F",
+       "Packer M"
+      ],
+      "journal": "Circulation",
+      "year": "2021",
+      "doi": "10.1161/CIRCULATIONAHA.120.051824"
+     },
+     {
+      "pmid": "33789663",
+      "title": "Report from the CVOT Summit 2020: new cardiovascular and renal outcomes.",
+      "authors": [
+       "Schnell O",
+       "Cos X",
+       "Cosentino F",
+       "Forst T",
+       "Giorgino F",
+       "Heersprink HJL",
+       "Kosiborod M",
+       "Wanner C",
+       "Standl E"
+      ],
+      "journal": "Cardiovascular diabetology",
+      "year": "2021",
+      "doi": "10.1186/s12933-021-01254-1"
+     },
+     {
+      "pmid": "37621153",
+      "title": "Blinded Withdrawal of Long-Term Randomized Treatment With Empagliflozin or Placebo in Patients With Heart Failure.",
+      "authors": [
+       "Packer M",
+       "Butler J",
+       "Zeller C",
+       "Pocock SJ",
+       "Brueckmann M",
+       "Ferreira JP",
+       "Filippatos G",
+       "Usman MS",
+       "Zannad F",
+       "Anker SD"
+      ],
+      "journal": "Circulation",
+      "year": "2023",
+      "doi": "10.1161/CIRCULATIONAHA.123.065748"
+     },
+     {
+      "pmid": "33105763",
+      "title": "Molecular Mechanisms of SGLT2 Inhibitor on Cardiorenal Protection.",
+      "authors": [
+       "Hou YC",
+       "Zheng CM",
+       "Yen TH",
+       "Lu KC"
+      ],
+      "journal": "International journal of molecular sciences",
+      "year": "2020",
+      "doi": "10.3390/ijms21217833"
+     },
+     {
+      "pmid": "33185854",
+      "title": "Sodium-Glucose Co-Transporter 2 (SGLT2) Inhibitors: Are They All the Same? A Narrative Review of Cardiovascular Outcome Trials.",
+      "authors": [
+       "Williams DM",
+       "Nawaz A",
+       "Evans M"
+      ],
+      "journal": "Diabetes therapy : research, treatment and education of diabetes and related disorders",
+      "year": "2021",
+      "doi": "10.1007/s13300-020-00951-6"
+     },
+     {
+      "pmid": "32969716",
+      "title": "Two Tales: One Story: EMPEROR-Reduced and DAPA-HF.",
+      "authors": [
+       "Verma S",
+       "McGuire DK",
+       "Kosiborod MN"
+      ],
+      "journal": "Circulation",
+      "year": "2020",
+      "doi": "10.1161/CIRCULATIONAHA.120.051122"
+     }
+    ],
+    "total_count": 32
+   },
+   "recorded_by": "perplexity:google/gemini-3.5-flash",
+   "recorded_at": "2026-11-06T18:15:45+00:00"
+  },
+  {
+   "key": "search_pubmed {\"query\": \"empagliflozin placebo \\\"heart failure\\\" \\\"ejection fraction\\\" 2020 \\\"new england journal of medicine\\\"\"}",
+   "tool": "search_pubmed",
+   "args": {
+    "query": "empagliflozin placebo \"heart failure\" \"ejection fraction\" 2020 \"New England Journal of Medicine\""
+   },
+   "variant": "current",
+   "response": {
+    "results": [],
+    "total_count": 0
+   },
+   "recorded_by": "perplexity:google/gemini-3.5-flash",
+   "recorded_at": "2026-11-06T18:15:42+00:00"
   }
  ]
 }

@@ -100,8 +100,8 @@
     ],
     "pmc_id": ""
    },
-   "recorded_by": "mock:submit-gold",
-   "recorded_at": "2026-11-06T15:43:27+00:00"
+   "recorded_by": "anthropic:claude-sonnet-5-5",
+   "recorded_at": "2026-11-06T18:14:22+00:00"
   },
   {
    "key": "get_trial {\"nctId\": \"nct03036124\"}",
@@ -264,8 +264,137 @@
      "31081589"
     ]
    },
-   "recorded_by": "mock:submit-gold",
-   "recorded_at": "2026-11-06T15:43:27+00:00"
+   "recorded_by": "anthropic:claude-sonnet-5-5",
+   "recorded_at": "2026-11-06T18:14:18+00:00"
+  },
+  {
+   "key": "search_pubmed {\"maxResults\": 3, \"query\": \"dapagliflozin in patients with heart failure and reduced ejection fraction mcmurray dapa-hf\"}",
+   "tool": "search_pubmed",
+   "args": {
+    "query": "Dapagliflozin in Patients with Heart Failure and Reduced Ejection Fraction McMurray DAPA-HF",
+    "maxResults": 3
+   },
+   "variant": "current",
+   "response": {
+    "results": [
+     {
+      "pmid": "31535829",
+      "title": "Dapagliflozin in Patients with Heart Failure and Reduced Ejection Fraction.",
+      "authors": [
+       "McMurray JJV",
+       "Solomon SD",
+       "Inzucchi SE",
+       "Køber L",
+       "Kosiborod MN",
+       "Martinez FA",
+       "Ponikowski P",
+       "Sabatine MS",
+       "Anand IS",
+       "Bělohlávek J",
+       "Böhm M",
+       "Chiang CE",
+       "Chopra VK",
+       "de Boer RA",
+       "Desai AS",
+       "Diez M",
+       "Drozdz J",
+       "Dukát A",
+       "Ge J",
+       "Howlett JG",
+       "Katova T",
+       "Kitakaze M",
+       "Ljungman CEA",
+       "Merkely B",
+       "Nicolau JC",
+       "O'Meara E",
+       "Petrie MC",
+       "Vinh PN",
+       "Schou M",
+       "Tereshchenko S",
+       "Verma S",
+       "Held C",
+       "DeMets DL",
+       "Docherty KF",
+       "Jhund PS",
+       "Bengtsson O",
+       "Sjöstrand M",
+       "Langkilde AM",
+       "DAPA-HF Trial Committees and Investigators"
+      ],
+      "journal": "The New England journal of medicine",
+      "year": "2019",
+      "doi": "10.1056/NEJMoa1911303"
+     },
+     {
+      "pmid": "36030328",
+      "title": "Dapagliflozin across the range of ejection fraction in patients with heart failure: a patient-level, pooled meta-analysis of DAPA-HF and DELIVER.",
+      "authors": [
+       "Jhund PS",
+       "Kondo T",
+       "Butt JH",
+       "Docherty KF",
+       "Claggett BL",
+       "Desai AS",
+       "Vaduganathan M",
+       "Gasparyan SB",
+       "Bengtsson O",
+       "Lindholm D",
+       "Petersson M",
+       "Langkilde AM",
+       "de Boer RA",
+       "DeMets D",
+       "Hernandez AF",
+       "Inzucchi SE",
+       "Kosiborod MN",
+       "Køber L",
+       "Lam CSP",
+       "Martinez FA",
+       "Sabatine MS",
+       "Shah SJ",
+       "Solomon SD",
+       "McMurray JJV"
+      ],
+      "journal": "Nature medicine",
+      "year": "2022",
+      "doi": "10.1038/s41591-022-01971-4"
+     },
+     {
+      "pmid": "35467935",
+      "title": "Efficacy and Safety of Dapagliflozin According to Frailty in Heart Failure With Reduced Ejection Fraction : A Post Hoc Analysis of the DAPA-HF Trial.",
+      "authors": [
+       "Butt JH",
+       "Dewan P",
+       "Merkely B",
+       "Belohlávek J",
+       "Drożdż J",
+       "Kitakaze M",
+       "Inzucchi SE",
+       "Kosiborod MN",
+       "Martinez FA",
+       "Tereshchenko S",
+       "Ponikowski P",
+       "Bengtsson O",
+       "Lindholm D",
+       "Langkilde AM",
+       "Schou M",
+       "Sjöstrand M",
+       "Solomon SD",
+       "Sabatine MS",
+       "Chiang CE",
+       "Docherty KF",
+       "Jhund PS",
+       "Køber L",
+       "McMurray JJV"
+      ],
+      "journal": "Annals of internal medicine",
+      "year": "2022",
+      "doi": "10.7326/M21-4776"
+     }
+    ],
+    "total_count": 86
+   },
+   "recorded_by": "anthropic:claude-sonnet-5-5",
+   "recorded_at": "2026-11-06T18:14:20+00:00"
   }
  ]
 }

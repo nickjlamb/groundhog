@@ -9,6 +9,8 @@ harness/
   tools.py          tool surface: 10 PubCrawl tools, 4 Redacta tools, submit_answer
   tool_specs/       tool definitions captured from the live servers
   cassette.py       frozen responses per task (cassettes/<task>.json)
+  corpus.py         frozen shared corpus (corpus/) answering searches and drug names
+  textsearch.py     PubMed-style boolean query matching with BM25 ranking
   paging.py         label sections served a page at a time, as PubCrawl >= 2.7.1 does
   faults.py         F1-F5 injection; fault_config.yaml holds the F5 texts
   gateway.py        ReplayGateway (cassettes + faults) and RecordGateway (live PubCrawl)
@@ -41,9 +43,26 @@ off-path, any fault events, the final answer and token usage.
 - **Cassettes store full label sections** (recorded with `max_chars` 50,000);
   the replay layer pages them to whatever the agent asks for. This is what
   lets F3 move the answer past the first page.
-- **Matching is tolerant of trivia**: key order, case, whitespace and paging
-  arguments on label tools. Anything else that is not in the cassette is
-  `off_path` and returns an empty result.
+- **Searches are answered from a frozen corpus, not by exact replay.** The
+  pilot showed models reword searches on every run (Claude: 107 of 148 PubMed
+  searches missed the cassette), so exact matching measured luck, not
+  reliability. `scripts/build_corpus.py` re-runs every search seen in
+  cassettes and traces against live PubCrawl and keeps every article and
+  trial returned, with abstracts, plus resolved drug names. In replay,
+  `search_pubmed`, `search_europepmc`, `search_trials` and `resolve_drug_name`
+  are answered from that corpus: space-separated terms are ANDed, AND/OR/NOT,
+  parentheses, quoted phrases and trailing wildcards work, field tags are
+  accepted, and hits are ranked by BM25. MeSH term mapping is not modelled,
+  and the corpus is far smaller than PubMed, so retrieval is easier than live;
+  report retrieval separately. Freeze the corpus before the full run.
+- **Label requests match the product, not the wording.** A request for
+  "metformin" is served the task's recorded Glucophage SmPC; a request that
+  names another drug ("metformin and glimepiride", a different brand) is not.
+  Abstracts of any corpus article are served too.
+- **Everything else must match the cassette** (tolerating key order, case,
+  whitespace and paging arguments). A miss is `off_path` and returns an empty
+  result. Each step records `served_by`: cassette, cassette:same_product or
+  corpus.
 - **F4 needs a stale recording.** A task's cassette must hold a `stale`
   variant (a superseded label or registry version); without one the fault is
   logged as unavailable and the run must be excluded, not counted as clean.

@@ -8,11 +8,25 @@ import copy
 import time
 
 from .cassette import Cassette
+from .corpus import CORPUS_TOOLS, Corpus
 from .faults import FaultState
 from .paging import page_response, select_sections
 from .tools import EXTERNAL, LOCAL, PAGED
 
 OFF_PATH = {"results": [], "note": "No results found."}
+LABEL_TOOLS = {"get_smpc", "get_uspi", "compare_labels"}
+_CORPUS = None
+
+
+def shared_corpus():
+    global _CORPUS
+    if _CORPUS is None:
+        _CORPUS = Corpus()
+    return _CORPUS
+
+
+def _secs(args):
+    return sorted(str(s).lower().strip() for s in (args.get("sections") or []))
 FULL_SECTION_CHARS = 50000
 
 
@@ -39,19 +53,75 @@ class _Base:
 
 
 class ReplayGateway(_Base):
-    def __init__(self, task, cassette, fault: str = "F0", local_client=None):
+    def __init__(self, task, cassette, fault: str = "F0", local_client=None, corpus=None):
         super().__init__(task, cassette, local_client)
         self.faults = FaultState(task, fault)
+        self.corpus = corpus if corpus is not None else shared_corpus()
 
     def _lookup(self, tool, args, variant):
-        """Exact match first; for labels, a request for some sections can be served
-        from a recording of the whole label for the same product."""
+        """Return (response, served_by) or (None, None).
+
+        1. exact match;
+        2. labels: some sections of a whole-label recording of the same request;
+        3. labels: the same product named differently ("metformin" for a recorded
+           "Glucophage" SmPC), but never a different product;
+        4. abstracts: any article in the shared corpus.
+        """
         hit = self.cassette.lookup(tool, args, variant=variant)
-        if hit is not None or tool not in PAGED or not args.get("sections"):
-            return hit
-        whole = {k: v for k, v in args.items() if k != "sections"}
-        hit = self.cassette.lookup(tool, whole, variant=variant)
-        return select_sections(hit, args["sections"]) if hit is not None else None
+        if hit is not None:
+            return hit, "cassette"
+        if tool in PAGED and args.get("sections"):
+            whole = {k: v for k, v in args.items() if k != "sections"}
+            hit = self.cassette.lookup(tool, whole, variant=variant)
+            if hit is not None:
+                return select_sections(hit, args["sections"]), "cassette"
+        if tool in LABEL_TOOLS:
+            hit = self._same_product(tool, args, variant)
+            if hit is not None:
+                return hit, "cassette:same_product"
+        if tool == "get_abstract" and args.get("pmid") and variant == "current":
+            hit = self.corpus.abstract(args["pmid"])
+            if hit is not None:
+                return hit, "corpus"
+        return None, None
+
+    def _same_product(self, tool, args, variant):
+        names = [args.get(k) for k in ("drug", "us_drug", "uk_drug") if args.get(k)]
+        if not names:
+            return None
+        want = _secs(args)
+        best = None
+        for e in self.cassette.data["entries"]:
+            if e["tool"] != tool or e.get("variant", "current") != variant:
+                continue
+            ea = e["args"]
+            enames = [ea.get(k) for k in ("drug", "us_drug", "uk_drug") if ea.get(k)]
+            resp = e["response"] if isinstance(e["response"], dict) else {}
+            enames += [resp.get("drug_name", "")] + list((resp.get("lookup_names") or {}).values())
+            if not all(self.corpus.same_product(n, [x for x in enames if x]) for n in names[:1]):
+                continue
+            have = _secs(ea)
+            if tool in PAGED:
+                if not have:
+                    return select_sections(e["response"], args.get("sections"))
+                if want and set(want) <= set(have):
+                    best = select_sections(e["response"], want)
+            elif tool == "compare_labels":
+                if have == want:
+                    return e["response"]
+                if not have and want:
+                    r = copy.deepcopy(e["response"])
+                    r["comparisons"] = [c for c in r.get("comparisons", [])
+                                        if any(w in str(c.get("topic", "")).lower() for w in want)]
+                    best = r if r["comparisons"] else best
+        return best
+
+    def _from_corpus(self, tool, args):
+        hit = self.cassette.lookup(tool, args)          # a live recording wins if present
+        if hit is not None:
+            return hit, "cassette"
+        hit = self.corpus.answer(tool, args)
+        return (hit, "corpus") if hit is not None else (None, None)
 
     def _external(self, tool, args):
         base = {"tool": tool, "args": args, "external": True}
@@ -59,12 +129,18 @@ class ReplayGateway(_Base):
         if short is not None:
             result, is_error = short
             return {**base, "result": result, "is_error": is_error, "off_path": False}
-        variant = self.faults.variant_for(tool, self.cassette)
-        recorded = self._lookup(tool, args, variant)
-        if recorded is None and variant != "current":
-            recorded = self._lookup(tool, args, "current")
+        if tool in CORPUS_TOOLS:
+            variant = "current"
+            recorded, served_by = self._from_corpus(tool, args)
+        else:
+            variant = self.faults.variant_for(tool, self.cassette)
+            recorded, served_by = self._lookup(tool, args, variant)
+            if recorded is None and variant != "current":
+                recorded, served_by = self._lookup(tool, args, "current")
         if recorded is None:
-            return {**base, "result": copy.deepcopy(OFF_PATH), "is_error": False, "off_path": True}
+            return {**base, "result": copy.deepcopy(OFF_PATH), "is_error": False, "off_path": True,
+                    "served_by": None}
+        base["served_by"] = served_by
         result = copy.deepcopy(recorded)
         if tool in PAGED:
             cut = self.faults.first_page_cut(tool, result, args.get("offset"))

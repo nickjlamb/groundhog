@@ -2,6 +2,56 @@
  "task_id": "label-001",
  "entries": [
   {
+   "key": "get_smpc {\"drug\": \"glucophage metformin film-coated tablets\", \"sections\": [\"4.3\"]}",
+   "tool": "get_smpc",
+   "args": {
+    "drug": "Glucophage metformin film-coated tablets",
+    "sections": [
+     "4.3"
+    ]
+   },
+   "variant": "current",
+   "response": {
+    "drug_name": "Glucophage 500 mg film coated tablets",
+    "product_id": "987",
+    "sections": [
+     {
+      "code": "4.3",
+      "title": "Contraindications",
+      "content": "• Hypersensitivity to metformin or to any of the excipients listed in section 6.1.\n • Any type of acute metabolic acidosis (such as lactic acidosis, diabetic ketoacidosis).\n • Diabetic pre-coma.\n • Severe renal failure (GFR < 30 mL/min).\n • Acute conditions with the potential to alter renal function such as: dehydration, severe infection, shock.\n • Disease which may cause tissue hypoxia (especially acute disease, or worsening of chronic disease) such as: decompensated heart failure, respiratory failure, recent myocardial infarction, shock.\n • Hepatic insufficiency, acute alcohol intoxication, alcoholism."
+     }
+    ],
+    "url": "https://www.medicines.org.uk/emc/product/987/smpc"
+   },
+   "recorded_by": "anthropic:claude-sonnet-5-5",
+   "recorded_at": "2026-11-06T18:13:59+00:00"
+  },
+  {
+   "key": "get_smpc {\"drug\": \"glucophage\", \"sections\": [\"4.3\"]}",
+   "tool": "get_smpc",
+   "args": {
+    "drug": "Glucophage",
+    "sections": [
+     "4.3"
+    ]
+   },
+   "variant": "current",
+   "response": {
+    "drug_name": "Glucophage 500 mg film coated tablets",
+    "product_id": "987",
+    "sections": [
+     {
+      "code": "4.3",
+      "title": "Contraindications",
+      "content": "• Hypersensitivity to metformin or to any of the excipients listed in section 6.1.\n • Any type of acute metabolic acidosis (such as lactic acidosis, diabetic ketoacidosis).\n • Diabetic pre-coma.\n • Severe renal failure (GFR < 30 mL/min).\n • Acute conditions with the potential to alter renal function such as: dehydration, severe infection, shock.\n • Disease which may cause tissue hypoxia (especially acute disease, or worsening of chronic disease) such as: decompensated heart failure, respiratory failure, recent myocardial infarction, shock.\n • Hepatic insufficiency, acute alcohol intoxication, alcoholism."
+     }
+    ],
+    "url": "https://www.medicines.org.uk/emc/product/987/smpc"
+   },
+   "recorded_by": "anthropic:claude-sonnet-5-5",
+   "recorded_at": "2026-11-06T18:13:55+00:00"
+  },
+  {
    "key": "get_smpc {\"drug\": \"glucophage\"}",
    "tool": "get_smpc",
    "args": {

@@ -1,9 +1,12 @@
+import json
 """Offline tests for the Groundhog harness: no network, no API keys."""
 
 import copy
 
 import pytest
 
+from harness.corpus import Corpus
+from harness.textsearch import Index
 from harness.agent import run_episode
 from harness.cassette import Cassette, canonical_key
 from harness.faults import f3_cut
@@ -42,8 +45,11 @@ def cassette(tmp_path):
     return c
 
 
-def gw(cassette, fault="F0", local=None, task=TASK):
-    return ReplayGateway(task, cassette, fault=fault, local_client=local)
+EMPTY_CORPUS = Corpus(root="/nonexistent")
+
+
+def gw(cassette, fault="F0", local=None, task=TASK, corpus=EMPTY_CORPUS):
+    return ReplayGateway(task, cassette, fault=fault, local_client=local, corpus=corpus)
 
 
 # --- tool surface ---------------------------------------------------------
@@ -188,7 +194,7 @@ def test_submit_gold_mock_runs_every_verified_task(tmp_path):
     for task in load_tasks("all"):
         model = SubmitGoldModel()
         model.bind(task)
-        trace = run_episode(task, model, ReplayGateway(task, Cassette(task["id"], root=tmp_path), fault=task["fault"]))
+        trace = run_episode(task, model, ReplayGateway(task, Cassette(task["id"], root=tmp_path), fault=task["fault"], corpus=EMPTY_CORPUS))
         assert trace["status"] == "submitted", task["id"]
 
 
@@ -210,3 +216,50 @@ def test_perplexity_round_trip_translation():
     r = parse_response(body)
     assert r["text"] == "Checking." and r["tool_calls"] == [{"id": "c2", "name": "get_smpc", "args": {"drug": "Eliquis"}}]
     assert r["usage"]["cost_usd"] == 0.0012
+
+
+# --- frozen corpus: searches and product names ----------------------------
+
+def small_corpus(tmp_path):
+    c = Corpus(root=tmp_path / "corpus")
+    c.add_search_results("search_pubmed", {"results": [
+        {"pmid": "1", "title": "Empagliflozin in heart failure with reduced ejection fraction", "authors": ["Packer M"],
+         "journal": "N Engl J Med", "year": "2020", "doi": ""},
+        {"pmid": "2", "title": "Dapagliflozin in heart failure", "authors": ["McMurray JJV"],
+         "journal": "N Engl J Med", "year": "2019", "doi": ""}]})
+    c.add_abstract({"pmid": "1", "title": "Empagliflozin in heart failure with reduced ejection fraction",
+                    "abstract_sections": [{"label": "", "text": "EMPEROR-Reduced randomised trial"}]})
+    c.add_drug("Glucophage", {"inputType": "brand", "genericName": "Metformin"})
+    c.add_drug("metformin", {"inputType": "generic", "genericName": "Metformin", "brandNames": ["Glucophage"]})
+    c.add_drug("glimepiride", {"inputType": "generic", "genericName": "Glimepiride", "brandNames": ["Amaryl"]})
+    c.add_drug("Eliquis", {"inputType": "brand", "genericName": "Apixaban"})
+    return c
+
+
+def test_search_is_answered_from_corpus_with_pubmed_semantics(tmp_path, cassette):
+    g = gw(cassette, corpus=small_corpus(tmp_path))
+    hits = lambda q: [r["pmid"] for r in g.call("search_pubmed", {"query": q})["result"]["results"]]
+    assert hits("EMPEROR-Reduced") == ["1"]                        # found via the abstract
+    assert hits("gliflozin heart failure") == []                   # all terms must match
+    assert set(hits('"heart failure" AND (empagliflozin OR dapagliflozin)')) == {"1", "2"}
+    assert hits("Packer M[au] empagliflozin") == ["1"]
+    step = g.call("search_pubmed", {"query": "empagliflozin"})
+    assert step["served_by"] == "corpus" and not step["off_path"]
+    assert g.call("search_pubmed", {"query": "heart failure", "dateFrom": "2020/01/01"})["result"]["total_count"] == 1
+
+
+def test_abstract_for_a_corpus_article_not_in_the_task_cassette(tmp_path, cassette):
+    step = gw(Cassette("other", root=tmp_path), corpus=small_corpus(tmp_path)).call("get_abstract", {"pmid": "1"})
+    assert step["served_by"] == "corpus" and "EMPEROR" in json.dumps(step["result"])
+
+
+def test_label_request_under_another_name_for_the_same_product(tmp_path):
+    c = Cassette("label-x", root=tmp_path)
+    c.add("get_smpc", {"drug": "Glucophage"}, {"drug_name": "Glucophage 500 mg film coated tablets",
+          "sections": [{"code": "4.3", "title": "Contraindications", "content": "GFR < 30 mL/min"}]}, recorded_by="t")
+    g = gw(c, corpus=small_corpus(tmp_path))
+    for name in ("metformin", "metformin hydrochloride", "Glucophage film-coated tablets"):
+        step = g.call("get_smpc", {"drug": name, "sections": ["4.3"]})
+        assert not step["off_path"] and step["served_by"] == "cassette:same_product", name
+    for other in ("glimepiride", "metformin and glimepiride", "Eliquis"):
+        assert g.call("get_smpc", {"drug": other})["off_path"], other
