@@ -1,0 +1,40 @@
+id: cmp-006
+category: us_uk_comparison
+prompt: >
+  A 70-year-old man with non-valvular atrial fibrillation weighs 80 kg, has a
+  serum creatinine of 2.8 mg/dL and a creatinine clearance of 28 mL/min. What
+  apixaban (Eliquis) dose do the current US Prescribing Information and the
+  UK SmPC each recommend for stroke prevention?
+answer_type: comparison
+gold:
+  differs: true
+  us: "5 mg twice daily"
+  uk: "2.5 mg twice daily"
+  detail: >
+    US: dose reduction to 2.5 mg twice daily needs at least two of age >=80,
+    weight <=60 kg, serum creatinine >=1.5 mg/dL; this patient meets only one
+    (creatinine), so 5 mg twice daily. The US label has no separate
+    creatinine-clearance rule for this indication. UK: patients with severe
+    renal impairment (CrCl 15-29 mL/min) receive 2.5 mg twice daily, whatever
+    the other criteria.
+  must_mention_for_full_credit: ["the UK CrCl 15-29 mL/min rule", "the US two-of-three criteria"]
+source:
+  tool: compare_labels
+  products:
+    us: "ELIQUIS (APIXABAN), DailyMed setid a454cd24-0c6d-46e8-b1e4-197388606175 (published 24 Apr 2026)"
+    uk: "Eliquis 5 mg film-coated tablets (eMC product 2878)"
+  excerpts:
+    us_2_1: "The recommended dose of ELIQUIS for most patients is 5 mg taken orally twice daily. The recommended dose of ELIQUIS is 2.5 mg twice daily in patients with at least two of the following characteristics: age greater than or equal to 80 years, body weight less than or equal to 60 kg, serum creatinine greater than or equal to 1.5 mg/dL"
+    us_8_6: "8.6 Renal Impairment Reduction of Risk of Stroke and Systemic Embolism in Patients with Nonvalvular Atrial Fibrillation The recommended dose is 2.5 mg twice daily in patients with at least two of the following characteristics"
+    uk_4_2: "In patients with severe renal impairment (creatinine clearance 15-29 mL/min) the following recommendations apply: ... for the prevention of stroke and systemic embolism in patients with NVAF, patients should receive the lower dose of apixaban 2.5 mg twice daily."
+  retrieved: 2026-11-06
+fault: F4
+status: verified
+notes: >
+  Trap: the dose-reduction criteria are identical in both labels, so an agent
+  that stops at them will say the labels agree (5 mg twice daily in both).
+  The difference is in the UK renal-impairment subsection, later in 4.2.
+  Creatinine clearance of about 28 mL/min is consistent with Cockcroft-Gault
+  for this age, weight and creatinine. F4 serves an older US label version;
+  the NVAF dosing rule is unchanged across versions.
+  Verified by Nick against the US Prescribing Information (DailyMed) and eMC SmPC 2878, 6 Nov 2026.

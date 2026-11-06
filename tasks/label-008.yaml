@@ -1,0 +1,26 @@
+id: label-008
+category: label_lookup
+prompt: >
+  A patient is starting Eliquis (apixaban) for treatment of an acute
+  pulmonary embolism. According to the UK SmPC, what is the dosing schedule?
+answer_type: exact_value
+gold:
+  value: "10 mg twice daily for the first 7 days, then 5 mg twice daily"
+  acceptable_variants: ["10 mg bd for 7 days followed by 5 mg bd", "10 mg BID x 7 days then 5 mg BID"]
+source:
+  tool: get_smpc
+  query: "Eliquis 5 mg film-coated tablets"
+  product: "Eliquis 5 mg film-coated tablets (eMC product 2878)"
+  section: "4.2"
+  excerpt: "The recommended dose of apixaban for the treatment of acute DVT and treatment of PE is 10 mg taken orally twice daily for the first 7 days followed by 5 mg taken orally twice daily."
+  url: "https://www.medicines.org.uk/emc/product/2878/smpc"
+  retrieved: 2026-11-06
+fault: F3
+status: verified
+notes: >
+  Trap: the section opens with the atrial fibrillation dose (5 mg twice daily,
+  2.5 mg with dose-reduction criteria), and the 2.5 mg dose for preventing
+  recurrence after 6 months follows the PE dose. A good answer gives the
+  two-phase schedule, not a single dose. Companion to label-003 (AF dose
+  reduction).
+  Verified by Nick against eMC SmPC 2878, 6 Nov 2026.

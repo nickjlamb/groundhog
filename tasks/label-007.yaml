@@ -1,0 +1,29 @@
+id: label-007
+category: label_lookup
+prompt: >
+  According to the UK SmPC for Enhertu (trastuzumab deruxtecan), what is the
+  recommended dose for a patient with HER2-low metastatic breast cancer?
+answer_type: exact_value
+gold:
+  value: "5.4 mg/kg every 3 weeks"
+  unit: "mg/kg"
+  acceptable_variants: ["5.4 mg/kg IV once every 3 weeks (21-day cycle)", "5.4 mg/kg q3w"]
+source:
+  tool: get_smpc
+  query: "Enhertu 100 mg powder for concentrate"
+  product: "Enhertu 100 mg powder for concentrate for solution for infusion (eMC product 12135)"
+  section: "4.2"
+  excerpts:
+    breast: "The recommended dose of Enhertu is 5.4 mg/kg body weight given as an intravenous infusion once every 3 weeks (21-day cycle) until disease progression or unacceptable toxicity."
+    gastric: "Recommended dosage for Gastric cancer The recommended dose of Enhertu is 6.4 mg/kg body weight given as an intravenous infusion once every 3 weeks (21-day cycle)"
+  url: "https://www.medicines.org.uk/emc/product/12135/smpc"
+  retrieved: 2026-11-06
+fault: F3
+status: verified
+notes: >
+  Trap: the gastric cancer dose (6.4 mg/kg) sits in the next paragraph. The
+  breast dose applies to HER2-positive, HER2-low and HER2-ultralow breast
+  cancer alike, so an agent should not look for a separate HER2-low dose.
+  F3 pages section 4.2 so the posology falls past the first page, after the
+  long patient-selection text.
+  Verified by Nick against eMC SmPC 12135, 6 Nov 2026.

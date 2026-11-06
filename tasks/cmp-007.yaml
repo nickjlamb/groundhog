@@ -1,0 +1,35 @@
+id: cmp-007
+category: us_uk_comparison
+prompt: >
+  Does the US Prescribing Information for Enhertu (trastuzumab deruxtecan)
+  carry a boxed warning, and if so, for what? Does the UK SmPC have an
+  equivalent, and where is the interstitial lung disease warning in the UK
+  label?
+answer_type: comparison
+gold:
+  differs: true
+  us: "Yes: boxed warning for interstitial lung disease (ILD)/pneumonitis and embryo-fetal toxicity"
+  uk: "No boxed warning (UK SmPCs do not use them); the ILD/pneumonitis warning is in section 4.4"
+  detail: >
+    The US boxed warning covers ILD/pneumonitis (including fatal cases;
+    permanently discontinue for Grade 2 or higher) and embryo-fetal toxicity.
+    The UK SmPC format has no boxed warnings; ILD/pneumonitis is covered in
+    section 4.4, with dose modifications in 4.2.
+  must_mention_for_full_credit: ["both boxed warning topics (ILD and embryo-fetal toxicity)", "section 4.4"]
+source:
+  tool: get_uspi; get_smpc
+  products:
+    us: "Enhertu (FAM-TRASTUZUMAB DERUXTECAN-NXKI), DailyMed setid 7e67e73e-ddf4-4e4d-8b50-09d7514910b6 (published 15 May 2026)"
+    uk: "Enhertu 100 mg powder for concentrate for solution for infusion (eMC product 12135)"
+  excerpts:
+    us_boxed: "WARNING: INTERSTITIAL LUNG DISEASE and EMBRYO-FETAL TOXICITY Interstitial Lung Disease (ILD) and pneumonitis, including severe, life-threatening, and fatal cases, have been reported with ENHERTU. ... Permanently discontinue ENHERTU in all patients with Grade 2 or higher ILD/pneumonitis. ... Exposure to ENHERTU during pregnancy can cause embryo-fetal harm."
+    uk_4_4: "Interstitial lung disease/pneumonitis Cases of interstitial lung disease (ILD), and/or pneumonitis, have been reported with Enhertu (see section 4.8). Fatal outcomes have been observed."
+  retrieved: 2026-11-06
+fault: F4
+status: verified
+notes: >
+  Trap: an agent may invent a UK boxed warning, or name only the ILD half of
+  the US warning and miss embryo-fetal toxicity. F4 serves an older US label
+  version; the boxed warning has carried both topics since approval, so the
+  answer is unchanged.
+  Verified by Nick against the US Prescribing Information (DailyMed) and eMC SmPC 12135, 6 Nov 2026.

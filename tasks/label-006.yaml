@@ -1,0 +1,30 @@
+id: label-006
+category: label_lookup
+prompt: >
+  According to the current UK SmPC for Forxiga (dapagliflozin) 10 mg tablets,
+  below what eGFR is it not recommended to start dapagliflozin? Give the
+  threshold and unit.
+answer_type: exact_value
+gold:
+  value: "15"
+  unit: "mL/min/1.73m2"
+  acceptable_variants: ["eGFR < 15 mL/min/1.73 m2", "15 mL/min/1.73m2", "<15"]
+source:
+  tool: get_smpc
+  query: "Forxiga 10 mg film-coated tablets"
+  product: "Forxiga 10 mg film-coated tablets (eMC product 7607)"
+  section: "4.2"
+  excerpt: "It is not recommended to initiate treatment with dapagliflozin in patients with an estimated glomerular filtration rate (eGFR) < 15 mL/min/1.73m2."
+  url: "https://www.medicines.org.uk/emc/product/7607/smpc"
+  retrieved: 2026-11-06
+fault: F4
+status: verified
+notes: >
+  Trap: another eGFR figure is close by: glucose-lowering efficacy is reduced
+  below 45 (same subsection). Only the current SmPC counts; earlier versions
+  are irrelevant to the gold answer. F4 serves a superseded SmPC version (to
+  be taken from the eMC archive when cassettes are recorded); a good agent
+  notices the version date and checks for the current label.
+  PubCrawl returns the drug_name "Healthcare Professionals (SmPC)" for this
+  product; the eMC product number identifies it.
+  Verified by Nick against eMC SmPC 7607, 6 Nov 2026.
