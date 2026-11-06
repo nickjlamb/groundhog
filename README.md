@@ -31,8 +31,8 @@ Agents work through realistic medical-writing research tasks (finding a dose in 
 
 | Category | Example | Verified |
 |---|---|---|
-| Label lookup | What is the UK SmPC dose of apixaban for this 82-year-old, 58 kg patient with atrial fibrillation? | 5 / 8 |
-| US/UK comparison | Is montelukast licensed for allergic rhinitis without asthma in the US? In the UK? | 5 / 7 |
+| Label lookup | What is the UK SmPC dose of apixaban for this 82-year-old, 58 kg patient with atrial fibrillation? | 8 / 8 |
+| US/UK comparison | Is montelukast licensed for allergic rhinitis without asthma in the US? In the UK? | 7 / 7 |
 | Claim checking | Is this leavepiece sentence supported by the cited paper? | 8 / 8 |
 | Citation | Find the PMID for this described study and format the reference | 6 / 6 |
 | Trial facts | Primary endpoint and result for a given NCT number | 6 / 6 |
