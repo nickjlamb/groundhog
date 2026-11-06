@@ -94,8 +94,187 @@
     ],
     "pmc_id": ""
    },
-   "recorded_by": "mock:submit-gold",
-   "recorded_at": "2026-11-06T15:34:09+00:00"
+   "recorded_by": "anthropic:claude-sonnet-5-5",
+   "recorded_at": "2026-11-06T17:52:15+00:00"
+  },
+  {
+   "key": "search_pubmed {\"maxResults\": 3, \"query\": \"granger apixaban versus warfarin in patients with atrial fibrillation aristotle\"}",
+   "tool": "search_pubmed",
+   "args": {
+    "query": "Granger apixaban versus warfarin in patients with atrial fibrillation ARISTOTLE",
+    "maxResults": 3
+   },
+   "variant": "current",
+   "response": {
+    "results": [
+     {
+      "pmid": "21870978",
+      "title": "Apixaban versus warfarin in patients with atrial fibrillation.",
+      "authors": [
+       "Granger CB",
+       "Alexander JH",
+       "McMurray JJ",
+       "Lopes RD",
+       "Hylek EM",
+       "Hanna M",
+       "Al-Khalidi HR",
+       "Ansell J",
+       "Atar D",
+       "Avezum A",
+       "Bahit MC",
+       "Diaz R",
+       "Easton JD",
+       "Ezekowitz JA",
+       "Flaker G",
+       "Garcia D",
+       "Geraldes M",
+       "Gersh BJ",
+       "Golitsyn S",
+       "Goto S",
+       "Hermosillo AG",
+       "Hohnloser SH",
+       "Horowitz J",
+       "Mohan P",
+       "Jansky P",
+       "Lewis BS",
+       "Lopez-Sendon JL",
+       "Pais P",
+       "Parkhomenko A",
+       "Verheugt FW",
+       "Zhu J",
+       "Wallentin L",
+       "ARISTOTLE Committees and Investigators"
+      ],
+      "journal": "The New England journal of medicine",
+      "year": "2011",
+      "doi": "10.1056/NEJMoa1107039"
+     },
+     {
+      "pmid": "34985309",
+      "title": "Direct Oral Anticoagulants Versus Warfarin in Patients With Atrial Fibrillation: Patient-Level Network Meta-Analyses of Randomized Clinical Trials With Interaction Testing by Age and Sex.",
+      "authors": [
+       "Carnicelli AP",
+       "Hong H",
+       "Connolly SJ",
+       "Eikelboom J",
+       "Giugliano RP",
+       "Morrow DA",
+       "Patel MR",
+       "Wallentin L",
+       "Alexander JH",
+       "Cecilia Bahit M",
+       "Benz AP",
+       "Bohula EA",
+       "Chao TF",
+       "Dyal L",
+       "Ezekowitz M",
+       "A A Fox K",
+       "Gencer B",
+       "Halperin JL",
+       "Hijazi Z",
+       "Hohnloser SH",
+       "Hua K",
+       "Hylek E",
+       "Toda Kato E",
+       "Kuder J",
+       "Lopes RD",
+       "Mahaffey KW",
+       "Oldgren J",
+       "Piccini JP",
+       "Ruff CT",
+       "Steffel J",
+       "Wojdyla D",
+       "Granger CB",
+       "COMBINE AF (A Collaboration Between Multiple Institutions to Better Investigate Non-Vitamin K Antagonist Oral Anticoagulant Use in Atrial Fibrillation) Investigators"
+      ],
+      "journal": "Circulation",
+      "year": "2022",
+      "doi": "10.1161/CIRCULATIONAHA.121.056355"
+     },
+     {
+      "pmid": "32160801",
+      "title": "Apixaban Versus Warfarin in Patients With Atrial Fibrillation and Advanced Chronic Kidney Disease.",
+      "authors": [
+       "Stanifer JW",
+       "Pokorney SD",
+       "Chertow GM",
+       "Hohnloser SH",
+       "Wojdyla DM",
+       "Garonzik S",
+       "Byon W",
+       "Hijazi Z",
+       "Lopes RD",
+       "Alexander JH",
+       "Wallentin L",
+       "Granger CB"
+      ],
+      "journal": "Circulation",
+      "year": "2020",
+      "doi": "10.1161/CIRCULATIONAHA.119.044059"
+     }
+    ],
+    "total_count": 29
+   },
+   "recorded_by": "anthropic:claude-sonnet-5-5",
+   "recorded_at": "2026-11-06T17:52:04+00:00"
+  },
+  {
+   "key": "search_pubmed {\"maxResults\": 3, \"query\": \"granger apixaban versus warfarin in patients with atrial fibrillation n engl j med 2011\"}",
+   "tool": "search_pubmed",
+   "args": {
+    "query": "Granger Apixaban versus warfarin in patients with atrial fibrillation N Engl J Med 2011",
+    "maxResults": 3
+   },
+   "variant": "current",
+   "response": {
+    "results": [
+     {
+      "pmid": "21870978",
+      "title": "Apixaban versus warfarin in patients with atrial fibrillation.",
+      "authors": [
+       "Granger CB",
+       "Alexander JH",
+       "McMurray JJ",
+       "Lopes RD",
+       "Hylek EM",
+       "Hanna M",
+       "Al-Khalidi HR",
+       "Ansell J",
+       "Atar D",
+       "Avezum A",
+       "Bahit MC",
+       "Diaz R",
+       "Easton JD",
+       "Ezekowitz JA",
+       "Flaker G",
+       "Garcia D",
+       "Geraldes M",
+       "Gersh BJ",
+       "Golitsyn S",
+       "Goto S",
+       "Hermosillo AG",
+       "Hohnloser SH",
+       "Horowitz J",
+       "Mohan P",
+       "Jansky P",
+       "Lewis BS",
+       "Lopez-Sendon JL",
+       "Pais P",
+       "Parkhomenko A",
+       "Verheugt FW",
+       "Zhu J",
+       "Wallentin L",
+       "ARISTOTLE Committees and Investigators"
+      ],
+      "journal": "The New England journal of medicine",
+      "year": "2011",
+      "doi": "10.1056/NEJMoa1107039"
+     }
+    ],
+    "total_count": 1
+   },
+   "recorded_by": "anthropic:claude-sonnet-5-5",
+   "recorded_at": "2026-11-06T17:52:14+00:00"
   }
  ]
 }

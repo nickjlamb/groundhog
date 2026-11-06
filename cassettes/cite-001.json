@@ -62,8 +62,8 @@
     "style": "vancouver",
     "citation": "Packer M, Anker SD, Butler J, Filippatos G, Pocock SJ, Carson P, et al. Cardiovascular and Renal Outcomes with Empagliflozin in Heart Failure. The New England journal of medicine. 2020;383(15):1413-1424. doi:10.1056/NEJMoa2022190"
    },
-   "recorded_by": "mock:submit-gold",
-   "recorded_at": "2026-11-06T15:46:58+00:00"
+   "recorded_by": "anthropic:claude-sonnet-5-5",
+   "recorded_at": "2026-11-06T17:51:58+00:00"
   },
   {
    "key": "format_citation {\"pmid\": \"32865377\"}",
@@ -79,6 +79,73 @@
    },
    "recorded_by": "mock:submit-gold",
    "recorded_at": "2026-11-06T15:46:58+00:00"
+  },
+  {
+   "key": "search_pubmed {\"dateFrom\": \"2020/01/01\", \"dateTo\": \"2020/12/31\", \"maxResults\": 10, \"query\": \"empagliflozin heart failure reduced ejection fraction emperor-reduced new england journal of medicine\"}",
+   "tool": "search_pubmed",
+   "args": {
+    "query": "empagliflozin heart failure reduced ejection fraction EMPEROR-Reduced New England Journal of Medicine",
+    "dateFrom": "2020/01/01",
+    "dateTo": "2020/12/31",
+    "maxResults": 10
+   },
+   "variant": "current",
+   "response": {
+    "results": [
+     {
+      "pmid": "32865377",
+      "title": "Cardiovascular and Renal Outcomes with Empagliflozin in Heart Failure.",
+      "authors": [
+       "Packer M",
+       "Anker SD",
+       "Butler J",
+       "Filippatos G",
+       "Pocock SJ",
+       "Carson P",
+       "Januzzi J",
+       "Verma S",
+       "Tsutsui H",
+       "Brueckmann M",
+       "Jamal W",
+       "Kimura K",
+       "Schnee J",
+       "Zeller C",
+       "Cotton D",
+       "Bocchi E",
+       "Böhm M",
+       "Choi DJ",
+       "Chopra V",
+       "Chuquiure E",
+       "Giannetti N",
+       "Janssens S",
+       "Zhang J",
+       "Gonzalez Juanatey JR",
+       "Kaul S",
+       "Brunner-La Rocca HP",
+       "Merkely B",
+       "Nicholls SJ",
+       "Perrone S",
+       "Pina I",
+       "Ponikowski P",
+       "Sattar N",
+       "Senni M",
+       "Seronde MF",
+       "Spinar J",
+       "Squire I",
+       "Taddei S",
+       "Wanner C",
+       "Zannad F",
+       "EMPEROR-Reduced Trial Investigators"
+      ],
+      "journal": "The New England journal of medicine",
+      "year": "2020",
+      "doi": "10.1056/NEJMoa2022190"
+     }
+    ],
+    "total_count": 1
+   },
+   "recorded_by": "anthropic:claude-sonnet-5-5",
+   "recorded_at": "2026-11-06T17:51:57+00:00"
   }
  ]
 }

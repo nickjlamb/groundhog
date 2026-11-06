@@ -75,8 +75,339 @@
     ],
     "pmc_id": "PMC4689591"
    },
-   "recorded_by": "mock:submit-gold",
-   "recorded_at": "2026-11-06T15:37:40+00:00"
+   "recorded_by": "anthropic:claude-sonnet-5-5",
+   "recorded_at": "2026-11-06T17:51:42+00:00"
+  },
+  {
+   "key": "search_pubmed {\"maxResults\": 3, \"query\": \"effects of intensive blood-pressure control in type 2 diabetes mellitus accord\"}",
+   "tool": "search_pubmed",
+   "args": {
+    "query": "Effects of intensive blood-pressure control in type 2 diabetes mellitus ACCORD",
+    "maxResults": 3
+   },
+   "variant": "current",
+   "response": {
+    "results": [
+     {
+      "pmid": "20228401",
+      "title": "Effects of intensive blood-pressure control in type 2 diabetes mellitus.",
+      "authors": [
+       "ACCORD Study Group",
+       "Cushman WC",
+       "Evans GW",
+       "Byington RP",
+       "Goff DC Jr",
+       "Grimm RH Jr",
+       "Cutler JA",
+       "Simons-Morton DG",
+       "Basile JN",
+       "Corson MA",
+       "Probstfield JL",
+       "Katz L",
+       "Peterson KA",
+       "Friedewald WT",
+       "Buse JB",
+       "Bigger JT",
+       "Gerstein HC",
+       "Ismail-Beigi F"
+      ],
+      "journal": "The New England journal of medicine",
+      "year": "2010",
+      "doi": "10.1056/NEJMoa1001286"
+     },
+     {
+      "pmid": "17599422",
+      "title": "Action to Control Cardiovascular Risk in Diabetes (ACCORD) trial: design and methods.",
+      "authors": [
+       "ACCORD Study Group",
+       "Buse JB",
+       "Bigger JT",
+       "Byington RP",
+       "Cooper LS",
+       "Cushman WC",
+       "Friedewald WT",
+       "Genuth S",
+       "Gerstein HC",
+       "Ginsberg HN",
+       "Goff DC Jr",
+       "Grimm RH Jr",
+       "Margolis KL",
+       "Probstfield JL",
+       "Simons-Morton DG",
+       "Sullivan MD"
+      ],
+      "journal": "The American journal of cardiology",
+      "year": "2007",
+      "doi": ""
+     },
+     {
+      "pmid": "12556541",
+      "title": "Multifactorial intervention and cardiovascular disease in patients with type 2 diabetes.",
+      "authors": [
+       "Gaede P",
+       "Vedel P",
+       "Larsen N",
+       "Jensen GV",
+       "Parving HH",
+       "Pedersen O"
+      ],
+      "journal": "The New England journal of medicine",
+      "year": "2003",
+      "doi": ""
+     }
+    ],
+    "total_count": 91
+   },
+   "recorded_by": "anthropic:claude-sonnet-5-5",
+   "recorded_at": "2026-11-06T17:51:46+00:00"
+  },
+  {
+   "key": "search_pubmed {\"maxResults\": 5, \"query\": \"a randomized trial of intensive versus standard blood-pressure control sprint\"}",
+   "tool": "search_pubmed",
+   "args": {
+    "query": "A Randomized Trial of Intensive versus Standard Blood-Pressure Control SPRINT",
+    "maxResults": 5
+   },
+   "variant": "current",
+   "response": {
+    "results": [
+     {
+      "pmid": "26551272",
+      "title": "A Randomized Trial of Intensive versus Standard Blood-Pressure Control.",
+      "authors": [
+       "SPRINT Research Group",
+       "Wright JT Jr",
+       "Williamson JD",
+       "Whelton PK",
+       "Snyder JK",
+       "Sink KM",
+       "Rocco MV",
+       "Reboussin DM",
+       "Rahman M",
+       "Oparil S",
+       "Lewis CE",
+       "Kimmel PL",
+       "Johnson KC",
+       "Goff DC Jr",
+       "Fine LJ",
+       "Cutler JA",
+       "Cushman WC",
+       "Cheung AK",
+       "Ambrosius WT"
+      ],
+      "journal": "The New England journal of medicine",
+      "year": "2015",
+      "doi": "10.1056/NEJMoa1511939"
+     },
+     {
+      "pmid": "34010531",
+      "title": "Final Report of a Trial of Intensive versus Standard Blood-Pressure Control.",
+      "authors": [
+       "SPRINT Research Group",
+       "Lewis CE",
+       "Fine LJ",
+       "Beddhu S",
+       "Cheung AK",
+       "Cushman WC",
+       "Cutler JA",
+       "Evans GW",
+       "Johnson KC",
+       "Kitzman DW",
+       "Oparil S",
+       "Rahman M",
+       "Reboussin DM",
+       "Rocco MV",
+       "Sink KM",
+       "Snyder JK",
+       "Whelton PK",
+       "Williamson JD",
+       "Wright JT Jr",
+       "Ambrosius WT"
+      ],
+      "journal": "The New England journal of medicine",
+      "year": "2021",
+      "doi": "10.1056/NEJMoa1901281"
+     },
+     {
+      "pmid": "40902616",
+      "title": "Benefit-harm trade-offs of intensive blood pressure control versus standard blood pressure control on cardiovascular and renal outcomes: an individual participant data analysis of randomised controlled trials.",
+      "authors": [
+       "Guo X",
+       "Sun G",
+       "Xu Y",
+       "Zhou S",
+       "Song Q",
+       "Li Y",
+       "Ouyang N",
+       "Li G",
+       "Cheng Z",
+       "Ye N",
+       "Wang J",
+       "Zhou Y",
+       "Yang H",
+       "Shi C",
+       "Wang C",
+       "Liu S",
+       "Zhu W",
+       "Moran AE",
+       "Ning G",
+       "Bi Y",
+       "Wang W",
+       "Cai J",
+       "Li J",
+       "Sun Y",
+       "BPRULE Study Group"
+      ],
+      "journal": "Lancet (London, England)",
+      "year": "2025",
+      "doi": "10.1016/S0140-6736(25)01391-1"
+     },
+     {
+      "pmid": "28642330",
+      "title": "Effects of Intensive BP Control in CKD.",
+      "authors": [
+       "Cheung AK",
+       "Rahman M",
+       "Reboussin DM",
+       "Craven TE",
+       "Greene T",
+       "Kimmel PL",
+       "Cushman WC",
+       "Hawfield AT",
+       "Johnson KC",
+       "Lewis CE",
+       "Oparil S",
+       "Rocco MV",
+       "Sink KM",
+       "Whelton PK",
+       "Wright JT Jr",
+       "Basile J",
+       "Beddhu S",
+       "Bhatt U",
+       "Chang TI",
+       "Chertow GM",
+       "Chonchol M",
+       "Freedman BI",
+       "Haley W",
+       "Ix JH",
+       "Katz LA",
+       "Killeen AA",
+       "Papademetriou V",
+       "Ricardo AC",
+       "Servilla K",
+       "Wall B",
+       "Wolfgram D",
+       "Yee J",
+       "SPRINT Research Group"
+      ],
+      "journal": "Journal of the American Society of Nephrology : JASN",
+      "year": "2017",
+      "doi": "10.1681/ASN.2017020148"
+     },
+     {
+      "pmid": "42614618",
+      "title": "Intensive versus standard blood pressure control and overall brain small vessel disease burden: a post-hoc analysis of the SPRINT randomized clinical trial.",
+      "authors": [
+       "Charisis S",
+       "Pajewski NM",
+       "Price LR",
+       "Ho NH",
+       "Rashid T",
+       "Wang D",
+       "Zeng Y",
+       "Kutty NS",
+       "Bryan RN",
+       "Kern KC",
+       "Dickerson BC",
+       "Seshadri S",
+       "Nasrallah I",
+       "Launer L",
+       "Davatzikos C",
+       "Williamson JD",
+       "Habes M"
+      ],
+      "journal": "EClinicalMedicine",
+      "year": "2026",
+      "doi": "10.1016/j.eclinm.2026.104143"
+     }
+    ],
+    "total_count": 57
+   },
+   "recorded_by": "anthropic:claude-sonnet-5-5",
+   "recorded_at": "2026-11-06T17:51:41+00:00"
+  },
+  {
+   "key": "search_pubmed {\"maxResults\": 5, \"query\": \"sprint randomized trial of intensive versus standard blood-pressure control n engl j med 2015 wright\"}",
+   "tool": "search_pubmed",
+   "args": {
+    "query": "SPRINT randomized trial of intensive versus standard blood-pressure control N Engl J Med 2015 Wright",
+    "maxResults": 5
+   },
+   "variant": "current",
+   "response": {
+    "results": [
+     {
+      "pmid": "26551272",
+      "title": "A Randomized Trial of Intensive versus Standard Blood-Pressure Control.",
+      "authors": [
+       "SPRINT Research Group",
+       "Wright JT Jr",
+       "Williamson JD",
+       "Whelton PK",
+       "Snyder JK",
+       "Sink KM",
+       "Rocco MV",
+       "Reboussin DM",
+       "Rahman M",
+       "Oparil S",
+       "Lewis CE",
+       "Kimmel PL",
+       "Johnson KC",
+       "Goff DC Jr",
+       "Fine LJ",
+       "Cutler JA",
+       "Cushman WC",
+       "Cheung AK",
+       "Ambrosius WT"
+      ],
+      "journal": "The New England journal of medicine",
+      "year": "2015",
+      "doi": "10.1056/NEJMoa1511939"
+     },
+     {
+      "pmid": "34010531",
+      "title": "Final Report of a Trial of Intensive versus Standard Blood-Pressure Control.",
+      "authors": [
+       "SPRINT Research Group",
+       "Lewis CE",
+       "Fine LJ",
+       "Beddhu S",
+       "Cheung AK",
+       "Cushman WC",
+       "Cutler JA",
+       "Evans GW",
+       "Johnson KC",
+       "Kitzman DW",
+       "Oparil S",
+       "Rahman M",
+       "Reboussin DM",
+       "Rocco MV",
+       "Sink KM",
+       "Snyder JK",
+       "Whelton PK",
+       "Williamson JD",
+       "Wright JT Jr",
+       "Ambrosius WT"
+      ],
+      "journal": "The New England journal of medicine",
+      "year": "2021",
+      "doi": "10.1056/NEJMoa1901281"
+     }
+    ],
+    "total_count": 2
+   },
+   "recorded_by": "anthropic:claude-sonnet-5-5",
+   "recorded_at": "2026-11-06T17:51:32+00:00"
   }
  ]
 }
