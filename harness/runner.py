@@ -26,6 +26,16 @@ from .models import make_model
 ROOT = Path(__file__).resolve().parent.parent
 
 
+def load_env(path=ROOT / ".env"):
+    """Read API keys from a git-ignored .env file; real environment variables win."""
+    import os
+    if path.exists():
+        for line in path.read_text().splitlines():
+            if "=" in line and not line.lstrip().startswith("#"):
+                k, v = line.split("=", 1)
+                os.environ.setdefault(k.strip(), v.strip().strip("'\""))
+
+
 def load_tasks(selector: str) -> list[dict]:
     tasks = [yaml.safe_load(p.read_text()) for p in sorted((ROOT / "tasks").glob("*.yaml"))]
     tasks = [t for t in tasks if t.get("status") == "verified"]
@@ -54,6 +64,7 @@ def task_set_hash(tasks) -> str:
 
 
 def main(argv=None):
+    load_env()
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--model", required=True)
     ap.add_argument("--tasks", default="all")
