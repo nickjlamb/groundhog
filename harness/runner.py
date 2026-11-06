@@ -63,6 +63,14 @@ def task_set_hash(tasks) -> str:
     return h.hexdigest()[:12]
 
 
+def files_hash(paths) -> str:
+    h = hashlib.sha256()
+    for p in sorted(paths):
+        h.update(Path(p).name.encode())
+        h.update(Path(p).read_bytes())
+    return h.hexdigest()[:12]
+
+
 def main(argv=None):
     load_env()
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -92,6 +100,9 @@ def main(argv=None):
     manifest = {"run_id": run_id, "model": args.model, "runs": args.runs, "conditions": args.conditions,
                 "mode": "record" if args.record else "replay", "git_sha": git_sha(),
                 "task_set_hash": task_set_hash(tasks), "tasks": [t["id"] for t in tasks],
+                "corpus_hash": files_hash((ROOT / "corpus").glob("*.json")),
+                "cassettes_hash": files_hash((ROOT / "cassettes").glob("*.json")),
+                "interface_hash": files_hash([ROOT / "harness" / "tools.py", ROOT / "harness" / "prompts" / "system.md"]),
                 "pubcrawl": pubcrawl.server_info if pubcrawl else None,
                 "redacta": local.server_info if local else None,
                 "started": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")}
@@ -102,6 +113,10 @@ def main(argv=None):
     for task in tasks:
         conds = ["F0"] if args.record else {"both": ["F0", task["fault"]], "clean": ["F0"], "fault": [task["fault"]]}[args.conditions]
         cassette = Cassette(task["id"])
+        if task["fault"] == "F4" and not args.record and not cassette.has_variant("stale"):
+            if task["fault"] in conds:
+                print(f"{task['id']:14} F4 skipped: no stale recording, so the fault cannot be injected", flush=True)
+            conds = [c for c in conds if c != "F4"]
         for cond in conds:
             for rep in range(1, args.runs + 1):
                 model = make_model(args.model)

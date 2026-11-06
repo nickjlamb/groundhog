@@ -32,8 +32,13 @@ SUBMIT_ANSWER = {
             "value": {"type": "string", "description": "The answer value (a dose, threshold, endpoint and result, or short answer)."},
             "unit": {"type": "string", "description": "Unit for value, if any."},
             "pmid": {"type": "string", "description": "PubMed ID, for citation questions."},
-            "verdict": {"type": "string", "enum": ["supported", "partial", "unsupported"], "description": "For claim-checking questions."},
-            "abstain": {"type": "boolean", "description": "True if the requested information is not available in any source you could access."},
+            "verdict": {"type": "string", "enum": ["supported", "partial", "unsupported"],
+                        "description": "Only for questions asking whether a claim is supported by a source. "
+                                       "Leave it out for every other kind of question."},
+            "abstain": {"type": "boolean",
+                        "description": "Set to true whenever you do not give the requested answer: the information "
+                                       "is not in any source you could access, does not exist, or the question rests "
+                                       "on a false premise. Explain why in rationale; leave value empty."},
             "conflict": {"type": "boolean", "description": "True if sources disagree on the requested figure."},
             "rationale": {"type": "string", "description": "Explanation citing the sources and figures relied on."},
         },

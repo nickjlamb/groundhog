@@ -91,7 +91,10 @@ def main():
     ap.add_argument("--budget", type=float, default=0, help="stop after this many seconds (0 = no limit)")
     ap.add_argument("--runs-glob", default="runs/*/*__*.json")
     ap.add_argument("--pubcrawl-cmd", default="npx -y @pharmatools/pubcrawl@2.8.0")
+    ap.add_argument("--unfreeze", action="store_true", help="allow changes to a frozen corpus")
     args = ap.parse_args()
+    if (ROOT / "corpus" / "FROZEN").exists() and not args.unfreeze:
+        sys.exit("corpus/ is frozen for the full run (corpus/FROZEN). Use --unfreeze to change it deliberately.")
     t0 = time.time()
     corpus = Corpus()
     state = json.loads(STATE.read_text()) if STATE.exists() else {"done": [], "failed": []}
