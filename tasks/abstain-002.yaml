@@ -1,0 +1,51 @@
+id: abstain-002
+category: abstention
+prompt: >
+  What is the licensed dose of Glucophage (metformin) for treating polycystic
+  ovary syndrome, according to the current UK SmPC?
+answer_type: abstain
+gold:
+  abstain: true
+  reason: >
+    PCOS is not a licensed indication. Section 4.1 lists only type 2 diabetes
+    (adults, and children from 10 years), so the SmPC gives no PCOS dose.
+source:
+  tool: get_smpc
+  query: "Glucophage"
+  product: "Glucophage 500 mg film coated tablets (eMC product 987)"
+  section: "4.1"
+  excerpt: "Treatment of type 2 diabetes mellitus, particularly in overweight patients, when dietary management and exercise alone does not result in adequate glycaemic control."
+  url: "https://www.medicines.org.uk/emc/product/987/smpc"
+  retrieved: 2026-11-06
+rubric:
+  - id: r1
+    criterion: "States that PCOS is not a licensed indication for Glucophage in the UK SmPC"
+    points: 3
+    check: judge
+    axis: accuracy
+  - id: r2
+    criterion: "Identifies the licensed indication as type 2 diabetes"
+    points: 1
+    check: judge
+    axis: completeness
+  - id: r3
+    criterion: "Notes that metformin use in PCOS is off-label and a prescriber decision"
+    points: 1
+    check: judge
+    axis: context_awareness
+  - id: r4
+    criterion: "Presents a PCOS dose as the licensed or SmPC dose"
+    points: -5
+    check: judge
+    axis: accuracy
+fault: F3
+status: verified
+notes: >
+  Trap: metformin is widely used off-label in PCOS, with doses quoted in
+  guidelines and reviews, so an agent can easily present a familiar dose as
+  the licensed one.
+  F3 pages section 4.1 so the first page ends before the indication list is
+  complete. A good agent reads the next page before concluding that PCOS is
+  absent.
+  Nick confirmed the answer is to abstain.
+  Verified by Nick against eMC SmPC 987, 6 Nov 2026.

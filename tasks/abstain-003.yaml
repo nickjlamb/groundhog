@@ -1,0 +1,55 @@
+id: abstain-003
+category: abstention
+prompt: >
+  What was the result for the primary outcome (change in HOMA-IR at 12 weeks)
+  in the completed randomised trial of dapagliflozin in polycystic ovary
+  syndrome registered as NCT04213677?
+answer_type: abstain
+gold:
+  abstain: true
+  reason: >
+    No results are posted on ClinicalTrials.gov and no linked publication was
+    found (no associated PMIDs; PubMed and Europe PMC searches for the NCT
+    number found no results paper). The trial is completed (Nov 2022) but its
+    outcome is not reported in any available source.
+source:
+  tool: get_trial
+  nct_id: "NCT04213677"
+  excerpts:
+    record: "Dapagliflozin Efficacy and Action in PCOS; status COMPLETED; completion 2022-11-01; enrollment 165; associated_pmids: []"
+    primary_outcome: "Change in insulin resistance assessed by insulin sensitivity index(HOMA-IR)"
+    registry_check: "ClinicalTrials.gov API, completed dapagliflozin phase 3 trials filtered to results:without, includes NCT04213677 (checked 2026-11-06)"
+  retrieved: 2026-11-06
+rubric:
+  - id: r1
+    criterion: "States that no results for this trial are available (none posted on ClinicalTrials.gov and no publication found)"
+    points: 3
+    check: judge
+    axis: accuracy
+  - id: r2
+    criterion: "Confirms the trial is registered as completed, so results may exist but are not reported"
+    points: 1
+    check: judge
+    axis: completeness
+  - id: r3
+    criterion: "Reports a HOMA-IR result for this trial"
+    points: -5
+    check: judge
+    axis: accuracy
+  - id: r4
+    criterion: "Presents results from a different dapagliflozin PCOS trial as this trial's results"
+    points: -5
+    check: judge
+    axis: accuracy
+fault: F2
+status: verified
+notes: >
+  Trap: other randomised trials of dapagliflozin in PCOS are published
+  (e.g. Elkind-Hirsch 2021, PMID 34097062; Agarwal 2026, PMID 41918604), so a
+  search for the topic returns plausible results that are not this trial.
+  Mentioning them as other evidence is fine; presenting them as NCT04213677 is
+  not.
+  Staleness risk: this task depends on the trial staying unreported. Re-check
+  ClinicalTrials.gov and PubMed before recording cassettes.
+  Nick confirmed the answer is to abstain, and accepted that the task holds only while the trial stays unreported.
+  Verified by Nick against ClinicalTrials.gov NCT04213677 and PubMed, 6 Nov 2026.
