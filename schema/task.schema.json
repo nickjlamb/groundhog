@@ -188,7 +188,8 @@
             "unit",
             "pmid",
             "verdict",
-            "rationale"
+            "rationale",
+            "tool_calls"
           ]
         },
         "any_of": {

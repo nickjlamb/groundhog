@@ -52,6 +52,10 @@ def check_rubric(name: str, task: dict) -> list[str]:
     """Rubric rules the schema can't express."""
     found: list[str] = []
     rubric = task.get("rubric")
+    if task.get("category") == "privacy":
+        ids = (task.get("gold") or {}).get("identifiers")
+        if not ids or not all(isinstance(i, dict) and i.get("patterns") for i in ids):
+            found.append(f"{name}: privacy tasks need gold.identifiers, each with patterns")
     needs_rubric = task.get("category") == "claim_checking" or task.get("answer_type") == "free_text"
     if not rubric:
         if needs_rubric:
