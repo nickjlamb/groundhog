@@ -1,0 +1,158 @@
+{
+ "task_id": "trial-005",
+ "entries": [
+  {
+   "key": "get_trial {\"nctId\": \"nct01179048\"}",
+   "tool": "get_trial",
+   "args": {
+    "nctId": "NCT01179048"
+   },
+   "variant": "current",
+   "response": {
+    "nct_id": "NCT01179048",
+    "title": "Liraglutide Effect and Action in Diabetes: Evaluation of Cardiovascular Outcome Results",
+    "status": "COMPLETED",
+    "phase": "PHASE3",
+    "conditions": [
+     "Diabetes",
+     "Diabetes Mellitus, Type 2"
+    ],
+    "interventions": [
+     {
+      "type": "DRUG",
+      "name": "liraglutide"
+     },
+     {
+      "type": "DRUG",
+      "name": "placebo"
+     }
+    ],
+    "enrollment": 9341,
+    "sponsor": "Novo Nordisk A/S",
+    "start_date": "2010-08-31",
+    "completion_date": "2015-12-17",
+    "study_type": "INTERVENTIONAL",
+    "url": "https://clinicaltrials.gov/study/NCT01179048",
+    "official_title": "A Long-term, Multi-centre, International, Randomised Double-blind, Placebo-controlled Trial to Determine Liraglutide Effects on Cardiovascular Events",
+    "summary": "This trial is conducted in Africa, Asia, Europe, and North and South America. The aim of this trial is to determine the long term effect of liraglutide on cardiovascular events in subjects with type 2 diabetes.",
+    "eligibility": {
+     "criteria": "Inclusion Criteria: - Type 2 diabetes - Age min. 50 years at screening and concomitant cardiovascular, cerebrovascular or peripheral vascular disease or chronic renal failure or chronic heart failure OR age min. 60 years at screening and other specified risk factors of cardiovascular disease - HbA1c: 7.0% or above - Anti-diabetic drug naive or treated with one or more oral anti-diabetic drugs (OADs) or treated with human NPH insulin or long-acting insulin analogue or premixed insulin, alone or in combination with OAD(s) Exclusion Criteria: - Type 1 diabetes - Use of a glucagon-like peptide-1 (GLP-1) receptor agonist (exenatide, liraglutide or other) or pramlintide or any dipeptidyl peptidase 4 (DPP-4) inhibitor within the 3 months prior to screening (trial start) - Use of insulin other than human NPH insulin or long-acting insulin analogue or premixed insulin within 3 months prior to screening. Short-term use of other insulin during this period in connection with intercurrent illness is allowed, at Investigator's discretion",
+     "gender": "ALL",
+     "minimum_age": "50 Years",
+     "maximum_age": "",
+     "healthy_volunteers": "false"
+    },
+    "design": {
+     "allocation": "RANDOMIZED",
+     "intervention_model": "PARALLEL",
+     "primary_purpose": "TREATMENT",
+     "masking": "DOUBLE",
+     "who_masked": [
+      "PARTICIPANT",
+      "INVESTIGATOR"
+     ]
+    },
+    "arms": [
+     {
+      "label": "Liraglutide",
+      "type": "EXPERIMENTAL",
+      "description": "",
+      "intervention_names": [
+       "Drug: liraglutide"
+      ]
+     },
+     {
+      "label": "Placebo",
+      "type": "PLACEBO_COMPARATOR",
+      "description": "",
+      "intervention_names": [
+       "Drug: placebo"
+      ]
+     }
+    ],
+    "primary_outcomes": [
+     {
+      "measure": "Time From Randomisation to First Occurrence of Cardiovascular Death, Non-fatal Myocardial Infarction, or Non-fatal Stroke (a Composite Cardiovascular Outcome)",
+      "description": "Time from randomisation to first occurrence of cardiovascular death, non-fatal myocardial infarction, or non-fatal stroke (a composite cardiovascular outcome). The percentage of subjects experiencing a first event of cardiovascular death, non-fatal myocardial infarction, or non-fatal stroke (a composite cardiovascular outcome) is presented.",
+      "time_frame": "from randomisation (visit 3; month 0) to last contact (visit 16; up to month 60+30 days)"
+     }
+    ],
+    "secondary_outcomes": [
+     {
+      "measure": "Time From Rand. to First Occurrence of an Expanded Composite Cardiovascular Outcome Defined as Either Cardiovascular Death, Non-fatal Myocardial Infarction, Non-fatal Stroke, Revascularisation, Hospitalisation for Unstable Angina or for Heart Failure.",
+      "description": "Time from randomisation to first occurrence of an expanded composite cardiovascular outcome defined as either cardiovascular death, non-fatal myocardial infarction, non-fatal stroke, coronary revascularisation, hospitalisation for unstable angina or for heart failure. The percentage of subjects experiencing first occurrence of an expanded composite cardiovascular outcome defined as either cardiovascular death, non-fatal myocardial infarction, non-fatal stroke, coronary revascularisation, hospitalisation for unstable angina or for heart failure is presented.",
+      "time_frame": "from randomisation (visit 3; month 0) to last contact (visit 16; up to month 60+30 days)"
+     },
+     {
+      "measure": "Time From Randomisation to All Cause Death",
+      "description": "Time from randomisation to all cause death. The percentage of subjects with a death by any cause (all-cause death) is presented.",
+      "time_frame": "from randomisation (visit 3; month 0) to last contact (visit 16; up to month 60+30 days)"
+     },
+     {
+      "measure": "Time From Randomisation to Each Individual Component of the Expanded Composite Cardiovascular Outcome",
+      "description": "Time from randomisation to each individual component of the expanded composite cardiovascular outcome. The percentage of subjects experiencing each of the individual component of the expanded composite cardiovascular outcome (defined as either cardiovascular death, non-fatal myocardial infarction, non-fatal stroke, coronary revascularisation, hospitalisation for unstable angina or heart failure) is presented.",
+      "time_frame": "from randomisation (visit 3; month 0) to last contact (visit 16; up to month 60+30 days)"
+     },
+     {
+      "measure": "Time From Randomisation to First Occurrence of a Composite Microvascular Outcome",
+      "description": "Time from randomisation to first occurrence of a composite microvascular outcome, defined as any one of the following:\n\n* new onset of persistent macroalbuminuria\n* persistent doubling of serum creatinine\n* need for continuous renal replacement therapy\n* death due to renal disease\n* need for retinal photocoagulation or treatment with intravitreal agents\n* vitreous haemorrhage\n* diabetes-related blindness\n\nThe percentage of subjects experiencing a first occurrence of a composite microvascular outcome is presented.",
+      "time_frame": "from randomisation (visit 3; month 0) to last contact (visit 16; up to month 60+30 days)"
+     },
+     {
+      "measure": "Time From Randomisation to Each Individual Component of the Composite Microvascular Outcome and to the Retinopathy and Nephropathy Composite Outcomes Separately.",
+      "description": "Time from randomisation to each individual component of the composite microvascular outcome and to the retinopathy and nephropathy composite outcomes separately. The percentage of subjects experiencing each individual component of the composite microvascular outcome are presented.",
+      "time_frame": "from randomisation (visit 3; month 0) to last contact (visit 16; up to month 60+30 days)"
+     }
+    ],
+    "locations_count": 428,
+    "lead_investigator": "Global Clinical Registry (GCR, 1452)",
+    "associated_pmids": [
+     "30851070",
+     "30900349",
+     "27295427",
+     "26855018",
+     "26864124",
+     "27320184",
+     "27274772",
+     "24176437",
+     "25275271",
+     "25656058",
+     "28476871",
+     "28854085",
+     "29279300",
+     "29627109",
+     "29760228",
+     "29898902",
+     "29903847",
+     "29947247",
+     "30072400",
+     "30354517",
+     "30566006",
+     "30566004",
+     "30260088",
+     "30392095",
+     "30508430",
+     "41198855",
+     "39963952",
+     "35332654",
+     "34704120",
+     "33504496",
+     "32744418",
+     "32647053",
+     "32643857",
+     "32372454",
+     "32366578",
+     "32164886",
+     "32132141",
+     "31959650",
+     "31721979",
+     "31399438",
+     "31282028",
+     "29693361"
+    ]
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:34:12+00:00"
+  }
+ ]
+}

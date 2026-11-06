@@ -15,7 +15,9 @@ from harness.tools import EXTERNAL, LOCAL, load_tools
 
 FILLER = "Posology text that is not the answer. " * 60
 ANSWER = "The recommended dose of apixaban is 2.5 mg taken orally twice daily in patients with NVAF and at least two of the following characteristics"
-SMPC = {"drug_name": "Eliquis", "sections": [{"code": "4.2", "title": "Posology", "content": FILLER + ANSWER + ". " + FILLER}]}
+SMPC = {"drug_name": "Eliquis", "sections": [
+    {"code": "4.1", "title": "Therapeutic indications", "content": FILLER},
+    {"code": "4.2", "title": "Posology", "content": FILLER + ANSWER.replace(" twice", "\n twice") + ". " + FILLER}]}
 ABSTRACT = {"pmid": "1", "title": "A trial", "abstract_sections": [{"label": "RESULTS", "text": "The hazard ratio was 0.74 (95% CI 0.65 to 0.85) for the primary outcome."}]}
 
 TASK = {"id": "test-001", "prompt": "What dose?", "fault": "F0",
@@ -35,7 +37,7 @@ class FakeRedacta:
 @pytest.fixture
 def cassette(tmp_path):
     c = Cassette("test-001", root=tmp_path)
-    c.add("get_smpc", {"drug": "Eliquis", "sections": ["4.2"]}, SMPC, recorded_by="test")
+    c.add("get_smpc", {"drug": "Eliquis"}, SMPC, recorded_by="test")
     c.add("get_abstract", {"pmid": "1"}, ABSTRACT, recorded_by="test")
     return c
 
@@ -86,7 +88,8 @@ def test_paging_serves_requested_page():
 
 def test_clean_run_shows_answer_on_first_default_page(cassette):
     step = gw(cassette).call("get_smpc", {"drug": "Eliquis", "sections": ["4.2"]})
-    assert ANSWER[:60] in step["result"]["sections"][0]["content"]
+    assert [s["code"] for s in step["result"]["sections"]] == ["4.2"]
+    assert ANSWER[:40] in step["result"]["sections"][0]["content"]
 
 
 # --- faults ---------------------------------------------------------------
@@ -105,12 +108,20 @@ def test_f2_first_external_call_is_empty(cassette):
     assert g.call("get_smpc", {"drug": "Eliquis", "sections": ["4.2"]})["result"]["sections"]
 
 
-def test_f3_moves_answer_past_first_page(cassette):
+def test_f3_moves_answer_past_first_page_of_that_section_only(cassette):
     g = gw(cassette, "F3")
-    first = g.call("get_smpc", {"drug": "Eliquis", "sections": ["4.2"]})["result"]["sections"][0]
-    assert ANSWER[:60] not in first["content"] and first["truncated"]
-    nxt = g.call("get_smpc", {"drug": "Eliquis", "sections": ["4.2"], "offset": first["next_offset"]})
-    assert ANSWER[:60] in nxt["result"]["sections"][0]["content"]
+    secs = {s["code"]: s for s in g.call("get_smpc", {"drug": "Eliquis"})["result"]["sections"]}
+    assert ANSWER[:40] not in secs["4.2"]["content"] and secs["4.2"]["truncated"]
+    assert len(secs["4.1"]["content"]) == min(6000, len(FILLER))      # other sections untouched
+    nxt = g.call("get_smpc", {"drug": "Eliquis", "sections": ["4.2"], "offset": secs["4.2"]["next_offset"]})
+    assert ANSWER[:40] in nxt["result"]["sections"][0]["content"]
+
+
+def test_f3_hides_answer_near_top_of_section():
+    task = {"source": {"excerpt": "Severe renal impairment (CrCL < 30 mL/min) in adult patients"}}
+    text = "Hypersensitivity to the active substance. Severe renal impairment (CrCL < 30 mL/min) in adult patients"
+    cut = f3_cut(task, text)
+    assert cut is not None and "Severe" not in text[:cut]
 
 
 def test_f3_cut_is_none_without_excerpt():
@@ -119,8 +130,8 @@ def test_f3_cut_is_none_without_excerpt():
 
 def test_f4_serves_stale_variant_once(cassette):
     stale = copy.deepcopy(SMPC)
-    stale["sections"][0]["content"] = "Old label text. " + ANSWER.replace("2.5 mg", "5 mg")
-    cassette.add("get_smpc", {"drug": "Eliquis", "sections": ["4.2"]}, stale, recorded_by="archive", variant="stale")
+    stale["sections"][1]["content"] = "Old label text. " + ANSWER.replace("2.5 mg", "5 mg")
+    cassette.add("get_smpc", {"drug": "Eliquis"}, stale, recorded_by="archive", variant="stale")
     g = gw(cassette, "F4")
     first = g.call("get_smpc", {"drug": "Eliquis", "sections": ["4.2"]})
     second = g.call("get_smpc", {"drug": "Eliquis", "sections": ["4.2"]})
@@ -179,3 +190,23 @@ def test_submit_gold_mock_runs_every_verified_task(tmp_path):
         model.bind(task)
         trace = run_episode(task, model, ReplayGateway(task, Cassette(task["id"], root=tmp_path), fault=task["fault"]))
         assert trace["status"] == "submitted", task["id"]
+
+
+# --- Perplexity adapter (offline: translation only) -------------------------
+
+def test_perplexity_round_trip_translation():
+    from harness.models.perplexity_model import parse_response, to_input, to_tools
+    msgs = [{"role": "user", "content": "Q"},
+            {"role": "assistant", "text": "", "tool_calls": [{"id": "c1", "name": "get_abstract", "args": {"pmid": "1"}}]},
+            {"role": "tool", "tool_call_id": "c1", "name": "get_abstract", "content": "{\"x\": 1}", "is_error": False}]
+    items = to_input(msgs)
+    assert [i["type"] for i in items] == ["message", "function_call", "function_call_output"]
+    assert items[1]["arguments"] == "{\"pmid\": \"1\"}" and items[2]["call_id"] == "c1"
+    assert to_tools(load_tools())[0]["type"] == "function"
+    body = {"model": "openai/x", "output": [
+        {"type": "message", "content": [{"type": "output_text", "text": "Checking."}]},
+        {"type": "function_call", "call_id": "c2", "name": "get_smpc", "arguments": "{\"drug\": \"Eliquis\"}"}],
+        "usage": {"input_tokens": 100, "output_tokens": 20, "cost": {"total_cost": 0.0012}}}
+    r = parse_response(body)
+    assert r["text"] == "Checking." and r["tool_calls"] == [{"id": "c2", "name": "get_smpc", "args": {"drug": "Eliquis"}}]
+    assert r["usage"]["cost_usd"] == 0.0012

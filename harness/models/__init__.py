@@ -10,7 +10,10 @@ def make_model(spec: str):
         if rest in ("", "submit-gold"):
             return SubmitGoldModel()
         raise ValueError(f"unknown mock model {rest!r}")
+    if kind == "perplexity":
+        from .perplexity_model import PerplexityModel
+        return PerplexityModel(rest)
     if kind == "anthropic":
         from .anthropic_model import AnthropicModel
         return AnthropicModel(rest)
-    raise ValueError(f"unknown model spec {spec!r} (use mock:submit-gold or anthropic:<model-id>)")
+    raise ValueError(f"unknown model spec {spec!r} (use mock:submit-gold, perplexity:<gateway-model-id> or anthropic:<model-id>)")

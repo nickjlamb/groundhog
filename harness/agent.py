@@ -22,14 +22,14 @@ def run_episode(task: dict, model, gateway, max_tool_calls: int = MAX_TOOL_CALLS
                 max_turns: int = 40, system: str = SYSTEM_PROMPT) -> dict:
     tools = load_tools()
     messages = [{"role": "user", "content": task["prompt"]}]
-    steps, usage = [], {"input_tokens": 0, "output_tokens": 0}
+    steps, usage = [], {"input_tokens": 0, "output_tokens": 0, "cost_usd": 0.0}
     answer, status, calls, nudged = None, None, 0, False
     t0 = time.monotonic()
 
     for _turn in range(max_turns):
         reply = model.complete(system=system, messages=messages, tools=tools)
         for k in usage:
-            usage[k] += int(reply.get("usage", {}).get(k, 0))
+            usage[k] += type(usage[k])(reply.get("usage", {}).get(k, 0) or 0)
         tool_calls = reply.get("tool_calls") or []
         messages.append({"role": "assistant", "text": reply.get("text", ""), "tool_calls": tool_calls})
         if not tool_calls:

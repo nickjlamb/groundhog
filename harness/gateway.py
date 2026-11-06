@@ -8,7 +8,7 @@ import copy
 
 from .cassette import Cassette
 from .faults import FaultState
-from .paging import page_response
+from .paging import page_response, select_sections
 from .tools import EXTERNAL, LOCAL, PAGED
 
 OFF_PATH = {"results": [], "note": "No results found."}
@@ -42,6 +42,16 @@ class ReplayGateway(_Base):
         super().__init__(task, cassette, local_client)
         self.faults = FaultState(task, fault)
 
+    def _lookup(self, tool, args, variant):
+        """Exact match first; for labels, a request for some sections can be served
+        from a recording of the whole label for the same product."""
+        hit = self.cassette.lookup(tool, args, variant=variant)
+        if hit is not None or tool not in PAGED or not args.get("sections"):
+            return hit
+        whole = {k: v for k, v in args.items() if k != "sections"}
+        hit = self.cassette.lookup(tool, whole, variant=variant)
+        return select_sections(hit, args["sections"]) if hit is not None else None
+
     def _external(self, tool, args):
         base = {"tool": tool, "args": args, "external": True}
         short = self.faults.before_call(tool, args)
@@ -49,14 +59,14 @@ class ReplayGateway(_Base):
             result, is_error = short
             return {**base, "result": result, "is_error": is_error, "off_path": False}
         variant = self.faults.variant_for(tool, self.cassette)
-        recorded = self.cassette.lookup(tool, args, variant=variant)
+        recorded = self._lookup(tool, args, variant)
         if recorded is None and variant != "current":
-            recorded = self.cassette.lookup(tool, args)
+            recorded = self._lookup(tool, args, "current")
         if recorded is None:
             return {**base, "result": copy.deepcopy(OFF_PATH), "is_error": False, "off_path": True}
         result = copy.deepcopy(recorded)
         if tool in PAGED:
-            cut = self.faults.first_page_cut(tool, result)
+            cut = self.faults.first_page_cut(tool, result, args.get("offset"))
             result = page_response(result, args.get("max_chars"), args.get("offset"), first_page_cut=cut)
         result = self.faults.after_call(tool, result)
         return {**base, "result": result, "is_error": False, "off_path": False, "variant": variant}
