@@ -98,6 +98,21 @@
    "recorded_at": "2026-11-06T18:13:32+00:00"
   },
   {
+   "key": "get_full_text {\"pmid\": \"21870978\"}",
+   "tool": "get_full_text",
+   "args": {
+    "pmid": "21870978"
+   },
+   "variant": "current",
+   "response": {
+    "_recorded_error": {
+     "text": "No PMC full text available for PMID 21870978. The article may not be open access."
+    }
+   },
+   "recorded_by": "record-misses",
+   "recorded_at": "2026-11-06T20:46:47+00:00"
+  },
+  {
    "key": "get_trial {\"nctId\": \"nct00412984\"}",
    "tool": "get_trial",
    "args": {

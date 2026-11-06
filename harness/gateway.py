@@ -141,6 +141,10 @@ class ReplayGateway(_Base):
             return {**base, "result": copy.deepcopy(OFF_PATH), "is_error": False, "off_path": True,
                     "served_by": None}
         base["served_by"] = served_by
+        if isinstance(recorded, dict) and "_recorded_error" in recorded:
+            # The live source answered with an error (e.g. no open-access full text): replay it as such.
+            return {**base, "result": copy.deepcopy(recorded["_recorded_error"]), "is_error": True,
+                    "off_path": False, "variant": variant}
         result = copy.deepcopy(recorded)
         if tool in PAGED:
             cut = self.faults.first_page_cut(tool, result, args.get("offset"))
