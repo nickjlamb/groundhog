@@ -14,7 +14,7 @@ harness/
   gateway.py        ReplayGateway (cassettes + faults) and RecordGateway (live PubCrawl)
   mcp_client.py     minimal stdio MCP client
   agent.py          one episode: up to 15 tool calls, ends at submit_answer
-  models/           adapters: mock (tests), anthropic (cross-check and judge)
+  models/           adapters: mock (tests, gold-path recording), perplexity, anthropic
   runner.py         models x tasks x conditions x repeats -> runs/<run_id>/
 ```
 
@@ -47,5 +47,13 @@ off-path, any fault events, the final answer and token usage.
 - **F4 needs a stale recording.** A task's cassette must hold a `stale`
   variant (a superseded label or registry version); without one the fault is
   logged as unavailable and the run must be excluded, not counted as clean.
+- **Gold paths are seeded by the mock.** `mock:submit-gold --record` makes the
+  calls on each task's evidence path (from its `source` block, or
+  `GOLD_PATH_OVERRIDES` in `models/mock.py`): labels fetched whole, citations
+  in every style. Search routes are added when real models run live in the
+  pilot (spec §5, record/replay).
+- **Recording retries** failed live calls (5, 20, 45 s) because NCBI rate
+  limits and eMC/openFDA misses are usually transient; calls that still fail
+  are not stored and are reported as `LIVE ERRORS` in the run log.
 - **Faults fire once**, on the first eligible external call, so clean and
   faulty runs of the same task differ in exactly one place.

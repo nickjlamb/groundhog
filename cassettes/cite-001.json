@@ -1,0 +1,84 @@
+{
+ "task_id": "cite-001",
+ "entries": [
+  {
+   "key": "format_citation {\"pmid\": \"32865377\", \"style\": \"apa\"}",
+   "tool": "format_citation",
+   "args": {
+    "pmid": "32865377",
+    "style": "apa"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "32865377",
+    "style": "apa",
+    "citation": "Packer, M., Anker, S. D., Butler, J., Filippatos, G., Pocock, S. J., Carson, P., ... EMPEROR-Reduced, T. I. (2020). Cardiovascular and Renal Outcomes with Empagliflozin in Heart Failure. *The New England journal of medicine*, *383*(15), 1413-1424. https://doi.org/10.1056/NEJMoa2022190"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:46:58+00:00"
+  },
+  {
+   "key": "format_citation {\"pmid\": \"32865377\", \"style\": \"bibtex\"}",
+   "tool": "format_citation",
+   "args": {
+    "pmid": "32865377",
+    "style": "bibtex"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "32865377",
+    "style": "bibtex",
+    "citation": "@article{packer2020,\n  author  = {Packer, Milton and Anker, Stefan D and Butler, Javed and Filippatos, Gerasimos and Pocock, Stuart J and Carson, Peter and Januzzi, James and Verma, Subodh and Tsutsui, Hiroyuki and Brueckmann, Martina and Jamal, Waheed and Kimura, Karen and Schnee, Janet and Zeller, Cordula and Cotton, Daniel and Bocchi, Edimar and B&#xf6;hm, Michael and Choi, Dong-Ju and Chopra, Vijay and Chuquiure, Eduardo and Giannetti, Nadia and Janssens, Stefan and Zhang, Jian and Gonzalez, Juanatey Jose R and Kaul, Sanjay and Brunner-La, Rocca Hans-Peter and Merkely, Bela and Nicholls, Stephen J and Perrone, Sergio and Pina, Ileana and Ponikowski, Piotr and Sattar, Naveed and Senni, Michele and Seronde, Marie-France and Spinar, Jindrich and Squire, Iain and Taddei, Stefano and Wanner, Christoph and Zannad, Faiez and EMPEROR-Reduced, Trial Investigators},\n  title   = {Cardiovascular and Renal Outcomes with Empagliflozin in Heart Failure.},\n  journal = {The New England journal of medicine},\n  year    = {2020},\n  volume  = {383},\n  number  = {15},\n  pages   = {1413-1424},\n  doi     = {10.1056/NEJMoa2022190},\n  pmid    = {32865377},\n}"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:46:58+00:00"
+  },
+  {
+   "key": "format_citation {\"pmid\": \"32865377\", \"style\": \"harvard\"}",
+   "tool": "format_citation",
+   "args": {
+    "pmid": "32865377",
+    "style": "harvard"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "32865377",
+    "style": "harvard",
+    "citation": "Packer, M. et al. 2020. 'Cardiovascular and Renal Outcomes with Empagliflozin in Heart Failure.'. *The New England journal of medicine*, 383(15), pp. 1413-1424. doi:10.1056/NEJMoa2022190"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:46:58+00:00"
+  },
+  {
+   "key": "format_citation {\"pmid\": \"32865377\", \"style\": \"vancouver\"}",
+   "tool": "format_citation",
+   "args": {
+    "pmid": "32865377",
+    "style": "vancouver"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "32865377",
+    "style": "vancouver",
+    "citation": "Packer M, Anker SD, Butler J, Filippatos G, Pocock SJ, Carson P, et al. Cardiovascular and Renal Outcomes with Empagliflozin in Heart Failure. The New England journal of medicine. 2020;383(15):1413-1424. doi:10.1056/NEJMoa2022190"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:46:58+00:00"
+  },
+  {
+   "key": "format_citation {\"pmid\": \"32865377\"}",
+   "tool": "format_citation",
+   "args": {
+    "pmid": "32865377"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "32865377",
+    "style": "apa",
+    "citation": "Packer, M., Anker, S. D., Butler, J., Filippatos, G., Pocock, S. J., Carson, P., ... EMPEROR-Reduced, T. I. (2020). Cardiovascular and Renal Outcomes with Empagliflozin in Heart Failure. *The New England journal of medicine*, *383*(15), 1413-1424. https://doi.org/10.1056/NEJMoa2022190"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:46:58+00:00"
+  }
+ ]
+}

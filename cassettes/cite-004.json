@@ -1,0 +1,84 @@
+{
+ "task_id": "cite-004",
+ "entries": [
+  {
+   "key": "format_citation {\"pmid\": \"35665782\", \"style\": \"apa\"}",
+   "tool": "format_citation",
+   "args": {
+    "pmid": "35665782",
+    "style": "apa"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "35665782",
+    "style": "apa",
+    "citation": "Modi, S., Jacot, W., Yamashita, T., Sohn, J., Vidal, M., Tokunaga, E., ... DESTINY-Breast04, T. I. (2022). Trastuzumab Deruxtecan in Previously Treated HER2-Low Advanced Breast Cancer. *The New England journal of medicine*, *387*(1), 9-20. https://doi.org/10.1056/NEJMoa2203690"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:46:59+00:00"
+  },
+  {
+   "key": "format_citation {\"pmid\": \"35665782\", \"style\": \"bibtex\"}",
+   "tool": "format_citation",
+   "args": {
+    "pmid": "35665782",
+    "style": "bibtex"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "35665782",
+    "style": "bibtex",
+    "citation": "@article{modi2022,\n  author  = {Modi, Shanu and Jacot, William and Yamashita, Toshinari and Sohn, Joohyuk and Vidal, Maria and Tokunaga, Eriko and Tsurutani, Junji and Ueno, Naoto T and Prat, Aleix and Chae, Yee Soo and Lee, Keun Seok and Niikura, Naoki and Park, Yeon Hee and Xu, Binghe and Wang, Xiaojia and Gil-Gil, Miguel and Li, Wei and Pierga, Jean-Yves and Im, Seock-Ah and Moore, Halle C F and Rugo, Hope S and Yerushalmi, Rinat and Zagouri, Flora and Gombos, Andrea and Kim, Sung-Bae and Liu, Qiang and Luo, Ting and Saura, Cristina and Schmid, Peter and Sun, Tao and Gambhire, Dhiraj and Yung, Lotus and Wang, Yibin and Singh, Jasmeet and Vitazka, Patrik and Meinhardt, Gerold and Harbeck, Nadia and Cameron, David A and DESTINY-Breast04, Trial Investigators},\n  title   = {Trastuzumab Deruxtecan in Previously Treated HER2-Low Advanced Breast Cancer.},\n  journal = {The New England journal of medicine},\n  year    = {2022},\n  volume  = {387},\n  number  = {1},\n  pages   = {9-20},\n  doi     = {10.1056/NEJMoa2203690},\n  pmid    = {35665782},\n}"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:46:59+00:00"
+  },
+  {
+   "key": "format_citation {\"pmid\": \"35665782\", \"style\": \"harvard\"}",
+   "tool": "format_citation",
+   "args": {
+    "pmid": "35665782",
+    "style": "harvard"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "35665782",
+    "style": "harvard",
+    "citation": "Modi, S. et al. 2022. 'Trastuzumab Deruxtecan in Previously Treated HER2-Low Advanced Breast Cancer.'. *The New England journal of medicine*, 387(1), pp. 9-20. doi:10.1056/NEJMoa2203690"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:46:59+00:00"
+  },
+  {
+   "key": "format_citation {\"pmid\": \"35665782\", \"style\": \"vancouver\"}",
+   "tool": "format_citation",
+   "args": {
+    "pmid": "35665782",
+    "style": "vancouver"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "35665782",
+    "style": "vancouver",
+    "citation": "Modi S, Jacot W, Yamashita T, Sohn J, Vidal M, Tokunaga E, et al. Trastuzumab Deruxtecan in Previously Treated HER2-Low Advanced Breast Cancer. The New England journal of medicine. 2022;387(1):9-20. doi:10.1056/NEJMoa2203690"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:46:59+00:00"
+  },
+  {
+   "key": "format_citation {\"pmid\": \"35665782\"}",
+   "tool": "format_citation",
+   "args": {
+    "pmid": "35665782"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "35665782",
+    "style": "apa",
+    "citation": "Modi, S., Jacot, W., Yamashita, T., Sohn, J., Vidal, M., Tokunaga, E., ... DESTINY-Breast04, T. I. (2022). Trastuzumab Deruxtecan in Previously Treated HER2-Low Advanced Breast Cancer. *The New England journal of medicine*, *387*(1), 9-20. https://doi.org/10.1056/NEJMoa2203690"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:46:59+00:00"
+  }
+ ]
+}

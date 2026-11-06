@@ -1,0 +1,211 @@
+{
+ "task_id": "abstain-005",
+ "entries": [
+  {
+   "key": "search_pubmed {\"query\": \"(sglt2 or empagliflozin or dapagliflozin) and (takotsubo or \\\"stress cardiomyopathy\\\")\"}",
+   "tool": "search_pubmed",
+   "args": {
+    "query": "(SGLT2 OR empagliflozin OR dapagliflozin) AND (takotsubo OR \"stress cardiomyopathy\")"
+   },
+   "variant": "current",
+   "response": {
+    "results": [
+     {
+      "pmid": "42264284",
+      "title": "Takotsubo Syndrome: From Pathophysiology and Diagnosis to Management.",
+      "authors": [
+       "Marschall A",
+       "Salamanca J",
+       "Cecconi A",
+       "Santos B",
+       "Vilches L",
+       "Gamarra Á",
+       "Martí D",
+       "Nuñez-Gil IJ",
+       "Alfonso F"
+      ],
+      "journal": "The American journal of cardiology",
+      "year": "2026",
+      "doi": "10.1016/j.amjcard.2026.06.006"
+     },
+     {
+      "pmid": "32983346",
+      "title": "Stroke Risk Following Takotsubo Cardiomyopathy.",
+      "authors": [
+       "Morris NA",
+       "Chen ML",
+       "Adejumo OL",
+       "Murthy SB",
+       "Kamel H",
+       "Merkler AE"
+      ],
+      "journal": "The Neurohospitalist",
+      "year": "2020",
+      "doi": "10.1177/1941874420931230"
+     },
+     {
+      "pmid": "41791554",
+      "title": "SGLT2 inhibitors therapy in patients with acute Takotsubo syndrome.",
+      "authors": [
+       "Arcari L",
+       "Camastra G",
+       "Sclafani M",
+       "Ciolina F",
+       "Belmonte E",
+       "Castiello T",
+       "Danti M",
+       "Sbarbati S",
+       "Cacciotti L"
+      ],
+      "journal": "International journal of cardiology",
+      "year": "2026",
+      "doi": "10.1016/j.ijcard.2026.134262"
+     },
+     {
+      "pmid": "41878773",
+      "title": "Mechanistic insights into SGLT2 inhibition in Takotsubo syndrome.",
+      "authors": [
+       "Trimaille A",
+       "Tatarcheh T",
+       "Granier A",
+       "Schini-Kerth V",
+       "Morel O"
+      ],
+      "journal": "European heart journal. Cardiovascular pharmacotherapy",
+      "year": "2026",
+      "doi": "10.1093/ehjcvp/pvag017"
+     },
+     {
+      "pmid": "41789319",
+      "title": "Coronary Microvascular Dysfunction in Cardiomyopathies: Insights on Clinical and Prognostic Roles.",
+      "authors": [
+       "Giacobbe F",
+       "Meynet P",
+       "Balducci M",
+       "Capoccia S",
+       "Cimino RA",
+       "Morena A",
+       "Dalu A",
+       "D'Ascenzo F",
+       "De Filippo O",
+       "Novarese F",
+       "Bruno F",
+       "Raineri C",
+       "Conrotto F",
+       "Sakalidis A",
+       "Omedé P",
+       "Giannino G",
+       "Angelini F",
+       "Bocchino PP",
+       "Dusi V",
+       "Porto I",
+       "De Ferrari GM"
+      ],
+      "journal": "Reviews in cardiovascular medicine",
+      "year": "2026",
+      "doi": "10.31083/RCM46829"
+     },
+     {
+      "pmid": "37072267",
+      "title": "[News in diagnostics and treament of cardiomyopathies].",
+      "authors": [
+       "Poloczková H",
+       "Honek T",
+       "Chaloupka A",
+       "Opatřil L",
+       "Bakošová M",
+       "Krejčí J"
+      ],
+      "journal": "Vnitrni lekarstvi",
+      "year": "2023",
+      "doi": "10.36290/vnl.2023.016"
+     },
+     {
+      "pmid": "42144123",
+      "title": "Outcomes of Early Sodium-Glucose Cotransporter Two Inhibitor Use in Takotsubo Syndrome: Insights From a Multicenter Real-World Cohort Study.",
+      "authors": [
+       "Taha A",
+       "Mondal A",
+       "Sandhyavenu H",
+       "Atti L",
+       "Alhajji M",
+       "Thangjui S",
+       "Shaik BF",
+       "Thyagaturu H",
+       "Caccamo M",
+       "Fonarow GC",
+       "Balla S"
+      ],
+      "journal": "The American journal of cardiology",
+      "year": "2026",
+      "doi": "10.1016/j.amjcard.2026.05.012"
+     },
+     {
+      "pmid": "33014200",
+      "title": "A case in which SGLT2 inhibitor is a contributing factor to takotsubo cardiomyopathy and heart failure.",
+      "authors": [
+       "Kinoshita H",
+       "Sugino H",
+       "Oka T",
+       "Ichikawa O",
+       "Shimonaga T",
+       "Sumimoto Y",
+       "Kashiwabara A",
+       "Sakai T"
+      ],
+      "journal": "Journal of cardiology cases",
+      "year": "2020",
+      "doi": "10.1016/j.jccase.2020.06.014"
+     },
+     {
+      "pmid": "41549637",
+      "title": "SGLT2 inhibitors are associated with improved long-term survival in Takotsubo syndrome: insights from large-scale real-world data.",
+      "authors": [
+       "Rawish E",
+       "Lemmer F",
+       "Kurz K",
+       "Mezger M",
+       "Pätz T",
+       "Stiermaier T",
+       "Eitel I"
+      ],
+      "journal": "European heart journal. Cardiovascular pharmacotherapy",
+      "year": "2026",
+      "doi": "10.1093/ehjcvp/pvaf088"
+     },
+     {
+      "pmid": "38550506",
+      "title": "Beyond the Benefits: A Case Study on the Complications of Sodium-Glucose Co-Transporter-2 (SGLT2) Inhibitors (Euglycemic Diabetic Ketoacidosis (DKA) and Takotsubo Cardiomyopathy).",
+      "authors": [
+       "Sabanci R",
+       "Saaed M",
+       "Bandi A",
+       "Das K",
+       "Wilcox M"
+      ],
+      "journal": "Cureus",
+      "year": "2024",
+      "doi": "10.7759/cureus.55068"
+     }
+    ],
+    "total_count": 14
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:40:21+00:00"
+  },
+  {
+   "key": "search_pubmed {\"query\": \"empagliflozin takotsubo randomized\"}",
+   "tool": "search_pubmed",
+   "args": {
+    "query": "empagliflozin takotsubo randomized"
+   },
+   "variant": "current",
+   "response": {
+    "results": [],
+    "total_count": 0
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:40:21+00:00"
+  }
+ ]
+}

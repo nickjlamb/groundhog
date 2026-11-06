@@ -1,0 +1,77 @@
+{
+ "task_id": "claim-003",
+ "entries": [
+  {
+   "key": "get_abstract {\"pmid\": \"26378978\"}",
+   "tool": "get_abstract",
+   "args": {
+    "pmid": "26378978"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "26378978",
+    "title": "Empagliflozin, Cardiovascular Outcomes, and Mortality in Type 2 Diabetes.",
+    "authors": [
+     "Zinman Bernard",
+     "Wanner Christoph",
+     "Lachin John M",
+     "Fitchett David",
+     "Bluhmki Erich",
+     "Hantel Stefan",
+     "Mattheus Michaela",
+     "Devins Theresa",
+     "Johansen Odd Erik",
+     "Woerle Hans J",
+     "Broedl Uli C",
+     "Inzucchi Silvio E",
+     "EMPA-REG OUTCOME Investigators"
+    ],
+    "journal": "The New England journal of medicine",
+    "year": "2015",
+    "doi": "10.1056/NEJMoa1504720",
+    "volume": "373",
+    "issue": "22",
+    "pages": "2117-28",
+    "abstract_sections": [
+     {
+      "label": "BACKGROUND",
+      "text": "The effects of empagliflozin, an inhibitor of sodium-glucose cotransporter 2, in addition to standard care, on cardiovascular morbidity and mortality in patients with type 2 diabetes at high cardiovascular risk are not known."
+     },
+     {
+      "label": "METHODS",
+      "text": "We randomly assigned patients to receive 10 mg or 25 mg of empagliflozin or placebo once daily. The primary composite outcome was death from cardiovascular causes, nonfatal myocardial infarction, or nonfatal stroke, as analyzed in the pooled empagliflozin group versus the placebo group. The key secondary composite outcome was the primary outcome plus hospitalization for unstable angina."
+     },
+     {
+      "label": "RESULTS",
+      "text": "A total of 7020 patients were treated (median observation time, 3.1 years). The primary outcome occurred in 490 of 4687 patients (10.5%) in the pooled empagliflozin group and in 282 of 2333 patients (12.1%) in the placebo group (hazard ratio in the empagliflozin group, 0.86; 95.02% confidence interval, 0.74 to 0.99; P=0.04 for superiority). There were no significant between-group differences in the rates of myocardial infarction or stroke, but in the empagliflozin group there were significantly lower rates of death from cardiovascular causes (3.7%, vs. 5.9% in the placebo group; 38% relative risk reduction), hospitalization for heart failure (2.7% and 4.1%, respectively; 35% relative risk reduction), and death from any cause (5.7% and 8.3%, respectively; 32% relative risk reduction). There was no significant between-group difference in the key secondary outcome (P=0.08 for superiority). Among patients receiving empagliflozin, there was an increased rate of genital infection but no increase in other adverse events."
+     },
+     {
+      "label": "CONCLUSIONS",
+      "text": "Patients with type 2 diabetes at high risk for cardiovascular events who received empagliflozin, as compared with placebo, had a lower rate of the primary composite cardiovascular outcome and of death from any cause when the study drug was added to standard care. (Funded by Boehringer Ingelheim and Eli Lilly; EMPA-REG OUTCOME ClinicalTrials.gov number, NCT01131676.)."
+     }
+    ],
+    "keywords": [],
+    "mesh_terms": [
+     "Aged",
+     "Benzhydryl Compounds",
+     "Cardiovascular Diseases",
+     "Cause of Death",
+     "Diabetes Mellitus, Type 2",
+     "Female",
+     "Glucosides",
+     "Hospitalization",
+     "Humans",
+     "Hypoglycemic Agents",
+     "Intention to Treat Analysis",
+     "Kaplan-Meier Estimate",
+     "Male",
+     "Middle Aged",
+     "Risk Factors"
+    ],
+    "pmc_id": ""
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:37:44+00:00"
+  }
+ ]
+}

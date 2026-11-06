@@ -1,0 +1,79 @@
+{
+ "task_id": "claim-005",
+ "entries": [
+  {
+   "key": "get_abstract {\"pmid\": \"37952131\"}",
+   "tool": "get_abstract",
+   "args": {
+    "pmid": "37952131"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "37952131",
+    "title": "Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes.",
+    "authors": [
+     "Lincoff A Michael",
+     "Brown-Frandsen Kirstine",
+     "Colhoun Helen M",
+     "Deanfield John",
+     "Emerson Scott S",
+     "Esbjerg Sille",
+     "Hardt-Lindberg S&#xf8;ren",
+     "Hovingh G Kees",
+     "Kahn Steven E",
+     "Kushner Robert F",
+     "Lingvay Ildiko",
+     "Oral Tugce K",
+     "Michelsen Marie M",
+     "Plutzky Jorge",
+     "Torn&#xf8;e Christoffer W",
+     "Ryan Donna H",
+     "SELECT Trial Investigators"
+    ],
+    "journal": "The New England journal of medicine",
+    "year": "2023",
+    "doi": "10.1056/NEJMoa2307563",
+    "volume": "389",
+    "issue": "24",
+    "pages": "2221-2232",
+    "abstract_sections": [
+     {
+      "label": "BACKGROUND",
+      "text": "Semaglutide, a glucagon-like peptide-1 receptor agonist, has been shown to reduce the risk of adverse cardiovascular events in patients with diabetes. Whether semaglutide can reduce cardiovascular risk associated with overweight and obesity in the absence of diabetes is unknown."
+     },
+     {
+      "label": "METHODS",
+      "text": "In a multicenter, double-blind, randomized, placebo-controlled, event-driven superiority trial, we enrolled patients 45 years of age or older who had preexisting cardiovascular disease and a body-mass index (the weight in kilograms divided by the square of the height in meters) of 27 or greater but no history of diabetes. Patients were randomly assigned in a 1:1 ratio to receive once-weekly subcutaneous semaglutide at a dose of 2.4 mg or placebo. The primary cardiovascular end point was a composite of death from cardiovascular causes, nonfatal myocardial infarction, or nonfatal stroke in a time-to-first-event analysis. Safety was also assessed."
+     },
+     {
+      "label": "RESULTS",
+      "text": "A total of 17,604 patients were enrolled; 8803 were assigned to receive semaglutide and 8801 to receive placebo. The mean (&#xb1;SD) duration of exposure to semaglutide or placebo was 34.2&#xb1;13.7 months, and the mean duration of follow-up was 39.8&#xb1;9.4 months. A primary cardiovascular end-point event occurred in 569 of the 8803 patients (6.5%) in the semaglutide group and in 701 of the 8801 patients (8.0%) in the placebo group (hazard ratio, 0.80; 95% confidence interval, 0.72 to 0.90; P<0.001). Adverse events leading to permanent discontinuation of the trial product occurred in 1461 patients (16.6%) in the semaglutide group and 718 patients (8.2%) in the placebo group (P<0.001)."
+     },
+     {
+      "label": "CONCLUSIONS",
+      "text": "In patients with preexisting cardiovascular disease and overweight or obesity but without diabetes, weekly subcutaneous semaglutide at a dose of 2.4 mg was superior to placebo in reducing the incidence of death from cardiovascular causes, nonfatal myocardial infarction, or nonfatal stroke at a mean follow-up of 39.8 months. (Funded by Novo Nordisk; SELECT ClinicalTrials.gov number, NCT03574597.)."
+     }
+    ],
+    "keywords": [],
+    "mesh_terms": [
+     "Humans",
+     "Cardiovascular Diseases",
+     "Diabetes Mellitus, Type 2",
+     "Double-Blind Method",
+     "Glucagon-Like Peptides",
+     "Hypoglycemic Agents",
+     "Myocardial Infarction",
+     "Obesity",
+     "Overweight",
+     "Stroke",
+     "Glucagon-Like Peptide-1 Receptor Agonists",
+     "Cardiovascular Agents",
+     "Semaglutide"
+    ],
+    "pmc_id": ""
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:43:14+00:00"
+  }
+ ]
+}

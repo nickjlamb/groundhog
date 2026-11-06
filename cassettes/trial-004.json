@@ -1,0 +1,202 @@
+{
+ "task_id": "trial-004",
+ "entries": [
+  {
+   "key": "get_abstract {\"pmid\": \"35320644\"}",
+   "tool": "get_abstract",
+   "args": {
+    "pmid": "35320644"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "35320644",
+    "title": "Trastuzumab Deruxtecan versus Trastuzumab Emtansine for Breast Cancer.",
+    "authors": [
+     "Cort&#xe9;s Javier",
+     "Kim Sung-Bae",
+     "Chung Wei-Pang",
+     "Im Seock-Ah",
+     "Park Yeon Hee",
+     "Hegg Roberto",
+     "Kim Min Hwan",
+     "Tseng Ling-Ming",
+     "Petry Vanessa",
+     "Chung Chi-Feng",
+     "Iwata Hiroji",
+     "Hamilton Erika",
+     "Curigliano Giuseppe",
+     "Xu Binghe",
+     "Huang Chiun-Sheng",
+     "Kim Jee Hyun",
+     "Chiu Joanne W Y",
+     "Pedrini Jose Luiz",
+     "Lee Caleb",
+     "Liu Yali",
+     "Cathcart Jillian",
+     "Bako Emarjola",
+     "Verma Sunil",
+     "Hurvitz Sara A",
+     "DESTINY-Breast03 Trial Investigators"
+    ],
+    "journal": "The New England journal of medicine",
+    "year": "2022",
+    "doi": "10.1056/NEJMoa2115022",
+    "volume": "386",
+    "issue": "12",
+    "pages": "1143-1154",
+    "abstract_sections": [
+     {
+      "label": "BACKGROUND",
+      "text": "Trastuzumab emtansine is the current standard treatment for patients with human epidermal growth factor receptor 2 (HER2)-positive metastatic breast cancer whose disease progresses after treatment with a combination of anti-HER2 antibodies and a taxane."
+     },
+     {
+      "label": "METHODS",
+      "text": "We conducted a phase 3, multicenter, open-label, randomized trial to compare the efficacy and safety of trastuzumab deruxtecan (a HER2 antibody-drug conjugate) with those of trastuzumab emtansine in patients with HER2-positive metastatic breast cancer previously treated with trastuzumab and a taxane. The primary end point was progression-free survival (as determined by blinded independent central review); secondary end points included overall survival, objective response, and safety."
+     },
+     {
+      "label": "RESULTS",
+      "text": "Among 524 randomly assigned patients, the percentage of those who were alive without disease progression at 12 months was 75.8% (95% confidence interval [CI], 69.8 to 80.7) with trastuzumab deruxtecan and 34.1% (95% CI, 27.7 to 40.5) with trastuzumab emtansine (hazard ratio for progression or death from any cause, 0.28; 95% CI, 0.22 to 0.37; P<0.001). The percentage of patients who were alive at 12 months was 94.1% (95% CI, 90.3 to 96.4) with trastuzumab deruxtecan and 85.9% (95% CI, 80.9 to 89.7) with trastuzumab emtansine (hazard ratio for death, 0.55; 95% CI, 0.36 to 0.86; prespecified significance boundary not reached). An overall response (a complete or partial response) occurred in 79.7% (95% CI, 74.3 to 84.4) of the patients who received trastuzumab deruxtecan and in 34.2% (95% CI, 28.5 to 40.3) of those who received trastuzumab emtansine. The incidence of drug-related adverse events of any grade was 98.1% with trastuzumab deruxtecan and 86.6% with trastuzumab emtansine, and the incidence of drug-related adverse events of grade 3 or 4 was 45.1% and 39.8%, respectively. Adjudicated drug-related interstitial lung disease or pneumonitis occurred in 10.5% of the patients in the trastuzumab deruxtecan group and in 1.9% of those in the trastuzumab emtansine group; none of these events were of grade 4 or 5."
+     },
+     {
+      "label": "CONCLUSIONS",
+      "text": "Among patients with HER2-positive metastatic breast cancer previously treated with trastuzumab and a taxane, the risk of disease progression or death was lower among those who received trastuzumab deruxtecan than among those who received trastuzumab emtansine. Treatment with trastuzumab deruxtecan was associated with interstitial lung disease and pneumonitis. (Funded by Daiichi Sankyo and AstraZeneca; DESTINY-Breast03 ClinicalTrials.gov number, NCT03529110.)."
+     }
+    ],
+    "keywords": [],
+    "mesh_terms": [
+     "Ado-Trastuzumab Emtansine",
+     "Adult",
+     "Aged",
+     "Aged, 80 and over",
+     "Antineoplastic Agents, Immunological",
+     "Breast Neoplasms",
+     "Camptothecin",
+     "Female",
+     "Humans",
+     "Immunoconjugates",
+     "Kaplan-Meier Estimate",
+     "Lung Diseases, Interstitial",
+     "Middle Aged",
+     "Pneumonia",
+     "Progression-Free Survival",
+     "Erb-b2 Receptor Tyrosine Kinases",
+     "Trastuzumab"
+    ],
+    "pmc_id": ""
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:47:00+00:00"
+  },
+  {
+   "key": "get_trial {\"nctId\": \"nct03529110\"}",
+   "tool": "get_trial",
+   "args": {
+    "nctId": "NCT03529110"
+   },
+   "variant": "current",
+   "response": {
+    "nct_id": "NCT03529110",
+    "title": "DS-8201a Versus T-DM1 for Human Epidermal Growth Factor Receptor 2 (HER2)-Positive, Unresectable and/or Metastatic Breast Cancer Previously Treated With Trastuzumab and Taxane [DESTINY-Breast03]",
+    "status": "COMPLETED",
+    "phase": "PHASE3",
+    "conditions": [
+     "Breast Cancer"
+    ],
+    "interventions": [
+     {
+      "type": "DRUG",
+      "name": "Trastuzumab deruxtecan (T-DXd)"
+     },
+     {
+      "type": "DRUG",
+      "name": "Ado-trastuzumab emtansine (T-DM1)"
+     }
+    ],
+    "enrollment": 524,
+    "sponsor": "Daiichi Sankyo",
+    "start_date": "2018-08-09",
+    "completion_date": "2026-08-31",
+    "study_type": "INTERVENTIONAL",
+    "url": "https://clinicaltrials.gov/study/NCT03529110",
+    "official_title": "A Phase 3, Multicenter, Randomized, Open-Label, Active-Controlled Study of DS-8201a (Trastuzumab Deruxtecan), an Anti-HER2 Antibody Drug Conjugate (ADC), Versus Ado Trastuzumab Emtansine (T-DM1) for HER2-Positive, Unresectable and/or Metastatic Breast Cancer Subjects Previously Treated With Trastuzumab and Taxane",
+    "summary": "This study is designed to compare the anti-tumor activity as well as the safety and efficacy of DS-8201a versus T-DM1 in HER2-positive, unresectable and/or metastatic breast cancer subjects previously treated with trastuzumab and taxane.",
+    "eligibility": {
+     "criteria": "Inclusion Criteria:\n\n1. Must be competent and able to comprehend, sign, and date an Institutional Review Board (IRB) or Ethics Committee (EC) approved ICF before performance of any study-specific procedures or tests.\n2. Adults ≥18 y old. (Please follow local regulatory requirements if the legal age of consent for study participation is \\>18 y old.)\n3. Pathologically documented breast cancer that:\n\n   1. is unresectable or metastatic.\n   2. has confirmed HER2-positive expression as determined according to American Society of Clinical Oncology - College of American Pathologists guidelines evaluated at a central laboratory.23\n   3. was previously treated with trastuzumab and taxane in the advanced/ metastatic setting or progressed within 6 mo after neoadjuvant or adjuvant treatment involving a regimen including trastuzumab and taxane.\n4. Documented radiologic progression (during or after most recent treatment or within 6 mo after completing adjuvant therapy).\n5. Subjects must be HER2-positive as confirmed by central laboratory assessment of most recent tumor tissue sample available. If archived tissue is not available, a fresh biopsy is required.\n6. Presence of at least 1 measurable lesion per modified Response Evaluation Criteria in Solid Tumors (mRECIST) version 1.1\n\nExclusion Criteria:\n\n1. Prior treatment with an anti-HER2 ADC (such as T-DM1) in the metastatic setting. Prior treatment in the adjuvant/neoadjuvant setting would be allowed if progression of disease did not occur within 12 mo of end of adjuvant therapy.\n2. Uncontrolled or significant cardiovascular disease, including any of the following:\n\n   1. History of myocardial infarction within 6 mo before randomization;\n   2. History of symptomatic congestive heart failure (New York Heart Association Class II to IV);\n   3. Troponin levels consistent with myocardial infarction as defined according to the manufacturer within 28 d prior to randomization;\n   4. Corrected QT interval (QTc) prolongation to \\> 470 ms (females) or \\>450 ms (male) based on average of Screening triplicate 12-lead ECG;\n   5. LVEF \\< 50% within 28 d prior to randomization\n3. Has a history of (noninfectious) ILD/pneumonitis that required steroids, has current ILD/pneumonitis, or where suspected ILD/pneumonitis cannot be ruled out by imaging at Screening.\n4. Spinal cord compression or clinically active central nervous system (CNS) metastases, defined as untreated or symptomatic, or requiring therapy with corticosteroids or anticonvulsants to control associated symptoms.\n\n   * Subjects with clinically inactive brain metastases may be included in the study.\n   * Subjects with treated brain metastases that are no longer symptomatic and who require no treatment with corticosteroids or anticonvulsants may be included in the study if they have recovered from the acute toxic effect of radiotherapy. A minimum of 2 wk must have elapsed between the end of whole brain radiotherapy and study enrollment.\n5. Has a history of severe hypersensitivity reactions to either the drug substances or inactive ingredients in the drug product.\n6. History of severe hypersensitivity reactions to other mAbs.",
+     "gender": "ALL",
+     "minimum_age": "18 Years",
+     "maximum_age": "",
+     "healthy_volunteers": "false"
+    },
+    "design": {
+     "allocation": "RANDOMIZED",
+     "intervention_model": "PARALLEL",
+     "primary_purpose": "TREATMENT",
+     "masking": "NONE",
+     "who_masked": []
+    },
+    "arms": [
+     {
+      "label": "Trastuzumab deruxtecan (T-DXd)",
+      "type": "EXPERIMENTAL",
+      "description": "Participants with HER2-positive, unresectable and/or metastatic breast cancer participants previously treated with trastuzumab and taxane who received T-DXd as a sterile intravenous (IV) solution at a dose of 5.4 mg/kg every 3 weeks (Q3W).",
+      "intervention_names": [
+       "Drug: Trastuzumab deruxtecan (T-DXd)"
+      ]
+     },
+     {
+      "label": "Ado-trastuzumab emtansine (T-DM1)",
+      "type": "ACTIVE_COMPARATOR",
+      "description": "Participants with HER2-positive, unresectable and/or metastatic breast cancer participants previously treated with trastuzumab and taxane who received T-DM1 in accordance with the approved label.",
+      "intervention_names": [
+       "Drug: Ado-trastuzumab emtansine (T-DM1)"
+      ]
+     }
+    ],
+    "primary_outcomes": [
+     {
+      "measure": "Progression-Free Survival (PFS) Based on Blinded Independent Central Review (BICR) in Participants With HER2-Positive, Unresectable and/or Metastatic Breast Cancer Previously Treated With Trastuzumab and Taxane",
+      "description": "Progression-free survival (PFS) by BICR was defined as the time from the date of enrollment to the earlier of the dates of the first objective documentation of disease progression (as per RECIST v1.1) or death due to any cause. Progressive disease was defined as at least a 20% increase in the sum of diameters of target lesions.",
+      "time_frame": "Up to 33 months (data cut-off)"
+     }
+    ],
+    "secondary_outcomes": [
+     {
+      "measure": "Overall Survival (OS) in Participants With HER2-Positive, Unresectable and/or Metastatic Breast Cancer Previously Treated With Trastuzumab and Taxane",
+      "description": "Overall survival (OS) was defined as the time from the date of first dose of study drug to the date of death due to any cause.",
+      "time_frame": "Up to 33 months (data cut-off)"
+     },
+     {
+      "measure": "Percentage of Participants With Objective Response Rate (ORR) Based on BICR and Investigator Assessment in Participants With HER2-Positive, Unresectable and/or Metastatic Breast Cancer Previously Treated With Trastuzumab and Taxane",
+      "description": "The Objective Response Rate (ORR) was defined as the percentage of participants who achieved a best overall response of confirmed Complete Response (CR) or Partial Response (PR), assessed by BICR and investigator assessment based on RECIST version 1.1. CR was defined as a disappearance of all target lesions and PR was defined as at least a 30% decrease in the sum of diameters of target lesions. Confirmed ORR is reported.",
+      "time_frame": "Up to 33 months (data cut-off)"
+     },
+     {
+      "measure": "Duration of Response (DoR) Based on BICR and Investigator Assessment in Participants With HER2-Positive, Unresectable and/or Metastatic Breast Cancer Previously Treated With Trastuzumab and Taxane",
+      "description": "Duration of Response (DoR) was defined as the time from the date of the first documentation of objective response (complete response \\[CR\\] or partial response \\[PR\\]) to the date of the first objective documentation of progressive disease (PD) or death due to any cause. DoR in participants with confirmed CR/PR based on BICR and investigator assessment is reported.",
+      "time_frame": "Up to 33 months (data cut-off)"
+     },
+     {
+      "measure": "Progression-Free Survival (PFS) Based on Investigator Assessment in Participants With HER2-Positive, Unresectable and/or Metastatic Breast Cancer Previously Treated With Trastuzumab and Taxane",
+      "description": "Progression-free survival (PFS) by investigator assessment was defined as the time from the date of enrollment to the earlier of the dates of the first objective documentation of disease progression (as per RECIST v1.1) or death due to any cause. Progressive disease was defined as at least a 20% increase in the sum of diameters of target lesions.",
+      "time_frame": "Up to 33 months (data cut-off)"
+     }
+    ],
+    "locations_count": 164,
+    "lead_investigator": "Global Team Leader",
+    "associated_pmids": [
+     "38979893",
+     "38825627",
+     "38442809",
+     "38059424",
+     "37207306",
+     "37179020",
+     "36495879",
+     "35964548",
+     "35320644"
+    ]
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:47:00+00:00"
+  }
+ ]
+}

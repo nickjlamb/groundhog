@@ -1,0 +1,256 @@
+{
+ "task_id": "conflict-003",
+ "entries": [
+  {
+   "key": "get_abstract {\"pmid\": \"26378978\"}",
+   "tool": "get_abstract",
+   "args": {
+    "pmid": "26378978"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "26378978",
+    "title": "Empagliflozin, Cardiovascular Outcomes, and Mortality in Type 2 Diabetes.",
+    "authors": [
+     "Zinman Bernard",
+     "Wanner Christoph",
+     "Lachin John M",
+     "Fitchett David",
+     "Bluhmki Erich",
+     "Hantel Stefan",
+     "Mattheus Michaela",
+     "Devins Theresa",
+     "Johansen Odd Erik",
+     "Woerle Hans J",
+     "Broedl Uli C",
+     "Inzucchi Silvio E",
+     "EMPA-REG OUTCOME Investigators"
+    ],
+    "journal": "The New England journal of medicine",
+    "year": "2015",
+    "doi": "10.1056/NEJMoa1504720",
+    "volume": "373",
+    "issue": "22",
+    "pages": "2117-28",
+    "abstract_sections": [
+     {
+      "label": "BACKGROUND",
+      "text": "The effects of empagliflozin, an inhibitor of sodium-glucose cotransporter 2, in addition to standard care, on cardiovascular morbidity and mortality in patients with type 2 diabetes at high cardiovascular risk are not known."
+     },
+     {
+      "label": "METHODS",
+      "text": "We randomly assigned patients to receive 10 mg or 25 mg of empagliflozin or placebo once daily. The primary composite outcome was death from cardiovascular causes, nonfatal myocardial infarction, or nonfatal stroke, as analyzed in the pooled empagliflozin group versus the placebo group. The key secondary composite outcome was the primary outcome plus hospitalization for unstable angina."
+     },
+     {
+      "label": "RESULTS",
+      "text": "A total of 7020 patients were treated (median observation time, 3.1 years). The primary outcome occurred in 490 of 4687 patients (10.5%) in the pooled empagliflozin group and in 282 of 2333 patients (12.1%) in the placebo group (hazard ratio in the empagliflozin group, 0.86; 95.02% confidence interval, 0.74 to 0.99; P=0.04 for superiority). There were no significant between-group differences in the rates of myocardial infarction or stroke, but in the empagliflozin group there were significantly lower rates of death from cardiovascular causes (3.7%, vs. 5.9% in the placebo group; 38% relative risk reduction), hospitalization for heart failure (2.7% and 4.1%, respectively; 35% relative risk reduction), and death from any cause (5.7% and 8.3%, respectively; 32% relative risk reduction). There was no significant between-group difference in the key secondary outcome (P=0.08 for superiority). Among patients receiving empagliflozin, there was an increased rate of genital infection but no increase in other adverse events."
+     },
+     {
+      "label": "CONCLUSIONS",
+      "text": "Patients with type 2 diabetes at high risk for cardiovascular events who received empagliflozin, as compared with placebo, had a lower rate of the primary composite cardiovascular outcome and of death from any cause when the study drug was added to standard care. (Funded by Boehringer Ingelheim and Eli Lilly; EMPA-REG OUTCOME ClinicalTrials.gov number, NCT01131676.)."
+     }
+    ],
+    "keywords": [],
+    "mesh_terms": [
+     "Aged",
+     "Benzhydryl Compounds",
+     "Cardiovascular Diseases",
+     "Cause of Death",
+     "Diabetes Mellitus, Type 2",
+     "Female",
+     "Glucosides",
+     "Hospitalization",
+     "Humans",
+     "Hypoglycemic Agents",
+     "Intention to Treat Analysis",
+     "Kaplan-Meier Estimate",
+     "Male",
+     "Middle Aged",
+     "Risk Factors"
+    ],
+    "pmc_id": ""
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:43:23+00:00"
+  },
+  {
+   "key": "get_trial {\"nctId\": \"nct01131676\"}",
+   "tool": "get_trial",
+   "args": {
+    "nctId": "NCT01131676"
+   },
+   "variant": "current",
+   "response": {
+    "nct_id": "NCT01131676",
+    "title": "BI 10773 (Empagliflozin) Cardiovascular Outcome Event Trial in Type 2 Diabetes Mellitus Patients (EMPA-REG OUTCOME).",
+    "status": "COMPLETED",
+    "phase": "PHASE3",
+    "conditions": [
+     "Diabetes Mellitus, Type 2"
+    ],
+    "interventions": [
+     {
+      "type": "DRUG",
+      "name": "BI 10773 low dose"
+     },
+     {
+      "type": "DRUG",
+      "name": "Placebo BI 10773 high dose"
+     },
+     {
+      "type": "DRUG",
+      "name": "BI 10773 high dose"
+     },
+     {
+      "type": "DRUG",
+      "name": "Placebo BI 10773 low dose"
+     },
+     {
+      "type": "DRUG",
+      "name": "Placebo BI 10773 low dose"
+     },
+     {
+      "type": "DRUG",
+      "name": "Placebo BI 10773 high dose"
+     }
+    ],
+    "enrollment": 7064,
+    "sponsor": "Boehringer Ingelheim",
+    "start_date": "2010-07",
+    "completion_date": "2015-04",
+    "study_type": "INTERVENTIONAL",
+    "url": "https://clinicaltrials.gov/study/NCT01131676",
+    "official_title": "A Phase III, Multicentre, International, Randomised, Parallel Group, Double Blind Cardiovascular Safety Study of BI 10773 (10 mg and 25 mg Administered Orally Once Daily) Compared to Usual Care in Type 2 Diabetes Mellitus Patients With Increased Cardiovascular Risk",
+    "summary": "The aim of the present study is to investigate the safety of BI 10773 treatment in patients with Type 2 Diabetes Mellitus and high cardiovascular risk.",
+    "eligibility": {
+     "criteria": "Inclusion criteria:\n\n1. Diagnosis of type 2 diabetes mellitus prior to informed consent\n2. Male or female patients on diet and exercise regimen who are drug naive or pre treated with any background therapy. Antidiabetic therapy has to be unchanged for 12 weeks prior to randomization.\n3. Glycosylated haemoglobin (HbA1c) of \\>= 7.0% and \\<=10% for patients on background therapy or HbA1c \\>= 7.0% and \\<= 9.0% for drug naive patients\n4. Age \\>= 18 years\n5. Body Mass index \\<= 45 at Visit 1\n6. Signed and dated informed consent\n7. High cardiovascular risk\n\nExclusion criteria:\n\n1. Uncontrolled hyperglycaemia with a glucose level \\>240 mg/dl (\\>13.3 mmol/L) after an overnight fast during placebo run-in and confirmed by a second measurement (not on the same day)\n2. Indication of liver disease, defined by serum levels of either alanine aminotransferase (ALT), aspartate aminotransferase ALT or alkaline phosphatase above 3 x upper limit of normal (ULN) as determined at screening and/or run in.\n3. Planned cardiac surgery or angioplasty within 3 months\n4. Impaired renal function, defined as Glomerular Filtration Rate \\<30 ml/min (severe renal impairment, Modification of Diet in Renal Disease formula) during screening or run in.\n5. Bariatric surgery within the past two years and other gastrointestinal surgeries that induce chronic malabsorption\n6. Blood dyscrasias or any disorders causing haemolysis or unstable Red Blood Cell (e.g. malaria, babesiosis, haemolytic anemia)\n7. Medical history of cancer (except for basal cell carcinoma) and/or treatment for cancer within the last 5 years\n8. Contraindications to background therapy according to the local label\n9. Treatment with anti-obesity drugs (e.g. sibutramine, orlistat) 3 months prior to informed consent or any other treatment at the time of screening (i.e. surgery, aggressive diet regimen, etc.) leading to unstable body weight\n10. Current treatment with systemic steroids at time of informed consent or change in dosage of thyroid hormones within 6 weeks prior to informed consent or any other uncontrolled endocrine disorder except type 2 diabetes mellitus\n11. Pre-menopausal women (last menstruation \\<+ 1 year prior to informed consent) who:\n\n    * are nursing or pregnant or\n    * are of child-bearing potential and are not practicing an acceptable method of birth control, or do not plan to continue using this method throughout the study and do not agree to submit to periodic pregnancy testing during participation in the trial. Acceptable methods of birth control include tubal ligation, transdermal patch, intra uterine devices/systems, oral, implantable or injectable contraceptives, sexual abstinence, double barrier method and vasectomised partner\n12. Alcohol or drug abuse within the 3 months prior to informed consent that would interfere with trial participation or any ongoing condition leading to a decreased compliance to study procedures or study drug intake\n13. Participation in another trial with an investigational drug within 30 days prior to informed consent\n14. Any other clinical condition that would jeopardize patients safety while participating in this clinical trial\n15. Acute coronary syndrome, stroke or TIA within 2 months prior to informed consent",
+     "gender": "ALL",
+     "minimum_age": "18 Years",
+     "maximum_age": "",
+     "healthy_volunteers": "false"
+    },
+    "design": {
+     "allocation": "RANDOMIZED",
+     "intervention_model": "PARALLEL",
+     "primary_purpose": "TREATMENT",
+     "masking": "DOUBLE",
+     "who_masked": []
+    },
+    "arms": [
+     {
+      "label": "BI 10773 low dose",
+      "type": "EXPERIMENTAL",
+      "description": "BI 10773 tablets once daily",
+      "intervention_names": [
+       "Drug: BI 10773 low dose",
+       "Drug: Placebo BI 10773 high dose"
+      ]
+     },
+     {
+      "label": "BI 10773 high dose",
+      "type": "EXPERIMENTAL",
+      "description": "BI 10773 tablets once daily",
+      "intervention_names": [
+       "Drug: BI 10773 high dose",
+       "Drug: Placebo BI 10773 low dose"
+      ]
+     },
+     {
+      "label": "Placebo",
+      "type": "PLACEBO_COMPARATOR",
+      "description": "Placebo tablets matching BI 10773",
+      "intervention_names": [
+       "Drug: Placebo BI 10773 high dose",
+       "Drug: Placebo BI 10773 low dose"
+      ]
+     }
+    ],
+    "primary_outcomes": [
+     {
+      "measure": "Time to the First Occurrence of Any of the Following Adjudicated Components of the Primary Composite Endpoint (3-point MACE): CV Death (Including Fatal Stroke and Fatal MI), Non-fatal MI (Excluding Silent MI), and Non-fatal Stroke.",
+      "description": "Time to the first occurrence of any of the following adjudicated components of the primary composite endpoint (3-point major adverse cardiovascular events (MACE)): cardiovascular (CV) death (including fatal stroke and fatal myocardial infarction (MI)), non-fatal MI (excluding silent MI), and non-fatal stroke.\n\nPercentage of patients with the event are presented.",
+      "time_frame": "From randomisation to individual end of observation, up to 4.6 years"
+     }
+    ],
+    "secondary_outcomes": [
+     {
+      "measure": "Percentage of Participants With the Composite of All Events Adjudicated (4-point MACE): CV Death (Including Fatal Stroke and Fatal MI), Non-fatal MI (Excluding Silent MI), Non-fatal Stroke and Hospitalization for Unstable Angina Pectoris",
+      "description": "The composite of all events adjudicated (4-point MACE): cardiovascular death (including fatal stroke and fatal myocardial infarction), non-fatal myocardial infarction (excluding silent MI), non-fatal stroke and hospitalization for unstable angina pectoris.This is a key secondary endpoint of the trial.\n\nPercentage of patients with the event are presented.",
+      "time_frame": "From randomisation to individual end of observation, up to 4.6 years"
+     },
+     {
+      "measure": "Percentage of Participants With Silent MI",
+      "description": "Silent MI; defined as presence in the ECG of:\n\n* Any Q-wave in leads V2-V3 ≥0.02 seconds or QS complex in leads V2 and V3\n* Q-wave ≥0.03 seconds and ≥0.1 mV deep or QS complex in leads I, II, aVL, aVF, or V4-V6 in any two leads of a contiguous lead grouping (I, aVL, V6; V4-V6; II, III, and aVF)\n* R-wave ≥0.04 seconds in V1-V2 and R/S ≥1 with a concordant positive T-wave in the absence of a conduction defect.\n\nIt was also required that there had been no adjudicated and confirmed event of either acute MI, hospitalisation for unstable angina, coronary revascularisation procedures or stent thrombosis following randomisation up to and including the date of the specified ECG measurement.\n\nPercentage of patients with the event are presented.",
+      "time_frame": "From randomisation to individual end of observation, up to 4.6 years"
+     },
+     {
+      "measure": "Percentage of Participants With Heart Failure Requiring Hospitalisation (Adjudicated)",
+      "description": "Heart failure requiring hospitalisation (adjudicated). Percentage of patients with the event are presented.",
+      "time_frame": "From randomisation to individual end of observation, up to 4.6 years"
+     },
+     {
+      "measure": "Percentage of Participants With New Onset Albuminuria",
+      "description": "New onset albuminuria defined as urine albumin / creatinine ratio (UACR) ≥30 mg/g.\n\nPercentage of patients with the event are presented.",
+      "time_frame": "From randomisation to individual end of observation, up to 4.6 years"
+     },
+     {
+      "measure": "Percentage of Participants With New Onset Macroalbuminuria",
+      "description": "New onset macroalbuminuria defined as UACR \\>300 mg/g. Percentage of patients with the event are presented.",
+      "time_frame": "From randomisation to individual end of observation, up to 4.6 years"
+     },
+     {
+      "measure": "Percentage of Participants With the Composite Microvascular Outcome",
+      "description": "Composite microvascular outcome defined as:\n\n* Initiation of retinal photocoagulation\n* Vitreous haemorrhage\n* Diabetes-related blindness, or\n* New or worsening nephropathy defined as:\n\n  * New onset of macroalbuminuria; or\n  * Doubling of serum creatinine level accompanied by an eGFR (based on modification of diet in renal disease (MDRD) formula) ≤45 mL/min/1.73m2; or\n  * Initiation of continuous renal replacement therapy, or\n  * Death due to renal disease. Percentage of patients with the event are presented.",
+      "time_frame": "From randomisation to individual end of observation, up to 4.6 years"
+     }
+    ],
+    "locations_count": 615,
+    "lead_investigator": "Boehringer Ingelheim",
+    "associated_pmids": [
+     "41198855",
+     "39026628",
+     "38992713",
+     "38770818",
+     "38419787",
+     "37449424",
+     "36700391",
+     "35472672",
+     "35166009",
+     "35005582",
+     "34752913",
+     "34558768",
+     "34463409",
+     "34325887",
+     "34129237",
+     "33754809",
+     "33243221",
+     "33217335",
+     "33050931",
+     "33004464",
+     "32994159",
+     "32893717",
+     "32618884",
+     "32485734",
+     "32369546",
+     "31495881",
+     "31295358",
+     "31163986",
+     "30885684",
+     "30767353",
+     "30586757",
+     "29777264",
+     "29693360",
+     "29203583",
+     "28904068",
+     "28666775",
+     "28386035",
+     "27299675",
+     "26378978",
+     "24943000"
+    ]
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:43:23+00:00"
+  }
+ ]
+}

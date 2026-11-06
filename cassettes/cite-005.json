@@ -1,0 +1,84 @@
+{
+ "task_id": "cite-005",
+ "entries": [
+  {
+   "key": "format_citation {\"pmid\": \"27295427\", \"style\": \"apa\"}",
+   "tool": "format_citation",
+   "args": {
+    "pmid": "27295427",
+    "style": "apa"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "27295427",
+    "style": "apa",
+    "citation": "Marso, S. P., Daniels, G. H., Brown-Frandsen, K., Kristensen, P., Mann, J. F. E., Nauck, M. A., ... LEADER, T. I. (2016). Liraglutide and Cardiovascular Outcomes in Type 2 Diabetes. *The New England journal of medicine*, *375*(4), 311-22. https://doi.org/10.1056/NEJMoa1603827"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:47:00+00:00"
+  },
+  {
+   "key": "format_citation {\"pmid\": \"27295427\", \"style\": \"bibtex\"}",
+   "tool": "format_citation",
+   "args": {
+    "pmid": "27295427",
+    "style": "bibtex"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "27295427",
+    "style": "bibtex",
+    "citation": "@article{marso2016,\n  author  = {Marso, Steven P and Daniels, Gilbert H and Brown-Frandsen, Kirstine and Kristensen, Peter and Mann, Johannes F E and Nauck, Michael A and Nissen, Steven E and Pocock, Stuart and Poulter, Neil R and Ravn, Lasse S and Steinberg, William M and Stockner, Mette and Zinman, Bernard and Bergenstal, Richard M and Buse, John B and LEADER, Steering Committee and LEADER, Trial Investigators},\n  title   = {Liraglutide and Cardiovascular Outcomes in Type 2 Diabetes.},\n  journal = {The New England journal of medicine},\n  year    = {2016},\n  volume  = {375},\n  number  = {4},\n  pages   = {311-22},\n  doi     = {10.1056/NEJMoa1603827},\n  pmid    = {27295427},\n}"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:47:00+00:00"
+  },
+  {
+   "key": "format_citation {\"pmid\": \"27295427\", \"style\": \"harvard\"}",
+   "tool": "format_citation",
+   "args": {
+    "pmid": "27295427",
+    "style": "harvard"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "27295427",
+    "style": "harvard",
+    "citation": "Marso, S.P. et al. 2016. 'Liraglutide and Cardiovascular Outcomes in Type 2 Diabetes.'. *The New England journal of medicine*, 375(4), pp. 311-22. doi:10.1056/NEJMoa1603827"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:47:00+00:00"
+  },
+  {
+   "key": "format_citation {\"pmid\": \"27295427\", \"style\": \"vancouver\"}",
+   "tool": "format_citation",
+   "args": {
+    "pmid": "27295427",
+    "style": "vancouver"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "27295427",
+    "style": "vancouver",
+    "citation": "Marso SP, Daniels GH, Brown-Frandsen K, Kristensen P, Mann JFE, Nauck MA, et al. Liraglutide and Cardiovascular Outcomes in Type 2 Diabetes. The New England journal of medicine. 2016;375(4):311-22. doi:10.1056/NEJMoa1603827"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:47:00+00:00"
+  },
+  {
+   "key": "format_citation {\"pmid\": \"27295427\"}",
+   "tool": "format_citation",
+   "args": {
+    "pmid": "27295427"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "27295427",
+    "style": "apa",
+    "citation": "Marso, S. P., Daniels, G. H., Brown-Frandsen, K., Kristensen, P., Mann, J. F. E., Nauck, M. A., ... LEADER, T. I. (2016). Liraglutide and Cardiovascular Outcomes in Type 2 Diabetes. *The New England journal of medicine*, *375*(4), 311-22. https://doi.org/10.1056/NEJMoa1603827"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:47:00+00:00"
+  }
+ ]
+}

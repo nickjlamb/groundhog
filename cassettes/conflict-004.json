@@ -1,0 +1,128 @@
+{
+ "task_id": "conflict-004",
+ "entries": [
+  {
+   "key": "get_abstract {\"pmid\": \"32678530\"}",
+   "tool": "get_abstract",
+   "args": {
+    "pmid": "32678530"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "32678530",
+    "title": "Dexamethasone in Hospitalized Patients with Covid-19.",
+    "authors": [
+     "RECOVERY Collaborative Group",
+     "Horby Peter",
+     "Lim Wei Shen",
+     "Emberson Jonathan R",
+     "Mafham Marion",
+     "Bell Jennifer L",
+     "Linsell Louise",
+     "Staplin Natalie",
+     "Brightling Christopher",
+     "Ustianowski Andrew",
+     "Elmahi Einas",
+     "Prudon Benjamin",
+     "Green Christopher",
+     "Felton Timothy",
+     "Chadwick David",
+     "Rege Kanchan",
+     "Fegan Christopher",
+     "Chappell Lucy C",
+     "Faust Saul N",
+     "Jaki Thomas",
+     "Jeffery Katie",
+     "Montgomery Alan",
+     "Rowan Kathryn",
+     "Juszczak Edmund",
+     "Baillie J Kenneth",
+     "Haynes Richard",
+     "Landray Martin J"
+    ],
+    "journal": "The New England journal of medicine",
+    "year": "2021",
+    "doi": "10.1056/NEJMoa2021436",
+    "volume": "384",
+    "issue": "8",
+    "pages": "693-704",
+    "abstract_sections": [
+     {
+      "label": "BACKGROUND",
+      "text": "Coronavirus disease 2019 (Covid-19) is associated with diffuse lung damage. Glucocorticoids may modulate inflammation-mediated lung injury and thereby reduce progression to respiratory failure and death."
+     },
+     {
+      "label": "METHODS",
+      "text": "In this controlled, open-label trial comparing a range of possible treatments in patients who were hospitalized with Covid-19, we randomly assigned patients to receive oral or intravenous dexamethasone (at a dose of 6 mg once daily) for up to 10 days or to receive usual care alone. The primary outcome was 28-day mortality. Here, we report the final results of this assessment."
+     },
+     {
+      "label": "RESULTS",
+      "text": "A total of 2104 patients were assigned to receive dexamethasone and 4321 to receive usual care. Overall, 482 patients (22.9%) in the dexamethasone group and 1110 patients (25.7%) in the usual care group died within 28 days after randomization (age-adjusted rate ratio, 0.83; 95% confidence interval [CI], 0.75 to 0.93; P<0.001). The proportional and absolute between-group differences in mortality varied considerably according to the level of respiratory support that the patients were receiving at the time of randomization. In the dexamethasone group, the incidence of death was lower than that in the usual care group among patients receiving invasive mechanical ventilation (29.3% vs. 41.4%; rate ratio, 0.64; 95% CI, 0.51 to 0.81) and among those receiving oxygen without invasive mechanical ventilation (23.3% vs. 26.2%; rate ratio, 0.82; 95% CI, 0.72 to 0.94) but not among those who were receiving no respiratory support at randomization (17.8% vs. 14.0%; rate ratio, 1.19; 95% CI, 0.92 to 1.55)."
+     },
+     {
+      "label": "CONCLUSIONS",
+      "text": "In patients hospitalized with Covid-19, the use of dexamethasone resulted in lower 28-day mortality among those who were receiving either invasive mechanical ventilation or oxygen alone at randomization but not among those receiving no respiratory support. (Funded by the Medical Research Council and National Institute for Health Research and others; RECOVERY ClinicalTrials.gov number, NCT04381936; ISRCTN number, 50189673.)."
+     }
+    ],
+    "keywords": [],
+    "mesh_terms": [
+     "Administration, Oral",
+     "Aged",
+     "Aged, 80 and over",
+     "Anti-Infective Agents",
+     "COVID-19",
+     "Dexamethasone",
+     "Drug Therapy, Combination",
+     "Female",
+     "Glucocorticoids",
+     "Hospitalization",
+     "Humans",
+     "Injections, Intravenous",
+     "Kaplan-Meier Estimate",
+     "Length of Stay",
+     "Male",
+     "Odds Ratio",
+     "Oxygen Inhalation Therapy",
+     "Respiration, Artificial",
+     "United Kingdom",
+     "COVID-19 Drug Treatment"
+    ],
+    "pmc_id": "PMC7383595"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:43:24+00:00"
+  },
+  {
+   "key": "get_full_text {\"pmcid\": \"pmc7383595\"}",
+   "tool": "get_full_text",
+   "args": {
+    "pmcid": "PMC7383595"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "",
+    "pmcid": "PMC7383595",
+    "title": "Dexamethasone in Hospitalized Patients with Covid-19 — Preliminary Report",
+    "sections": [
+     {
+      "title": "Methods",
+      "content": "\n### Trial Design and Oversight\n\nThe RECOVERY trial was designed to evaluate the effects of potential treatments in patients hospitalized with Covid-19 at 176 National Health Service organizations in the United Kingdom and was supported by the National Institute for Health Research Clinical Research Network. (Details regarding this trial are provided in the, available with the full text of this article at NEJM.org.) The trial is being coordinated by the Nuffield Department of Population Health at the University of Oxford, the trial sponsor. Although the randomization of patients to receive dexamethasone, hydroxychloroquine, or lopinavir–ritonavir has now been stopped, the trial continues randomization to groups receiving azithromycin, tocilizumab, or convalescent plasma.\n\nHospitalized patients were eligible for the trial if they had clinically suspected or laboratory-confirmed SARS-CoV-2 infection and no medical history that might, in the opinion of the attending clinician, put patients at substantial risk if they were to participate in the trial. Initially, recruitment was limited to patients who were at least 18 years of age, but the age limit was removed starting on May 9, 2020. Pregnant or breast-feeding women were eligible.\n\nWritten informed consent was obtained from all the patients or from a legal representative if they were unable to provide consent. The trial was conducted in accordance with the principles of the Good Clinical Practice guidelines of the International Conference on Harmonisation and was approved by the U.K. Medicines and Healthcare Products Regulatory Agency and the Cambridge East Research Ethics Committee. Thewith its statistical analysis plan is available at NEJM.org and on the trial website at.\n\nThe initial version of the manuscript was drafted by the first and last authors, developed by the writing committee, and approved by all members of the trial steering committee. The funders had no role in the analysis of the data, in the preparation or approval of the manuscript, or in the decision to submit the manuscript for publication. The first and last members of the writing committee vouch for the completeness and accuracy of the data and for the fidelity of the trial to the protocol and statistical analysis plan.\n\n\n### Randomization\n\nWe collected baseline data using a Web-based case-report form that included demographic data, the level of respiratory support, major coexisting illnesses, suitability of the trial treatment for a particular patient, and treatment availability at the trial site. Randomization was performed with the use of a Web-based system with concealment of the trial-group assignment. Eligible and consenting patients were assigned in a 2:1 ratio to receive either the usual standard of care alone or the usual standard of care plus oral or intravenous dexamethasone (at a dose of 6 mg once daily) for up to 10 days (or until hospital discharge if sooner) or to receive one of the other suitable and available treatments that were being evaluated in the trial.\n\nFor some patients, dexamethasone was unavailable at the hospital at the time of enrollment or was considered by the managing physician to be either definitely indicated or definitely contraindicated. These patients were excluded from entry in the randomized comparison between dexamethasone and usual care and hence were not included in this report. The randomly assigned treatment was prescribed by the treating clinician. Patients and local members of the trial staff were aware of the assigned treatments.\n\n\n### Procedures\n\nA single online follow-up form was to be completed when the patients were discharged or had died or at 28 days after randomization, whichever occurred first. Information was recorded regarding the patients’ adherence to the assigned treatment, receipt of other trial treatments, duration of admission, receipt of respiratory support (with duration and type), receipt of renal support, and vital status (including the cause of death). In addition, we obtained routine health care and registry data, including information on vital status (with date and cause of death), discharge from the hospital, and respiratory and renal support therapy.\n\n\n### Outcome Measures\n\nThe primary outcome was all-cause mortality within 28 days after randomization; further analyses were specified at 6 months. Secondary outcomes were the time until discharge from the hospital and, among patients not receiving invasive mechanical ventilation at the time of randomization, subsequent receipt of invasive mechanical ventilation (including extracorporeal membrane oxygenation) or death. Other prespecified clinical outcomes included cause-specific mortality, receipt of renal hemodialysis or hemofiltration, major cardiac arrhythmia (recorded in a subgroup), and receipt and duration of ventilation.\n\n\n### Statistical Analysis\n\nAs stated in the protocol, appropriate sample sizes could not be estimated when the trial was being planned at the start of the Covid-19 pandemic. As the trial progressed, the trial steering committee, whose members were unaware of the results of the trial comparisons, determined that if 28-day mortality was 20%, then the enrollment of at least 2000 patients in the dexamethasone group and 4000 in the usual care group would provide a power of at least 90% at a two-sided P value of 0.01 to detect a clinically relevant proportional reduction of 20% (an absolute difference of 4 percentage points) between the two groups. Consequently, on June 8, 2020, the steering committee closed recruitment to the dexamethasone group, since enrollment had exceeded 2000 patients.\n\nFor the primary outcome of 28-day mortality, the hazard ratio from Cox regression was used to estimate the mortality rate ratio. Among the few patients (0.1%) who had not been followed for 28 days by the time of the data cutoff on July 6, 2020, data were censored either on that date or on day 29 if the patient had already been discharged. That is, in the absence of any information to the contrary, these patients were assumed to have survived for 28 days. Kaplan–Meier survival curves were constructed to show cumulative mortality over the 28-day period. Cox regression was used to analyze the secondary outcome of hospital discharge within 28 days, with censoring of data on day 29 for patients who had died during hospitalization. For the prespecified composite secondary outcome of invasive mechanical ventilation or death within 28 days (among patients who were not receiving invasive mechanical ventilation at randomization), the precise date of invasive mechanical ventilation was not available, so a log-binomial regression model was used to estimate the risk ratio.\n\nThrough the play of chance in the unstratified randomization, the mean age was 1.1 years older among patients in the dexamethasone group than among those in the usual care group (). To account for this imbalance in an important prognostic factor, estimates of rate ratios were adjusted for the baseline age in three categories (<70 years, 70 to 79 years, and ≥80 years). This adjustment was not specified in the first version of the statistical analysis plan but was added once the imbalance in age became apparent. Results without age adjustment (corresponding to the first version of the analysis plan) are provided in the.\n\nPrespecified analyses of the primary outcome were performed in five subgroups, as defined by characteristics at randomization: age, sex, level of respiratory support, days since symptom onset, and predicted 28-day mortality risk. (One further prespecified subgroup analysis regarding race will be conducted once the data collection has been completed.) In prespecified subgroups, we estimated rate ratios (or risk ratios in some analyses) and their confidence intervals using regression models that included an interaction term between the treatment assignment and the subgroup of interest. Chi-square tests for linear trend across the subgroup-specific log estimates were then performed in accordance with the prespecified plan.\n\nAll P values are two-sided and are shown without adjustment for multiple testing. All analyses were performed according to the intention-to-treat principle. The full database is held by the trial team, which collected the data from trial sites and performed the analyses at the Nuffield Department of Population Health, University of Oxford."
+     },
+     {
+      "title": "Results",
+      "content": "\n### Patients\n\nOf the 11,303 patients who underwent randomization from March 19 to June 8, 2020, a total of 9355 patients (83%) were eligible to receive dexamethasone (i.e., the drug was available in the hospital at the time and the patient had no known indication for or contraindication to dexamethasone). Of these patients, 6425 underwent randomization to receive either dexamethasone (2104 patients) or usual care alone (4321 patients) (). The remaining patients were randomly assigned to one of the other treatment groups being evaluated in the trial.\n\nThe mean (±SD) age of the patients in this comparison was 66.1±15.7 years, and 36% of the patients were female (). A history of diabetes was present in 24% of the patients, heart disease in 27%, and chronic lung disease in 21%, with 56% having at least one major coexisting illness recorded. In this analysis, 89% of the patients had laboratory-confirmed SARS-CoV-2 infection, and 0.4% were currently awaiting the result. At randomization, 16% were receiving invasive mechanical ventilation or extracorporeal membrane oxygenation, 60% were receiving oxygen only (with or without noninvasive ventilation), and 24% were receiving neither.\n\nFollow-up information for the primary outcome was complete for 6418 patients (99.9%) who had undergone randomization. In the dexamethasone group, 95% of the patients received at least one dose of the drug (Table S1). The median duration of treatment was 7 days (interquartile range, 3 to 10). In the usual care group, 8% of the patients received dexamethasone as part of their clinical care. The use of azithromycin during the follow-up period was similar in the dexamethasone group and the usual care group (24% vs. 25%), and 0 to 3% of patients received hydroxychloroquine, lopinavir–ritonavir, or interleukin-6 antagonists during follow-up (Table S1 in the). After remdesivir became available in the United Kingdom on May 26, 2020, the drug was administered to 3 patients in the dexamethasone group and 2 patients in the usual care group.\n\n\n### Primary Outcome\n\nMortality at 28 days was significantly lower in the dexamethasone group than in the usual care group, with deaths reported in 482 of 2104 patients (22.9%) and in 1110 of 4321 patients (25.7%), respectively (rate ratio, 0.83; 95% confidence interval [CI], 0.75 to 0.93; P<0.001) (). In a prespecified analysis according to the level of respiratory support that the patients were receiving at randomization, there was a trend showing the greatest absolute and proportional benefit among patients who were receiving invasive mechanical ventilation (11.5 by chi-square test for trend) (). In the dexamethasone group, the incidence of death was lower than that in the usual care group among patients receiving invasive mechanical ventilation (29.3% vs. 41.4%; rate ratio, 0.64; 95% CI, 0.51 to 0.81) and in those receiving oxygen without invasive mechanical ventilation (23.3% vs. 26.2%; rate ratio, 0.82; 95% CI, 0.72 to 0.94) (). However, there was no clear effect of dexamethasone among patients who were not receiving any respiratory support at randomization (17.8% vs. 14.0%; rate ratio, 1.19; 95% CI, 0.91 to 1.55) (). The results were similar in a post hoc exploratory analysis restricted to the 5698 patients (89%) with a positive SARS-CoV-2 test result. Likewise, sensitivity analyses without adjustment for age resulted in similar findings (Table S2).\n\nPatients who were receiving invasive mechanical ventilation at randomization were on average 10 years younger than those not receiving any respiratory support and had a history of symptoms before randomization for an average of 7 days longer (and Table S3). The age-adjusted absolute reductions in 28-day mortality associated with the use of dexamethasone were 12.3 percentage points (95% CI, 6.3 to 17.6) among the patients who were receiving invasive mechanical ventilation and 4.2 percentage points (95% CI, 1.4 to 6.7) among those receiving oxygen only.\n\nPatients with a longer duration of symptoms (who were more likely to have been receiving invasive mechanical ventilation at randomization) had a greater mortality benefit in response to treatment with dexamethasone. The receipt of dexamethasone was associated with a reduction in 28-day mortality among those with symptoms for more than 7 days but not among those with a more recent symptom onset (12.3 by chi-square test for trend) (Fig. S1).\n\n\n### Secondary Outcomes\n\nPatients in the dexamethasone group had a shorter duration of hospitalization than those in the usual care group (median, 12 days vs. 13 days) and a greater probability of discharge alive within 28 days (rate ratio, 1.10; 95% CI, 1.03 to 1.17) (). The greatest effect regarding discharge within 28 days was seen among patients who were receiving invasive mechanical ventilation at randomization (11.5 by chi-square test for trend) (Fig. S2A).\n\nAmong the patients who were not receiving invasive mechanical ventilation at randomization, the number of patients who progressed to the prespecified composite secondary outcome of invasive mechanical ventilation or death was lower in the dexamethasone group than in the usual care group (risk ratio, 0.92; 95% CI, 0.84 to 1.01) (). This effect was greater among the patients who were receiving oxygen at randomization (6.2 by chi-square test for trend) (Fig. S2B).\n\n\n### Other Prespecified Clinical Outcomes\n\nThe risk of progression to invasive mechanical ventilation was lower in the dexamethasone group than in the usual care group (risk ratio, 0.77; 95% CI, 0.62 to 0.95) (). Analyses are ongoing regarding cause-specific mortality, the need for renal dialysis or hemofiltration, and the duration of ventilation."
+     },
+     {
+      "title": "Discussion",
+      "content": "Our preliminary results show that among hospitalized patients with Covid-19, the use of dexamethasone for up to 10 days resulted in lower 28-day mortality than usual care in patients who were receiving invasive mechanical ventilation at randomization (by 12.3 age-adjusted percentage points, a proportional reduction of approximately one third) and those who were receiving oxygen without invasive mechanical ventilation (by 4.1 age-adjusted percentage points, a proportional reduction of approximately one fifth). However, there was no evidence that dexamethasone provided any benefit among patients who were not receiving respiratory support at randomization, and the results were consistent with possible harm in this subgroup. The benefit was also clear in patients who were being treated more than 7 days after symptom onset, when inflammatory lung damage is likely to have been more common. In a recent trial involving patients with acute respiratory distress syndrome who were undergoing mechanical ventilation, mortality at 60 days was 15 percentage points lower among those receiving dexamethasone than among those receiving usual care, a finding that was consistent with our results.\n\nThe RECOVERY trial was designed to provide a rapid and robust assessment of the effect of readily available potential treatments for Covid-19 on 28-day mortality. Approximately 15% of all hospitalized patients with Covid-19 in the United Kingdom were enrolled in the trial, and mortality in the usual care group was consistent with the overall case fatality rate for hospitalized patients with Covid-19 in the United Kingdom.Only essential data were collected at hospital sites, with additional information (including longer-term mortality) ascertained through linkage with routine data sources. We did not collect information on physiologic, laboratory, or virologic measures. The protocol combines the methods that were used in large, simple trials of treatments for acute myocardial infarction in the 1980s with the opportunities provided by digital health care in the 2020s.The trial has progressed rapidly, as is essential for studies during epidemics.These preliminary results for dexamethasone were announced on June 16, 2020, nearly 100 days after the protocol was first drafted, and were adopted into U.K. practice later the same day.\n\nGlucocorticoids have been widely used in syndromes closely related to Covid-19, including SARS, Middle East respiratory syndrome (MERS), severe influenza, and community-acquired pneumonia. However, the evidence to support or discourage the use of glucocorticoids under these conditions has been weak owing to the lack of data from sufficiently powered randomized, controlled trials.In addition, the evidence base has suffered from heterogeneity in glucocorticoid doses, medical conditions, and disease severity. It is likely that the beneficial effect of glucocorticoids in severe viral respiratory infections is dependent on a selection of the right dose, at the right time, in the right patient. High doses may be more harmful than helpful, as may such treatment given at a time when control of viral replication is paramount and inflammation is minimal. Slower clearance of viral RNA has been observed in patients with SARS, MERS, and influenza who were treated with systemic glucocorticoids, but the clinical significance of these findings is unknown.Unlike with SARS, in which viral replication peaks in the second week of illness,viral shedding in SARS-CoV-2 appears to be higher early in the illness and declines thereafter.The greater mortality benefit of dexamethasone in patients with Covid-19 who are receiving respiratory support and among those recruited after the first week of their illness suggests that at that stage the disease may be dominated by immunopathological elements, with active viral replication playing a secondary role. This hypothesis would caution against extrapolation of the effect of dexamethasone in patients with Covid-19 to patients with other viral respiratory diseases with a different natural history.\n\nThe RECOVERY trial provides evidence that treatment with dexamethasone at a dose of 6 mg once daily for up to 10 days reduces 28-day mortality in patients with Covid-19 who are receiving respiratory support. We found no benefit (and the possibility of harm) among patients who did not require oxygen. Before the completion of the trial, many Covid-19 treatment guidelines stated that the use of glucocorticoids was either contraindicated or not recommended.Dexamethasone is on the list of essential medicines of the World Health Organization and is readily available worldwide at low cost. Guidelines issued by the U.K. chief medical officers and by the National Institutes of Health in the United States have already been updated to recommend the use of glucocorticoids in patients hospitalized with Covid-19."
+     }
+    ],
+    "figure_captions": [],
+    "table_captions": [],
+    "reference_count": 39
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:43:24+00:00"
+  }
+ ]
+}

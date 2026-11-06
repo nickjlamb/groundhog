@@ -1,0 +1,84 @@
+{
+ "task_id": "cite-003",
+ "entries": [
+  {
+   "key": "format_citation {\"pmid\": \"30990260\", \"style\": \"apa\"}",
+   "tool": "format_citation",
+   "args": {
+    "pmid": "30990260",
+    "style": "apa"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "30990260",
+    "style": "apa",
+    "citation": "Perkovic, V., Jardine, M. J., Neal, B., Bompoint, S., Heerspink, H. J. L., Charytan, D. M., ... CREDENCE, T. I. (2019). Canagliflozin and Renal Outcomes in Type 2 Diabetes and Nephropathy. *The New England journal of medicine*, *380*(24), 2295-2306. https://doi.org/10.1056/NEJMoa1811744"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:46:59+00:00"
+  },
+  {
+   "key": "format_citation {\"pmid\": \"30990260\", \"style\": \"bibtex\"}",
+   "tool": "format_citation",
+   "args": {
+    "pmid": "30990260",
+    "style": "bibtex"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "30990260",
+    "style": "bibtex",
+    "citation": "@article{perkovic2019,\n  author  = {Perkovic, Vlado and Jardine, Meg J and Neal, Bruce and Bompoint, Severine and Heerspink, Hiddo J L and Charytan, David M and Edwards, Robert and Agarwal, Rajiv and Bakris, George and Bull, Scott and Cannon, Christopher P and Capuano, George and Chu, Pei-Ling and de, Zeeuw Dick and Greene, Tom and Levin, Adeera and Pollock, Carol and Wheeler, David C and Yavin, Yshai and Zhang, Hong and Zinman, Bernard and Meininger, Gary and Brenner, Barry M and Mahaffey, Kenneth W and CREDENCE, Trial Investigators},\n  title   = {Canagliflozin and Renal Outcomes in Type 2 Diabetes and Nephropathy.},\n  journal = {The New England journal of medicine},\n  year    = {2019},\n  volume  = {380},\n  number  = {24},\n  pages   = {2295-2306},\n  doi     = {10.1056/NEJMoa1811744},\n  pmid    = {30990260},\n}"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:46:59+00:00"
+  },
+  {
+   "key": "format_citation {\"pmid\": \"30990260\", \"style\": \"harvard\"}",
+   "tool": "format_citation",
+   "args": {
+    "pmid": "30990260",
+    "style": "harvard"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "30990260",
+    "style": "harvard",
+    "citation": "Perkovic, V. et al. 2019. 'Canagliflozin and Renal Outcomes in Type 2 Diabetes and Nephropathy.'. *The New England journal of medicine*, 380(24), pp. 2295-2306. doi:10.1056/NEJMoa1811744"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:46:59+00:00"
+  },
+  {
+   "key": "format_citation {\"pmid\": \"30990260\", \"style\": \"vancouver\"}",
+   "tool": "format_citation",
+   "args": {
+    "pmid": "30990260",
+    "style": "vancouver"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "30990260",
+    "style": "vancouver",
+    "citation": "Perkovic V, Jardine MJ, Neal B, Bompoint S, Heerspink HJL, Charytan DM, et al. Canagliflozin and Renal Outcomes in Type 2 Diabetes and Nephropathy. The New England journal of medicine. 2019;380(24):2295-2306. doi:10.1056/NEJMoa1811744"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:46:59+00:00"
+  },
+  {
+   "key": "format_citation {\"pmid\": \"30990260\"}",
+   "tool": "format_citation",
+   "args": {
+    "pmid": "30990260"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "30990260",
+    "style": "apa",
+    "citation": "Perkovic, V., Jardine, M. J., Neal, B., Bompoint, S., Heerspink, H. J. L., Charytan, D. M., ... CREDENCE, T. I. (2019). Canagliflozin and Renal Outcomes in Type 2 Diabetes and Nephropathy. *The New England journal of medicine*, *380*(24), 2295-2306. https://doi.org/10.1056/NEJMoa1811744"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:46:59+00:00"
+  }
+ ]
+}

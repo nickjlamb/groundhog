@@ -99,7 +99,8 @@ def main(argv=None):
                 name = f"{task['id']}__{cond}__r{rep}.json"
                 (out / name).write_text(json.dumps(trace, indent=1, ensure_ascii=False) + "\n")
                 print(f"{task['id']:14} {cond} r{rep}  {trace['status']:16} calls={trace['tool_calls']}"
-                      f" off_path={sum(s['off_path'] for s in trace['steps'])}")
+                      f" off_path={sum(s['off_path'] for s in trace['steps'])}"
+                      + (f"  LIVE ERRORS={len(gw.errors)}" if args.record and gw.errors else ""))
         if args.record:
             cassette.save()
 

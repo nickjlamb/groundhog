@@ -1,0 +1,271 @@
+{
+ "task_id": "trial-001",
+ "entries": [
+  {
+   "key": "get_abstract {\"pmid\": \"31535829\"}",
+   "tool": "get_abstract",
+   "args": {
+    "pmid": "31535829"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "31535829",
+    "title": "Dapagliflozin in Patients with Heart Failure and Reduced Ejection Fraction.",
+    "authors": [
+     "McMurray John J V",
+     "Solomon Scott D",
+     "Inzucchi Silvio E",
+     "K&#xf8;ber Lars",
+     "Kosiborod Mikhail N",
+     "Martinez Felipe A",
+     "Ponikowski Piotr",
+     "Sabatine Marc S",
+     "Anand Inder S",
+     "B&#x11b;lohl&#xe1;vek Jan",
+     "B&#xf6;hm Michael",
+     "Chiang Chern-En",
+     "Chopra Vijay K",
+     "de Boer Rudolf A",
+     "Desai Akshay S",
+     "Diez Mirta",
+     "Drozdz Jaroslaw",
+     "Duk&#xe1;t Andrej",
+     "Ge Junbo",
+     "Howlett Jonathan G",
+     "Katova Tzvetana",
+     "Kitakaze Masafumi",
+     "Ljungman Charlotta E A",
+     "Merkely B&#xe9;la",
+     "Nicolau Jose C",
+     "O'Meara Eileen",
+     "Petrie Mark C",
+     "Vinh Pham N",
+     "Schou Morten",
+     "Tereshchenko Sergey",
+     "Verma Subodh",
+     "Held Claes",
+     "DeMets David L",
+     "Docherty Kieran F",
+     "Jhund Pardeep S",
+     "Bengtsson Olof",
+     "Sj&#xf6;strand Mikaela",
+     "Langkilde Anna-Maria",
+     "DAPA-HF Trial Committees and Investigators"
+    ],
+    "journal": "The New England journal of medicine",
+    "year": "2019",
+    "doi": "10.1056/NEJMoa1911303",
+    "volume": "381",
+    "issue": "21",
+    "pages": "1995-2008",
+    "abstract_sections": [
+     {
+      "label": "BACKGROUND",
+      "text": "In patients with type 2 diabetes, inhibitors of sodium-glucose cotransporter 2 (SGLT2) reduce the risk of a first hospitalization for heart failure, possibly through glucose-independent mechanisms. More data are needed regarding the effects of SGLT2 inhibitors in patients with established heart failure and a reduced ejection fraction, regardless of the presence or absence of type 2 diabetes."
+     },
+     {
+      "label": "METHODS",
+      "text": "In this phase 3, placebo-controlled trial, we randomly assigned 4744 patients with New York Heart Association class II, III, or IV heart failure and an ejection fraction of 40% or less to receive either dapagliflozin (at a dose of 10 mg once daily) or placebo, in addition to recommended therapy. The primary outcome was a composite of worsening heart failure (hospitalization or an urgent visit resulting in intravenous therapy for heart failure) or cardiovascular death."
+     },
+     {
+      "label": "RESULTS",
+      "text": "Over a median of 18.2 months, the primary outcome occurred in 386 of 2373 patients (16.3%) in the dapagliflozin group and in 502 of 2371 patients (21.2%) in the placebo group (hazard ratio, 0.74; 95% confidence interval [CI], 0.65 to 0.85; P<0.001). A first worsening heart failure event occurred in 237 patients (10.0%) in the dapagliflozin group and in 326 patients (13.7%) in the placebo group (hazard ratio, 0.70; 95% CI, 0.59 to 0.83). Death from cardiovascular causes occurred in 227 patients (9.6%) in the dapagliflozin group and in 273 patients (11.5%) in the placebo group (hazard ratio, 0.82; 95% CI, 0.69 to 0.98); 276 patients (11.6%) and 329 patients (13.9%), respectively, died from any cause (hazard ratio, 0.83; 95% CI, 0.71 to 0.97). Findings in patients with diabetes were similar to those in patients without diabetes. The frequency of adverse events related to volume depletion, renal dysfunction, and hypoglycemia did not differ between treatment groups."
+     },
+     {
+      "label": "CONCLUSIONS",
+      "text": "Among patients with heart failure and a reduced ejection fraction, the risk of worsening heart failure or death from cardiovascular causes was lower among those who received dapagliflozin than among those who received placebo, regardless of the presence or absence of diabetes. (Funded by AstraZeneca; DAPA-HF ClinicalTrials.gov number, NCT03036124.)."
+     }
+    ],
+    "keywords": [],
+    "mesh_terms": [
+     "Aged",
+     "Benzhydryl Compounds",
+     "Cardiovascular Agents",
+     "Cardiovascular Diseases",
+     "Combined Modality Therapy",
+     "Diabetes Mellitus, Type 2",
+     "Drug Therapy, Combination",
+     "Female",
+     "Glucosides",
+     "Glycated Hemoglobin",
+     "Heart Failure",
+     "Hospitalization",
+     "Humans",
+     "Kaplan-Meier Estimate",
+     "Male",
+     "Middle Aged",
+     "Sodium-Glucose Transporter 2 Inhibitors",
+     "Stroke Volume",
+     "Ventricular Dysfunction, Left"
+    ],
+    "pmc_id": ""
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:43:27+00:00"
+  },
+  {
+   "key": "get_trial {\"nctId\": \"nct03036124\"}",
+   "tool": "get_trial",
+   "args": {
+    "nctId": "NCT03036124"
+   },
+   "variant": "current",
+   "response": {
+    "nct_id": "NCT03036124",
+    "title": "Study to Evaluate the Effect of Dapagliflozin on the Incidence of Worsening Heart Failure or Cardiovascular Death in Patients With Chronic Heart Failure",
+    "status": "COMPLETED",
+    "phase": "PHASE3",
+    "conditions": [
+     "Chronic Heart Failure With Reduced Ejection Fraction (HFrEF)"
+    ],
+    "interventions": [
+     {
+      "type": "DRUG",
+      "name": "Dapagliflozin"
+     },
+     {
+      "type": "DRUG",
+      "name": "Placebo"
+     }
+    ],
+    "enrollment": 4744,
+    "sponsor": "AstraZeneca",
+    "start_date": "2017-02-08",
+    "completion_date": "2019-07-17",
+    "study_type": "INTERVENTIONAL",
+    "url": "https://clinicaltrials.gov/study/NCT03036124",
+    "official_title": "Study to Evaluate the Effect of Dapagliflozin on the Incidence of Worsening Heart Failure or Cardiovascular Death in Patients With Chronic Heart Failure With Reduced Ejection Fraction",
+    "summary": "The purpose of this study is to evaluate the effect of dapagliflozin on the incidence of worsening heart failure or cardiovascular death in patients with chronic heart failure with reduced ejection fraction",
+    "eligibility": {
+     "criteria": "Inclusion Criteria:\n\n* Provision of signed informed consent prior to any study specific procedures\n* Male or female, aged ≥18 years\n* Established documented diagnosis of symptomatic HFrEF (NYHA functional class II-IV), which has been present for at least 2 months\n* LVEF≤40%\n* Elevated NT-proBNP levels\n* Patients should receive background standard of care for HFrEF and be treated according to locally recognized guidelines\n* eGFR ≥30 mL/min/1.73 m\\^2 (CKD-EPI formula) at enrolment (visit 1)\n\nExclusion Criteria:\n\n* Receiving therapy with an SGLT2 inhibitor within 8 weeks prior to enrolment or previous intolerance of an SGLT2 inhibitor\n* Type 1 diabetes mellitus\n* Symptomatic hypotension or systolic BP \\<95 mmHg at 2 out of 3 measurements either at visit 1 or visit 2\n* Current acute decompensated HF or hospitalization due to decompensated HF \\<4 weeks prior to enrolment\n* MI, unstable angina, stroke or transient ischemic attack within 12 weeks prior to enrolment\n* Coronary revascularization (percutaneous coronary intervention or coronary artery bypass grafting) or valvular repair/replacement within 12 weeks prior to enrolment or planned to undergo any of these operations after randomization\n* Implantation of a CRT within 12 weeks prior to enrolment or intent to implant a CRT device\n* Previous cardiac transplantation or implantation of a ventricular assistance device or similar device, or implantation expected after randomization\n* HF due to restrictive cardiomyopathy, active myocarditis, constrictive pericarditis, hypertrophic (obstructive) cardiomyopathy or uncorrected primary valvular disease\n* Symptomatic bradycardia or second or third degree heart block without a pacemaker\n* Severe (eGFR \\<30 mL/min/1.73 m\\^2 by CKD-EPI), unstable or rapidly progressing renal disease at the time of randomization",
+     "gender": "ALL",
+     "minimum_age": "18 Years",
+     "maximum_age": "130 Years",
+     "healthy_volunteers": "false"
+    },
+    "design": {
+     "allocation": "RANDOMIZED",
+     "intervention_model": "PARALLEL",
+     "primary_purpose": "TREATMENT",
+     "masking": "QUADRUPLE",
+     "who_masked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    },
+    "arms": [
+     {
+      "label": "Dapagliflozin",
+      "type": "EXPERIMENTAL",
+      "description": "Patients will be randomized 1:1 to either dapagliflozin or placebo.",
+      "intervention_names": [
+       "Drug: Dapagliflozin"
+      ]
+     },
+     {
+      "label": "Placebo",
+      "type": "PLACEBO_COMPARATOR",
+      "description": "Placebo matching dapagliflozin.",
+      "intervention_names": [
+       "Drug: Placebo"
+      ]
+     }
+    ],
+    "primary_outcomes": [
+     {
+      "measure": "Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.",
+      "description": "Primary efficacy",
+      "time_frame": "Up to 27.8 months."
+     }
+    ],
+    "secondary_outcomes": [
+     {
+      "measure": "Subjects Included in the Composite Endpoint of CV Death or Hospitalization Due to Heart Failure.",
+      "description": "Secondary",
+      "time_frame": "Up to 27.8 months."
+     },
+     {
+      "measure": "Events Included in the Composite Endpoint of Recurrent Hospitalizations Due to Heart Failure and CV Death.",
+      "description": "Secondary",
+      "time_frame": "Up to 27.8 months."
+     },
+     {
+      "measure": "Change From Baseline in the KCCQ Total Symptom Score",
+      "description": "KCCQ is a 23-item, self-administered instrument that quantifies physical function, symptoms (frequency, severity and recent change), social function, self-efficacy and knowledge, and quality of life. The KCCQ total symptom score incorporates the symptom domains into a single score. Scores are transformed to a range of 0-100, in which higher scores reflect better health status.",
+      "time_frame": "Baseline and 8 months or death before 8 months"
+     },
+     {
+      "measure": "Subjects Included in the Composite Endpoint of ≥50% Sustained Decline in eGFR, ESRD or Renal Death.",
+      "description": "Secondary",
+      "time_frame": "Up to 27.8 months."
+     },
+     {
+      "measure": "Subjects Included in the Endpoint of All-cause Mortality.",
+      "description": "Secondary",
+      "time_frame": "Up to 27.8 months."
+     }
+    ],
+    "locations_count": 419,
+    "lead_investigator": "",
+    "associated_pmids": [
+     "41170566",
+     "40465275",
+     "40088234",
+     "38770818",
+     "38537918",
+     "38320525",
+     "37886880",
+     "37407113",
+     "37318419",
+     "37220172",
+     "37211977",
+     "37210608",
+     "37039015",
+     "36881399",
+     "36811901",
+     "36592046",
+     "36339117",
+     "36189985",
+     "36054568",
+     "35971840",
+     "35902157",
+     "35483792",
+     "35467935",
+     "35442064",
+     "35115084",
+     "34969498",
+     "34861151",
+     "34802253",
+     "34743554",
+     "34448003",
+     "34319398",
+     "34272791",
+     "33832352",
+     "33787831",
+     "33595593",
+     "33549554",
+     "33368858",
+     "33355302",
+     "33164553",
+     "33082245",
+     "33040613",
+     "32883108",
+     "32820334",
+     "32673497",
+     "32653447",
+     "32539224",
+     "32219386",
+     "31736335",
+     "31736328",
+     "31535829",
+     "31309699",
+     "31081589"
+    ]
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:43:27+00:00"
+  }
+ ]
+}

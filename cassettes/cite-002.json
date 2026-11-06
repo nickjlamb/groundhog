@@ -1,0 +1,84 @@
+{
+ "task_id": "cite-002",
+ "entries": [
+  {
+   "key": "format_citation {\"pmid\": \"28304224\", \"style\": \"apa\"}",
+   "tool": "format_citation",
+   "args": {
+    "pmid": "28304224",
+    "style": "apa"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "28304224",
+    "style": "apa",
+    "citation": "Sabatine, M. S., Giugliano, R. P., Keech, A. C., Honarpour, N., Wiviott, S. D., Murphy, S. A., ... FOURIER, S. C. a. I. (2017). Evolocumab and Clinical Outcomes in Patients with Cardiovascular Disease. *The New England journal of medicine*, *376*(18), 1713-1722. https://doi.org/10.1056/NEJMoa1615664"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:46:58+00:00"
+  },
+  {
+   "key": "format_citation {\"pmid\": \"28304224\", \"style\": \"bibtex\"}",
+   "tool": "format_citation",
+   "args": {
+    "pmid": "28304224",
+    "style": "bibtex"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "28304224",
+    "style": "bibtex",
+    "citation": "@article{sabatine2017,\n  author  = {Sabatine, Marc S and Giugliano, Robert P and Keech, Anthony C and Honarpour, Narimon and Wiviott, Stephen D and Murphy, Sabina A and Kuder, Julia F and Wang, Huei and Liu, Thomas and Wasserman, Scott M and Sever, Peter S and Pedersen, Terje R and FOURIER, Steering Committee and Investigators},\n  title   = {Evolocumab and Clinical Outcomes in Patients with Cardiovascular Disease.},\n  journal = {The New England journal of medicine},\n  year    = {2017},\n  volume  = {376},\n  number  = {18},\n  pages   = {1713-1722},\n  doi     = {10.1056/NEJMoa1615664},\n  pmid    = {28304224},\n}"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:46:58+00:00"
+  },
+  {
+   "key": "format_citation {\"pmid\": \"28304224\", \"style\": \"harvard\"}",
+   "tool": "format_citation",
+   "args": {
+    "pmid": "28304224",
+    "style": "harvard"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "28304224",
+    "style": "harvard",
+    "citation": "Sabatine, M.S. et al. 2017. 'Evolocumab and Clinical Outcomes in Patients with Cardiovascular Disease.'. *The New England journal of medicine*, 376(18), pp. 1713-1722. doi:10.1056/NEJMoa1615664"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:46:58+00:00"
+  },
+  {
+   "key": "format_citation {\"pmid\": \"28304224\", \"style\": \"vancouver\"}",
+   "tool": "format_citation",
+   "args": {
+    "pmid": "28304224",
+    "style": "vancouver"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "28304224",
+    "style": "vancouver",
+    "citation": "Sabatine MS, Giugliano RP, Keech AC, Honarpour N, Wiviott SD, Murphy SA, et al. Evolocumab and Clinical Outcomes in Patients with Cardiovascular Disease. The New England journal of medicine. 2017;376(18):1713-1722. doi:10.1056/NEJMoa1615664"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:46:58+00:00"
+  },
+  {
+   "key": "format_citation {\"pmid\": \"28304224\"}",
+   "tool": "format_citation",
+   "args": {
+    "pmid": "28304224"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "28304224",
+    "style": "apa",
+    "citation": "Sabatine, M. S., Giugliano, R. P., Keech, A. C., Honarpour, N., Wiviott, S. D., Murphy, S. A., ... FOURIER, S. C. a. I. (2017). Evolocumab and Clinical Outcomes in Patients with Cardiovascular Disease. *The New England journal of medicine*, *376*(18), 1713-1722. https://doi.org/10.1056/NEJMoa1615664"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:46:58+00:00"
+  }
+ ]
+}

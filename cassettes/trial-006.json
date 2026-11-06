@@ -1,0 +1,257 @@
+{
+ "task_id": "trial-006",
+ "entries": [
+  {
+   "key": "get_abstract {\"pmid\": \"30990260\"}",
+   "tool": "get_abstract",
+   "args": {
+    "pmid": "30990260"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "30990260",
+    "title": "Canagliflozin and Renal Outcomes in Type 2 Diabetes and Nephropathy.",
+    "authors": [
+     "Perkovic Vlado",
+     "Jardine Meg J",
+     "Neal Bruce",
+     "Bompoint Severine",
+     "Heerspink Hiddo J L",
+     "Charytan David M",
+     "Edwards Robert",
+     "Agarwal Rajiv",
+     "Bakris George",
+     "Bull Scott",
+     "Cannon Christopher P",
+     "Capuano George",
+     "Chu Pei-Ling",
+     "de Zeeuw Dick",
+     "Greene Tom",
+     "Levin Adeera",
+     "Pollock Carol",
+     "Wheeler David C",
+     "Yavin Yshai",
+     "Zhang Hong",
+     "Zinman Bernard",
+     "Meininger Gary",
+     "Brenner Barry M",
+     "Mahaffey Kenneth W",
+     "CREDENCE Trial Investigators"
+    ],
+    "journal": "The New England journal of medicine",
+    "year": "2019",
+    "doi": "10.1056/NEJMoa1811744",
+    "volume": "380",
+    "issue": "24",
+    "pages": "2295-2306",
+    "abstract_sections": [
+     {
+      "label": "BACKGROUND",
+      "text": "Type 2 diabetes mellitus is the leading cause of kidney failure worldwide, but few effective long-term treatments are available. In cardiovascular trials of inhibitors of sodium-glucose cotransporter 2 (SGLT2), exploratory results have suggested that such drugs may improve renal outcomes in patients with type 2 diabetes."
+     },
+     {
+      "label": "METHODS",
+      "text": "In this double-blind, randomized trial, we assigned patients with type 2 diabetes and albuminuric chronic kidney disease to receive canagliflozin, an oral SGLT2 inhibitor, at a dose of 100 mg daily or placebo. All the patients had an estimated glomerular filtration rate (GFR) of 30 to <90 ml per minute per 1.73 mof body-surface area and albuminuria (ratio of albumin [mg] to creatinine [g], >300 to 5000) and were treated with renin-angiotensin system blockade. The primary outcome was a composite of end-stage kidney disease (dialysis, transplantation, or a sustained estimated GFR of <15 ml per minute per 1.73 m), a doubling of the serum creatinine level, or death from renal or cardiovascular causes. Prespecified secondary outcomes were tested hierarchically."
+     },
+     {
+      "label": "RESULTS",
+      "text": "The trial was stopped early after a planned interim analysis on the recommendation of the data and safety monitoring committee. At that time, 4401 patients had undergone randomization, with a median follow-up of 2.62 years. The relative risk of the primary outcome was 30% lower in the canagliflozin group than in the placebo group, with event rates of 43.2 and 61.2 per 1000 patient-years, respectively (hazard ratio, 0.70; 95% confidence interval [CI], 0.59 to 0.82; P&#x2009;=&#x2009;0.00001). The relative risk of the renal-specific composite of end-stage kidney disease, a doubling of the creatinine level, or death from renal causes was lower by 34% (hazard ratio, 0.66; 95% CI, 0.53 to 0.81; P<0.001), and the relative risk of end-stage kidney disease was lower by 32% (hazard ratio, 0.68; 95% CI, 0.54 to 0.86; P&#x2009;=&#x2009;0.002). The canagliflozin group also had a lower risk of cardiovascular death, myocardial infarction, or stroke (hazard ratio, 0.80; 95% CI, 0.67 to 0.95; P&#x2009;=&#x2009;0.01) and hospitalization for heart failure (hazard ratio, 0.61; 95% CI, 0.47 to 0.80; P<0.001). There were no significant differences in rates of amputation or fracture."
+     },
+     {
+      "label": "CONCLUSIONS",
+      "text": "In patients with type 2 diabetes and kidney disease, the risk of kidney failure and cardiovascular events was lower in the canagliflozin group than in the placebo group at a median follow-up of 2.62 years. (Funded by Janssen Research and Development; CREDENCE ClinicalTrials.gov number, NCT02065791.)."
+     }
+    ],
+    "keywords": [],
+    "mesh_terms": [
+     "Aged",
+     "Canagliflozin",
+     "Cardiovascular Diseases",
+     "Creatinine",
+     "Diabetes Mellitus, Type 2",
+     "Diabetic Nephropathies",
+     "Double-Blind Method",
+     "Female",
+     "Follow-Up Studies",
+     "Glomerular Filtration Rate",
+     "Humans",
+     "Kidney Failure, Chronic",
+     "Male",
+     "Middle Aged",
+     "Sodium-Glucose Transporter 2 Inhibitors"
+    ],
+    "pmc_id": ""
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:43:33+00:00"
+  },
+  {
+   "key": "get_trial {\"nctId\": \"nct02065791\"}",
+   "tool": "get_trial",
+   "args": {
+    "nctId": "NCT02065791"
+   },
+   "variant": "current",
+   "response": {
+    "nct_id": "NCT02065791",
+    "title": "Evaluation of the Effects of Canagliflozin on Renal and Cardiovascular Outcomes in Participants With Diabetic Nephropathy",
+    "status": "COMPLETED",
+    "phase": "PHASE3",
+    "conditions": [
+     "Diabetes Mellitus, Type 2",
+     "Diabetic Nephropathy"
+    ],
+    "interventions": [
+     {
+      "type": "DRUG",
+      "name": "Canagliflozin"
+     },
+     {
+      "type": "DRUG",
+      "name": "Placebo"
+     }
+    ],
+    "enrollment": 4401,
+    "sponsor": "Janssen Research & Development, LLC",
+    "start_date": "2014-02-17",
+    "completion_date": "2018-10-30",
+    "study_type": "INTERVENTIONAL",
+    "url": "https://clinicaltrials.gov/study/NCT02065791",
+    "official_title": "A Randomized, Double-blind, Event-driven, Placebo-controlled, Multicenter Study of the Effects of Canagliflozin on Renal and Cardiovascular Outcomes in Subjects With Type 2 Diabetes Mellitus and Diabetic Nephropathy",
+    "summary": "The goal of this study is to assess whether canagliflozin has a renal and vascular protective effect in reducing the progression of renal impairment relative to placebo in participants with type 2 diabetes mellitus (T2DM), Stage 2 or 3 chronic kidney disease (CKD) and macroalbuminuria, who are receiving standard of care including a maximum tolerated labeled daily dose of an angiotensin-converting enzyme inhibitor (ACEi) or angiotensin receptor blocker (ARB).",
+    "eligibility": {
+     "criteria": "Inclusion Criteria:\n\n* Type 2 diabetes mellitus with a hemoglobin A1c (HbA1c) greater than or equal to (\\>=) 6.5 percent (%) and less than or equal to (\\<=) 12.0%, with an estimated glomerular filtration rate (eGFR) of \\>= 30 milliliter (mL)/minute (min)/1.73meter (m)\\^2 and less than (\\<) 90 mL/min/1.73 m\\^2\n* Participants need to be on a stable maximum tolerated labeled daily dose of an angiotensin-converting enzyme inhibitor (ACEi) or angiotensin receptor blocker (ARB) for at least 4 weeks prior to randomization\n* Must have a urine albumin to creatinine ratio (UACR) of greater than (\\>) 300 milligram (mg)/gram (g) and \\<= 5000 mg/g\n\nExclusion Criteria:\n\n* History of diabetic ketoacidosis or type 1 diabetes mellitus\n* History of hereditary glucose-galactose malabsorption or primary renal glucosuria\n* Renal disease that required treatment with immunosuppressive therapy\n* Known significant liver disease\n* Current or history of New York Heart Association (NYHA) Class IV heart failure\n* Blood potassium level \\>5.5 millimole (mmol)/liter (L) during Screening",
+     "gender": "ALL",
+     "minimum_age": "30 Years",
+     "maximum_age": "",
+     "healthy_volunteers": "false"
+    },
+    "design": {
+     "allocation": "RANDOMIZED",
+     "intervention_model": "PARALLEL",
+     "primary_purpose": "TREATMENT",
+     "masking": "DOUBLE",
+     "who_masked": [
+      "PARTICIPANT",
+      "INVESTIGATOR"
+     ]
+    },
+    "arms": [
+     {
+      "label": "Canagliflozin 100 mg",
+      "type": "EXPERIMENTAL",
+      "description": "Each participant will receive 100 mg of canagliflozin once daily",
+      "intervention_names": [
+       "Drug: Canagliflozin"
+      ]
+     },
+     {
+      "label": "Placebo",
+      "type": "PLACEBO_COMPARATOR",
+      "description": "Each participant will receive matching placebo once daily",
+      "intervention_names": [
+       "Drug: Placebo"
+      ]
+     }
+    ],
+    "primary_outcomes": [
+     {
+      "measure": "Primary Composite Endpoint of Doubling of Serum Creatinine (DoSC), End-stage Kidney Disease (ESKD), and Renal or Cardiovascular (CV) Death",
+      "description": "Primary composite endpoint is the composite of DoSC, ESKD, and renal or CV death. DoSC: from baseline average determination (sustained and confirmed by repeat central laboratory measure after at least 30 days and preferably within 60 days). ESKD: as initiation of maintenance dialysis for at least 30 days, or renal transplantation, or an estimated glomerular filtration rate (eGFR) value of less than (\\<)15 milliliters per minute per 1.73 square meter (mL/min/1.73 m\\^2) (sustained and confirmed by repeat central laboratory measure after at least 30 days and preferably within 60 days). Renal death: death in participants who had reached ESKD, died without initiating renal replacement therapy, and no other cause of death was determined via adjudication. Adjudication of these events by Endpoint Adjudication Committee (EAC) was performed in blinded fashion. Event rate estimated based on time to first occurrence of primary composite endpoint are presented.",
+      "time_frame": "Up to 4.6 years"
+     }
+    ],
+    "secondary_outcomes": [
+     {
+      "measure": "Composite Endpoint of CV Death and Hospitalized Heart Failure (HHF)",
+      "description": "The composite endpoint included CV death and HHF. CV death included death due to myocardial infarction (MI), stroke, heart failure, sudden death, death during a CV procedure or as a result of procedure-related complications, or death due to other CV causes. For analytic purposes, undetermined causes of death were considered CV deaths. In determining whether a death event was CV in nature, the EAC took into consideration both the proximate and underlying causes. Adjudication of these events by the EAC was performed in a blinded fashion. Event rate estimated based on the time to the first occurrence of the composite endpoint of CV death and HHF are presented.",
+      "time_frame": "Up to 4.6 years"
+     },
+     {
+      "measure": "Major Adverse Cardiac Event (MACE)",
+      "description": "The composite endpoint included CV death, non-fatal MI, and non-fatal stroke (that is, 3-point MACE). Adjudication of these events by the EAC was performed in a blinded fashion. Event rate estimated based on the time to the first occurrence of MACE are presented.",
+      "time_frame": "Up to 4.6 years"
+     },
+     {
+      "measure": "Hospitalized Heart Failure (HHF)",
+      "description": "Adjudication of these events by the Endpoint Adjudication Committee (EAC) was performed in a blinded fashion. Event rate estimated based on the time to the first occurrence of hospitalized heart failure are presented.",
+      "time_frame": "Up to 4.6 years"
+     },
+     {
+      "measure": "Renal Composite Endpoint",
+      "description": "The renal composite endpoint included composite of DoSC, ESKD and Renal death. DoSC: from the baseline average determination (sustained and confirmed by repeat central laboratory measure after at least 30 days and preferably within 60 days). ESKD: initiation of maintenance dialysis for at least 30 days, or renal transplantation, or an eGFR value of \\<15 mL/min/1.73 m\\^2 (sustained and confirmed by repeat central laboratory measure after at least 30 days and preferably within 60 days). Renal death: death in participants who have reached ESKD, died without initiating renal replacement therapy, and no other cause of death was determined via adjudication. Adjudication of these events by the EAC was performed in a blinded fashion. Event rate estimated based on the time to the first occurrence of the renal composite endpoint are presented.",
+      "time_frame": "Up to 4.6 years"
+     },
+     {
+      "measure": "Cardiovascular (CV) Death",
+      "description": "CV death included death due to MI, stroke, heart failure, sudden death, death during a CV procedure or as a result of procedure-related complications, or death due to other CV causes. For analytic purposes, undetermined causes of death were considered CV deaths. In determining whether a death event was a CV in nature, the EAC took into consideration both the proximate and underlying causes. Adjudication of these events by the EAC was performed in a blinded fashion. Event rate estimated based on the time to the first occurrence of CV death are presented.",
+      "time_frame": "Up to 4.6 years"
+     },
+     {
+      "measure": "All-cause Mortality",
+      "description": "Adjudication of these events by Endpoint Adjudication Committee (EAC) was performed in a blinded fashion. Event rate estimated based on time to first occurrence of all-cause mortality are presented.",
+      "time_frame": "Up to 4.6 years"
+     },
+     {
+      "measure": "CV Composite Endpoint",
+      "description": "The CV composite endpoint included the CV death, non-fatal MI, non-fatal stroke, hospitalized heart failure, and hospitalized unstable angina. CV death included death due to MI, stroke, heart failure, sudden death, death during a CV procedure or as a result of procedure-related complications, or death due to other CV causes. For analytic purposes, undetermined causes of death were considered CV deaths. In determining whether a death event was a CV in nature, the EAC took into consideration both the proximate and underlying causes. Adjudication of these events by the EAC was performed in a blinded fashion. Event rate estimated based on the time to the first occurrence of the CV composite endpoint are presented.",
+      "time_frame": "Up to 4.6 years"
+     }
+    ],
+    "locations_count": 575,
+    "lead_investigator": "Janssen Research & Development, LLC Clinical Trial",
+    "associated_pmids": [
+     "42475421",
+     "41926219",
+     "41817689",
+     "41198855",
+     "41196655",
+     "40689549",
+     "40658498",
+     "40526444",
+     "40375260",
+     "40239057",
+     "40105285",
+     "39844714",
+     "39704168",
+     "38932575",
+     "38807510",
+     "38770818",
+     "38622766",
+     "38401646",
+     "38240199",
+     "38099944",
+     "37876229",
+     "37872654",
+     "37671609",
+     "37603600",
+     "37438734",
+     "37345834",
+     "37120538",
+     "36999981",
+     "36889425",
+     "36302584",
+     "35938182",
+     "35929472",
+     "35063969",
+     "34029680",
+     "33874750",
+     "33826709",
+     "33619120",
+     "33554616",
+     "33358942",
+     "33340064",
+     "33263893",
+     "32930969",
+     "32354987",
+     "31707795",
+     "31291786",
+     "30990260",
+     "29253846"
+    ]
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:43:33+00:00"
+  }
+ ]
+}

@@ -1,0 +1,161 @@
+{
+ "task_id": "abstain-003",
+ "entries": [
+  {
+   "key": "get_trial {\"nctId\": \"nct04213677\"}",
+   "tool": "get_trial",
+   "args": {
+    "nctId": "NCT04213677"
+   },
+   "variant": "current",
+   "response": {
+    "nct_id": "NCT04213677",
+    "title": "Dapagliflozin Efficacy and Action in PCOS",
+    "status": "COMPLETED",
+    "phase": "PHASE3",
+    "conditions": [
+     "Polycystic Ovary Syndrome"
+    ],
+    "interventions": [
+     {
+      "type": "DRUG",
+      "name": "Dapagliflozin"
+     },
+     {
+      "type": "DRUG",
+      "name": "Placebo"
+     }
+    ],
+    "enrollment": 165,
+    "sponsor": "Nanfang Hospital, Southern Medical University",
+    "start_date": "2020-03-20",
+    "completion_date": "2022-11-01",
+    "study_type": "INTERVENTIONAL",
+    "url": "https://clinicaltrials.gov/study/NCT04213677",
+    "official_title": "Efficacy and Safety of Dapagliflozin in Polycystic Ovary Syndrome: a Multicentre, Randomized, Placebo-controlled Trial",
+    "summary": "The purpose of this study is to assess the efficacy and safety of dapagliflozin on improving insulin resistance and hyperandrogenemia in obesity women with polycystic ovary syndrome.",
+    "eligibility": {
+     "criteria": "Inclusion Criteria:\n\n1. women aged 18 to 45 years;\n2. Subjects with PCOS diagnosed by according to the Rotterdam criteria;\n3. BMI ≥24 kg/m2 and/ or Homeostatic model assessment of insulin resistance (HOMA-IR) with a cutoff ≥2.5;\n4. No pregnancy plan within the next 6 months;\n\nExclusion Criteria:\n\n1. Congenital adrenal hyperplasia such as 21-hydroxylase deficiency, hyperprolactinemia, Cushing syndrome, androgen-producing tumors of the adrenal gland or ovary;\n2. Other endocrine diseases include poorly controlled thyroid diseases (hyperthyroidism or hypothyroidism), acromegaly, type 2 diabetes;\n3. Patients with a history of acute / chronic infection, severe cardio-cerebrovascular diseases and acute / chronic pancreatitis;\n4. Taking any antidiabetic medication that would affect insulin resistance or hyperandrogenemia (i.e. TZD, GLP-1RA, DPP-4i, metformin) in the past one month;\n5. Taking letrozole, clomiphene, oral contraceptive, glucocorticoid, gonadotropin, gonadotropin releasing hormone agonist, anti-androgen drug (spironolactone, cycloproterenone acetate, Flutamide etc.) and/or other drugs for PCOS in the past three months;\n6. History of recurrent urinary tract infection;\n7. History of malignant tumor;\n8. Currently participating in weight loss programs or weight change in the past 3 months (\\> 5% current body weight) or have a history of gastrointestinal surgery.\n9. Serious liver dysfunction or chronic kidney disease (AST or ALT \\> 3 times the upper limit of normal, or eGFR\\<30 ml/min/1.73 m2);\n10. Women who are pregnant or plan to become pregnant;\n11. Subject is, in the judgment of the Investigator, unlikely to comply with the protocol or has any severe concurrent medical or psychological condition that may affect the interpretation of efficacy or safety data;\n12. Participation in other clinical trial in the 4 weeks before randomization;\n13. Patients who are unwilling or unable to give informed consent.",
+     "gender": "FEMALE",
+     "minimum_age": "18 Years",
+     "maximum_age": "45 Years",
+     "healthy_volunteers": "false"
+    },
+    "design": {
+     "allocation": "RANDOMIZED",
+     "intervention_model": "PARALLEL",
+     "primary_purpose": "TREATMENT",
+     "masking": "QUADRUPLE",
+     "who_masked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    },
+    "arms": [
+     {
+      "label": "Dapagliflozin",
+      "type": "EXPERIMENTAL",
+      "description": "Dapagliflozin (Participants will receive dapagliflozin 10mg po qd).",
+      "intervention_names": [
+       "Drug: Dapagliflozin"
+      ]
+     },
+     {
+      "label": "Placebo",
+      "type": "PLACEBO_COMPARATOR",
+      "description": "Placebo (Participants will receive placebo po qd)",
+      "intervention_names": [
+       "Drug: Placebo"
+      ]
+     }
+    ],
+    "primary_outcomes": [
+     {
+      "measure": "Improvement in insulin resistance over 12 weeks",
+      "description": "Change in insulin resistance assessed by insulin sensitivity index(HOMA-IR)",
+      "time_frame": "Baseline and 12 weeks"
+     },
+     {
+      "measure": "Improvement in serum androgen level over 12 weeks",
+      "description": "Change in androgen level assessed by free testosterone index(FAI)",
+      "time_frame": "Baseline and 12 weeks"
+     }
+    ],
+    "secondary_outcomes": [
+     {
+      "measure": "Change in AUC (area under a curve) of glucose and insulin during the oral glucose tolerant test (OGTT)",
+      "description": "",
+      "time_frame": "Baseline to 12 week"
+     },
+     {
+      "measure": "Change in serum free testosterone(FT)",
+      "description": "",
+      "time_frame": "Baseline to 12 week"
+     },
+     {
+      "measure": "Change in serum sex hormone binding globulin(SHBG)",
+      "description": "",
+      "time_frame": "Baseline to 12 week"
+     },
+     {
+      "measure": "Net change in total testosterone (TT) level",
+      "description": "",
+      "time_frame": "Baseline and 12 weeks"
+     },
+     {
+      "measure": "Net change in dehydroepiandrosterone-sulfate(DHEAS) level",
+      "description": "",
+      "time_frame": "Baseline and 12 weeks"
+     },
+     {
+      "measure": "Net change in androstenedione(AD) level",
+      "description": "",
+      "time_frame": "Baseline and 12 weeks"
+     },
+     {
+      "measure": "Net change in luteinzing hormone(LH) level",
+      "description": "",
+      "time_frame": "Baseline and 12 weeks"
+     },
+     {
+      "measure": "Net change in waist circumference",
+      "description": "",
+      "time_frame": "Baseline to 12 week"
+     },
+     {
+      "measure": "Net Change in liver fat",
+      "description": "Liver fat will be assessed by liver fibroscan.",
+      "time_frame": "Baseline to 12 week"
+     },
+     {
+      "measure": "Change in ovulation rate assessed by serum progesterone",
+      "description": "",
+      "time_frame": "Baseline to 12 week"
+     },
+     {
+      "measure": "Net change in body weight",
+      "description": "",
+      "time_frame": "Baseline to 12 week"
+     },
+     {
+      "measure": "Net change in BMI",
+      "description": "",
+      "time_frame": "Baseline to 12 week"
+     },
+     {
+      "measure": "Net change in glucose",
+      "description": "",
+      "time_frame": "Baseline to 12 week"
+     }
+    ],
+    "locations_count": 1,
+    "lead_investigator": "",
+    "associated_pmids": []
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:37:40+00:00"
+  }
+ ]
+}

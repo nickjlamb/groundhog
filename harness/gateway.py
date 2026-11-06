@@ -5,6 +5,7 @@ Every call returns a dict describing what happened, for the trace.
 """
 
 import copy
+import time
 
 from .cassette import Cassette
 from .faults import FaultState
@@ -72,6 +73,9 @@ class ReplayGateway(_Base):
         return {**base, "result": result, "is_error": False, "off_path": False, "variant": variant}
 
 
+RETRY_WAITS = (5, 20, 45, None)
+
+
 class RecordGateway(_Base):
     """Calls live PubCrawl, stores each response in the cassette, serves it clean (F0)."""
 
@@ -79,6 +83,7 @@ class RecordGateway(_Base):
         super().__init__(task, cassette, local_client)
         self.pubcrawl = pubcrawl_client
         self.recorded_by = recorded_by
+        self.errors = []          # live calls that still failed after retries
 
     def _external(self, tool, args):
         base = {"tool": tool, "args": args, "external": True, "off_path": False}
@@ -86,7 +91,12 @@ class RecordGateway(_Base):
         if tool in PAGED:
             live_args.pop("offset", None)
             live_args["max_chars"] = FULL_SECTION_CHARS
-        result, is_error = self.pubcrawl.call_tool(tool, live_args)
+        for wait in RETRY_WAITS:
+            result, is_error = self.pubcrawl.call_tool(tool, live_args)
+            if not is_error or wait is None:
+                break
+            time.sleep(wait)      # 429s and unreachable sources are usually transient
+        self.errors += [{"tool": tool, "args": args, "result": result}] if is_error else []
         if not is_error:
             self.cassette.add(tool, args, result, recorded_by=self.recorded_by)
         served = copy.deepcopy(result)

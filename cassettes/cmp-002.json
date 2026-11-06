@@ -1,0 +1,53 @@
+{
+ "task_id": "cmp-002",
+ "entries": [
+  {
+   "key": "compare_labels {\"drug\": \"metformin\", \"sections\": [\"contraindications\"], \"uk_drug\": \"glucophage\"}",
+   "tool": "compare_labels",
+   "args": {
+    "drug": "metformin",
+    "uk_drug": "Glucophage",
+    "sections": [
+     "contraindications"
+    ]
+   },
+   "variant": "current",
+   "response": {
+    "drug": "metformin",
+    "lookup_names": {
+     "us": "metformin",
+     "uk": "Glucophage"
+    },
+    "comparisons": [
+     {
+      "topic": "Contraindications",
+      "us_section": {
+       "code": "34070-3",
+       "title": "Contraindications",
+       "content": "4 CONTRAINDICATIONS Metformin hydrochloride extended-release tablets are contraindicated in patients with: • Severe renal impairment (eGFR below 30 mL/min/1.73 m 2 ) [see Warnings and Precautions (5.1) ]. • Hypersensitivity to metformin. • Acute or chronic metabolic acidosis, including diabetic ketoacidosis, with or without coma. • Severe renal impairment (eGFR below 30 mL/min/1.73 m 2 ) ( 4 , 5.1 ) • Hypersensitivity to metformin ( 4 ) • Acute or chronic metabolic acidosis, including diabetic ketoacidosis, with or without coma. ( 4 )"
+      },
+      "uk_section": {
+       "code": "4.3",
+       "title": "Contraindications",
+       "content": "• Hypersensitivity to metformin or to any of the excipients listed in section 6.1.\n • Any type of acute metabolic acidosis (such as lactic acidosis, diabetic ketoacidosis).\n • Diabetic pre-coma.\n • Severe renal failure (GFR < 30 mL/min).\n • Acute conditions with the potential to alter renal function such as: dehydration, severe infection, shock.\n • Disease which may cause tissue hypoxia (especially acute disease, or worsening of chronic disease) such as: decompensated heart failure, respiratory failure, recent myocardial infarction, shock.\n • Hepatic insufficiency, acute alcohol intoxication, alcoholism."
+      }
+     }
+    ],
+    "us_source": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=05999192-ebc6-4198-bd1e-f46abbfb4f8a",
+    "uk_source": "https://www.medicines.org.uk/emc/product/987/smpc",
+    "us_label": {
+     "status": "ok",
+     "product": "Metformin (METFORMIN ER 500 MG)",
+     "sections_returned": 1
+    },
+    "uk_label": {
+     "status": "ok",
+     "product": "Glucophage 500 mg film coated tablets",
+     "sections_returned": 1
+    }
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:40:24+00:00"
+  }
+ ]
+}

@@ -1,0 +1,301 @@
+{
+ "task_id": "trial-002",
+ "entries": [
+  {
+   "key": "get_abstract {\"pmid\": \"35665782\"}",
+   "tool": "get_abstract",
+   "args": {
+    "pmid": "35665782"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "35665782",
+    "title": "Trastuzumab Deruxtecan in Previously Treated HER2-Low Advanced Breast Cancer.",
+    "authors": [
+     "Modi Shanu",
+     "Jacot William",
+     "Yamashita Toshinari",
+     "Sohn Joohyuk",
+     "Vidal Maria",
+     "Tokunaga Eriko",
+     "Tsurutani Junji",
+     "Ueno Naoto T",
+     "Prat Aleix",
+     "Chae Yee Soo",
+     "Lee Keun Seok",
+     "Niikura Naoki",
+     "Park Yeon Hee",
+     "Xu Binghe",
+     "Wang Xiaojia",
+     "Gil-Gil Miguel",
+     "Li Wei",
+     "Pierga Jean-Yves",
+     "Im Seock-Ah",
+     "Moore Halle C F",
+     "Rugo Hope S",
+     "Yerushalmi Rinat",
+     "Zagouri Flora",
+     "Gombos Andrea",
+     "Kim Sung-Bae",
+     "Liu Qiang",
+     "Luo Ting",
+     "Saura Cristina",
+     "Schmid Peter",
+     "Sun Tao",
+     "Gambhire Dhiraj",
+     "Yung Lotus",
+     "Wang Yibin",
+     "Singh Jasmeet",
+     "Vitazka Patrik",
+     "Meinhardt Gerold",
+     "Harbeck Nadia",
+     "Cameron David A",
+     "DESTINY-Breast04 Trial Investigators"
+    ],
+    "journal": "The New England journal of medicine",
+    "year": "2022",
+    "doi": "10.1056/NEJMoa2203690",
+    "volume": "387",
+    "issue": "1",
+    "pages": "9-20",
+    "abstract_sections": [
+     {
+      "label": "BACKGROUND",
+      "text": "Among breast cancers without human epidermal growth factor receptor 2 (HER2) amplification, overexpression, or both, a large proportion express low levels of HER2 that may be targetable. Currently available HER2-directed therapies have been ineffective in patients with these \"HER2-low\" cancers."
+     },
+     {
+      "label": "METHODS",
+      "text": "We conducted a phase 3 trial involving patients with HER2-low metastatic breast cancer who had received one or two previous lines of chemotherapy. (Low expression of HER2 was defined as a score of 1+ on immunohistochemical [IHC] analysis or as an IHC score of 2+ and negative results on in situ hybridization.) Patients were randomly assigned in a 2:1 ratio to receive trastuzumab deruxtecan or the physician's choice of chemotherapy. The primary end point was progression-free survival in the hormone receptor-positive cohort. The key secondary end points were progression-free survival among all patients and overall survival in the hormone receptor-positive cohort and among all patients."
+     },
+     {
+      "label": "RESULTS",
+      "text": "Of 557 patients who underwent randomization, 494 (88.7%) had hormone receptor-positive disease and 63 (11.3%) had hormone receptor-negative disease. In the hormone receptor-positive cohort, the median progression-free survival was 10.1 months in the trastuzumab deruxtecan group and 5.4 months in the physician's choice group (hazard ratio for disease progression or death, 0.51; P<0.001), and overall survival was 23.9 months and 17.5 months, respectively (hazard ratio for death, 0.64; P&#x2009;=&#x2009;0.003). Among all patients, the median progression-free survival was 9.9 months in the trastuzumab deruxtecan group and 5.1 months in the physician's choice group (hazard ratio for disease progression or death, 0.50; P<0.001), and overall survival was 23.4 months and 16.8 months, respectively (hazard ratio for death, 0.64; P&#x2009;=&#x2009;0.001). Adverse events of grade 3 or higher occurred in 52.6% of the patients who received trastuzumab deruxtecan and 67.4% of those who received the physician's choice of chemotherapy. Adjudicated, drug-related interstitial lung disease or pneumonitis occurred in 12.1% of the patients who received trastuzumab deruxtecan; 0.8% had grade 5 events."
+     },
+     {
+      "label": "CONCLUSIONS",
+      "text": "In this trial involving patients with HER2-low metastatic breast cancer, trastuzumab deruxtecan resulted in significantly longer progression-free and overall survival than the physician's choice of chemotherapy. (Funded by Daiichi Sankyo and AstraZeneca; DESTINY-Breast04 ClinicalTrials.gov number, NCT03734029.)."
+     }
+    ],
+    "keywords": [],
+    "mesh_terms": [
+     "Antibodies, Monoclonal, Humanized",
+     "Antineoplastic Agents, Immunological",
+     "Antineoplastic Combined Chemotherapy Protocols",
+     "Breast Neoplasms",
+     "Camptothecin",
+     "Disease Progression",
+     "Female",
+     "Humans",
+     "Immunoconjugates",
+     "Immunohistochemistry",
+     "Erb-b2 Receptor Tyrosine Kinases",
+     "Trastuzumab"
+    ],
+    "pmc_id": "PMC10561652"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:43:28+00:00"
+  },
+  {
+   "key": "get_full_text {\"pmcid\": \"pmc10561652\"}",
+   "tool": "get_full_text",
+   "args": {
+    "pmcid": "PMC10561652"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "",
+    "pmcid": "PMC10561652",
+    "title": "Trastuzumab Deruxtecan in Previously Treated HER2-Low Advanced Breast Cancer",
+    "sections": [
+     {
+      "title": "INTRODUCTION",
+      "content": "Approximately 60% of human epidermal growth factor receptor 2 (HER2)–negative metastatic breast cancers express low levels of HER2, defined as a score of 1+ on immunohistochemical [IHC] analysis or as an IHC score of 2+ and negative results on in situ hybridization (ISH).These “HER2-low” tumors constitute a heterogeneous population including both hormone receptor–positive and hormone receptor–negative breast cancers that vary in prognosis and sensitivity to systemic treatments.Currently available HER2-directed therapies have not improved clinical outcomes for patients with this subtype; therefore, HER2-low breast cancer is currently treated as HER2-negative (HER2-low and HER2-zero [IHC score of 0]), with patients stratified according to hormone-receptor status.Overall, these patients have limited targeted treatment options after progression on primary therapy, and most commonly receive single-agent palliative chemotherapy.\n\nSpecifically, for patients with hormone receptor–positive, HER2-negative metastatic disease, combinations of endocrine therapy and cyclin-dependent kinase 4 and 6 (CDK4/6) inhibitors are effective for a median of approximately 2 years, after which resistance often occurs.Real-world data suggest a progression-free survival as low as 4 months with systemic therapies given after CDK4/6 inhibitors and chemotherapy in the context of metastatic disease.For patients with hormone receptor–negative, HER2-negative metastatic disease, few targeted agents are available, particularly for patients without pathogenicmutations or tumors without programmed death ligand 1 expression.\n\nTrastuzumab deruxtecan (formerly DS-8201), an antibody-drug conjugate consisting of a humanized anti-HER2 monoclonal antibody linked to a topoisomerase I inhibitor payload through a tetrapeptide-based cleavable linker, has been approved for the treatment of patients with metastatic HER2-positive breast cancer.Unlike many other approved HER2-targeted therapies, trastuzumab deruxtecan can also effectively target tumor cells that express low levels of HER2 and can deliver its potent cytotoxic payload (drug-to-antibody ratio, 8:1) through the bystander effect to neighboring tumor cells heterogeneously expressing HER2.Phase 1 and 2 studies have shown promising results in heavily pretreated patients with HER2-low metastatic breast cancer. In this patient population, the percentage of patients with an overall response has ranged from 37.0% to 37.5%, and the median progression-free survival has ranged from 6.3 to 11.1 months.These findings suggest that the efficacy of trastuzumab deruxtecan exceeds that of available treatments for patients with triple-negative or endocrine-refractory hormone receptor–positive breast cancer.We performed a phase 3 clinical trial (DESTINY-Breast04) to evaluate the efficacy and safety of trastuzumab deruxtecan as compared with the physician’s choice of chemotherapy in patients with HER2-low metastatic breast cancer."
+     },
+     {
+      "title": "METHODS",
+      "content": "\n### TRIAL DESIGN\n\nWe conducted a randomized, two-group, open-label, phase 3 trial involving patients with HER2-low, unresectable or metastatic breast cancer. Trial enrollment was planned for 480 patients with hormone receptor–positive disease (immunoreactive for estrogen or progesterone receptor in ≥1% of tumor-cell nuclei according to local testing) and 60 patients with hormone receptor–negative disease, approximating the proportions of receptor subtype observed in HER2-low breast cancer.Patients were randomly assigned in a 2:1 ratio to receive trastuzumab deruxtecan or the physician’s choice of capecitabine, eribulin, gemcitabine, paclitaxel, or nab-paclitaxel. Randomization was stratified according to HER2-low status (IHC1+ vs. IHC 2+ and ISH-negative), the number of previous lines of chemotherapy for metastatic disease (one vs. two), and hormone-receptor status (positive [with vs. without previous CDK4/6 inhibitor therapy] vs. negative).\n\nIHC scores for HER2 expression were determined through central testing of adequate archived or recent tumor-biopsy specimens with the use of an investigational IHC assay, the VENTANA HER2/neu (4B5) IUO (investigational use only) Assay system, according to an algorithm adapted from the 2018 American Society of Clinical Oncology/College of American Pathologists testing guidelines (in the, available with the full text of this article at).Specimens that yielded central HER2 IHC scores of 2+ were reflexed to ISH testing with the use of the investigational INFORM HER2 Dual ISH DNA Probe Cocktail IUO Assay system.\n\nEligible patients must have received chemotherapy for metastatic disease or have had disease recurrence during or within 6 months after completing adjuvant chemotherapy; patients with hormone receptor–positive disease must have received at least one line of endocrine therapy. Patients with treated, stable brain metastases were eligible; patients were ineligible if they had a history of noninfectious interstitial lung disease requiring treatment with glucocorticoids or had suspected interstitial lung disease on imaging at screening.\n\nTrastuzumab deruxtecan was administered intravenously every 3 weeks at a dose of 5.4 mg per kilogram of body weight, and the physician’s choice of chemotherapy was administered in accordance with local label or the National Comprehensive Cancer Network guidelines.More details are provided in the.\n\n\n### TRIAL OVERSIGHT\n\nDaiichi Sankyo and AstraZeneca funded this trial. The trial was designed by Daiichi Sankyo, approved by the institutional review board at each site, and conducted in adherence with the International Council for Harmonisation Good Clinical Practice, the Declaration of Helsinki, and local regulations on the conduct of clinical research. An independent data monitoring committee, composed of qualified physicians and scientists, was formed to monitor patient safety in the trial. All patients provided written informed consent before participation in the trial. The authors vouch for the completeness and accuracy of the data and for the adherence of the trial to the protocol and statistical analysis plan, which are available at. All the authors and contributors signed a standard confidentiality disclosure agreement that restricts disclosure of data outside of the publication process. Editorial and medical writing assistance for the manuscript was financially supported by Daiichi Sankyo.\n\n\n### END POINTS\n\nProgression-free survival and response to treatment were assessed by means of blinded independent central review. The primary end point was progression-free survival among patients with hormone receptor–positive disease. Key secondary end points were progression-free survival among all patients and overall survival in the hormone receptor–positive cohort and among all patients. Secondary and other end points included investigator-assessed progression-free survival, confirmed objective response, duration of response, and efficacy in the hormone receptor–negative cohort.\n\n\n### SAFETY\n\nAdverse events were coded and graded by(version 24.0) and National Cancer Institute Common Terminology Criteria for Adverse Events (version 5.0). Potential cases of interstitial lung disease or pneumonitis were evaluated by an independent adjudication committee. Protocol-specified guidelines on management of interstitial lung disease and pneumonitis are provided in.\n\n\n### STATISTICAL ANALYSIS\n\nThe primary efficacy analysis compared progression-free survival in the hormone receptor–positive cohort between the two trial groups with the use of a stratified log-rank test at a two-sided significance level of 0.05. The final efficacy analysis for progression-free survival was to be performed after approximately 318 patients had disease progression or died in the hormone receptor–positive cohort; this number of events would ensure a power of 90%, under the assumption of a hazard ratio of 0.68 and a two-sided alpha level of 0.05. We planned for a group sequential test using a stratified log-rank test to compare overall survival between the trial groups, provided that superiority with respect to progression-free survival was significant in the hormone receptor-positive cohort and among all patients. The hazard ratios and 95% confidence intervals for progression-free and overall survival were estimated with the use of a stratified Cox regression analysis. Efficacy analyses were performed in the intention-to-treat population. Safety analyses were performed in patients who received at least one dose of a trial drug. Details are provided in the."
+     },
+     {
+      "title": "RESULTS",
+      "content": "\n### PATIENTS\n\nFrom December 27, 2018, through December 31, 2021, a total of 713 patients with HER2-low metastatic breast cancer were screened for potential trial entry (). Of the 373 patients who were randomly assigned to the trastuzumab deruxtecan group and the 184 patients who were assigned to the physician’s choice group, 331 (88.7%) and 163 (88.6%), respectively, comprised the hormone receptor–positive cohort. In the physician’s choice group, patients received eribulin (51.1%), capecitabine (20.1%), nab-paclitaxel (10.3%), gemcitabine (10.3%), or paclitaxel (8.2%). The demographic and clinical characteristics of the patients at baseline were similar in the two trial groups ()and were largely representative of the overall population of patients with HER2-negative breast cancer (). Patients in both groups had a median of three lines of treatment for metastatic disease. The median duration of follow-up for survival was 18.4 months (95% confidence interval [CI], 17.7 to 18.9).\n\n\n### EFFICACY\n\nAt data cutoff for primary efficacy analysis (January 11, 2022), the median progression-free survival in the hormone receptor–positive cohort was 10.1 months (95% CI, 9.5 to 11.5) in the trastuzumab deruxtecan group and 5.4 months (95% CI, 4.4 to 7.1) in the physician’s choice group (hazard ratio for disease progression or death, 0.51; 95% CI, 0.40 to 0.64; P<0.001) (and). A consistent benefit was observed for trastuzumab deruxtecan across analyzed subgroups (). In the trastuzumab deruxtecan group, the median progression-free survival was 10.3 months among patients with a HER2 IHC score of 1+ and 10.1 months among those with a HER2 IHC score of 2+ and negative results on ISH. Among patients who had received previous treatment with CDK4/6 inhibitors, the median progression-free survival was 10.0 months in the trastuzumab deruxtecan group; without previous CDK4/6 inhibitor treatment, it was 11.7 months.\n\nAmong all patients, the median progression-free survival was 9.9 months (95% CI, 9.0 to 11.3) in the trastuzumab deruxtecan group and 5.1 months (95% CI, 4.2 to 6.8) in the physician’s choice group (hazard ratio for disease progression or death, 0.50; 95% CI, 0.40 to 0.63; P<0.001) (and). The median progression-free survival in the hormone receptor–negative cohort was 8.5 months (95% CI, 4.3 to 11.7) in the trastuzumab deruxtecan group and 2.9 months (95% CI, 1.4 to 5.1) in the physician’s choice group (hazard ratio, 0.46; 95% CI, 0.24 to 0.89) ().\n\nThe median overall survival in the hormone receptor–positive cohort was 23.9 months (95% CI, 20.8 to 24.8) in the trastuzumab deruxtecan group and 17.5 months (95% CI, 15.2 to 22.4) in the physician’s choice group (hazard ratio for death, 0.64; 95% CI, 0.48 to 0.86; P=0.003) (). Among all patients, the median overall survival was 23.4 months (95% CI, 20.0 to 24.8) in the trastuzumab deruxtecan group and 16.8 months (95% CI, 14.5 to 20.0) in the physician’s choice group (hazard ratio, 0.64; 95% CI, 0.49 to 0.84; P=0.001) (). The P values crossed the interim stopping boundary of 0.0075 in both cohorts. The median overall survival in the hormone receptor–negative cohort was 18.2 months (95% CI, 13.6 to not evaluable) in the trastuzumab deruxtecan group and 8.3 months (95% CI, 5.6 to 20.6) in the physician’s choice group (hazard ratio, 0.48; 95% CI, 0.24 to 0.95) ().\n\nThe percentage of patients with a confirmed objective response in the hormone receptor–positive cohort was 52.6% (95% CI, 47.0 to 58.0) in the trastuzumab deruxtecan group and 16.3% (95% CI, 11.0 to 22.8) in the physician’s choice group (and). A total of 12 patients (3.6%) in the trastuzumab deruxtecan group and 1 patient (0.6%) in the physician’s choice group had a complete response; 26 patients (7.8%) and 35 patients (21.1%) in the respective groups had progressive disease as the best overall response. The median duration of response was 10.7 months in the trastuzumab deruxtecan group and 6.8 months in the physician’s choice group.\n\nThe percentage of patients with a confirmed objective response among all patients was 52.3% (95% CI, 47.1 to 57.4) in the trastuzumab deruxtecan group and 16.3% (95% CI, 11.3 to 22.5) in the physician’s choice group (and). The corresponding percentages in the hormone receptor–negative cohort were 50.0% (95% CI, 33.8 to 66.2) and 16.7% (95% CI, 3.6 to 41.4).\n\n\n### SAFETY\n\nThe safety analysis set included 371 patients in the trastuzumab deruxtecan group and 172 patients in the physician’s choice group. The median duration of treatment duration was 8.2 months (range, 0.2 to 33.3) and 3.5 months (range, 0.3 to 17.6) in the respective groups. A total of 99.5% of the patients in the trastuzumab deruxtecan group and 98.3% of those in the physician’s choice group had at least one adverse event that emerged or worsened after initiation of a trial drug until 47 days after the last dose of the trial drug (); exposure-adjusted incidence rates were 1.30 per patient-year and 2.66 per patient-year, respectively (). The incidence of serious adverse events was 27.8% in the trastuzumab deruxtecan group and 25.0% in the physician’s choice group, and the incidence of adverse events of grade 3 or higher was 52.6% and 67.4%, respectively. The incidence of adverse events associated with discontinuation of treatment was 16.2% in the trastuzumab deruxtecan group and 8.1% in the physician’s choice group, and the incidence of adverse events associated with dose reductions was 22.6% and 38.4%, respectively.\n\nA total of 14 patients (3.8%) in the trastuzumab deruxtecan group and 5 patients (2.9%) in the physician’s choice group had adverse events that were associated with death. Drug-related deaths in the trastuzumab deruxtecan group were due to pneumonitis (in 2 patients [0.5%]) and ischemic colitis, disseminated intravascular coagulation, dyspnea, febrile neutropenia, and sepsis (in 1 patient [0.3%] each); there were no drug-related deaths in the physician’s choice group.\n\nIn the trastuzumab deruxtecan group, the most common drug-related adverse events of any grade included nausea (in 73.0% if the patients), fatigue (in 47.7%), and alopecia (in 37.7%), all of which were more frequent than in the physician’s choice group (in 23.8%, 42.4%, and 32.6%, respectively) (). In the trastuzumab deruxtecan group, the most common adverse events of grade 3 or higher were neutropenia (in 13.7% of the patients), anemia (in 8.1%), and fatigue (in 7.5%); the corresponding percentages in the physician’s choice group were 40.7%, 4.7%, and 4.7%.\n\nDrug-related interstitial lung disease or pneumonitis as adjudicated by an independent committee occurred in 45 patients (12.1%) who received trastuzumab deruxtecan, including 13 (3.5%) with a grade 1 event, 24 (6.5%) with a grade 2 event, 5 (1.3%) with a grade 3 event, and 3 (0.8%) with a grade 5 event. Of the grade 5 events, 1 event was an investigator-assessed grade 3 event in a patient who died due to disease progression (>47 days after the last dose of trastuzumab deruxtecan) and was adjudicated by the independent committee as being a grade 5 event. Interstitial lung disease or pneumonitis occurred in 1 patient (0.6%) who received the physician’s choice of chemotherapy; this patient, who received eribulin, had a grade 1 event. In the trastuzumab deruxtecan group, the median time to onset in patients with interstitial lung disease or pneumonitis was 129.0 days (range, 26 to 710).\n\nIn the trastuzumab deruxtecan group, left ventricular dysfunction was reported in 17 patients (4.6%) (decreased ejection fraction of grade 1 in 1 patient, of grade 2 in 14 patients, and of grade 3 in 1 patient and cardiac failure of grade 2 in 1 patient and of grade 3 in 1 patient). One patient initially had a decreased ejection fraction, then later had cardiac failure. On the basis of laboratory values of the left ventricular ejection fraction, grade 2 events (10 to 19% decrease from baseline) were observed in 44 of 371 patients (11.9%) in the trastuzumab deruxtecan group and in 10 of 172 patients (5.8%) in the physician’s choice group. Grade 3 events (>20% decrease from baseline) were observed in 5 patients (1.5%) in the trastuzumab deruxtecan group and no patients in the physician’s choice group."
+     },
+     {
+      "title": "DISCUSSION",
+      "content": "In this trial, we found that targeting low levels of HER2 with trastuzumab deruxtecan was a superior therapeutic approach to untargeted chemotherapy in patients with HER2-low metastatic breast cancer. The risk of disease progression or death was approximately 50% lower and the risk of death was 36% lower with trastuzumab deruxtecan than with the physician’s choice of chemotherapy, regardless of hormone-receptor status.\n\nHistorically, a binary categorization of HER2 status (positive vs. negative) defined the prognosis and treatment of patients with breast cancer on the basis of the activity of trastuzumab. Although HER2-targeted therapies have significantly improved outcomes for patients with HER2-positive breast cancer (defined by an IHC score of 3+ or by an IHC score of 2+ and positive results on ISH), benefits have not yet translated to patients with HER2 expression below this threshold.Although HER2 overexpression may be necessary for the efficacy of several anti-HER2 therapies, it may not be required for new antibody–drug conjugates. By virtue of its enzyme-cleavable antibody–drug linker, high drug-to-antibody ratio, and membrane-permeable payload, trastuzumab deruxtecan has shown evidence of antitumor activity in cancers across a full range of HER2-expression.In the DESTINY-Breast04 trial, trastuzumab deruxtecan showed superior activity over standard chemotherapy options in patients with HER2-low advanced breast cancer, which highlights the clinical relevance of the HER2-low patient population and supports a need to redefine subgroups within HER2-negative breast cancers.\n\nBefore this trial, few clinical trials were conducted specifically in patients with HER2-low metastatic breast cancer as defined here. Beyond recent trials of new antibody–drug conjugates, retrospective studies have failed to conclusively support defining HER2-low breast cancer as a prognostically or biologically distinct entity.However, the HER2-low population includes both hormone receptor–positive, hormone receptor–negative subgroups of patients, and trials in these populations can serve as a comparison for this new subgroup.\n\nAmong patients with metastatic hormone receptor–positive, HER2-negative breast cancer, real-world data show short progression-free survival after CDK4/6 inhibitor therapy, when serial single-agent chemotherapy is the mainstay of treatment for endocrine-refractory disease.Other studies of chemotherapy have shown modest benefits.In our trial, patients in the hormone receptor–positive cohort who received trastuzumab deruxtecan had significantly longer progression-free and overall survival than those who received the physician’s choice of chemotherapy. Patients with previous CDK4/6 inhibitor treatment had a progression-free survival benefit similar to that in patients without previous CDK4/6 inhibitor treatment.\n\nFor patients with refractory hormone receptor–negative, HER2-negative (triple-negative) disease, sacituzumab govitecan was recently approved on the basis of the results of the ASCENT trial, which showed progression-free and overall survival benefits for sacituzumab govitecan over the physician’s choice of chemotherapy.Although the hormone receptor–negative cohort was small in DESTINY-Breast04 trial, the proportion of patients with hormone receptor–negative disease was representative of the prevalence of such disease within the HER2-low population. Data are lacking to compare sacituzumab govitecan with trastuzumab deruxtecan in patients with breast cancer, but this trial suggests that trastuzumab deruxtecan offers another unique targeted therapy option for this otherwise poor-prognosis group. Moreover, given a similar mechanism of action, additional trials are needed to understand the appropriate use of these agents in this patient population.\n\nThe safety profile of trastuzumab deruxtecan in this trial was similar to the established safety profile in patients with HER2-positive metastatic breast cancer.The incidence of adverse events was similar in the two trial groups. The most common adverse event of grade 3 or higher was neutropenia in both trial groups, but incidences of febrile neutropenia were low. Most cases of adjudicated drug-related interstitial lung disease or pneumonitis in this trial were mild or moderate, and the overall incidence was generally consistent with that in previous studies.\n\nInterstitial lung disease or pneumonitis remains an important risk associated with trastuzumab deruxtecan. This trial followed current guidelines for surveillance and management, including proactive monitoring of symptoms and imaging to identify potential cases of interstitial lung disease or pneumonitis, active management with prompt dose interruption, and early institution of glucocorticoid treatment as recommended to manage the risk and minimize serious outcomes. Awareness efforts and research on risk factors for interstitial lung disease or pneumonitis are ongoing.\n\nA key consideration in DESTINY-Breast04 trial was the use of conventional HER2 IHC testing (and HER2 ISH testing when applicable) to identify cancers with HER2-low status. Although the accuracy of HER2-low scoring has been questioned,it is notable that the progression-free survival benefit was observed in patients with IHC 1+ and IHC 2+, ISH-negative disease. In this trial, the VENTANA HER2/neu (4B5) IUO Assay system (with ISH testing when applicable) was used to identify patients with HER2-low status, which suggests that a conventional IHC test can accurately identify patients who may benefit from trastuzumab deruxtecan. The data from this trial will also be used to update labeling of the assay to include a predictive claim for patients with HER2-low breast cancer. However, given reported limitations, alternative quantitative methods to better select patients for this new therapy may be warranted, especially as the minimum HER2-expression threshold required for trastuzumab deruxtecan activity is also currently being determined in ongoing studies (numbers,and). These results could have implications for future selection of patients for trastuzumab deruxtecan treatment.\n\nThis trial showed significantly longer progression-free survival and overall survival with trastuzumab deruxtecan than with the physician’s choice of chemotherapy among patients with HER2-low metastatic breast cancer, regardless of hormone-receptor status. These results have the potential to improve the treatment outcome for more than half of patients historically categorized as having HER2-negative breast cancer."
+     },
+     {
+      "title": "Supplementary Material",
+      "content": ""
+     }
+    ],
+    "figure_captions": [],
+    "table_captions": [],
+    "reference_count": 26
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:43:29+00:00"
+  },
+  {
+   "key": "get_trial {\"nctId\": \"nct03734029\"}",
+   "tool": "get_trial",
+   "args": {
+    "nctId": "NCT03734029"
+   },
+   "variant": "current",
+   "response": {
+    "nct_id": "NCT03734029",
+    "title": "Trastuzumab Deruxtecan (DS-8201a) Versus Investigator's Choice for HER2-low Breast Cancer That Has Spread or Cannot be Surgically Removed [DESTINY-Breast04]",
+    "status": "COMPLETED",
+    "phase": "PHASE3",
+    "conditions": [
+     "Breast Cancer"
+    ],
+    "interventions": [
+     {
+      "type": "DRUG",
+      "name": "Trastuzumab deruxtecan (DS-8201a)"
+     },
+     {
+      "type": "DRUG",
+      "name": "Capecitabine"
+     },
+     {
+      "type": "DRUG",
+      "name": "Eribulin"
+     },
+     {
+      "type": "DRUG",
+      "name": "Gemcitabine"
+     },
+     {
+      "type": "DRUG",
+      "name": "Paclitaxel"
+     },
+     {
+      "type": "DRUG",
+      "name": "Nab-paclitaxel"
+     }
+    ],
+    "enrollment": 557,
+    "sponsor": "Daiichi Sankyo",
+    "start_date": "2018-12-27",
+    "completion_date": "2026-05-19",
+    "study_type": "INTERVENTIONAL",
+    "url": "https://clinicaltrials.gov/study/NCT03734029",
+    "official_title": "A Phase 3, Multicenter, Randomized, Open-label, Active Controlled Trial of DS-8201a, an Anti-HER2-antibody Drug Conjugate (ADC), Versus Treatment of Physician's Choice for HER2-low, Unresectable and/or Metastatic Breast Cancer Subjects",
+    "summary": "This study will compare DS-8201a to physician choice standard treatment.\n\nParticipants must have HER2-low breast cancer that has been treated before.\n\nParticipants' cancer:\n\n* Cannot be removed by an operation\n* Has spread to other parts of the body",
+    "eligibility": {
+     "criteria": "Inclusion Criteria:\n\n* Is the age of majority in their country\n* Has pathologically documented breast cancer that:\n\n  1. Is unresectable or metastatic\n  2. Has low-HER2 expression defined as IHC 2+/ISH- or IHC 1+ (ISH- or untested)\n  3. Is HR-positive or HR-negative\n  4. Has progressed on, and would no longer benefit from, endocrine therapy\n  5. Has been treated with 1 to 2 prior lines of chemotherapy/adjuvant in the recurrent or metastatic setting\n  6. Was never previously HER2-positive (ICH 3+ or ISH+) on prior pathology testing (per American Society of Clinical Oncology-College of American Pathologists \\[ASCO-CAP\\] guidelines)\n* Has documented radiologic progression (during or after most recent treatment)\n* Has adequate archival tumor samples available or is wiling to provide fresh biopsies prior to randomization for:\n\n  1. assessment of HER2 status\n  2. assessment of post-treatment status\n* Has at least 1 measurable lesion per Response Evaluation Criteria In Solid Tumors 1.1\n* Has protocol-defined adequate cardiac, bone marrow, renal, hepatic and blood clotting functions\n* Male and female participants of reproductive/childbearing potential, agrees to follow instructions for method(s) of contraception and agrees to avoid preserving ova or sperm for at least 4.5 months after treatment (or longer, per locally approved labels)\n\nExclusion Criteria:\n\n* Is ineligible for all options in the physician's choice arm\n* Has breast cancer ever assessed with high-HER2 expression\n* Has previously been treated with any anti-HER2 therapy, including an antibody drug conjugate\n* Has uncontrolled or significant cardiovascular disease\n* Has spinal cord compression or clinically active central nervous system metastases\n* Has history of (noninfectious) interstitial lung disease (ILD)/pneumonitis that required steroids, has current ILD/pneumonitis, or suspected ILD/pneumonitis that cannot be ruled out by imaging at screening\n* Has any medical history or condition that per protocol or in the opinion of the investigator is inappropriate for the study",
+     "gender": "ALL",
+     "minimum_age": "18 Years",
+     "maximum_age": "",
+     "healthy_volunteers": "false"
+    },
+    "design": {
+     "allocation": "RANDOMIZED",
+     "intervention_model": "PARALLEL",
+     "primary_purpose": "TREATMENT",
+     "masking": "NONE",
+     "who_masked": []
+    },
+    "arms": [
+     {
+      "label": "Trastuzumab deruxtecan",
+      "type": "EXPERIMENTAL",
+      "description": "HER2-low, unresectable, and/or metastatic breast cancer participants previously treated with chemotherapy randomized to DS8201a",
+      "intervention_names": [
+       "Drug: Trastuzumab deruxtecan (DS-8201a)"
+      ]
+     },
+     {
+      "label": "Physician's Choice",
+      "type": "ACTIVE_COMPARATOR",
+      "description": "HER2-low, unresectable, and/or metastatic breast cancer participants previously treated with chemotherapy randomized to Physician's choice from the following options:\n\n* Capecitabine\n* Eribulin\n* Gemcitabine\n* Paclitaxel\n* Nab-paclitaxel",
+      "intervention_names": [
+       "Drug: Capecitabine",
+       "Drug: Eribulin",
+       "Drug: Gemcitabine",
+       "Drug: Paclitaxel",
+       "Drug: Nab-paclitaxel"
+      ]
+     }
+    ],
+    "primary_outcomes": [
+     {
+      "measure": "Progression-free Survival (PFS) Based on Blinded Independent Central Review (BICR) in the Hormone Receptor-Positive Cohort in Participants With HER2-low Breast Cancer",
+      "description": "Progression-free survival (PFS), defined as at least a 20% increase in the sum of diameters of target lesions, was assessed from the date of randomization to the date of the first radiographic disease progression or death due to any cause, whichever came first. PFS was based on blinded independent central review (BICR) in the hormone receptor-positive cohort according to modified Response Evaluation Criteria in Solid Tumors (mRECIST) version 1.1. Median PFS was from Kaplan-Meier analysis. Confidence interval for median was computed using the Brookmeyer-Crowley method.",
+      "time_frame": "From the date of randomization to the earliest date of the first objective documentation of radiographic disease progression or death due to any cause, up to approximately 3 years"
+     }
+    ],
+    "secondary_outcomes": [
+     {
+      "measure": "Progression-free Survival (PFS) Based on Blinded Independent Central Review (BICR) in Participants With HER2-low Breast Cancer (All Patients) Regardless of Hormone Receptor Status",
+      "description": "Progression-free survival (PFS), defined as at least a 20% increase in the sum of diameters of target lesions, was assessed from the date of randomization to the date of the first radiographic disease progression or death due to any cause, whichever came first. PFS was based on blinded independent central review (BICR) according to modified Response Evaluation Criteria in Solid Tumors (mRECIST) version 1.1. Median PFS was from Kaplan-Meier analysis. Confidence interval for median was computed using the Brookmeyer-Crowley method.",
+      "time_frame": "From the date of randomization to the earliest date of the first objective documentation of radiographic disease progression or death due to any cause, up to approximately 3 years"
+     },
+     {
+      "measure": "Progression-free Survival Based on Investigator Assessment in the Hormone Receptor-Positive Cohort in Participants With HER2-low Breast Cancer",
+      "description": "Progression-free survival (PFS), defined as at least a 20% increase in the sum of diameters of target lesions, was assessed from the date of randomization to the date of the first radiographic disease progression or death due to any cause, whichever came first. PFS was based on investigator assessment in the hormone receptor-positive cohort according to modified Response Evaluation Criteria in Solid Tumors (mRECIST) version 1.1. Median PFS was from Kaplan-Meier analysis. Confidence interval for median was computed using the Brookmeyer-Crowley method.",
+      "time_frame": "From the date of randomization to the earliest date of the first objective documentation of radiographic disease progression or death due to any cause, up to approximately 3 years"
+     },
+     {
+      "measure": "Progression-free Survival Based on Investigator Assessment in Participants With HER2-low Breast Cancer (All Patients)",
+      "description": "Progression-free survival (PFS), defined as at least a 20% increase in the sum of diameters of target lesions, was assessed from the date of randomization to the date of the first radiographic disease progression or death due to any cause, whichever came first. PFS was based on investigator assessment according to modified Response Evaluation Criteria in Solid Tumors (mRECIST) version 1.1. Median PFS was from Kaplan-Meier analysis. Confidence interval for median was computed using the Brookmeyer-Crowley method.",
+      "time_frame": "From the date of randomization to the earliest date of the first objective documentation of radiographic disease progression or death due to any cause, up to approximately 3 years"
+     },
+     {
+      "measure": "Overall Survival (OS) in the Hormone Receptor-Positive Cohort in Participants With HER2-low Breast Cancer",
+      "description": "Overall survival (OS) was defined as the time from the date of randomization to the date of death due to any cause. If there was no death reported for a participant before the data cutoff for OS analysis, OS was censored at the last contact date at which the participant was known to be alive.",
+      "time_frame": "From the date of randomization up to the date of death due to any cause, up to approximately 3 years"
+     },
+     {
+      "measure": "Number of Overall Survival Events (Deaths)",
+      "description": "",
+      "time_frame": "From the date of randomization up to the date of death due to any cause, up to approximately 3 years"
+     },
+     {
+      "measure": "Overall Survival (OS) in All Patients",
+      "description": "Overall survival (OS) was defined as the time from the date of randomization to the date of death due to any cause. If there was no death reported for a participant before the data cutoff for OS analysis, OS was censored at the last contact date at which the participant was known to be alive.",
+      "time_frame": "From the date of randomization up to the date of death due to any cause, up to approximately 3 years"
+     },
+     {
+      "measure": "Best Overall Response and Confirmed Objective Response Rate (ORR) in the Hormone Receptor-Positive Cohort in Participants With HER2-low Breast Cancer",
+      "description": "Best overall response rate and confirmed objective response rate (ORR) were assessed by blinded independent central review (BICR) and investigator assessment. Complete response (CR) was defined as a disappearance of all target lesions, partial response (PR) was defined as at least a 30% decrease in the sum of diameters of target lesions, and stable disease (SD) was defined as neither sufficient shrinkage to qualify for PR nor sufficient increase to qualify for progressive disease (PD; at least a 20% increase in the sum of diameters of target lesions. Confirmed ORR was defined as the number of participants with complete and partial responses and confirmed by a second assessment.",
+      "time_frame": "From screening and every 6 weeks up to withdrawal of subject consent, progressive disease (PD), or unacceptable toxicity, up to approximately 3 years"
+     },
+     {
+      "measure": "Best Overall Response and Confirmed Objective Response Rate (ORR) in Participants With HER2-low Breast Cancer (All Patients)",
+      "description": "Best overall response rate and confirmed objective response rate (ORR) were assessed by blinded independent central review (BICR) and investigator assessment. Complete response (CR) was defined as a disappearance of all target lesions, partial response (PR) was defined as at least a 30% decrease in the sum of diameters of target lesions, and stable disease (SD) was defined as neither sufficient shrinkage to qualify for PR nor sufficient increase to qualify for progressive disease (PD; at least a 20% increase in the sum of diameters of target lesions. Confirmed ORR was defined as the number of participants with complete and partial responses and confirmed by a second assessment.",
+      "time_frame": "From screening and every 6 weeks up to withdrawal of subject consent, progressive disease (PD), or unacceptable toxicity, up to approximately 3 years"
+     },
+     {
+      "measure": "Duration of Response in the Hormone Receptor-Positive Cohort in Participants With HER2-low Breast Cancer",
+      "description": "Duration of Response (DoR) is defined as the date of the first documented objective response (complete response \\[CR\\] or partial response \\[PR\\]) to the first documented disease progression or death, whichever occurs first. DoR was based on blinded independent central review (BICR) and investigator assessment. Median was from Kaplan-Meier estimate. Confidence interval for median was computed using the Brookmeyer-Crowley method.",
+      "time_frame": "From the date of the first documented objective response (CR or PR) to the first documented disease progression or death, whichever occurs first, up to approximately 3 years"
+     },
+     {
+      "measure": "Duration of Response in Participants With HER2-low Breast Cancer (All Patients)",
+      "description": "Duration of Response (DoR) is defined as the date of the first documented objective response (complete response \\[CR\\] or partial response \\[PR\\]) to the first documented disease progression or death, whichever occurs first. DoR was based on blinded independent central review (BICR) and investigator assessment. Median was from Kaplan-Meier estimate. Confidence interval for median was computed using the Brookmeyer-Crowley method.",
+      "time_frame": "From the date of the first documented objective response (CR or PR) to the first documented disease progression or death, whichever occurs first, up to approximately 3 years"
+     }
+    ],
+    "locations_count": 208,
+    "lead_investigator": "Global Clinical Leader",
+    "associated_pmids": [
+     "35665782",
+     "42340017",
+     "41062831",
+     "40349139",
+     "38884900",
+     "38442809",
+     "37597578",
+     "37207306",
+     "36780610"
+    ]
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:43:28+00:00"
+  }
+ ]
+}

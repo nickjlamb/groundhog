@@ -1,0 +1,82 @@
+{
+ "task_id": "abstain-004",
+ "entries": [
+  {
+   "key": "get_abstract {\"pmid\": \"26551272\"}",
+   "tool": "get_abstract",
+   "args": {
+    "pmid": "26551272"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "26551272",
+    "title": "A Randomized Trial of Intensive versus Standard Blood-Pressure Control.",
+    "authors": [
+     "SPRINT Research Group",
+     "Wright Jackson T",
+     "Williamson Jeff D",
+     "Whelton Paul K",
+     "Snyder Joni K",
+     "Sink Kaycee M",
+     "Rocco Michael V",
+     "Reboussin David M",
+     "Rahman Mahboob",
+     "Oparil Suzanne",
+     "Lewis Cora E",
+     "Kimmel Paul L",
+     "Johnson Karen C",
+     "Goff David C",
+     "Fine Lawrence J",
+     "Cutler Jeffrey A",
+     "Cushman William C",
+     "Cheung Alfred K",
+     "Ambrosius Walter T"
+    ],
+    "journal": "The New England journal of medicine",
+    "year": "2015",
+    "doi": "10.1056/NEJMoa1511939",
+    "volume": "373",
+    "issue": "22",
+    "pages": "2103-16",
+    "abstract_sections": [
+     {
+      "label": "BACKGROUND",
+      "text": "The most appropriate targets for systolic blood pressure to reduce cardiovascular morbidity and mortality among persons without diabetes remain uncertain."
+     },
+     {
+      "label": "METHODS",
+      "text": "We randomly assigned 9361 persons with a systolic blood pressure of 130 mm Hg or higher and an increased cardiovascular risk, but without diabetes, to a systolic blood-pressure target of less than 120 mm Hg (intensive treatment) or a target of less than 140 mm Hg (standard treatment). The primary composite outcome was myocardial infarction, other acute coronary syndromes, stroke, heart failure, or death from cardiovascular causes."
+     },
+     {
+      "label": "RESULTS",
+      "text": "At 1 year, the mean systolic blood pressure was 121.4 mm Hg in the intensive-treatment group and 136.2 mm Hg in the standard-treatment group. The intervention was stopped early after a median follow-up of 3.26 years owing to a significantly lower rate of the primary composite outcome in the intensive-treatment group than in the standard-treatment group (1.65% per year vs. 2.19% per year; hazard ratio with intensive treatment, 0.75; 95% confidence interval [CI], 0.64 to 0.89; P<0.001). All-cause mortality was also significantly lower in the intensive-treatment group (hazard ratio, 0.73; 95% CI, 0.60 to 0.90; P=0.003). Rates of serious adverse events of hypotension, syncope, electrolyte abnormalities, and acute kidney injury or failure, but not of injurious falls, were higher in the intensive-treatment group than in the standard-treatment group."
+     },
+     {
+      "label": "CONCLUSIONS",
+      "text": "Among patients at high risk for cardiovascular events but without diabetes, targeting a systolic blood pressure of less than 120 mm Hg, as compared with less than 140 mm Hg, resulted in lower rates of fatal and nonfatal major cardiovascular events and death from any cause, although significantly higher rates of some adverse events were observed in the intensive-treatment group. (Funded by the National Institutes of Health; ClinicalTrials.gov number, NCT01206062.)."
+     }
+    ],
+    "keywords": [],
+    "mesh_terms": [
+     "Age Factors",
+     "Aged",
+     "Antihypertensive Agents",
+     "Blood Pressure",
+     "Cardiovascular Diseases",
+     "Cause of Death",
+     "Female",
+     "Goals",
+     "Humans",
+     "Hypertension",
+     "Male",
+     "Middle Aged",
+     "Practice Guidelines as Topic",
+     "Risk Factors"
+    ],
+    "pmc_id": "PMC4689591"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:37:40+00:00"
+  }
+ ]
+}

@@ -2,6 +2,81 @@
  "task_id": "trial-005",
  "entries": [
   {
+   "key": "get_abstract {\"pmid\": \"27295427\"}",
+   "tool": "get_abstract",
+   "args": {
+    "pmid": "27295427"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "27295427",
+    "title": "Liraglutide and Cardiovascular Outcomes in Type 2 Diabetes.",
+    "authors": [
+     "Marso Steven P",
+     "Daniels Gilbert H",
+     "Brown-Frandsen Kirstine",
+     "Kristensen Peter",
+     "Mann Johannes F E",
+     "Nauck Michael A",
+     "Nissen Steven E",
+     "Pocock Stuart",
+     "Poulter Neil R",
+     "Ravn Lasse S",
+     "Steinberg William M",
+     "Stockner Mette",
+     "Zinman Bernard",
+     "Bergenstal Richard M",
+     "Buse John B",
+     "LEADER Steering Committee",
+     "LEADER Trial Investigators"
+    ],
+    "journal": "The New England journal of medicine",
+    "year": "2016",
+    "doi": "10.1056/NEJMoa1603827",
+    "volume": "375",
+    "issue": "4",
+    "pages": "311-22",
+    "abstract_sections": [
+     {
+      "label": "BACKGROUND",
+      "text": "The cardiovascular effect of liraglutide, a glucagon-like peptide 1 analogue, when added to standard care in patients with type 2 diabetes, remains unknown."
+     },
+     {
+      "label": "METHODS",
+      "text": "In this double-blind trial, we randomly assigned patients with type 2 diabetes and high cardiovascular risk to receive liraglutide or placebo. The primary composite outcome in the time-to-event analysis was the first occurrence of death from cardiovascular causes, nonfatal myocardial infarction, or nonfatal stroke. The primary hypothesis was that liraglutide would be noninferior to placebo with regard to the primary outcome, with a margin of 1.30 for the upper boundary of the 95% confidence interval of the hazard ratio. No adjustments for multiplicity were performed for the prespecified exploratory outcomes."
+     },
+     {
+      "label": "RESULTS",
+      "text": "A total of 9340 patients underwent randomization. The median follow-up was 3.8 years. The primary outcome occurred in significantly fewer patients in the liraglutide group (608 of 4668 patients [13.0%]) than in the placebo group (694 of 4672 [14.9%]) (hazard ratio, 0.87; 95% confidence interval [CI], 0.78 to 0.97; P<0.001 for noninferiority; P=0.01 for superiority). Fewer patients died from cardiovascular causes in the liraglutide group (219 patients [4.7%]) than in the placebo group (278 [6.0%]) (hazard ratio, 0.78; 95% CI, 0.66 to 0.93; P=0.007). The rate of death from any cause was lower in the liraglutide group (381 patients [8.2%]) than in the placebo group (447 [9.6%]) (hazard ratio, 0.85; 95% CI, 0.74 to 0.97; P=0.02). The rates of nonfatal myocardial infarction, nonfatal stroke, and hospitalization for heart failure were nonsignificantly lower in the liraglutide group than in the placebo group. The most common adverse events leading to the discontinuation of liraglutide were gastrointestinal events. The incidence of pancreatitis was nonsignificantly lower in the liraglutide group than in the placebo group."
+     },
+     {
+      "label": "CONCLUSIONS",
+      "text": "In the time-to-event analysis, the rate of the first occurrence of death from cardiovascular causes, nonfatal myocardial infarction, or nonfatal stroke among patients with type 2 diabetes mellitus was lower with liraglutide than with placebo. (Funded by Novo Nordisk and the National Institutes of Health; LEADER ClinicalTrials.gov number, NCT01179048.)."
+     }
+    ],
+    "keywords": [],
+    "mesh_terms": [
+     "Aged",
+     "Cardiovascular Diseases",
+     "Diabetes Mellitus, Type 2",
+     "Double-Blind Method",
+     "Female",
+     "Gastrointestinal Diseases",
+     "Humans",
+     "Hypoglycemic Agents",
+     "Liraglutide",
+     "Male",
+     "Middle Aged",
+     "Myocardial Infarction",
+     "Stroke",
+     "Treatment Outcome"
+    ],
+    "pmc_id": "PMC4985288"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:43:32+00:00"
+  },
+  {
    "key": "get_trial {\"nctId\": \"nct01179048\"}",
    "tool": "get_trial",
    "args": {
@@ -152,7 +227,7 @@
     ]
    },
    "recorded_by": "mock:submit-gold",
-   "recorded_at": "2026-11-06T15:34:12+00:00"
+   "recorded_at": "2026-11-06T15:43:31+00:00"
   }
  ]
 }

@@ -1,0 +1,46 @@
+{
+ "task_id": "cmp-005",
+ "entries": [
+  {
+   "key": "compare_labels {\"drug\": \"domperidone\", \"sections\": [\"contraindications\"]}",
+   "tool": "compare_labels",
+   "args": {
+    "drug": "domperidone",
+    "sections": [
+     "contraindications"
+    ]
+   },
+   "variant": "current",
+   "response": {
+    "drug": "domperidone",
+    "comparisons": [
+     {
+      "topic": "Contraindications",
+      "us_section": null,
+      "uk_section": {
+       "code": "4.3",
+       "title": "Contraindications",
+       "content": "Domperidone is contraindicated in the following situations: \n • Known hypersensitivity to domperidone or any of the excipients\n • Prolactin-releasing pituitary tumour (prolactinoma).\n • Confirmed or suspected pheochromocytoma due to the risk of severe hypertension episodes.\n • when stimulation of the gastric motility could be harmful, e.g .,in patients with gastro-intestinal haemorrhage, mechanical obstruction or perforation.\n • in patients with moderate or severe hepatic impairment (see section 5.2).\n • in patients who have known existing prolongation of cardiac conduction intervals, particularly QTc, patients with significant electrolyte disturbances or underlying cardiac diseases such as congestive heart failure (see section 4.4)\n • co-administration with QT-prolonging drugs, at the exception of apomorphine (see sections 4.4 and 4.5)\n • co-administration with potent CYP3A4 inhibitors (regardless of their QT prolonging effects) (see section 4.5)"
+      },
+      "us_note": "US label unavailable (see us_label.note)"
+     }
+    ],
+    "us_source": null,
+    "uk_source": "https://www.medicines.org.uk/emc/product/3188/smpc",
+    "us_label": {
+     "status": "unavailable",
+     "product": null,
+     "sections_returned": 0,
+     "note": "US label not retrieved: no openFDA/DailyMed product matched this name, or the source was unreachable. If the name is a brand, try resolve_drug_name and retry with the generic."
+    },
+    "uk_label": {
+     "status": "ok",
+     "product": "Domperidone 1mg/ml Oral Suspension",
+     "sections_returned": 1
+    }
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:43:15+00:00"
+  }
+ ]
+}

@@ -1,0 +1,96 @@
+{
+ "task_id": "claim-007",
+ "entries": [
+  {
+   "key": "get_abstract {\"pmid\": \"32678530\"}",
+   "tool": "get_abstract",
+   "args": {
+    "pmid": "32678530"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "32678530",
+    "title": "Dexamethasone in Hospitalized Patients with Covid-19.",
+    "authors": [
+     "RECOVERY Collaborative Group",
+     "Horby Peter",
+     "Lim Wei Shen",
+     "Emberson Jonathan R",
+     "Mafham Marion",
+     "Bell Jennifer L",
+     "Linsell Louise",
+     "Staplin Natalie",
+     "Brightling Christopher",
+     "Ustianowski Andrew",
+     "Elmahi Einas",
+     "Prudon Benjamin",
+     "Green Christopher",
+     "Felton Timothy",
+     "Chadwick David",
+     "Rege Kanchan",
+     "Fegan Christopher",
+     "Chappell Lucy C",
+     "Faust Saul N",
+     "Jaki Thomas",
+     "Jeffery Katie",
+     "Montgomery Alan",
+     "Rowan Kathryn",
+     "Juszczak Edmund",
+     "Baillie J Kenneth",
+     "Haynes Richard",
+     "Landray Martin J"
+    ],
+    "journal": "The New England journal of medicine",
+    "year": "2021",
+    "doi": "10.1056/NEJMoa2021436",
+    "volume": "384",
+    "issue": "8",
+    "pages": "693-704",
+    "abstract_sections": [
+     {
+      "label": "BACKGROUND",
+      "text": "Coronavirus disease 2019 (Covid-19) is associated with diffuse lung damage. Glucocorticoids may modulate inflammation-mediated lung injury and thereby reduce progression to respiratory failure and death."
+     },
+     {
+      "label": "METHODS",
+      "text": "In this controlled, open-label trial comparing a range of possible treatments in patients who were hospitalized with Covid-19, we randomly assigned patients to receive oral or intravenous dexamethasone (at a dose of 6 mg once daily) for up to 10 days or to receive usual care alone. The primary outcome was 28-day mortality. Here, we report the final results of this assessment."
+     },
+     {
+      "label": "RESULTS",
+      "text": "A total of 2104 patients were assigned to receive dexamethasone and 4321 to receive usual care. Overall, 482 patients (22.9%) in the dexamethasone group and 1110 patients (25.7%) in the usual care group died within 28 days after randomization (age-adjusted rate ratio, 0.83; 95% confidence interval [CI], 0.75 to 0.93; P<0.001). The proportional and absolute between-group differences in mortality varied considerably according to the level of respiratory support that the patients were receiving at the time of randomization. In the dexamethasone group, the incidence of death was lower than that in the usual care group among patients receiving invasive mechanical ventilation (29.3% vs. 41.4%; rate ratio, 0.64; 95% CI, 0.51 to 0.81) and among those receiving oxygen without invasive mechanical ventilation (23.3% vs. 26.2%; rate ratio, 0.82; 95% CI, 0.72 to 0.94) but not among those who were receiving no respiratory support at randomization (17.8% vs. 14.0%; rate ratio, 1.19; 95% CI, 0.92 to 1.55)."
+     },
+     {
+      "label": "CONCLUSIONS",
+      "text": "In patients hospitalized with Covid-19, the use of dexamethasone resulted in lower 28-day mortality among those who were receiving either invasive mechanical ventilation or oxygen alone at randomization but not among those receiving no respiratory support. (Funded by the Medical Research Council and National Institute for Health Research and others; RECOVERY ClinicalTrials.gov number, NCT04381936; ISRCTN number, 50189673.)."
+     }
+    ],
+    "keywords": [],
+    "mesh_terms": [
+     "Administration, Oral",
+     "Aged",
+     "Aged, 80 and over",
+     "Anti-Infective Agents",
+     "COVID-19",
+     "Dexamethasone",
+     "Drug Therapy, Combination",
+     "Female",
+     "Glucocorticoids",
+     "Hospitalization",
+     "Humans",
+     "Injections, Intravenous",
+     "Kaplan-Meier Estimate",
+     "Length of Stay",
+     "Male",
+     "Odds Ratio",
+     "Oxygen Inhalation Therapy",
+     "Respiration, Artificial",
+     "United Kingdom",
+     "COVID-19 Drug Treatment"
+    ],
+    "pmc_id": "PMC7383595"
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:37:46+00:00"
+  }
+ ]
+}

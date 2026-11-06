@@ -1,0 +1,239 @@
+{
+ "task_id": "trial-003",
+ "entries": [
+  {
+   "key": "get_abstract {\"pmid\": \"28304224\"}",
+   "tool": "get_abstract",
+   "args": {
+    "pmid": "28304224"
+   },
+   "variant": "current",
+   "response": {
+    "pmid": "28304224",
+    "title": "Evolocumab and Clinical Outcomes in Patients with Cardiovascular Disease.",
+    "authors": [
+     "Sabatine Marc S",
+     "Giugliano Robert P",
+     "Keech Anthony C",
+     "Honarpour Narimon",
+     "Wiviott Stephen D",
+     "Murphy Sabina A",
+     "Kuder Julia F",
+     "Wang Huei",
+     "Liu Thomas",
+     "Wasserman Scott M",
+     "Sever Peter S",
+     "Pedersen Terje R",
+     "FOURIER Steering Committee and Investigators"
+    ],
+    "journal": "The New England journal of medicine",
+    "year": "2017",
+    "doi": "10.1056/NEJMoa1615664",
+    "volume": "376",
+    "issue": "18",
+    "pages": "1713-1722",
+    "abstract_sections": [
+     {
+      "label": "BACKGROUND",
+      "text": "Evolocumab is a monoclonal antibody that inhibits proprotein convertase subtilisin-kexin type 9 (PCSK9) and lowers low-density lipoprotein (LDL) cholesterol levels by approximately 60%. Whether it prevents cardiovascular events is uncertain."
+     },
+     {
+      "label": "METHODS",
+      "text": "We conducted a randomized, double-blind, placebo-controlled trial involving 27,564 patients with atherosclerotic cardiovascular disease and LDL cholesterol levels of 70 mg per deciliter (1.8 mmol per liter) or higher who were receiving statin therapy. Patients were randomly assigned to receive evolocumab (either 140 mg every 2 weeks or 420 mg monthly) or matching placebo as subcutaneous injections. The primary efficacy end point was the composite of cardiovascular death, myocardial infarction, stroke, hospitalization for unstable angina, or coronary revascularization. The key secondary efficacy end point was the composite of cardiovascular death, myocardial infarction, or stroke. The median duration of follow-up was 2.2 years."
+     },
+     {
+      "label": "RESULTS",
+      "text": "At 48 weeks, the least-squares mean percentage reduction in LDL cholesterol levels with evolocumab, as compared with placebo, was 59%, from a median baseline value of 92 mg per deciliter (2.4 mmol per liter) to 30 mg per deciliter (0.78 mmol per liter) (P<0.001). Relative to placebo, evolocumab treatment significantly reduced the risk of the primary end point (1344 patients [9.8%] vs. 1563 patients [11.3%]; hazard ratio, 0.85; 95% confidence interval [CI], 0.79 to 0.92; P<0.001) and the key secondary end point (816 [5.9%] vs. 1013 [7.4%]; hazard ratio, 0.80; 95% CI, 0.73 to 0.88; P<0.001). The results were consistent across key subgroups, including the subgroup of patients in the lowest quartile for baseline LDL cholesterol levels (median, 74 mg per deciliter [1.9 mmol per liter]). There was no significant difference between the study groups with regard to adverse events (including new-onset diabetes and neurocognitive events), with the exception of injection-site reactions, which were more common with evolocumab (2.1% vs. 1.6%)."
+     },
+     {
+      "label": "CONCLUSIONS",
+      "text": "In our trial, inhibition of PCSK9 with evolocumab on a background of statin therapy lowered LDL cholesterol levels to a median of 30 mg per deciliter (0.78 mmol per liter) and reduced the risk of cardiovascular events. These findings show that patients with atherosclerotic cardiovascular disease benefit from lowering of LDL cholesterol levels below current targets. (Funded by Amgen; FOURIER ClinicalTrials.gov number, NCT01764633 .)."
+     }
+    ],
+    "keywords": [],
+    "mesh_terms": [
+     "Aged",
+     "Antibodies, Monoclonal",
+     "Antibodies, Monoclonal, Humanized",
+     "Anticholesteremic Agents",
+     "Atherosclerosis",
+     "Cardiovascular Diseases",
+     "Cholesterol, LDL",
+     "Double-Blind Method",
+     "Drug Therapy, Combination",
+     "Female",
+     "Follow-Up Studies",
+     "Humans",
+     "Hydroxymethylglutaryl-CoA Reductase Inhibitors",
+     "Hypercholesterolemia",
+     "Incidence",
+     "Least-Squares Analysis",
+     "Male",
+     "Middle Aged",
+     "PCSK9 Inhibitors",
+     "Proprotein Convertase 9"
+    ],
+    "pmc_id": ""
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:43:30+00:00"
+  },
+  {
+   "key": "get_trial {\"nctId\": \"nct01764633\"}",
+   "tool": "get_trial",
+   "args": {
+    "nctId": "NCT01764633"
+   },
+   "variant": "current",
+   "response": {
+    "nct_id": "NCT01764633",
+    "title": "Further Cardiovascular Outcomes Research With PCSK9 Inhibition in Subjects With Elevated Risk",
+    "status": "COMPLETED",
+    "phase": "PHASE3",
+    "conditions": [
+     "Dyslipidemia"
+    ],
+    "interventions": [
+     {
+      "type": "BIOLOGICAL",
+      "name": "Evolocumab"
+     },
+     {
+      "type": "DRUG",
+      "name": "Placebo"
+     }
+    ],
+    "enrollment": 27564,
+    "sponsor": "Amgen",
+    "start_date": "2013-02-08",
+    "completion_date": "2016-11-11",
+    "study_type": "INTERVENTIONAL",
+    "url": "https://clinicaltrials.gov/study/NCT01764633",
+    "official_title": "A Double-blind, Randomized, Placebo-controlled, Multicenter Study Assessing the Impact of Additional LDL-Cholesterol Reduction on Major Cardiovascular Events When Evolocumab (AMG 145) is Used in Combination With Statin Therapy In Patients With Clinically Evident Cardiovascular Disease",
+    "summary": "The primary objective was to evaluate the effect of treatment with evolocumab, compared with placebo, on the risk for cardiovascular death, myocardial infarction, stroke, hospitalization for unstable angina, or coronary revascularization, whichever occurs first, in patients with clinically evident cardiovascular disease.",
+    "eligibility": {
+     "criteria": "Inclusion Criteria:\n\n* Male or female ≥ 40 to ≤ 85 years of age\n* History of clinically evident cardiovascular disease at high risk for a recurrent event\n* Fasting low-density lipoprotein cholesterol (LDL-C) ≥ 70 mg/dL (≥ 1.8 mmol/L) ) or non-high-density lipoprotein cholesterol (non-HDL-C) ≥ 100 mg/dL (\\> 2.6 mmol/L)\n* Fasting triglycerides ≤ 400 mg/dL (4.5 mmol/L)\n\nExclusion Criteria:\n\n* New York Heart Association (NYHA) class III or IV, or last known left ventricular ejection fraction \\< 30%\n* Uncontrolled hypertension\n* Uncontrolled or recurrent ventricular tachycardia\n* Untreated hyperthyroidism or hypothyroidism\n* Homozygous familial hypercholesterolemia\n* LDL or plasma apheresis",
+     "gender": "ALL",
+     "minimum_age": "40 Years",
+     "maximum_age": "85 Years",
+     "healthy_volunteers": "false"
+    },
+    "design": {
+     "allocation": "RANDOMIZED",
+     "intervention_model": "PARALLEL",
+     "primary_purpose": "TREATMENT",
+     "masking": "QUADRUPLE",
+     "who_masked": [
+      "PARTICIPANT",
+      "CARE_PROVIDER",
+      "INVESTIGATOR",
+      "OUTCOMES_ASSESSOR"
+     ]
+    },
+    "arms": [
+     {
+      "label": "Placebo",
+      "type": "PLACEBO_COMPARATOR",
+      "description": "Participants received placebo subcutaneous injections either once every 2 weeks (Q2W) or once a month (QM) according to their own preference.",
+      "intervention_names": [
+       "Drug: Placebo"
+      ]
+     },
+     {
+      "label": "Evolocumab",
+      "type": "EXPERIMENTAL",
+      "description": "Participants received evolocumab 140 mg Q2W or 420 mg QM subcutaneous injections according to their own preference.",
+      "intervention_names": [
+       "Biological: Evolocumab"
+      ]
+     }
+    ],
+    "primary_outcomes": [
+     {
+      "measure": "Time to Cardiovascular Death, Myocardial Infarction, Hospitalization for Unstable Angina, Stroke, or Coronary Revascularization",
+      "description": "All deaths and potential endpoint events were adjudicated by an independent external Clinical Events Committee (CEC) led by the Thrombolysis in Myocardial Infarction (TIMI) Study Group, using standardized definitions based on the \"Standardized Definitions for Cardiovascular and Stroke End Point Events in Clinical Trials and the Third Universal Definition of Myocardial Infarction\".\n\nTime to cardiovascular death, myocardial infarction, stroke, hospitalization for unstable angina, or coronary revascularization was defined as the time from randomization to the first occurrence of any component of the composite endpoint and was analyzed using Kaplan-Meier (KM) survival analysis. KM estimates of the percentage of participants with an event are reported. Participants with no event were censored based on last non-fatal potential endpoint collection date.",
+      "time_frame": "Events that occurred from randomization to the last confirmed survival status date; the median duration of follow-up was 26 months. KM estimates at 6, 12, 18, 24, 30 and 36 months are reported."
+     }
+    ],
+    "secondary_outcomes": [
+     {
+      "measure": "Time to Cardiovascular Death, Myocardial Infarction, or Stroke",
+      "description": "All deaths and potential endpoint events were adjudicated by an independent external CEC led by the TIMI Study Group, using standardized definitions based on the \"Standardized Definitions for Cardiovascular and Stroke End Point Events in Clinical Trials and the Third Universal Definition of Myocardial Infarction\". Time to cardiovascular death, myocardial infarction, or stroke was defined as the time from randomization to the first occurrence of any component of the composite endpoint and was analyzed using Kaplan-Meier (KM) survival analysis. KM estimates of the percentage of participants with an event are reported. Participants with no event were censored based on last non-fatal potential endpoint collection date.",
+      "time_frame": "Events that occurred from randomization to the last confirmed survival status date; the median duration of follow-up was 26 months. KM estimates at 6, 12, 18, 24, 30 and 36 months are reported."
+     },
+     {
+      "measure": "Time to Cardiovascular Death",
+      "description": "All deaths and potential endpoint events were adjudicated by an independent external CEC led by the TIMI Study Group, using standardized definitions based on the \"Standardized Definitions for Cardiovascular and Stroke End Point Events in Clinical Trials and the Third Universal Definition of Myocardial Infarction\".\n\nCardiovascular death includes death resulting from an acute myocardial infarction (MI), sudden cardiac death, death due to heart failure (HF), death due to stroke, death due to cardiovascular (CV) procedures, death due to CV hemorrhage, and death due to other CV causes.\n\nTime to cardiovascular death was defined as the time from randomization to the date of cardiovascular death and was analyzed using Kaplan-Meier (KM) survival analysis. KM estimates of the percentage of participants with an event are reported. Participants with no event were censored based on the last confirmed survival status date.",
+      "time_frame": "Events that occurred from randomization to the last confirmed survival status date; the median duration of follow-up was 26 months. KM estimates at 6, 12, 18, 24, 30 and 36 months are reported."
+     },
+     {
+      "measure": "Time to All Cause Death",
+      "description": "Time to all-cause death was defined as the time from randomization to the date of death and was analyzed using Kaplan-Meier (KM) survival analysis. KM estimates of the percentage of participants with an event are reported. Participants with no event were censored based on the last confirmed survival status date.",
+      "time_frame": "Events that occurred from randomization to the last confirmed survival status date; the median duration of follow-up was 26 months. KM estimates at 6, 12, 18, 24, 30 and 36 months are reported."
+     },
+     {
+      "measure": "Time to First Myocardial Infarction",
+      "description": "All deaths and potential endpoint events were adjudicated by an independent external CEC led by the TIMI Study Group, using standardized definitions based on the \"Standardized Definitions for Cardiovascular and Stroke End Point Events in Clinical Trials and the Third Universal Definition of Myocardial Infarction\".\n\nThe diagnosis of myocardial infarction required the combination of:\n\n* Evidence of myocardial necrosis (either changes in cardiac biomarkers or post-mortem pathological findings); and\n* Supporting information derived from the clinical presentation, electrocardiographic changes, or the results of myocardial or coronary artery Imaging.\n\nTime to first myocardial infarction was defined as the time from randomization to the date of the first MI and was analyzed using Kaplan-Meier survival analysis. KM estimates of the percentage of participants with an event are reported. Participants with no event were censored based on last non-fatal potential endpoint collection date.",
+      "time_frame": "Events that occurred from randomization to the last confirmed survival status date; the median duration of follow-up was 26 months. KM estimates at 6, 12, 18, 24, 30 and 36 months are reported."
+     },
+     {
+      "measure": "Time to First Stroke",
+      "description": "All deaths and potential endpoint events were adjudicated by an independent external CEC led by the TIMI Study Group, using standardized definitions based on the \"Standardized Definitions for Cardiovascular and Stroke End Point Events in Clinical Trials and the Third Universal Definition of Myocardial Infarction\".\n\nStroke was defined as an acute episode of focal or global neurological dysfunction caused by brain, spinal cord, or retinal vascular injury as a result of hemorrhage or infarction.\n\nTime to first stroke was defined as the time from randomization to the date of the stroke and was analyzed using Kaplan-Meier (KM) survival analysis. KM estimates of the percentage of participants with an event are reported. Participants with no event were censored based on last non-fatal potential endpoint collection date.",
+      "time_frame": "Events that occurred from randomization to the last confirmed survival status date; the median duration of follow-up was 26 months. KM estimates at 6, 12, 18, 24, 30 and 36 months are reported."
+     },
+     {
+      "measure": "Time to First Coronary Revascularization",
+      "description": "All deaths and potential endpoint events were adjudicated by an independent external CEC led by the TIMI Study Group, using standardized definitions based on the \"Standardized Definitions for Cardiovascular and Stroke End Point Events in Clinical Trials and the Third Universal Definition of Myocardial Infarction\".\n\nTime to first coronary revascularization was defined as the time from randomization to the date of the coronary revascularization and was analyzed using Kaplan-Meier (KM) survival analysis. KM estimates of the percentage of participants with an event are reported. Participants with no event were censored based on last non-fatal potential endpoint collection date.",
+      "time_frame": "Events that occurred from randomization to the last confirmed survival status date; the median duration of follow-up was 26 months. KM estimates at 6, 12, 18, 24, 30 and 36 months are reported."
+     },
+     {
+      "measure": "Time to Cardiovascular Death or First Hospitalization for Worsening Heart Failure",
+      "description": "All events were adjudicated by an independent external CEC led by the TIMI Study Group, using standardized definitions.\n\nHF hospitalization was defined as an event that met all of the following criteria:\n\n1. Admitted to hospital with a primary diagnosis of HF\n2. In hospital for at least 24 hours\n3. Documented new or worsening symptoms due to HF, including at least 1 of the following:\n\n   * Dyspnea\n   * Decreased exercise tolerance\n   * Fatigue\n   * Other symptoms of worsened end-organ perfusion or volume overload\n4. Evidence of new or worsening HF consisting of at least 2 physical exam findings or 1 physical exam finding and at least 1 laboratory criterion\n5. Received new or increased treatment for HF. Time to CV death or first hospitalization for worsening HF was defined as the time from randomization to the first occurrence of any component of the endpoint analyzed using KM survival analysis. Participants with no event were censored based on last non-fatal potential endpoint collection date.",
+      "time_frame": "Events that occurred from randomization to the last confirmed survival status date; the median duration of follow-up was 26 months. KM estimates at 6, 12, 18, 24, 30 and 36 months are reported."
+     },
+     {
+      "measure": "Time to First Ischemic Fatal or Non-Fatal Stroke or Transient Ischemic Attack",
+      "description": "All deaths and potential endpoint events were adjudicated by an independent external CEC led by the TIMI Study Group, using standardized definitions.\n\nIschemic stroke was defined as an acute episode of focal cerebral, spinal, or retinal dysfunction caused by infarction of central nervous system tissue. Transient ischemic attack (TIA) was defined as a transient episode of focal neurological dysfunction caused by brain, spinal cord, or retinal ischemia, without acute infarction.\n\nTime to first ischemic fatal or non-fatal stroke or TIA was defined as the time from randomization to the first occurrence of any component of the composite endpoint and was analyzed using KM analysis. KM estimates of the percentage of participants with an event are reported. Participants with no event were censored based on last non-fatal potential endpoint collection date.",
+      "time_frame": "Events that occurred from randomization to the last confirmed survival status date; the median duration of follow-up was 26 months. KM estimates at 6, 12, 18, 24, 30 and 36 months are reported."
+     }
+    ],
+    "locations_count": 1284,
+    "lead_investigator": "MD",
+    "associated_pmids": [
+     "28304224",
+     "28832867",
+     "31166576",
+     "35760720",
+     "37344040",
+     "41178569",
+     "40255182",
+     "36779348",
+     "36585131",
+     "36007987",
+     "35209731",
+     "34537830",
+     "33980763",
+     "33197560",
+     "33078867",
+     "32785614",
+     "32432684",
+     "32347887",
+     "32347885",
+     "32312223",
+     "31196453",
+     "31116355",
+     "30586750",
+     "30540337",
+     "29898218",
+     "29626068",
+     "29530884",
+     "29133605",
+     "28927706",
+     "28859947"
+    ]
+   },
+   "recorded_by": "mock:submit-gold",
+   "recorded_at": "2026-11-06T15:43:29+00:00"
+  }
+ ]
+}
