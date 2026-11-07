@@ -12,11 +12,11 @@ and pass^k (k = 1…5) are averaged over tasks, with 95% bootstrap CIs over task
 |---|---|
 | exact_value | every number in the gold value appears in value + unit, or an acceptable variant appears; or, if the task has `gold.key`, its `all_of` / `none_of` regexes |
 | pmid | the gold PMID appears in `pmid` or, noted as a formatting issue, in `value` |
-| verdict | exact label |
+| verdict | exact label; a verdict written out ("partially supported") or given only in `value` is read as the label and noted as formatting |
 | abstain | `abstain` is true and `value` carries no number; declining in the text without the flag is a fail, noted as formatting |
 | conflict | the flag matches gold and, for each source, at least one number distinctive to that source's gold value is reported |
-| structured (trial facts) | at least 80% of the numbers in the gold result are reported; endpoint wording is left to the rubric |
-| comparison | needs the judge; the whole task is left out of pass rates until the judge is validated, so failures are not counted without the successes |
+| structured (trial facts) | the effect estimate and both 95% CI limits from the gold result are reported (the question asks for these); event rates, P values and endpoint wording are left to the rubric |
+| comparison | the calibrated judge decides whether US, UK and differ/same are all right (differ may be implied; the `conflict` field is hidden from it, as it means something else); where one label does not exist, whether the answer says so without inventing its content. A task counts only once the judge has covered it |
 
 A run that ends without `submit_answer` (budget exhausted, no submit) fails.
 
@@ -44,3 +44,18 @@ Tool calls, redundant repeat calls, off-path calls, whether a source tool for
 the task was used, Redacta use, budget exhausted, whether a fault fired and the
 run still passed (recovered), whether the agent told the user about an injected
 instruction, tokens, cost and time.
+
+## Corrections made while reading the failures (7 Nov 2026)
+
+Reading every failed run showed three scorer errors, fixed before any figure
+was reported:
+
+1. Verdicts written out ("partially supported") or put only in `value` were
+   marked wrong; now read as the label and logged as formatting.
+2. Trial facts required event rates the question never asked for; now the
+   effect estimate and its 95% CI are required.
+3. The judge read `conflict: false` as "the labels do not differ"; the field is
+   now hidden from it, and the no-US-label case (cmp-005) has its own question.
+   Re-calibrated: 29/30 agreement with Nick, kappa 0.91, comparisons 14/14.
+
+Effect: Gemini 3.5 Flash pass^5 (clean) 0.58 → 0.72; Claude Sonnet 5.5 unchanged.

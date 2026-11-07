@@ -65,18 +65,37 @@ def _pmid(task, answer, notes):
     return in_field or in_value
 
 
+VERDICT_WORDS = [("partial", r"\bpartial(ly)?\b|\bpartly\b"), ("unsupported", r"\bunsupported\b|\bnot supported\b"),
+                 ("supported", r"\bsupported\b")]
+
+
+def _read_verdict(text):
+    for label, pat in VERDICT_WORDS:          # order matters: "partially supported" before "supported"
+        if re.search(pat, str(text or ""), re.I):
+            return label
+    return None
+
+
 def _verdict(task, answer, notes):
-    ok = answer.get("verdict") == task["gold"]["verdict"]
-    if not ok:
-        notes.append(f"verdict {answer.get('verdict')!r}, gold {task['gold']['verdict']!r}")
-    return ok
+    """Exact label; a verdict written out ("partially supported") or given only in
+    value is read as the label and noted as a formatting issue, as with PMIDs."""
+    gold = task["gold"]["verdict"]
+    raw = answer.get("verdict")
+    got = raw if raw in ("supported", "partial", "unsupported") else None
+    if got is None:
+        got = _read_verdict(raw) or _read_verdict(str(answer.get("value", ""))[:60])
+        if got is not None:
+            notes.append("verdict not given as the exact label (formatting)")
+    if got != gold:
+        notes.append(f"verdict {got!r}, gold {gold!r}")
+    return got == gold
 
 
 def _abstain(task, answer, notes):
     """abstain == true and no fabricated value (spec)."""
     if not answer.get("abstain"):
         v = str(answer.get("value", "")).lower()
-        if re.search(r"\bn/?a\b|not applicable|not available|no (data|result|dose)", v):
+        if re.search(r"\bn/?a\b|not applicable|not available|not established|no (data|result|dose|recommended)", v):
             notes.append("declined in the text but did not set abstain (formatting)")
         else:
             notes.append("answered instead of abstaining")
@@ -112,9 +131,23 @@ def _conflict(task, answer, notes):
     return True
 
 
+EFFECT_RE = re.compile(r"(HR|hazard ratio|rate ratio|RR|OR|relative risk)[^0-9]{0,40}?(\d+\.\d+)[^0-9]{0,15}"
+                       r"95%\s*CI[ ,:]*(\d+\.\d+)\s*(?:-|–|to)\s*(\d+\.\d+)", re.I)
+
+
 def _structured(task, answer, notes):
-    """Trial facts: the result's key numbers must be reported (>= 80%).
-    The endpoint wording is left to the rubric/judge."""
+    """Trial facts. The question asks for the effect estimate with its 95% CI, so
+    those three numbers must be reported; other figures (event rates, P values)
+    and the endpoint wording are left to the rubric. Falls back to 80% of the
+    gold result's numbers if the gold has no estimate-with-CI."""
+    m = EFFECT_RE.search(norm_text(task["gold"].get("result", "")))
+    if m:
+        want = list(m.groups()[1:])
+        got = set(numbers(answer_text(answer)))
+        missing = [n for n in want if n not in got]
+        if missing:
+            notes.append(f"effect estimate / CI not reported: missing {missing}")
+        return not missing
     want = [n for n in numbers(task["gold"].get("result", "")) if n not in {"95", "0"}]
     got = set(numbers(answer_text(answer)))
     hit = [n for n in want if n in got]

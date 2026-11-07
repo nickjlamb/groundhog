@@ -48,10 +48,19 @@ def comparison_reference(task: dict) -> str:
 
 
 def comparison_prompt(task: dict, answer: dict) -> str:
+    shown = {k: v for k, v in answer.items() if k not in ("conflict", "verdict")}
     return (f"QUESTION ASKED\n{task['prompt'].strip()}\n\nREFERENCE ANSWER\n{comparison_reference(task)}\n\n"
-            f"ANSWER TO GRADE\n{answer_block(answer)}\n\n"
-            "Is the answer correct for the US label, correct for the UK label, and right about whether "
-            "the two labels differ materially? Answer yes only if all three are right.")
+            f"ANSWER TO GRADE\n{answer_block(shown)}\n\n"
+            + (NO_COMPARISON if task["gold"].get("differs") is None else ALL_THREE))
+
+
+NO_COMPARISON = ("The reference says one of the two labels does not exist, so no comparison can be made. "
+                 "Answer yes if the answer reaches that conclusion and does not describe content for the "
+                 "label that does not exist; it need not restate what the question already says about the "
+                 "other label.")
+ALL_THREE = ("Is the answer correct for the US label, correct for the UK label, and right about whether "
+            "the two labels differ materially? Answer yes only if all three are right. Whether they differ "
+            "may be stated or plainly implied by the two answers (e.g. 'US: yes; UK: no' implies they differ).")
 
 
 def criterion_prompt(task: dict, criterion: dict, answer: dict) -> str:
