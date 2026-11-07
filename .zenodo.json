@@ -1,0 +1,32 @@
+{
+  "title": "Groundhog: reliability of tool-using agents on medical-evidence tasks (v1.0.0)",
+  "upload_type": "dataset",
+  "description": "Benchmark of 50 verified medical-evidence tasks for tool-using AI agents, with frozen tool responses (cassettes and a fixed search collection), fault injection, scorers (outcome, process, pass^k), a calibrated model judge and a failure taxonomy. Code MIT; task files CC BY 4.0.",
+  "creators": [
+    {
+      "name": "Lamb, Nick",
+      "affiliation": "PharmaTools.AI",
+      "orcid": "0009-0009-6266-8499"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "keywords": [
+    "benchmark",
+    "AI agents",
+    "evaluation",
+    "reliability",
+    "pass^k",
+    "medical writing",
+    "drug labelling",
+    "prompt injection",
+    "MCP"
+  ],
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/nickjlamb/groundhog",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}
