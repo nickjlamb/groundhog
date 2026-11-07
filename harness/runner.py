@@ -82,6 +82,7 @@ def main(argv=None):
     ap.add_argument("--pubcrawl-cmd", default="npx -y @pharmatools/pubcrawl@2.8.0")
     ap.add_argument("--redacta-cmd", default="", help="command for a local Redacta MCP server; omit to run without Redacta")
     ap.add_argument("--out", default=str(ROOT / "runs"))
+    ap.add_argument("--max-tool-calls", type=int, default=15, help="tool-call budget per episode (spec: 15)")
     ap.add_argument("--resume", default="", help="existing run directory: run only the episodes it lacks")
     args = ap.parse_args(argv)
 
@@ -98,7 +99,7 @@ def main(argv=None):
     pubcrawl = StdioMCPClient(args.pubcrawl_cmd.split(), "pubcrawl") if args.record else None
 
     manifest = {"run_id": run_id, "model": args.model, "runs": args.runs, "conditions": args.conditions,
-                "mode": "record" if args.record else "replay", "git_sha": git_sha(),
+                "mode": "record" if args.record else "replay", "max_tool_calls": args.max_tool_calls, "git_sha": git_sha(),
                 "task_set_hash": task_set_hash(tasks), "tasks": [t["id"] for t in tasks],
                 "corpus_hash": files_hash((ROOT / "corpus").glob("*.json")),
                 "cassettes_hash": files_hash((ROOT / "cassettes").glob("*.json")),
@@ -130,7 +131,7 @@ def main(argv=None):
                 if (out / name).exists():           # --resume: keep finished episodes
                     continue
                 try:
-                    trace = run_episode(task, model, gw)
+                    trace = run_episode(task, model, gw, max_tool_calls=args.max_tool_calls)
                 except Exception as e:              # provider outage, rate limit: log and move on
                     failures += 1
                     print(f"{task['id']:14} {cond} r{rep}  MODEL ERROR {type(e).__name__}: {e}", flush=True)
