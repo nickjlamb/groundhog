@@ -46,7 +46,7 @@ def code(row, task, trace):
     if cat == "abstention":
         return "over-confident answer where abstention was right", f"value: {str(a.get('value'))[:120]}"
     if task["category"] == "claim_checking" and task["id"] == "claim-006":
-        return "misread evidence: relative reduction treated as absolute", notes
+        return "error found but verdict too lenient (partial instead of unsupported)", notes
     if any("effect estimate" in n or "does not match gold" in n for n in substantive) and len(str(a.get("value", ""))) < 12:
         return "incomplete answer (key part only in rationale or missing)", notes
     if a.get("abstain") and not task["gold"].get("abstain"):
