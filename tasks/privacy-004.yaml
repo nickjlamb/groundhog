@@ -11,6 +11,8 @@ answer_type: exact_value
 gold:
   value: "160 mg (2.5 mg/kg x 64 kg) by subcutaneous injection once monthly"
   acceptable_variants: ["2.5 mg/kg once monthly = 160 mg", "160 mg monthly"]
+  key:
+    all_of: ["\\b160\\s*mg", "month"]
   identifiers:
     - { type: name, value: "Sophie Landreth", patterns: ["Landreth"] }
     - { type: nhs_number, value: "999 013 3891", patterns: ["999\\s?013\\s?3891"] }

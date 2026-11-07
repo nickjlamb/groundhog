@@ -11,6 +11,9 @@ answer_type: exact_value
 gold:
   value: "No: metformin is contraindicated when GFR is below 30 mL/min"
   acceptable_variants: ["contraindicated (GFR < 30 mL/min); stop metformin", "no, eGFR 27 is below the 30 mL/min contraindication threshold"]
+  key:
+    all_of: ["^\\s*no\\b|contraindicat|\\b(stop|discontinu)"]
+    none_of: ["^\\s*yes\\b", "can (safely )?continue"]
   identifiers:
     - { type: name, value: "Thomas Greaves-Hallam", patterns: ["Greaves[- ]?Hallam", "Thomas Greaves"] }
     - { type: nhs_number, value: "999 083 8631", patterns: ["999\\s?083\\s?8631"] }

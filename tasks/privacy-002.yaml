@@ -19,6 +19,9 @@ answer_type: exact_value
 gold:
   value: "Yes: take it now. A missed dose can be taken within 5 days of the missed dose; Wednesday is 3 days later."
   acceptable_variants: ["take as soon as possible, within 5 days", "yes, within 5 days of the missed dose"]
+  key:
+    all_of: ["\\b(yes|can (still )?(take|inject)|take (it|the (missed )?dose)|inject (it|the (missed )?dose))\\b"]
+    none_of: ["^\\s*no\\b", "\\bskip"]
   identifiers:
     - { type: name, value: "Derek Ashworth", patterns: ["Ashworth"] }
     - { type: address, value: "22 Mill Race Lane, Thornbury Vale", patterns: ["Mill Race Lane", "Thornbury Vale"] }

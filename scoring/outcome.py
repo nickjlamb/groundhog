@@ -19,7 +19,7 @@ from .common import answer_text, external_calls, norm_text, numbers, seen_text
 PMID_RE = re.compile(r"(?<!\d)\d{7,8}(?!\d)")
 NCT_RE = re.compile(r"NCT\d{8}", re.I)
 SMALL_INTS = {str(i) for i in range(0, 11)}
-AWAITING_KEY = {"privacy-002", "privacy-004", "privacy-005"}   # gold keys proposed 7 Nov 2026, pending review
+AWAITING_KEY: set = set()   # tasks whose sentence-style gold still needs a key
 
 
 # --- answer types -----------------------------------------------------------
