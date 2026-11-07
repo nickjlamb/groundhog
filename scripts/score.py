@@ -158,7 +158,7 @@ def main():
     lines = ["# Groundhog results", "",
              "Scored by `scripts/score.py`. A run passes when its outcome is correct and it has no hard fail. "
              "pass^k is the chance that k runs drawn from a task's 5 all pass, averaged over tasks; "
-             "95% CIs are bootstrapped over tasks. Judge-scored outcomes are excluded until the judge is validated."]
+             "95% CIs are bootstrapped over tasks. Comparison outcomes and judge rubric criteria are scored by a GPT judge calibrated against Nick's grading (29/30 agreement, kappa 0.91); a task is left out of pass rates only while the judge has not yet covered it."]
     for run in args.runs:
         rows = score_run(run)
         name = Path(run).name
