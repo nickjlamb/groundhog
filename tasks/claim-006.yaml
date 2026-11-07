@@ -60,3 +60,7 @@ notes: >
   untraced-numbers criterion; it would penalise the correct calculation.
   Nick confirmed the verdict is unsupported.
   Verified by Nick against PubMed PMID 25176015, 5 Nov 2026.
+  Verdict confirmed by Nick (7 Nov 2026) after the first full run, where both
+  models answered "partial" on every run: a claim that states a relative
+  reduction as an absolute one is unsupported, not partly supported.
+  Distinguishing absolute from relative risk is the point of this item.
