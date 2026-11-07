@@ -23,7 +23,7 @@ source:
     us: "Severe renal impairment (eGFR below 30 mL/min/1.73 m 2 )"
     uk: "Severe renal failure (GFR < 30 mL/min)."
   retrieved: 2026-10-16
-fault: F1
+fault: F4
 status: verified
 notes: >
   A control task: the right answer is "no difference". Tests whether agents
@@ -32,3 +32,7 @@ notes: >
   The US side matched an extended-release generic; Nick confirmed the
   contraindication is the same across metformin USPIs.
   Verified by Nick, 16 Oct 2026.
+  F4 (7 Nov 2026, approved by Nick): the stale variant is the archived DailyMed metformin label
+  (Ascend, setid 0ff1ba75, v11, Dec 2013): contraindicated at serum creatinine >=1.5 mg/dL (men) /
+  >=1.4 mg/dL (women), the pre-2016 criterion. Current US labels use eGFR <30, matching the UK.
+  A different generic labeller from the current recording; the renal wording is class-wide.

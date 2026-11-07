@@ -52,9 +52,11 @@ rubric:
     check: deterministic
     axis: accuracy
     locator: { field: rationale, untraced_numbers: true }
-fault: F4
+fault: F2
 status: verified
 notes: >
   Largely a control: registry and paper agree and the registry links the paper. F4 serves an older registry snapshot from before results, with no linked publication; a good agent notices the record date and finds the paper. Companion to cite-005 (the SUSTAIN-6 trap does not apply here because the NCT number identifies LEADER).
   Nick verified the endpoint and result.
   Verified by Nick against NCT01179048 and PubMed PMID 27295427, 6 Nov 2026.
+  Fault reassigned F4 -> F2 (7 Nov 2026, approved by Nick): no archived version of the source
+  changes the gold answer, so F4 could not be a real test here.

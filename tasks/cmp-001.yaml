@@ -33,7 +33,7 @@ source:
       In those asthmatic patients in whom Singulair is indicated in asthma,
       Singulair can also provide symptomatic relief of seasonal allergic rhinitis.
   retrieved: 2026-10-16
-fault: F4
+fault: F1
 status: verified
 notes: >
   F4 (stale source) serves a pre-2020 US label without the "reserve use"
@@ -45,3 +45,5 @@ notes: >
   "no" across the range; the 10 mg is the only UK strength that mentions
   rhinitis, and only in asthmatic patients.
   Verified by Nick, 16 Oct 2026.
+  Fault reassigned F4 -> F1 (7 Nov 2026, approved by Nick): no archived version of the source
+  changes the gold answer, so F4 could not be a real test here.

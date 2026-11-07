@@ -28,7 +28,7 @@ source:
     us_8_6: "8.6 Renal Impairment Reduction of Risk of Stroke and Systemic Embolism in Patients with Nonvalvular Atrial Fibrillation The recommended dose is 2.5 mg twice daily in patients with at least two of the following characteristics"
     uk_4_2: "In patients with severe renal impairment (creatinine clearance 15-29 mL/min) the following recommendations apply: ... for the prevention of stroke and systemic embolism in patients with NVAF, patients should receive the lower dose of apixaban 2.5 mg twice daily."
   retrieved: 2026-11-06
-fault: F4
+fault: F2
 status: verified
 notes: >
   Trap: the dose-reduction criteria are identical in both labels, so an agent
@@ -38,3 +38,5 @@ notes: >
   for this age, weight and creatinine. F4 serves an older US label version;
   the NVAF dosing rule is unchanged across versions.
   Verified by Nick against the US Prescribing Information (DailyMed) and eMC SmPC 2878, 6 Nov 2026.
+  Fault reassigned F4 -> F2 (7 Nov 2026, approved by Nick): no archived version of the source
+  changes the gold answer, so F4 could not be a real test here.

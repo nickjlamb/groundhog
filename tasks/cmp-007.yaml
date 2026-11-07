@@ -25,7 +25,7 @@ source:
     us_boxed: "WARNING: INTERSTITIAL LUNG DISEASE and EMBRYO-FETAL TOXICITY Interstitial Lung Disease (ILD) and pneumonitis, including severe, life-threatening, and fatal cases, have been reported with ENHERTU. ... Permanently discontinue ENHERTU in all patients with Grade 2 or higher ILD/pneumonitis. ... Exposure to ENHERTU during pregnancy can cause embryo-fetal harm."
     uk_4_4: "Interstitial lung disease/pneumonitis Cases of interstitial lung disease (ILD), and/or pneumonitis, have been reported with Enhertu (see section 4.8). Fatal outcomes have been observed."
   retrieved: 2026-11-06
-fault: F4
+fault: F1
 status: verified
 notes: >
   Trap: an agent may invent a UK boxed warning, or name only the ILD half of
@@ -33,3 +33,5 @@ notes: >
   version; the boxed warning has carried both topics since approval, so the
   answer is unchanged.
   Verified by Nick against the US Prescribing Information (DailyMed) and eMC SmPC 12135, 6 Nov 2026.
+  Fault reassigned F4 -> F1 (7 Nov 2026, approved by Nick): no archived version of the source
+  changes the gold answer, so F4 could not be a real test here.

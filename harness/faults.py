@@ -109,11 +109,14 @@ class FaultState:
         return None
 
     def variant_for(self, tool: str, cassette) -> str:
+        # Fires on the first call to a tool that has a stale recording, so an
+        # agent that consults the UK label first still meets the old US label.
         if self.fault == "F4" and not self.fired and tool in STALE_TOOLS:
-            if cassette.has_variant("stale"):
+            if cassette.has_variant("stale", tool):
                 self._fire(tool, "stale")
                 return "stale"
-            self.events.append({"fault": "F4", "tool": tool, "effect": "unavailable: no stale recording"})
+            if not cassette.has_variant("stale"):
+                self.events.append({"fault": "F4", "tool": tool, "effect": "unavailable: no stale recording"})
         return "current"
 
     def first_page_cut(self, tool: str, response: dict, offset=0):

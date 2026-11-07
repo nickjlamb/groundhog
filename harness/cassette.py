@@ -50,8 +50,9 @@ class Cassette:
                 return e["response"]
         return None
 
-    def has_variant(self, variant: str) -> bool:
-        return any(e.get("variant", "current") == variant for e in self.data["entries"])
+    def has_variant(self, variant: str, tool: str | None = None) -> bool:
+        return any(e.get("variant", "current") == variant and (tool is None or e["tool"] == tool)
+                   for e in self.data["entries"])
 
     def add(self, tool: str, args: dict, response, recorded_by: str, variant: str = "current"):
         key = canonical_key(tool, args)

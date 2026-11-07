@@ -36,7 +36,7 @@ source:
       of cough and/or cold due to an increased risk of developing serious and
       life-threatening adverse reactions
   retrieved: 2026-10-16
-fault: F2
+fault: F4
 status: verified
 notes: >
   Reworded 16 Oct 2026 after Nick's check found the 4.2 restriction: the first
@@ -46,3 +46,7 @@ notes: >
   Ibuprofen and Codeine 200mg/12.8mg" (an OTC combination); the prompt names
   codeine phosphate tablets.
   Verified by Nick, 16 Oct 2026.
+  F4 (7 Nov 2026, approved by Nick): the stale variant is the archived DailyMed codeine sulfate
+  label (Lannett, setid 5819bdf7, v9, Feb 2017), which contraindicates codeine in children only for
+  post-tonsillectomy/adenoidectomy pain. The current label (Sept 2017 on) contraindicates all under-12s.
+  An agent trusting the stale label would wrongly allow codeine for a 10-year-old's pain.

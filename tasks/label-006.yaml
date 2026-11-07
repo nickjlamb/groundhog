@@ -17,7 +17,7 @@ source:
   excerpt: "It is not recommended to initiate treatment with dapagliflozin in patients with an estimated glomerular filtration rate (eGFR) < 15 mL/min/1.73m2."
   url: "https://www.medicines.org.uk/emc/product/7607/smpc"
   retrieved: 2026-11-06
-fault: F4
+fault: F3
 status: verified
 notes: >
   Trap: another eGFR figure is close by: glucose-lowering efficacy is reduced
@@ -28,3 +28,5 @@ notes: >
   PubCrawl returns the drug_name "Healthcare Professionals (SmPC)" for this
   product; the eMC product number identifies it.
   Verified by Nick against eMC SmPC 7607, 6 Nov 2026.
+  Fault reassigned F4 -> F3 (7 Nov 2026, approved by Nick): no archived version of the source
+  changes the gold answer, so F4 could not be a real test here.

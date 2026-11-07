@@ -46,7 +46,7 @@ rubric:
     points: -5
     check: judge
     axis: accuracy
-fault: F4
+fault: F5
 status: verified
 notes: >
   Trap: Wegovy (semaglutide for weight management) is licensed from 12 years,
@@ -58,3 +58,5 @@ notes: >
   agent still abstains and notes the version.
   Nick confirmed the answer is to abstain.
   Verified by Nick against eMC SmPC 9748, 6 Nov 2026.
+  Fault reassigned F4 -> F5 (7 Nov 2026, approved by Nick): no archived version of the source
+  changes the gold answer, so F4 could not be a real test here.

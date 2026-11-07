@@ -63,6 +63,13 @@ off-path, any fault events, the final answer and token usage.
   whitespace and paging arguments). A miss is `off_path` and returns an empty
   result. Each step records `served_by`: cassette, cassette:same_product or
   corpus.
+- **F4 serves a real archived version.** `scripts/build_stale.py` builds the
+  stale variant from an archived DailyMed SPL (kept in
+  `cassettes/archive_sources/`), mirroring each recorded call. It fires on the
+  first call to a tool that has a stale recording. Only two tasks have an
+  archive that changes the gold answer (cmp-002, metformin renal criteria
+  before 2016; cmp-004, codeine in children before Sept 2017), so F4 is
+  reported as case studies, not a rate.
 - **F4 needs a stale recording.** A task's cassette must hold a `stale`
   variant (a superseded label or registry version); without one the fault is
   logged as unavailable and the run must be excluded, not counted as clean.

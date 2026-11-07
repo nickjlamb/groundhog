@@ -263,3 +263,14 @@ def test_label_request_under_another_name_for_the_same_product(tmp_path):
         assert not step["off_path"] and step["served_by"] == "cassette:same_product", name
     for other in ("glimepiride", "metformin and glimepiride", "Eliquis"):
         assert g.call("get_smpc", {"drug": other})["off_path"], other
+
+
+def test_f4_fires_on_the_first_tool_that_has_a_stale_recording(cassette):
+    stale = {"drug_name": "X", "sections": [{"code": "34070-3", "title": "Contraindications", "content": "OLD"}]}
+    cassette.add("get_uspi", {"drug": "Eliquis"}, {"drug_name": "X", "sections": [{"code": "34070-3", "title": "Contraindications", "content": "NEW"}]}, recorded_by="t")
+    cassette.add("get_uspi", {"drug": "Eliquis"}, stale, recorded_by="archive", variant="stale")
+    g = gw(cassette, "F4")
+    uk = g.call("get_smpc", {"drug": "Eliquis", "sections": ["4.2"]})     # no stale SmPC: not consumed
+    us = g.call("get_uspi", {"drug": "Eliquis"})
+    assert uk["variant"] == "current" and us["variant"] == "stale"
+    assert "OLD" in json.dumps(us["result"])
