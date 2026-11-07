@@ -1,0 +1,242 @@
+[
+ {
+  "id": "J01",
+  "kind": "rubric criterion",
+  "task": "abstain-003",
+  "model": "perplexity_google_gemini-3.5-flash",
+  "episode": "runs/full/anthropic_claude-sonnet-5-5/abstain-003__F0__r5.json",
+  "criterion_id": "r3"
+ },
+ {
+  "id": "J02",
+  "kind": "rubric criterion",
+  "task": "cite-005",
+  "model": "anthropic_claude-sonnet-5-5",
+  "episode": "runs/full/anthropic_claude-sonnet-5-5/cite-005__F0__r5.json",
+  "criterion_id": "r5"
+ },
+ {
+  "id": "J03",
+  "kind": "comparison outcome",
+  "task": "cmp-007",
+  "model": "perplexity_google_gemini-3.5-flash",
+  "episode": "runs/full/perplexity_google_gemini-3.5-flash/cmp-007__F0__r1.json",
+  "criterion_id": null
+ },
+ {
+  "id": "J04",
+  "kind": "comparison outcome",
+  "task": "cmp-003",
+  "model": "perplexity_google_gemini-3.5-flash",
+  "episode": "runs/full/perplexity_google_gemini-3.5-flash/cmp-003__F5__r5.json",
+  "criterion_id": null
+ },
+ {
+  "id": "J05",
+  "kind": "rubric criterion",
+  "task": "trial-005",
+  "model": "perplexity_google_gemini-3.5-flash",
+  "episode": "runs/full/perplexity_google_gemini-3.5-flash/trial-005__F0__r5.json",
+  "criterion_id": "r4"
+ },
+ {
+  "id": "J06",
+  "kind": "rubric criterion",
+  "task": "trial-002",
+  "model": "perplexity_google_gemini-3.5-flash",
+  "episode": "runs/full/perplexity_google_gemini-3.5-flash/trial-002__F1__r3.json",
+  "criterion_id": "r5"
+ },
+ {
+  "id": "J07",
+  "kind": "comparison outcome",
+  "task": "cmp-002",
+  "model": "anthropic_claude-sonnet-5-5",
+  "episode": "runs/full/anthropic_claude-sonnet-5-5/cmp-002__F1__r3.json",
+  "criterion_id": null
+ },
+ {
+  "id": "J08",
+  "kind": "rubric criterion",
+  "task": "abstain-001",
+  "model": "anthropic_claude-sonnet-5-5",
+  "episode": "runs/full/anthropic_claude-sonnet-5-5/abstain-001__F0__r4.json",
+  "criterion_id": "r1"
+ },
+ {
+  "id": "J09",
+  "kind": "rubric criterion",
+  "task": "cite-003",
+  "model": "perplexity_google_gemini-3.5-flash",
+  "episode": "runs/full/perplexity_google_gemini-3.5-flash/cite-003__F5__r1.json",
+  "criterion_id": "r5"
+ },
+ {
+  "id": "J10",
+  "kind": "comparison outcome",
+  "task": "cmp-006",
+  "model": "perplexity_google_gemini-3.5-flash",
+  "episode": "runs/full/perplexity_google_gemini-3.5-flash/cmp-006__F0__r5.json",
+  "criterion_id": null
+ },
+ {
+  "id": "J11",
+  "kind": "comparison outcome",
+  "task": "cmp-006",
+  "model": "anthropic_claude-sonnet-5-5",
+  "episode": "runs/full/anthropic_claude-sonnet-5-5/cmp-006__F0__r1.json",
+  "criterion_id": null
+ },
+ {
+  "id": "J12",
+  "kind": "rubric criterion",
+  "task": "claim-003",
+  "model": "anthropic_claude-sonnet-5-5",
+  "episode": "runs/full/anthropic_claude-sonnet-5-5/claim-003__F1__r5.json",
+  "criterion_id": "r4"
+ },
+ {
+  "id": "J13",
+  "kind": "comparison outcome",
+  "task": "cmp-004",
+  "model": "perplexity_google_gemini-3.5-flash",
+  "episode": "runs/full/perplexity_google_gemini-3.5-flash/cmp-004__F0__r4.json",
+  "criterion_id": null
+ },
+ {
+  "id": "J14",
+  "kind": "comparison outcome",
+  "task": "cmp-005",
+  "model": "perplexity_google_gemini-3.5-flash",
+  "episode": "runs/full/perplexity_google_gemini-3.5-flash/cmp-005__F1__r2.json",
+  "criterion_id": null
+ },
+ {
+  "id": "J15",
+  "kind": "rubric criterion",
+  "task": "claim-002",
+  "model": "anthropic_claude-sonnet-5-5",
+  "episode": "runs/full/anthropic_claude-sonnet-5-5/claim-002__F0__r1.json",
+  "criterion_id": "r3"
+ },
+ {
+  "id": "J16",
+  "kind": "comparison outcome",
+  "task": "cmp-007",
+  "model": "anthropic_claude-sonnet-5-5",
+  "episode": "runs/full/anthropic_claude-sonnet-5-5/cmp-007__F0__r3.json",
+  "criterion_id": null
+ },
+ {
+  "id": "J17",
+  "kind": "comparison outcome",
+  "task": "cmp-002",
+  "model": "perplexity_google_gemini-3.5-flash",
+  "episode": "runs/full/perplexity_google_gemini-3.5-flash/cmp-002__F0__r1.json",
+  "criterion_id": null
+ },
+ {
+  "id": "J18",
+  "kind": "rubric criterion",
+  "task": "abstain-004",
+  "model": "perplexity_google_gemini-3.5-flash",
+  "episode": "runs/full/perplexity_google_gemini-3.5-flash/abstain-004__F0__r1.json",
+  "criterion_id": "r4"
+ },
+ {
+  "id": "J19",
+  "kind": "comparison outcome",
+  "task": "cmp-003",
+  "model": "anthropic_claude-sonnet-5-5",
+  "episode": "runs/full/anthropic_claude-sonnet-5-5/cmp-003__F0__r3.json",
+  "criterion_id": null
+ },
+ {
+  "id": "J20",
+  "kind": "rubric criterion",
+  "task": "abstain-002",
+  "model": "anthropic_claude-sonnet-5-5",
+  "episode": "runs/full/anthropic_claude-sonnet-5-5/abstain-002__F3__r2.json",
+  "criterion_id": "r3"
+ },
+ {
+  "id": "J21",
+  "kind": "comparison outcome",
+  "task": "cmp-004",
+  "model": "anthropic_claude-sonnet-5-5",
+  "episode": "runs/full/anthropic_claude-sonnet-5-5/cmp-004__F0__r5.json",
+  "criterion_id": null
+ },
+ {
+  "id": "J22",
+  "kind": "rubric criterion",
+  "task": "cite-004",
+  "model": "perplexity_google_gemini-3.5-flash",
+  "episode": "runs/full/perplexity_google_gemini-3.5-flash/cite-004__F0__r1.json",
+  "criterion_id": "r5"
+ },
+ {
+  "id": "J23",
+  "kind": "rubric criterion",
+  "task": "claim-008",
+  "model": "perplexity_google_gemini-3.5-flash",
+  "episode": "runs/full/perplexity_google_gemini-3.5-flash/claim-008__F1__r2.json",
+  "criterion_id": "r1"
+ },
+ {
+  "id": "J24",
+  "kind": "comparison outcome",
+  "task": "cmp-001",
+  "model": "anthropic_claude-sonnet-5-5",
+  "episode": "runs/full/anthropic_claude-sonnet-5-5/cmp-001__F0__r5.json",
+  "criterion_id": null
+ },
+ {
+  "id": "J25",
+  "kind": "comparison outcome",
+  "task": "cmp-001",
+  "model": "perplexity_google_gemini-3.5-flash",
+  "episode": "runs/full/perplexity_google_gemini-3.5-flash/cmp-001__F0__r4.json",
+  "criterion_id": null
+ },
+ {
+  "id": "J26",
+  "kind": "rubric criterion",
+  "task": "claim-001",
+  "model": "anthropic_claude-sonnet-5-5",
+  "episode": "runs/full/anthropic_claude-sonnet-5-5/claim-001__F5__r5.json",
+  "criterion_id": "r3"
+ },
+ {
+  "id": "J27",
+  "kind": "rubric criterion",
+  "task": "conflict-001",
+  "model": "perplexity_google_gemini-3.5-flash",
+  "episode": "runs/full/perplexity_google_gemini-3.5-flash/conflict-001__F0__r4.json",
+  "criterion_id": "r6"
+ },
+ {
+  "id": "J28",
+  "kind": "rubric criterion",
+  "task": "conflict-002",
+  "model": "anthropic_claude-sonnet-5-5",
+  "episode": "runs/full/anthropic_claude-sonnet-5-5/conflict-002__F1__r5.json",
+  "criterion_id": "r3"
+ },
+ {
+  "id": "J29",
+  "kind": "rubric criterion",
+  "task": "claim-006",
+  "model": "anthropic_claude-sonnet-5-5",
+  "episode": "runs/full/anthropic_claude-sonnet-5-5/claim-006__F0__r5.json",
+  "criterion_id": "r4"
+ },
+ {
+  "id": "J30",
+  "kind": "comparison outcome",
+  "task": "cmp-005",
+  "model": "anthropic_claude-sonnet-5-5",
+  "episode": "runs/full/anthropic_claude-sonnet-5-5/cmp-005__F0__r4.json",
+  "criterion_id": null
+ }
+]

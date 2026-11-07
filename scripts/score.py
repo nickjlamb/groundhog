@@ -30,6 +30,23 @@ for f in (ROOT / "tasks").glob("*.yaml"):
     TASKS[t["id"]] = t
 
 
+def load_judged(out_dir):
+    """{(run name, episode file): {item: verdict}} from judge_runs.py's cache."""
+    judged = {}
+    path = Path(out_dir) / "judge_cache.jsonl"
+    if path.exists():
+        for line in path.read_text().splitlines():
+            if line.strip():
+                r = json.loads(line)
+                ep, item = r["key"].split("#")
+                judged.setdefault(ep, {})[item] = r["verdict"]
+    return judged
+
+
+JUDGED = {}
+JUDGED_TASKS = set()     # (run name, task id) with judge outcome verdicts
+
+
 def score_run(run_dir):
     rows = []
     for f in sorted(glob.glob(str(Path(run_dir) / "*__*.json"))):
@@ -37,7 +54,10 @@ def score_run(run_dir):
         task = TASKS[trace["task_id"]]
         if task.get("status") != "verified":
             continue
-        out = score_episode(task, trace)
+        judged = dict(JUDGED.get(f"{Path(run_dir).name}/{Path(f).name}", {}))
+        if (Path(run_dir).name, task["id"]) in JUDGED_TASKS:
+            judged["_task_judged"] = True
+        out = score_episode(task, trace, judged)
         rows.append({"task": task["id"], "category": task["category"], "condition": trace["condition"],
                      "clean": trace["condition"] == "F0", "repeat": trace["repeat"], "status": trace["status"],
                      **out, "process": score_process(task, trace, out)})
@@ -90,6 +110,10 @@ def summarise(name, rows, lines):
         rec = sum(r["passed"] for r in fired)
         lines.append(f"| {fault} | {len(tids)} | {fmt(c)} | {fmt(f)} | {rec}/{len(fired)} |")
 
+    rs = [r["rubric"]["score"] for r in rows if r["rubric"]["score"] is not None]
+    if rs:
+        lines.append(f"\n**Rubric score** (all criteria, judge included; reported separately from pass/fail): "
+                     f"mean {statistics.mean(rs):.2f} over {len(rs)} runs on tasks with a rubric\n")
     hf = collections.Counter(h.split(":")[0] for r in rows for h in r["hard_fails"])
     lines.append("\n**Hard fails:** " + (", ".join(f"{k} {v}" for k, v in hf.items()) if hf else "none") + "\n")
     notes = collections.Counter()
@@ -126,6 +150,11 @@ def main():
     ap.add_argument("--out", default=str(ROOT / "results"))
     args = ap.parse_args()
     out = Path(args.out); out.mkdir(parents=True, exist_ok=True)
+    JUDGED.update(load_judged(out))
+    for ep, items in JUDGED.items():
+        if "outcome" in items:
+            run, fname = ep.split("/")
+            JUDGED_TASKS.add((run, fname.split("__")[0]))
     lines = ["# Groundhog results", "",
              "Scored by `scripts/score.py`. A run passes when its outcome is correct and it has no hard fail. "
              "pass^k is the chance that k runs drawn from a task's 5 all pass, averaged over tasks; "

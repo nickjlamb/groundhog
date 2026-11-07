@@ -137,3 +137,10 @@ def test_deterministic_rubric_and_untraced_numbers():
     assert clean["criteria"] == {"r1": True, "r2": None, "r3": False} and clean["deterministic_score"] == 1.0
     made_up = score_episode(task, trace({"verdict": "partial", "rationale": "HR 0.79, NNT 37"}, seen))["rubric"]
     assert made_up["criteria"]["r3"] is True and made_up["deterministic_score"] == 0.0
+
+
+def test_comparison_scored_once_the_judge_has_covered_the_task():
+    task = {"id": "cmp-x", "category": "us_uk_comparison", "answer_type": "comparison", "prompt": "", "gold": {}}
+    assert score_episode(task, trace({}, status="budget_exceeded"), {"_task_judged": True})["passed"] is False
+    assert score_episode(task, trace({"rationale": "x"}), {"_task_judged": True, "outcome": True})["passed"] is True
+    assert score_episode(task, trace({"rationale": "x"}), {"_task_judged": True, "outcome": False})["passed"] is False

@@ -178,16 +178,23 @@ def _untraced(task, trace, answer, field):
     return [n for n in numbers(answer.get(field, "")) if n not in seen and n not in SMALL_INTS]
 
 
-def score_rubric(task, trace, answer) -> dict:
-    """Deterministic criteria are scored; judge criteria are counted but left
-    unscored until the judge has been checked against Nick's grading."""
+def score_rubric(task, trace, answer, judged=None) -> dict:
+    """Deterministic criteria are scored by code; judge criteria use the
+    calibrated judge's verdicts when given, otherwise they stay unscored."""
+    judged = judged or {}
     met, pos_total, judged_pending, detail = 0, 0, 0, {}
+    jmet, jpos = 0, 0
     for c in task.get("rubric") or []:
         if c["points"] > 0:
             pos_total += c["points"]
         if c.get("check") != "deterministic":
-            judged_pending += 1
-            detail[c["id"]] = None
+            v = judged.get(c["id"])
+            detail[c["id"]] = v
+            if v is None:
+                judged_pending += 1
+            else:
+                jpos += max(0, c["points"])
+                jmet += c["points"] if v else 0
             continue
         loc = c["locator"]
         texts = _field_text(loc.get("field", "rationale"), answer, trace)
@@ -205,17 +212,33 @@ def score_rubric(task, trace, answer) -> dict:
         if hit:
             met += c["points"]
     det_pos = sum(c["points"] for c in task.get("rubric") or [] if c["points"] > 0 and c.get("check") == "deterministic")
+    full = None
+    if task.get("rubric") and judged_pending == 0 and pos_total:
+        full = max(0.0, min(1.0, (met + jmet) / pos_total))
     return {"criteria": detail, "judge_pending": judged_pending,
-            "deterministic_score": (max(0.0, min(1.0, met / det_pos)) if det_pos else None)}
+            "deterministic_score": (max(0.0, min(1.0, met / det_pos)) if det_pos else None),
+            "score": full}
 
 
 # --- episode -----------------------------------------------------------------
 
-def score_episode(task: dict, trace: dict) -> dict:
+def score_episode(task: dict, trace: dict, judged: dict | None = None) -> dict:
+    """judged maps item ("outcome" or a rubric criterion id) to the judge's
+    verdict for this episode, from scripts/judge_runs.py."""
     answer = trace.get("answer") or {}
     notes = []
+    judged = judged or {}
     scorer = SCORERS.get(task.get("answer_type"))
-    if scorer is None:
+    # A comparison task is scored only once the judge has covered the task, so
+    # its failures are never counted without its successes.
+    if scorer is None and task.get("answer_type") == "comparison" and judged.get("_task_judged") and \
+            (trace.get("status") != "submitted" or judged.get("outcome") is not None):
+        correct = trace.get("status") == "submitted" and bool(judged.get("outcome"))
+        if trace.get("status") != "submitted":
+            notes.append(f"no answer submitted ({trace.get('status')})")
+        elif not correct:
+            notes.append("judge: comparison answer not fully correct")
+    elif scorer is None:
         correct = None           # the whole task waits for the judge, failures included, so rates are unbiased
         notes.append(f"answer type {task.get('answer_type')!r} needs the judge")
     elif trace.get("status") != "submitted":
@@ -232,4 +255,4 @@ def score_episode(task: dict, trace: dict) -> dict:
     else:
         passed = bool(correct) and not fails
     return {"correct": correct, "hard_fails": fails, "passed": passed, "notes": notes,
-            "rubric": score_rubric(task, trace, answer)}
+            "rubric": score_rubric(task, trace, answer, judged)}

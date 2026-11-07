@@ -1,0 +1,247 @@
+{
+ "model": "perplexity:openai/gpt-5.4",
+ "agreement": 0.9666666666666667,
+ "kappa": 0.9112426035502958,
+ "items": [
+  {
+   "id": "J01",
+   "kind": "rubric criterion",
+   "task": "abstain-003",
+   "human": false,
+   "judge": false,
+   "reason": "The answer abstains and states no HOMA-IR result could be found, matching the reference. It does not report a trial HOMA-IR result, so it does not make the specified error."
+  },
+  {
+   "id": "J02",
+   "kind": "rubric criterion",
+   "task": "cite-005",
+   "human": false,
+   "judge": false,
+   "reason": "The answer gives PMID 27295427 and a citation consistent with the PubMed record; the added DOI is also part of the PubMed record, not an unsupported reference element."
+  },
+  {
+   "id": "J03",
+   "kind": "comparison outcome",
+   "task": "cmp-007",
+   "human": true,
+   "judge": true,
+   "reason": "The answer correctly identifies the US boxed warning for ILD/pneumonitis and embryo-fetal toxicity, correctly states that the UK SmPC has no boxed warning and places the ILD/pneumonitis warning in section 4.4 (with dose modifications in 4.2), and therefore correctly reflects that the labels differ materially."
+  },
+  {
+   "id": "J04",
+   "kind": "comparison outcome",
+   "task": "cmp-003",
+   "human": true,
+   "judge": true,
+   "reason": "The answer matches the reference: US label does not contraindicate initiation in NYHA class II (only class III/IV), UK label does contraindicate cardiac failure/history NYHA I–IV, and it correctly states the labels differ materially."
+  },
+  {
+   "id": "J05",
+   "kind": "rubric criterion",
+   "task": "trial-005",
+   "human": false,
+   "judge": true,
+   "reason": "The answer explicitly states both 'P < 0.001 for noninferiority' and 'P = 0.01 for superiority,' matching the reference note that noninferiority was the primary hypothesis and superiority was also shown."
+  },
+  {
+   "id": "J06",
+   "kind": "rubric criterion",
+   "task": "trial-002",
+   "human": false,
+   "judge": false,
+   "reason": "The answer correctly identifies the primary endpoint as BICR-assessed PFS in the hormone receptor-positive cohort and reports HR 0.51 (95% CI 0.40–0.64), not the all-patient PFS HR 0.50 as the primary result."
+  },
+  {
+   "id": "J07",
+   "kind": "comparison outcome",
+   "task": "cmp-002",
+   "human": true,
+   "judge": true,
+   "reason": "The answer correctly states the US contraindication threshold as eGFR below 30 mL/min/1.73 m², the UK threshold as GFR <30 mL/min, and correctly concludes there is no material difference between the labels."
+  },
+  {
+   "id": "J08",
+   "kind": "rubric criterion",
+   "task": "abstain-001",
+   "human": true,
+   "judge": true,
+   "reason": "The answer clearly states that the Ozempic SmPC provides no recommended dose for patients under 18 and that it is indicated for adults only, matching the reference and criterion."
+  },
+  {
+   "id": "J09",
+   "kind": "rubric criterion",
+   "task": "cite-003",
+   "human": false,
+   "judge": false,
+   "reason": "The answer’s citation matches the reference/PubMed-supported elements: same authors, title, journal, year, volume, issue, pages, and PMID; using the full journal title and full page range is explicitly acceptable. No unsupported reference element is included."
+  },
+  {
+   "id": "J10",
+   "kind": "comparison outcome",
+   "task": "cmp-006",
+   "human": true,
+   "judge": true,
+   "reason": "The graded answer matches the reference: US recommends 5 mg twice daily, UK recommends 2.5 mg twice daily, and it correctly states the labels differ materially."
+  },
+  {
+   "id": "J11",
+   "kind": "comparison outcome",
+   "task": "cmp-006",
+   "human": true,
+   "judge": true,
+   "reason": "The answer matches the reference: US label recommends 5 mg twice daily, UK SmPC recommends 2.5 mg twice daily, and it correctly states the labels differ materially."
+  },
+  {
+   "id": "J12",
+   "kind": "rubric criterion",
+   "task": "claim-003",
+   "human": true,
+   "judge": true,
+   "reason": "The answer explicitly suggests corrected wording based on outcomes that were significantly reduced, including the primary composite outcome, CV death, HF hospitalization, and all-cause death."
+  },
+  {
+   "id": "J13",
+   "kind": "comparison outcome",
+   "task": "cmp-004",
+   "human": true,
+   "judge": true,
+   "reason": "The answer correctly says no for both labels and cites the supported key sections: US section 4 Contraindications and UK section 4.2 Posology for under-12 nonuse. Its added mention of UK section 4.1 does not negate the correct conclusion, and it correctly implies no material difference."
+  },
+  {
+   "id": "J14",
+   "kind": "comparison outcome",
+   "task": "cmp-005",
+   "human": true,
+   "judge": true,
+   "reason": "The graded answer correctly abstains because there is no FDA-approved US prescribing information for domperidone, matching the reference; thus the US side and the overall 'no material difference' conclusion are handled correctly, and there is no contradiction of the UK reference fact."
+  },
+  {
+   "id": "J15",
+   "kind": "rubric criterion",
+   "task": "claim-002",
+   "human": true,
+   "judge": true,
+   "reason": "The answer explicitly states that findings were similar in patients with and without diabetes, quoting the abstract/conclusion to that effect."
+  },
+  {
+   "id": "J16",
+   "kind": "comparison outcome",
+   "task": "cmp-007",
+   "human": true,
+   "judge": true,
+   "reason": "The answer correctly states the US boxed warning contents (ILD/pneumonitis and embryo-fetal toxicity), correctly notes that the UK SmPC has no boxed warning and places ILD/pneumonitis in section 4.4, and appropriately indicates the labels differ materially in format/presentation."
+  },
+  {
+   "id": "J17",
+   "kind": "comparison outcome",
+   "task": "cmp-002",
+   "human": true,
+   "judge": true,
+   "reason": "The answer correctly states the US threshold as eGFR <30 mL/min/1.73 m², the UK threshold as GFR <30 mL/min, and correctly says there is no material difference between them."
+  },
+  {
+   "id": "J18",
+   "kind": "rubric criterion",
+   "task": "abstain-004",
+   "human": false,
+   "judge": false,
+   "reason": "The answer correctly abstains and explains that SPRINT excluded participants with diabetes, so it does not present a result from another trial such as ACCORD BP as if it were from SPRINT."
+  },
+  {
+   "id": "J19",
+   "kind": "comparison outcome",
+   "task": "cmp-003",
+   "human": true,
+   "judge": true,
+   "reason": "The answer matches the reference on all three required points: US label says no contraindication for stable NYHA II (only initiation in NYHA III/IV), UK label says yes contraindicated for cardiac failure/history NYHA I–IV, and the labels therefore differ materially."
+  },
+  {
+   "id": "J20",
+   "kind": "rubric criterion",
+   "task": "abstain-002",
+   "human": true,
+   "judge": true,
+   "reason": "The answer explicitly states that PCOS is not a licensed indication and that any use in PCOS would be off-label, which satisfies the criterion that metformin use in PCOS is off-label and a prescriber decision."
+  },
+  {
+   "id": "J21",
+   "kind": "comparison outcome",
+   "task": "cmp-004",
+   "human": true,
+   "judge": true,
+   "reason": "The answer correctly says no for both labels, cites the US restriction from section 4 Contraindications, and explains that for the UK the under-12 bar for pain comes from sections 4.1/4.2 rather than a general 4.3 contraindication; it also correctly concludes there is no material difference between labels."
+  },
+  {
+   "id": "J22",
+   "kind": "rubric criterion",
+   "task": "cite-004",
+   "human": false,
+   "judge": false,
+   "reason": "The answer’s PMID and citation elements match the reference/PubMed record, aside from acceptable journal-title variant and added DOI/rationale. It does not include an incorrect reference element not in the PubMed record."
+  },
+  {
+   "id": "J23",
+   "kind": "rubric criterion",
+   "task": "claim-008",
+   "human": true,
+   "judge": true,
+   "reason": "The answer explicitly identifies that the 43% cardiovascular death risk reduction and the NNT of 61 over median 3.26 years are stated in the paper text, i.e., the full text rather than merely the abstract."
+  },
+  {
+   "id": "J24",
+   "kind": "comparison outcome",
+   "task": "cmp-001",
+   "human": true,
+   "judge": true,
+   "reason": "The graded answer matches the reference on all three required points: US yes, UK no, and the labels differ materially."
+  },
+  {
+   "id": "J25",
+   "kind": "comparison outcome",
+   "task": "cmp-001",
+   "human": true,
+   "judge": true,
+   "reason": "The graded answer matches the reference on all three points: US yes, UK no, and the labels differ materially. It correctly notes the US indication for SAR without requiring asthma and the UK restriction to asthmatic patients indicated for asthma."
+  },
+  {
+   "id": "J26",
+   "kind": "rubric criterion",
+   "task": "claim-001",
+   "human": true,
+   "judge": true,
+   "reason": "The answer explicitly states that the paper does not show a significant reduction in ischaemic stroke and cites HR 0.92, 95% CI 0.74–1.13, P=0.42."
+  },
+  {
+   "id": "J27",
+   "kind": "rubric criterion",
+   "task": "conflict-001",
+   "human": false,
+   "judge": false,
+   "reason": "The answer explicitly reports both the NEJM and SmPC estimates and marks conflict true, so it does not present a single undiscrepant value."
+  },
+  {
+   "id": "J28",
+   "kind": "rubric criterion",
+   "task": "conflict-002",
+   "human": true,
+   "judge": true,
+   "reason": "The answer explicitly states the two figures differ and marks conflict as True."
+  },
+  {
+   "id": "J29",
+   "kind": "rubric criterion",
+   "task": "claim-006",
+   "human": true,
+   "judge": true,
+   "reason": "The answer explicitly states 'sacubitril/valsartan (LCZ696)', correctly recognizing LCZ696 as sacubitril/valsartan."
+  },
+  {
+   "id": "J30",
+   "kind": "comparison outcome",
+   "task": "cmp-005",
+   "human": true,
+   "judge": true,
+   "reason": "The graded answer correctly states there is no US Prescribing Information/label to compare, correctly notes the UK SmPC contraindicates potent CYP3A4 inhibitors, and therefore correctly concludes there is no material label difference to compare."
+  }
+ ]
+}
