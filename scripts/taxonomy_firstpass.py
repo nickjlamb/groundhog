@@ -57,7 +57,11 @@ def code(row, task, trace):
         return "missed conflict (one source's value not reported)", notes
     if cat == "us_uk_comparison":
         key = f"{row['_run']}/{row['_file']}#outcome"
-        return "misread evidence", "judge: " + JUDGE.get(key, {}).get("reason", "")
+        reason = JUDGE.get(key, {}).get("reason", "")
+        stale_served = any(s.get("variant") == "stale" for s in trace["steps"])
+        if stale_served and re.search(r"section 4|8\.4|5\.6|wrong (US )?(label )?section", reason, re.I) and "UK part is not" not in reason:
+            return "trusted stale data: cited the wrong US section after the outdated label's Contraindications omitted the restriction", "judge: " + reason
+        return "misread evidence", "judge: " + reason
     if row["condition"] == "F3" and cat in ("label_lookup", "trial_facts"):
         return "trusted truncated/stale data", notes
     return "misread evidence", notes
