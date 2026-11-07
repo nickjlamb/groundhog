@@ -268,7 +268,7 @@ groundhog/
   README.md · CITATION.cff · LICENSE · CHANGELOG.md
 ```
 
-The scorers are short, self-contained Python and are earmarked for Nick to write himself.
+The scorers are short, self-contained Python in `scoring/` (outcome, process, consistency), written by Claude and reviewed by Nick; `scripts/score.py` runs them. See `docs/scoring.md` for the decisions they encode.
 
 ---
 
