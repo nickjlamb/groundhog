@@ -9,7 +9,7 @@
 
 **Licence:** CC BY 4.0
 
-**Comments:** Code, tasks, frozen tool responses and scorers: https://github.com/nickjlamb/groundhog (DOI: add the Zenodo DOI here once minted)
+**Comments:** Code, tasks, frozen tool responses and scorers: https://github.com/nickjlamb/groundhog (v1.0.0 archived at https://doi.org/10.5281/zenodo.24043717)
 
 **Abstract** (plain text for the arXiv form, 1,709 characters, under the 1,920 limit):
 

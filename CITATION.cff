@@ -15,6 +15,7 @@ repository-code: "https://github.com/nickjlamb/groundhog"
 url: "https://github.com/nickjlamb/groundhog"
 license: MIT
 version: 1.0.0
+doi: 10.5281/zenodo.24043717
 date-released: "2026-11-07"
 keywords:
   - benchmark
