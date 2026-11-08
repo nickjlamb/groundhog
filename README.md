@@ -4,7 +4,7 @@
 
 [![validate tasks](https://github.com/nickjlamb/groundhog/actions/workflows/validate.yml/badge.svg)](https://github.com/nickjlamb/groundhog/actions/workflows/validate.yml)
 ![status](https://img.shields.io/badge/status-v1.1%20results-brightgreen)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24043717.svg)](https://doi.org/10.5281/zenodo.24043717)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24051137.svg)](https://doi.org/10.5281/zenodo.24051137)
 ![tasks](https://img.shields.io/badge/verified%20tasks-50%20of%2050-blue)
 [![licence: MIT (code) / CC BY 4.0 (tasks)](https://img.shields.io/badge/licence-MIT%20%2F%20CC%20BY%204.0-lightgrey)](#licence)
 
@@ -177,7 +177,7 @@ A small task set (50, of which 33 are at ceiling), a single verifier, English-la
 
 ## Citation
 
-If you use Groundhog, please cite it using the metadata in [`CITATION.cff`](CITATION.cff). Archived releases: [doi:10.5281/zenodo.24043717](https://doi.org/10.5281/zenodo.24043717) (v1.0.0).
+If you use Groundhog, please cite it using the metadata in [`CITATION.cff`](CITATION.cff). Archived releases: [doi:10.5281/zenodo.24051137](https://doi.org/10.5281/zenodo.24051137) (v1.1.0, three models); [doi:10.5281/zenodo.24043717](https://doi.org/10.5281/zenodo.24043717) (v1.0.0).
 
 ## Licence
 
