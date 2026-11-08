@@ -13,7 +13,10 @@ def make_model(spec: str):
     if kind == "perplexity":
         from .perplexity_model import PerplexityModel
         return PerplexityModel(rest)
+    if kind == "gemini":
+        from .gemini_model import GeminiModel
+        return GeminiModel(rest)
     if kind == "anthropic":
         from .anthropic_model import AnthropicModel
         return AnthropicModel(rest)
-    raise ValueError(f"unknown model spec {spec!r} (use mock:submit-gold, perplexity:<gateway-model-id> or anthropic:<model-id>)")
+    raise ValueError(f"unknown model spec {spec!r} (use mock:submit-gold, perplexity:<gateway-model-id>, gemini:<model-id> or anthropic:<model-id>)")

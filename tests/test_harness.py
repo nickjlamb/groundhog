@@ -274,3 +274,34 @@ def test_f4_fires_on_the_first_tool_that_has_a_stale_recording(cassette):
     us = g.call("get_uspi", {"drug": "Eliquis"})
     assert uk["variant"] == "current" and us["variant"] == "stale"
     assert "OLD" in json.dumps(us["result"])
+
+
+def test_gemini_adapter_replays_thought_signature_and_groups_responses():
+    from harness.models import gemini_model as g
+    body = {"candidates": [{"content": {"role": "model", "parts": [
+                {"functionCall": {"name": "get_smpc", "args": {"drug": "Ozempic"}}, "thoughtSignature": "SIG"},
+                {"functionCall": {"name": "get_uspi", "args": {"drug": "Ozempic"}}}]}, "finishReason": "STOP"}],
+            "usageMetadata": {"promptTokenCount": 1000, "candidatesTokenCount": 50, "thoughtsTokenCount": 150}}
+    out = g.parse_response(body, "gemini-3.1-pro-preview")
+    assert [c["name"] for c in out["tool_calls"]] == ["get_smpc", "get_uspi"]
+    assert abs(out["usage"]["cost_usd"] - (1000 * 2 + 200 * 12) / 1e6) < 1e-12
+    calls = out["tool_calls"]
+    msgs = [{"role": "user", "content": "q"},
+            {"role": "assistant", "text": "", "tool_calls": calls},
+            {"role": "tool", "tool_call_id": calls[0]["id"], "content": "a"},
+            {"role": "tool", "tool_call_id": calls[1]["id"], "content": "b"}]
+    c = g.to_contents(msgs)
+    assert c[1]["parts"][0]["thoughtSignature"] == "SIG"            # signature sent back unchanged
+    assert [p["functionResponse"]["name"] for p in c[2]["parts"]] == ["get_smpc", "get_uspi"]
+    assert len(c) == 3                                              # both responses in one turn
+
+
+def test_gemini_budget_cap(tmp_path, monkeypatch):
+    from harness.models import gemini_model as g
+    import pytest
+    monkeypatch.setattr(g, "LEDGER", tmp_path / "spend.json")
+    monkeypatch.setenv("GEMINI_API_KEY", "x")
+    monkeypatch.setenv("GEMINI_BUDGET_USD", "1")
+    g._add_spend(1.5, "gemini-3.1-pro-preview")
+    with pytest.raises(g.BudgetExceeded):
+        g.GeminiModel("gemini-3.1-pro-preview").complete("s", [{"role": "user", "content": "q"}], [])
