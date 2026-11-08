@@ -1,7 +1,7 @@
 {
-  "title": "Groundhog: reliability of tool-using agents on medical-evidence tasks (v1.0.0)",
+  "title": "Groundhog: reliability of tool-using agents on medical-evidence tasks (v1.1.0)",
   "upload_type": "dataset",
-  "description": "Benchmark of 50 verified medical-evidence tasks for tool-using AI agents, with frozen tool responses (cassettes and a fixed search collection), fault injection, scorers (outcome, process, pass^k), a calibrated model judge and a failure taxonomy. Code MIT; task files CC BY 4.0.",
+  "description": "Benchmark of 50 verified medical-evidence tasks for tool-using AI agents, with frozen tool responses, fault injection, scorers (outcome, process, pass^k), a calibrated model judge, a failure taxonomy and an item analysis. v1.1.0 adds Gemini 3.1 Pro (preview), a tool-budget sweep, and the untraced-citation rule. Code MIT; task files CC BY 4.0.",
   "creators": [
     {
       "name": "Lamb, Nick",

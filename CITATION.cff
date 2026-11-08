@@ -14,9 +14,9 @@ authors:
 repository-code: "https://github.com/nickjlamb/groundhog"
 url: "https://github.com/nickjlamb/groundhog"
 license: MIT
-version: 1.0.0
+version: 1.1.0
 doi: 10.5281/zenodo.24043717
-date-released: "2026-11-07"
+date-released: "2026-11-08"
 keywords:
   - benchmark
   - AI agents
