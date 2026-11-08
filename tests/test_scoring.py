@@ -161,3 +161,9 @@ def test_real_matched_pmid_from_memory_is_untraced_not_fabricated():
     assert score_process(task, trace(ans), out)["untraced_ids"] == ["34449189"]
     wrong = {"abstain": True, "rationale": "See the dapagliflozin PCOS trial, PMID 34449189."}
     assert "fabricated_id:34449189" in score_episode(task, trace(wrong))["hard_fails"]
+
+
+def test_bootstrap_ci_with_too_few_runs_is_nan():
+    from scoring.consistency import bootstrap_ci, mean_pass_hat_k
+    lo, hi = bootstrap_ci({"a": [True]}, lambda d: mean_pass_hat_k(d, 5))
+    assert lo != lo and hi != hi

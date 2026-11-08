@@ -1,0 +1,30 @@
+name: Propose a task
+description: Suggest a new medical-evidence task
+labels: ["task-proposal"]
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options: [abstention, conflict_detection, claim_checking, label_lookup, us_uk_comparison, citation, trial_facts, privacy]
+    validations:
+      required: true
+  - type: textarea
+    id: prompt
+    attributes:
+      label: Prompt
+      description: The question as an agent would receive it.
+    validations:
+      required: true
+  - type: textarea
+    id: gold
+    attributes:
+      label: Gold answer and source
+      description: The answer, and the public source passage that settles it.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: What it tests
+      description: The trap or skill, and which fault (F1–F5) would test it best.

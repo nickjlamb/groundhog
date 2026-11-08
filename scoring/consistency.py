@@ -46,6 +46,8 @@ def bootstrap_ci(results: dict, stat, n_boot: int = 2000, alpha: float = 0.05, s
         v = stat(sample)
         if v == v:                     # skip NaN
             vals.append(v)
+    if not vals:                       # e.g. fewer runs per task than k
+        return float("nan"), float("nan")
     vals.sort()
     lo = vals[int(alpha / 2 * len(vals))]
     hi = vals[min(len(vals) - 1, int((1 - alpha / 2) * len(vals)))]

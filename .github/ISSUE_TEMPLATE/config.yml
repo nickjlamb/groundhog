@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Results write-up
+    url: https://www.pharmatools.ai/notes/groundhog-agent-reliability
+    about: What v1.1 found, in plain language.

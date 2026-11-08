@@ -1,0 +1,26 @@
+name: Gold answer looks wrong
+description: A task's gold answer, source or rubric disagrees with the source document
+labels: ["gold-answer"]
+body:
+  - type: input
+    id: task
+    attributes:
+      label: Task id
+      placeholder: label-003
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong
+      description: The gold answer (or rubric criterion) and what you think it should be.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source
+      description: Link to the SmPC, USPI, paper or registry entry, the section, and the exact passage.
+      placeholder: "https://www.medicines.org.uk/emc/product/4756/smpc, section 4.2: \"...\""
+    validations:
+      required: true

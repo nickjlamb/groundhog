@@ -1,4 +1,4 @@
-name: validate tasks
+name: CI
 
 on:
   push:
@@ -8,13 +8,18 @@ permissions:
   contents: read
 
 jobs:
-  validate:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -r requirements-dev.txt
-      - run: python scripts/validate_tasks.py
-      - run: python -m pytest -q tests
+      - name: Validate tasks against the schema
+        run: make validate
+      - name: Offline tests
+        run: make test
+      - name: Quick start (replay, no API keys)
+        run: make quickstart
+      - name: Gold answers pass their own scorers
+        run: make selfcheck

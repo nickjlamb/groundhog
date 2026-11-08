@@ -76,6 +76,10 @@ def fmt(x):
     return "–" if x != x else f"{x:.2f}"
 
 
+def ci(lo, hi):
+    return "" if lo != lo else f" [{fmt(lo)}–{fmt(hi)}]"
+
+
 def summarise(name, rows, lines):
     lines.append(f"\n## {name}\n")
     pending = sorted({r["task"] for r in rows if r["passed"] is None})
@@ -88,8 +92,8 @@ def summarise(name, rows, lines):
         res = by_task(rows, pred)
         p1 = mean_pass_hat_k(res, 1); lo1, hi1 = bootstrap_ci(res, lambda d: mean_pass_hat_k(d, 1))
         p5 = mean_pass_hat_k(res, 5); lo5, hi5 = bootstrap_ci(res, lambda d: mean_pass_hat_k(d, 5))
-        lines.append(f"| {label} | {len(res)} | {fmt(p1)} [{fmt(lo1)}–{fmt(hi1)}] | {fmt(mean_pass_hat_k(res, 2))} | "
-                     f"{fmt(mean_pass_hat_k(res, 3))} | {fmt(p5)} [{fmt(lo5)}–{fmt(hi5)}] |")
+        lines.append(f"| {label} | {len(res)} | {fmt(p1)}{ci(lo1, hi1)} | {fmt(mean_pass_hat_k(res, 2))} | "
+                     f"{fmt(mean_pass_hat_k(res, 3))} | {fmt(p5)}{ci(lo5, hi5)} |")
 
     lines.append("\n**By category** (pass@1, clean | fault)\n")
     lines.append("| Category | Clean | Fault |")

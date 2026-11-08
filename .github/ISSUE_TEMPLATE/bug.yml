@@ -1,0 +1,27 @@
+name: Bug report
+description: Something in the harness, scorers or scripts doesn't work
+labels: ["bug"]
+body:
+  - type: textarea
+    id: command
+    attributes:
+      label: Command
+      render: bash
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what you expected
+    validations:
+      required: true
+  - type: textarea
+    id: trace
+    attributes:
+      label: Trace or output
+      description: The relevant episode JSON from runs/<run_id>/, or the error.
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      placeholder: v1.1.0 / 0d47483
