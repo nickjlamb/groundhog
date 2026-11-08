@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/banner-dark.svg">
-    <img alt="Groundhog: being right once isn't reliable. 50 medical-evidence tasks, 5 runs each, clean and under injected tool faults." src="docs/assets/banner-light.svg" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/banner-dark-animated.svg">
+    <img alt="Groundhog: being right once isn't reliable. 50 medical-evidence tasks, 5 runs each, clean and under injected tool faults." src="docs/assets/banner-light-animated.svg" width="100%">
   </picture>
 </p>
 

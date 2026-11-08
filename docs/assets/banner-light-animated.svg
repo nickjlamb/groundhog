@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="Groundhog: right once isn't reliable">
+<style>
+.r,.eyes{transform-box:fill-box;transform-origin:center}
+@keyframes pop1{0%,18.75%{opacity:0;transform:scale(.3)}21.50%{opacity:1;transform:scale(1.12)}23.25%{transform:scale(1)}87.50%{opacity:1;transform:scale(1)}93.75%,100%{opacity:0;transform:scale(.9)}}
+.r1{animation:pop1 8.0s infinite}
+@keyframes draw1{0%,21.00%{stroke-dashoffset:40}25.00%,100%{stroke-dashoffset:0}}
+.c1{stroke-dasharray:40;animation:draw1 8.0s infinite}
+@keyframes pop2{0%,24.00%{opacity:0;transform:scale(.3)}26.75%{opacity:1;transform:scale(1.12)}28.50%{transform:scale(1)}87.50%{opacity:1;transform:scale(1)}93.75%,100%{opacity:0;transform:scale(.9)}}
+.r2{animation:pop2 8.0s infinite}
+@keyframes draw2{0%,26.25%{stroke-dashoffset:40}30.25%,100%{stroke-dashoffset:0}}
+.c2{stroke-dasharray:40;animation:draw2 8.0s infinite}
+@keyframes pop3{0%,29.25%{opacity:0;transform:scale(.3)}32.00%{opacity:1;transform:scale(1.12)}33.75%{transform:scale(1)}87.50%{opacity:1;transform:scale(1)}93.75%,100%{opacity:0;transform:scale(.9)}}
+.r3{animation:pop3 8.0s infinite}
+@keyframes draw3{0%,31.50%{stroke-dashoffset:40}35.50%,100%{stroke-dashoffset:0}}
+.c3{stroke-dasharray:40;animation:draw3 8.0s infinite}
+@keyframes pop4{0%,34.50%{opacity:0;transform:scale(.3)}37.25%{opacity:1;transform:scale(1.12)}39.00%{transform:scale(1)}87.50%{opacity:1;transform:scale(1)}93.75%,100%{opacity:0;transform:scale(.9)}}
+.r4{animation:pop4 8.0s infinite}
+@keyframes draw4{0%,36.75%{stroke-dashoffset:40}40.75%,100%{stroke-dashoffset:0}}
+.c4{stroke-dasharray:40;animation:draw4 8.0s infinite}
+@keyframes pop5{0%,39.75%{opacity:0;transform:scale(.3)}42.50%{opacity:1;transform:scale(1.12)}44.25%{transform:scale(1)}87.50%{opacity:1;transform:scale(1)}93.75%,100%{opacity:0;transform:scale(.9)}}
+.r5{animation:pop5 8.0s infinite}
+@keyframes shake{0%,44.25%{transform:translateX(0)}45.00%{transform:translateX(-6px)}45.75%{transform:translateX(6px)}46.50%{transform:translateX(-4px)}47.25%{transform:translateX(3px)}48.00%,100%{transform:translateX(0)}}
+.shake{animation:shake 8.0s infinite}
+@keyframes hog{0%,3.75%{transform:translateY(130px)}11.88%{transform:translateY(-8px)}14.37%{transform:translateY(0)}44.25%{transform:translateY(0)}45.75%{transform:translateY(-14px)}48.00%{transform:translateY(0)}90.00%{transform:translateY(0)}96.25%,100%{transform:translateY(130px)}}
+.hog{animation:hog 8.0s infinite}
+@keyframes blink{0%,67.50%,70.00%,100%{transform:scaleY(1)}68.75%{transform:scaleY(.1)}}
+.eyes{animation:blink 8.0s infinite}
+@keyframes stat{0%,49.25%{opacity:0;transform:translateY(6px)}54.25%{opacity:1;transform:translateY(0)}87.50%{opacity:1;transform:translateY(0)}93.75%,100%{opacity:0}}
+.stat{animation:stat 8.0s infinite}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style>
+<defs><clipPath id="burrow"><rect x="-100" y="-200" width="200" height="203"/></clipPath></defs>
+<rect width="1200" height="300" rx="16" fill="#faf9f7"/>
+<rect x="0.5" y="0.5" width="1199" height="299" rx="16" fill="none" stroke="#e2e5ea"/>
+<text x="64" y="96" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" letter-spacing="3" fill="#0d7377">AGENT RELIABILITY BENCHMARK</text>
+<text x="62" y="168" font-family="Georgia, 'Times New Roman', serif" font-size="72" fill="#0f1a2e">Groundhog</text>
+<text x="64" y="214" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" fill="#5b6b7d">Being right once isn’t reliable.</text>
+<text x="64" y="248" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" fill="#5b6b7d">50 medical-evidence tasks · 5 runs each · clean and under injected tool faults</text>
+<g class="r r1"><circle cx="760" cy="150" r="28" fill="#0d7377" stroke="#0d7377" stroke-width="3"/><path class="c1" d="M748 150 l8 9 l16 -18" fill="none" stroke="#faf9f7" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="760" y="208" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#5b6b7d">run 1</text>
+<g class="r r2"><circle cx="844" cy="150" r="28" fill="#0d7377" stroke="#0d7377" stroke-width="3"/><path class="c2" d="M832 150 l8 9 l16 -18" fill="none" stroke="#faf9f7" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="844" y="208" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#5b6b7d">run 2</text>
+<g class="r r3"><circle cx="928" cy="150" r="28" fill="#0d7377" stroke="#0d7377" stroke-width="3"/><path class="c3" d="M916 150 l8 9 l16 -18" fill="none" stroke="#faf9f7" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="928" y="208" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#5b6b7d">run 3</text>
+<g class="r r4"><circle cx="1012" cy="150" r="28" fill="#0d7377" stroke="#0d7377" stroke-width="3"/><path class="c4" d="M1000 150 l8 9 l16 -18" fill="none" stroke="#faf9f7" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="1012" y="208" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#5b6b7d">run 4</text>
+<g class="shake"><g class="r r5"><circle cx="1096" cy="150" r="28" fill="none" stroke="#b4475a" stroke-width="3"/><path d="M1087 141 l18 18 M1105 141 l-18 18" fill="none" stroke="#b4475a" stroke-width="4" stroke-linecap="round"/></g></g>
+<text x="1096" y="208" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15" fill="#5b6b7d">run 5</text>
+<text class="stat" x="928" y="252" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" fill="#0f1a2e">pass@1 = 0.80 · pass^5 = 0</text>
+<g transform="translate(548 200)" aria-hidden="true">
+  <ellipse cx="0" cy="2" rx="82" ry="15" fill="#e6dfd2"/>
+  <ellipse cx="0" cy="0" rx="52" ry="9" fill="#3b3128"/>
+  <g clip-path="url(#burrow)"><g class="hog">
+  <path d="M-44 2 C-50 -34 -44 -62 -30 -76 L30 -76 C44 -62 50 -34 44 2 Z" fill="#0d7377"/>
+  <ellipse cx="0" cy="-30" rx="25" ry="30" fill="#f3efe6"/>
+  <circle cx="-27" cy="-110" r="6.5" fill="#0a5c5f"/><circle cx="27" cy="-110" r="6.5" fill="#0a5c5f"/>
+  <ellipse cx="0" cy="-92" rx="36" ry="27" fill="#0d7377"/>
+  <ellipse cx="0" cy="-81" rx="16" ry="11" fill="#f3efe6"/>
+  <g class="eyes"><circle cx="-14" cy="-98" r="4.2" fill="#0f1a2e"/><circle cx="14" cy="-98" r="4.2" fill="#0f1a2e"/>
+  <circle cx="-12.6" cy="-99.6" r="1.4" fill="#ffffff"/><circle cx="15.4" cy="-99.6" r="1.4" fill="#ffffff"/></g>
+  <ellipse cx="0" cy="-87" rx="5.5" ry="3.8" fill="#0f1a2e"/>
+  <path d="M-3.5 -77 h7 v6 a1.5 1.5 0 0 1 -1.5 1.5 h-4 a1.5 1.5 0 0 1 -1.5 -1.5 Z" fill="#ffffff" stroke="#0f1a2e" stroke-width="0.8"/>
+  <path d="M-17 -84 L-34 -88 M-17 -80 L-34 -79 M17 -84 L34 -88 M17 -80 L34 -79" stroke="#0f1a2e" stroke-width="1.2" stroke-linecap="round" opacity="0.55"/>
+  <ellipse cx="-13" cy="-50" rx="8" ry="5.5" fill="#0a5c5f"/>
+  <ellipse cx="13" cy="-50" rx="8" ry="5.5" fill="#0a5c5f"/>
+  </g></g>
+  <path d="M-82 2 A82 15 0 0 0 82 2 L52 2 A52 9 0 0 1 -52 2 Z" fill="#e6dfd2"/>
+</g>
+</svg>
