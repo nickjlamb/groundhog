@@ -77,7 +77,7 @@ Three models, 1,500 scored runs (6–8 Nov 2026). pass^5 is the chance that all 
 - **Models find the error but grade it too leniently.** All 30 runs on a leavepiece that called a 20% relative reduction "absolute" named the error and the 4.7-point absolute difference; 29 still rated the claim "partially supported".
 - **Most items stop discriminating.** 33 of 50 tasks are at ceiling for all three models; 14 separate them, mostly abstention and conflict tasks.
 
-Write-up: [Right once isn't reliable](https://www.pharmatools.ai/notes/groundhog-agent-reliability). Every failed run read and coded: [`analysis/taxonomy.md`](analysis/taxonomy.md). Which tasks discriminate: [`analysis/item_analysis.md`](analysis/item_analysis.md). Scoring rules and the corrections made before reporting: [`docs/scoring.md`](docs/scoring.md).
+Write-up: [Being right once isn't reliable](https://www.pharmatools.ai/notes/groundhog-agent-reliability). Every failed run read and coded: [`analysis/taxonomy.md`](analysis/taxonomy.md). Which tasks discriminate: [`analysis/item_analysis.md`](analysis/item_analysis.md). Scoring rules and the corrections made before reporting: [`docs/scoring.md`](docs/scoring.md).
 
 ## How it works
 
