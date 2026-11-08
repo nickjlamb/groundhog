@@ -29,6 +29,8 @@ LEDGER = Path(__file__).resolve().parents[2] / "runs" / "gemini_spend.json"
 PRICES = {
     "gemini-3.1-pro-preview": (2.00, 12.00),
     "gemini-3.5-flash": (0.75, 3.75),
+    "gemini-4-argon": (2.00, 10.00),      # third-party snapshot, Oct 2026; reported to double on 1 Dec 2026
+    "gemini-3.8-flash": (0.75, 3.75),
 }
 DEFAULT_PRICE = (2.00, 12.00)
 

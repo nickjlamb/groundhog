@@ -4,7 +4,8 @@
 #   ./scripts/gemini_direct.sh check      key works? which Gemini models are available?
 #   ./scripts/gemini_direct.sh headline   Gemini 3.1 Pro on abstain-001 (planted dose), 5 clean + 5 fault
 #   ./scripts/gemini_direct.sh pro        Gemini 3.1 Pro on all 50 tasks (continues from headline)
-#   ./scripts/gemini_direct.sh flash      Gemini Flash on all 50 tasks (FLASH_ID=..., default gemini-3.5-flash)
+#   ./scripts/gemini_direct.sh argon      Gemini 4 Argon on all 50 tasks
+#   ./scripts/gemini_direct.sh flash      Gemini Flash on all 50 tasks (FLASH_ID=..., default gemini-3.8-flash)
 #   ./scripts/gemini_direct.sh score      judge and score whatever has run
 set -e
 cd "$(dirname "$0")/.."
@@ -12,7 +13,8 @@ cd "$(dirname "$0")/.."
 .venv/bin/pip install -q -r requirements-dev.txt
 REDACTA="node $HOME/redacta/mcp-server/dist/index.js"
 PRO=gemini-3.1-pro-preview
-FLASH=${FLASH_ID:-gemini-3.5-flash}
+FLASH=${FLASH_ID:-gemini-3.8-flash}
+ARGON=gemini-4-argon
 mkdir -p runs/direct
 spend() { .venv/bin/python -c "from harness.models.gemini_model import spent; print(f'Gemini spend so far: \${spent():.2f}')"; }
 case "$1" in
@@ -50,6 +52,10 @@ PY
     .venv/bin/python -u -m harness.runner --model gemini:$PRO --tasks all --conditions both --runs 5 \
       --redacta-cmd "$REDACTA" --resume runs/direct/gemini_$PRO > runs/direct/pro.log 2>&1
     tail -3 runs/direct/pro.log; spend ;;
+  argon)
+    .venv/bin/python -u -m harness.runner --model gemini:$ARGON --tasks all --conditions both --runs 5 \
+      --redacta-cmd "$REDACTA" --resume runs/direct/gemini_$ARGON > runs/direct/argon.log 2>&1
+    tail -3 runs/direct/argon.log; spend ;;
   flash)
     .venv/bin/python -u -m harness.runner --model gemini:$FLASH --tasks all --conditions both --runs 5 \
       --redacta-cmd "$REDACTA" --resume runs/direct/gemini_$FLASH > runs/direct/flash.log 2>&1
@@ -58,6 +64,6 @@ PY
     .venv/bin/python -u scripts/judge_runs.py runs/direct/gemini_* --out runs/scores_direct
     .venv/bin/python scripts/score.py runs/direct/gemini_* --out runs/scores_direct > /dev/null
     echo "Summary: runs/scores_direct/summary.md"; spend ;;
-  *) sed -n 2,9p "$0" ;;
+  *) sed -n 2,10p "$0" ;;
 esac
 echo "GEMINI $1 DONE"
