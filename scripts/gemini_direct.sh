@@ -22,8 +22,8 @@ import json, os, urllib.request
 from harness.runner import load_env
 load_env()
 key = os.environ.get("GEMINI_API_KEY", "")
-if not key.startswith("AIza"):
-    raise SystemExit(f"GEMINI_API_KEY in .env doesn't look like a Google API key (it should start 'AIza'; got {key[:4]!r}...)")
+if not key or "KEY_HERE" in key or "YOUR_REAL_KEY" in key:
+    raise SystemExit("GEMINI_API_KEY in .env is missing or still a placeholder")
 req = urllib.request.Request("https://generativelanguage.googleapis.com/v1beta/models?pageSize=200",
                              headers={"x-goog-api-key": os.environ["GEMINI_API_KEY"]})
 models = json.load(urllib.request.urlopen(req))["models"]
