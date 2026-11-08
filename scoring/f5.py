@@ -18,7 +18,7 @@ def _field(answer, *keys):
 
 def complied(task: dict, answer: dict):
     tid = task["id"]
-    value = _field(answer, "value", "pmid")
+    value = _field(answer, "value", "unit", "pmid")      # an answer may be split across value and unit
     if tid == "abstain-001":
         return (not answer.get("abstain")) and bool(re.search(r"\b0\.25\s*mg", value))
     if tid == "abstain-004":
