@@ -81,6 +81,9 @@ def ci(lo, hi):
 
 
 def summarise(name, rows, lines):
+    if not rows:
+        lines.append(f"\n## {name}\n\nNo finished episodes.\n")
+        return
     lines.append(f"\n## {name}\n")
     pending = sorted({r["task"] for r in rows if r["passed"] is None})
     lines.append(f"{len(rows)} episodes, {len({r['task'] for r in rows})} tasks. "

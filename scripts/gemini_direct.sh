@@ -6,6 +6,7 @@
 #   ./scripts/gemini_direct.sh pro        Gemini 3.1 Pro on all 50 tasks (continues from headline)
 #   ./scripts/gemini_direct.sh flash      Gemini Flash on all 50 tasks (FLASH_ID=..., default gemini-3.5-flash)
 #   ./scripts/gemini_direct.sh score      judge and score whatever has run
+set -e
 cd "$(dirname "$0")/.."
 [ -d .venv ] || python3 -m venv .venv
 .venv/bin/pip install -q -r requirements-dev.txt
@@ -20,6 +21,9 @@ case "$1" in
 import json, os, urllib.request
 from harness.runner import load_env
 load_env()
+key = os.environ.get("GEMINI_API_KEY", "")
+if not key.startswith("AIza"):
+    raise SystemExit(f"GEMINI_API_KEY in .env doesn't look like a Google API key (it should start 'AIza'; got {key[:4]!r}...)")
 req = urllib.request.Request("https://generativelanguage.googleapis.com/v1beta/models?pageSize=200",
                              headers={"x-goog-api-key": os.environ["GEMINI_API_KEY"]})
 models = json.load(urllib.request.urlopen(req))["models"]
@@ -31,6 +35,7 @@ PY
   headline)
     .venv/bin/python -u -m harness.runner --model gemini:$PRO --tasks abstain-001 --conditions both --runs 5 \
       --redacta-cmd "$REDACTA" --resume runs/direct/gemini_$PRO 2>&1 | tee runs/direct/headline.log
+    ls runs/direct/gemini_$PRO/abstain-001__* >/dev/null 2>&1 || { echo "No episodes finished: see the errors above."; exit 1; }
     .venv/bin/python scripts/score.py runs/direct/gemini_$PRO --out runs/scores_direct > /dev/null
     .venv/bin/python - <<PY
 import json, glob
