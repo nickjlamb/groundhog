@@ -198,6 +198,20 @@ One independent annotator with medical-information or medcomms experience (for e
 
 Annotation happens before cassettes are recorded, so annotators never see model outputs.
 
+### 5.3 Workload for annotator B
+
+| Part | Estimate |
+|---|---|
+| Briefing and 3 practice tasks | 1 h |
+| Blind answering, 60 tasks from public sources (eMC, DailyMed, PubMed, ClinicalTrials.gov), about 15 min each | 15 h |
+| Judge calibration set, 30 graded answers | 2 h |
+| Adjudication call(s) | 2 h |
+| Optional: taxonomy coding, ~20% of failed runs | 4–5 h |
+| Optional: manuscript review (for authorship) | 2–3 h |
+| **Core total** | **~20 h over 2–3 weeks** |
+
+No code or API access is needed: B works from a spreadsheet of prompts and source pointers. Cutting the sample to 40 tasks brings the core to about 15 h.
+
 ---
 
 ## 6. Held-out split
@@ -223,7 +237,7 @@ Annotation happens before cassettes are recorded, so annotators never see model 
 | Claude Haiku 5.5 | Anthropic API | n/a |
 | One open-weights model (e.g. Kimi K3) | Perplexity gateway | none |
 
-v1.2 showed the gateway and Google's own API gave the same headline for Gemini 3.1 Pro. On current credits, routing every model through its own provider isn't affordable: about £28 of GCP credit is left and there is no OpenAI credit. So the plan is gateway for the main run plus a direct-API cross-check wherever credit allows. The roadmap line "each called through its own provider's API" would change to match. **[D6]**
+v1.2 showed the gateway and Google's own API gave the same headline for Gemini 3.1 Pro. On current credits, routing every model through its own provider isn't affordable: about £28 of GCP credit is left and there is no OpenAI credit. So the plan is gateway for the main run plus a direct-API cross-check wherever credit allows. The roadmap line now says this (D6, decided 9 Nov).
 
 Every model's tool calling is checked in the pilot. A model that can't call tools reliably is dropped, and the drop is reported.
 
@@ -298,14 +312,14 @@ As in v1, **task verification is the critical path.** 100 new tasks is twice v1'
 |---|---|---|
 | D1 | Add `partial_abstain` (part-answerable questions) | Yes |
 | D2 | Persistent faults on 60 tasks | 60; cut to 30 if time is short |
-| D3 | Who is the second annotator, and how are they credited | Nick to approach a CMPP colleague; credited as contributor (co-author if they also code taxonomy) |
+| D3 | Who is the second annotator, and how are they credited | Nick approaching candidates; co-authorship offered if they also review the manuscript (ICMJE), otherwise acknowledgement and dataset credit |
 | D4 | IAA sample | 60 tasks (all 30 held-out + 30 public) |
 | D5 | Held-out split size and release | 30 tasks; released at v3 |
-| D6 | Gateway for the main run, direct-API cross-checks only | Yes, and update the README roadmap wording |
+| D6 | Gateway for the main run, direct-API cross-checks only | **Decided (9 Nov):** yes; README roadmap updated |
 | D7 | B also codes 20% of failures for taxonomy agreement | Yes, if B has time; otherwise IAA on gold only |
-| D8 | v2 tasks written as now (Claude drafts, Nick verifies), or Nick drafts some held-out tasks himself so no model sees their content before the run | Nick drafts the held-out 30 himself |
+| D8 | v2 tasks written as now (Claude drafts, Nick verifies), or Nick drafts some held-out tasks himself so no model sees their content before the run | **Decided (9 Nov):** Nick drafts the held-out 30 himself |
 
-D8 matters more than it looks. If Claude drafts the held-out tasks, their content passes through a model provider before the run. That is a weak point for a contamination claim. Drafting them by hand keeps the held-out split clean.
+D8 matters more than it looks. If Claude drafts the held-out tasks, their content passes through a model provider before the run. That is a weak point for a contamination claim. Nick drafts and verifies them by hand, outside any AI tool, so the held-out split stays clean. The held-out files, cassettes and annotation sheets also stay out of AI-assisted sessions until the run.
 
 ---
 

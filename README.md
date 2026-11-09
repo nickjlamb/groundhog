@@ -199,7 +199,7 @@ tests/        offline tests, run in CI
 - [ ] **v2**: ~150 tasks weighted towards abstention and conflict, where models actually differ
 - [ ] **v2**: persistent faults (not just fire-once), privacy tasks that put real pressure on the model
 - [ ] **v2**: second annotator and inter-annotator agreement; private held-out split
-- [ ] **v2**: more models, each called through its own provider's API (done for Gemini in v1.2)
+- [ ] **v2**: more models through one gateway, cross-checked against each provider's own API where credits allow (done for Gemini in v1.2)
 
 Ideas and task proposals are welcome: see [Contributing](CONTRIBUTING.md).
 
