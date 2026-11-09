@@ -3,9 +3,12 @@
   python -m harness.runner --model mock:submit-gold --tasks all --runs 1
   python -m harness.runner --model anthropic:<id> --tasks label-001,claim-001 --runs 5
 
-Conditions: each task runs clean (F0) and under its assigned fault, unless
---conditions clean or --conditions fault is given. Replay mode reads
-cassettes/; record mode (--record) calls live PubCrawl and writes them.
+Conditions: each task runs clean (F0) and under its transient fault by
+default (--conditions both). --conditions all adds the task's persistent fault
+(F1p-F5p) where it has one; clean, fault and persistent run one kind only.
+Replay mode reads cassettes/; record mode (--record) calls live PubCrawl and
+writes them. Held-out tasks are included when GROUNDHOG_PRIVATE is set
+(see harness/taskset.py).
 """
 
 import argparse
@@ -16,12 +19,11 @@ import subprocess
 import sys
 from pathlib import Path
 
-import yaml
-
 from .agent import run_episode
 from .cassette import Cassette
 from .gateway import RecordGateway, ReplayGateway
 from .models import make_model
+from .taskset import WHICH, cassette_root, conditions, load_all
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -37,8 +39,7 @@ def load_env(path=ROOT / ".env"):
 
 
 def load_tasks(selector: str) -> list[dict]:
-    tasks = [yaml.safe_load(p.read_text()) for p in sorted((ROOT / "tasks").glob("*.yaml"))]
-    tasks = [t for t in tasks if t.get("status") == "verified"]
+    tasks = [t for t in load_all() if t.get("status") == "verified"]
     if selector != "all":
         wanted = set(selector.split(","))
         tasks = [t for t in tasks if t["id"] in wanted]
@@ -59,7 +60,7 @@ def git_sha() -> str:
 def task_set_hash(tasks) -> str:
     h = hashlib.sha256()
     for t in tasks:
-        h.update((ROOT / "tasks" / f"{t['id']}.yaml").read_bytes())
+        h.update(Path(t["_path"]).read_bytes())
     return h.hexdigest()[:12]
 
 
@@ -77,7 +78,8 @@ def main(argv=None):
     ap.add_argument("--model", required=True)
     ap.add_argument("--tasks", default="all")
     ap.add_argument("--runs", type=int, default=1, help="repeats per task per condition (spec: 5)")
-    ap.add_argument("--conditions", choices=["both", "clean", "fault"], default="both")
+    ap.add_argument("--conditions", choices=list(WHICH), default="both",
+                    help="both = clean + transient fault (v1); all adds the persistent fault")
     ap.add_argument("--record", action="store_true", help="call live PubCrawl and write cassettes (clean only)")
     ap.add_argument("--pubcrawl-cmd", default="npx -y @pharmatools/pubcrawl@2.8.0")
     ap.add_argument("--redacta-cmd", default="", help="command for a local Redacta MCP server; omit to run without Redacta")
@@ -101,6 +103,7 @@ def main(argv=None):
     manifest = {"run_id": run_id, "model": args.model, "runs": args.runs, "conditions": args.conditions,
                 "mode": "record" if args.record else "replay", "max_tool_calls": args.max_tool_calls, "git_sha": git_sha(),
                 "task_set_hash": task_set_hash(tasks), "tasks": [t["id"] for t in tasks],
+                "heldout_tasks": sum(t.get("split") == "heldout" for t in tasks),
                 "corpus_hash": files_hash((ROOT / "corpus").glob("*.json")),
                 "cassettes_hash": files_hash((ROOT / "cassettes").glob("*.json")),
                 "interface_hash": files_hash([ROOT / "harness" / "tools.py", ROOT / "harness" / "prompts" / "system.md"]),
@@ -112,12 +115,12 @@ def main(argv=None):
 
     failures = 0
     for task in tasks:
-        conds = ["F0"] if args.record else {"both": ["F0", task["fault"]], "clean": ["F0"], "fault": [task["fault"]]}[args.conditions]
-        cassette = Cassette(task["id"])
-        if task["fault"] == "F4" and not args.record and not cassette.has_variant("stale"):
-            if task["fault"] in conds:
-                print(f"{task['id']:14} F4 skipped: no stale recording, so the fault cannot be injected", flush=True)
-            conds = [c for c in conds if c != "F4"]
+        conds = ["F0"] if args.record else conditions(task, args.conditions)
+        cassette = Cassette(task["id"], root=cassette_root(task))
+        if not args.record and not cassette.has_variant("stale"):
+            for c in [c for c in conds if c in ("F4", "F4p")]:
+                print(f"{task['id']:14} {c} skipped: no stale recording, so the fault cannot be injected", flush=True)
+            conds = [c for c in conds if c not in ("F4", "F4p")]
         for cond in conds:
             for rep in range(1, args.runs + 1):
                 model = make_model(args.model)

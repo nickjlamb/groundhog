@@ -15,19 +15,15 @@ import statistics
 import sys
 from pathlib import Path
 
-import yaml
-
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 from scoring.consistency import bootstrap_ci, mean_pass_hat_k  # noqa: E402
 from scoring.outcome import score_episode                       # noqa: E402
 from scoring.process import score_process                       # noqa: E402
+from harness.taskset import by_id, is_persistent, task_for_condition  # noqa: E402
 
-TASKS = {}
-for f in (ROOT / "tasks").glob("*.yaml"):
-    t = yaml.safe_load(f.read_text())
-    TASKS[t["id"]] = t
+TASKS = by_id()        # includes held-out tasks when GROUNDHOG_PRIVATE is set
 
 
 def load_judged(out_dir):
@@ -51,7 +47,7 @@ def score_run(run_dir):
     rows = []
     for f in sorted(glob.glob(str(Path(run_dir) / "*__*.json"))):
         trace = json.load(open(f))
-        task = TASKS[trace["task_id"]]
+        task = task_for_condition(TASKS[trace["task_id"]], trace["condition"])
         if task.get("status") != "verified":
             continue
         judged = dict(JUDGED.get(f"{Path(run_dir).name}/{Path(f).name}", {}))
@@ -59,9 +55,14 @@ def score_run(run_dir):
             judged["_task_judged"] = True
         out = score_episode(task, trace, judged)
         rows.append({"task": task["id"], "category": task["category"], "condition": trace["condition"],
-                     "clean": trace["condition"] == "F0", "repeat": trace["repeat"], "status": trace["status"],
+                     "clean": trace["condition"] == "F0", "persistent": is_persistent(trace["condition"]),
+                     "split": task.get("split", "public"), "repeat": trace["repeat"], "status": trace["status"],
                      **out, "process": score_process(task, trace, out)})
     return rows
+
+
+def transient(r):
+    return not r["clean"] and not r.get("persistent")
 
 
 def by_task(rows, pred):
@@ -91,7 +92,10 @@ def summarise(name, rows, lines):
                  + (f" ({', '.join(pending)})" if pending else "") + ".\n")
     lines.append("| Condition | Tasks | pass@1 [95% CI] | pass^2 | pass^3 | pass^5 [95% CI] |")
     lines.append("|---|---|---|---|---|---|")
-    for label, pred in (("Clean", lambda r: r["clean"]), ("Fault", lambda r: not r["clean"])):
+    conds = [("Clean", lambda r: r["clean"]), ("Fault", transient)]
+    if any(r.get("persistent") for r in rows):
+        conds.append(("Persistent fault", lambda r: r.get("persistent")))
+    for label, pred in conds:
         res = by_task(rows, pred)
         p1 = mean_pass_hat_k(res, 1); lo1, hi1 = bootstrap_ci(res, lambda d: mean_pass_hat_k(d, 1))
         p5 = mean_pass_hat_k(res, 5); lo5, hi5 = bootstrap_ci(res, lambda d: mean_pass_hat_k(d, 5))
@@ -103,7 +107,7 @@ def summarise(name, rows, lines):
     lines.append("|---|---|---|")
     for cat in sorted({r["category"] for r in rows}):
         c = mean_pass_hat_k(by_task(rows, lambda r: r["clean"] and r["category"] == cat), 1)
-        f = mean_pass_hat_k(by_task(rows, lambda r: not r["clean"] and r["category"] == cat), 1)
+        f = mean_pass_hat_k(by_task(rows, lambda r: transient(r) and r["category"] == cat), 1)
         lines.append(f"| {cat} | {fmt(c)} | {fmt(f)} |")
 
     lines.append("\n**By fault** (pass@1 on the same tasks, clean → fault)\n")
@@ -138,6 +142,10 @@ def summarise(name, rows, lines):
     cost = sum(p["cost_usd"] for p in P)
     lines.append("**Process**\n")
     lines.append(f"- Ran out of tool calls: {sum(p['budget_exhausted'] for p in P)}/{len(P)} episodes")
+    pers = [p for p in P if p.get("switched_route") is not None]
+    if pers:
+        lines.append(f"- Persistent faults: switched to another tool in {sum(p['switched_route'] for p in pers)}/{len(pers)} "
+                     f"runs; mean calls spent on the faulted tool {statistics.mean(p['faulted_tool_calls'] for p in pers):.1f}")
     lines.append(f"- Mean tool calls: {statistics.mean(p['tool_calls'] for p in P):.1f}; "
                  f"redundant repeat calls: {sum(p['redundant_calls'] for p in P)}; "
                  f"off-path calls: {sum(p['off_path_calls'] for p in P)}")

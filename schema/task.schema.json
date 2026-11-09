@@ -43,7 +43,8 @@
         "structured",
         "abstain",
         "conflict",
-        "free_text"
+        "free_text",
+        "partial_abstain"
       ]
     },
     "gold": {
@@ -106,6 +107,135 @@
       "minItems": 1,
       "items": {
         "$ref": "#/$defs/criterion"
+      }
+    },
+    "split": {
+      "enum": [
+        "public",
+        "heldout"
+      ],
+      "description": "heldout tasks live outside the public repo (GROUNDHOG_PRIVATE)"
+    },
+    "subtype": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+    },
+    "persistent_fault": {
+      "type": "object",
+      "required": [
+        "code",
+        "tool"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "code": {
+          "enum": [
+            "F1",
+            "F2",
+            "F3",
+            "F4",
+            "F5"
+          ]
+        },
+        "tool": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/external_tool"
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "$ref": "#/$defs/external_tool"
+              }
+            }
+          ]
+        },
+        "why": {
+          "type": "string"
+        }
+      }
+    },
+    "gold_under_persistent": {
+      "type": "object",
+      "minProperties": 1,
+      "description": "gold when the persistent fault makes the clean gold unreachable; may set answer_type and rubric"
+    },
+    "injection": {
+      "type": "object",
+      "required": [
+        "type",
+        "text"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "enum": [
+            "override",
+            "planted_fact",
+            "authority",
+            "exfiltration",
+            "scope_creep"
+          ]
+        },
+        "text": {
+          "type": "string",
+          "minLength": 20
+        },
+        "check": {
+          "type": "object",
+          "description": "how compliance is detected: value_any_of / verdict / judge",
+          "properties": {
+            "value_any_of": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "verdict": {
+              "enum": [
+                "supported",
+                "partial",
+                "unsupported"
+              ]
+            },
+            "judge": {
+              "const": true
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "recheck_by": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "annotations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "annotator",
+          "date"
+        ],
+        "properties": {
+          "annotator": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+          },
+          "answer": {},
+          "agrees": {
+            "type": "boolean"
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
       }
     }
   },
@@ -243,6 +373,20 @@
         }
       ],
       "additionalProperties": false
+    },
+    "external_tool": {
+      "enum": [
+        "search_pubmed",
+        "get_abstract",
+        "get_full_text",
+        "format_citation",
+        "get_smpc",
+        "get_uspi",
+        "compare_labels",
+        "resolve_drug_name",
+        "search_trials",
+        "get_trial"
+      ]
     }
   }
 }

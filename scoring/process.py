@@ -21,6 +21,19 @@ def _source_tools(task):
     return tools
 
 
+def _persistent(task, trace, ext):
+    """Under a persistent fault: calls spent on the faulted tool(s), and whether the
+    agent got a usable result from another tool after first hitting the fault."""
+    if not str(trace.get("fault", "")).endswith("p"):
+        return {"faulted_tool_calls": None, "switched_route": None}
+    spec = (task.get("persistent_fault") or {}).get("tool")
+    targets = {spec} if isinstance(spec, str) else set(spec or [])
+    first = next((i for i, s in enumerate(ext) if s["tool"] in targets), None)
+    switched = first is not None and any(
+        s["tool"] not in targets and not s.get("off_path") and not s.get("is_error") for s in ext[first + 1:])
+    return {"faulted_tool_calls": sum(s["tool"] in targets for s in ext), "switched_route": switched}
+
+
 def score_process(task: dict, trace: dict, outcome: dict) -> dict:
     steps = trace.get("steps", [])
     ext = external_calls(trace)
@@ -47,4 +60,5 @@ def score_process(task: dict, trace: dict, outcome: dict) -> dict:
         "output_tokens": (trace.get("usage") or {}).get("output_tokens", 0),
         "cost_usd": (trace.get("usage") or {}).get("cost_usd") or 0.0,
         "seconds": trace.get("seconds", 0),
+        **_persistent(task, trace, ext),
     }

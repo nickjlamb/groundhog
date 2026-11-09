@@ -11,14 +11,16 @@ spread = best model's rate - worst model's rate. A task is
 """
 import collections
 import json
+import sys
 from pathlib import Path
 
-import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 MODELS = {"anthropic_claude-sonnet-5-5": "Claude", "perplexity_google_gemini-3.1-pro-preview": "Gemini Pro",
           "perplexity_google_gemini-3.5-flash": "Gemini Flash"}
-TASKS = {yaml.safe_load(f.read_text())["id"]: yaml.safe_load(f.read_text()) for f in (ROOT / "tasks").glob("*.yaml")}
+sys.path.insert(0, str(ROOT))
+from harness.taskset import by_id  # noqa: E402
+TASKS = by_id()
 
 
 def main():

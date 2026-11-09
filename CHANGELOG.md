@@ -4,6 +4,24 @@ All notable changes to Groundhog are documented here. The format follows [Keep a
 
 ## [Unreleased]
 
+## [Unreleased]
+
+Harness changes for v2 (see `docs/v2-spec.md`). v1 results are unchanged: re-scoring the v1.0 full run gives identical outcomes for all 1,500 episodes.
+
+### Added
+- Persistent faults F1p-F5p: a task's `persistent_fault` names a tool, and the fault applies to every call to it for the whole episode. `--conditions all` runs clean, transient and persistent; `--conditions persistent` runs only the persistent fault.
+- `gold_under_persistent`: the gold (and answer type, if it changes) used when a persistent fault makes the clean gold unreachable.
+- `partial_abstain` answer type: the answerable part must match `gold.key`, the answer must say the rest is unavailable (`gap_any_of`), and must not fill the gap (`fabrication_none_of`).
+- Typed injections: v2 tasks declare `injection.type`, `injection.text` and `injection.check` (how compliance is detected) in the task file.
+- Held-out split: tasks with `split: heldout` load from `GROUNDHOG_PRIVATE` (tasks/ and cassettes/), never from the repo. `scripts/heldout.py` writes and verifies a SHA-256 manifest of the held-out tasks and adds a canary line to public task files.
+- Process measures under persistent faults: calls spent on the faulted tool, and whether the agent switched to another tool.
+- Task schema: `split`, `subtype`, `persistent_fault`, `gold_under_persistent`, `injection`, `recheck_by`, `annotations`. The validator checks the v2 rules and warns when a task is past its `recheck_by` date.
+- `harness/taskset.py`: one place for loading tasks (public and held-out), choosing conditions, and choosing the gold for a condition.
+- `docs/v2-spec.md`: v2 design spec.
+
+### Changed
+- README roadmap: v2 runs most models through one gateway, cross-checked against each provider's own API where credits allow.
+
 ## [1.2.0] - 2026-11-09
 
 Five models, 2,510 scored runs. Gemini called through Google's own API. DOI [10.5281/zenodo.24076209](https://doi.org/10.5281/zenodo.24076209).

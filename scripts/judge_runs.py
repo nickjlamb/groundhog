@@ -13,18 +13,14 @@ import json
 import sys
 from pathlib import Path
 
-import yaml
-
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 from harness.runner import load_env  # noqa: E402
 from scoring.judge import Judge      # noqa: E402
+from harness.taskset import by_id, task_for_condition  # noqa: E402
 
-TASKS = {}
-for f in (ROOT / "tasks").glob("*.yaml"):
-    t = yaml.safe_load(f.read_text())
-    TASKS[t["id"]] = t
+TASKS = by_id()        # includes held-out tasks when GROUNDHOG_PRIVATE is set
 
 
 def item_key(episode, item):
@@ -56,7 +52,7 @@ def main():
             trace = json.load(open(f))
             if trace.get("status") != "submitted":
                 continue
-            task = TASKS[trace["task_id"]]
+            task = task_for_condition(TASKS[trace["task_id"]], trace.get("condition", "F0"))
             if task.get("answer_type") == "comparison":
                 todo.append((f, "outcome", task, None, trace["answer"] or {}))
             for c in task.get("rubric") or []:

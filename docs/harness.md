@@ -83,3 +83,15 @@ off-path, any fault events, the final answer and token usage.
   are not stored and are reported as `LIVE ERRORS` in the run log.
 - **Faults fire once**, on the first eligible external call, so clean and
   faulty runs of the same task differ in exactly one place.
+
+## v2: persistent faults and the held-out split
+
+**Persistent faults.** A task may carry a `persistent_fault` (`code` F1-F5, `tool` one external tool or a list). Run as condition `F1p`-`F5p`, the fault applies to every call to that tool for the whole episode, while other tools work normally: F1p always times out, F2p always returns empty, F3p cuts every first page, F4p always serves the stale recording, F5p injects into every text response. Transient faults (F1-F5) are unchanged and still fire once.
+
+```bash
+python -m harness.runner --model <model> --tasks conflict-021 --runs 5 --conditions all   # F0, transient, persistent
+```
+
+When the persistent fault makes the clean gold unreachable, the task's `gold_under_persistent` is used for scoring and judging (`harness/taskset.py: task_for_condition`).
+
+**Held-out tasks.** Tasks with `split: heldout` never enter this repo. Keep them in a private directory with `tasks/` and `cassettes/` subfolders and set `GROUNDHOG_PRIVATE` to it: the runner, scorer, judge and validator then include them. `scripts/heldout.py manifest` writes `heldout/manifest.sha256` (one SHA-256 per held-out task, over its parsed content) to publish at the v2 tag; `scripts/heldout.py verify` checks the private tasks still match it.
