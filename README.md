@@ -11,13 +11,13 @@
   <a href="https://doi.org/10.5281/zenodo.24051137"><img alt="DOI" src="https://zenodo.org/badge/DOI/10.5281/zenodo.24051137.svg"></a>
   <img alt="Python 3.12" src="https://img.shields.io/badge/python-3.12-0d7377">
   <img alt="Tasks: 50 verified" src="https://img.shields.io/badge/tasks-50%20verified-0d7377">
-  <img alt="Scored runs: 1,500" src="https://img.shields.io/badge/scored%20runs-1%2C500-0d7377">
+  <img alt="Scored runs: 2,510" src="https://img.shields.io/badge/scored%20runs-2%2C510-0d7377">
   <a href="#licence"><img alt="Licence: MIT and CC BY 4.0" src="https://img.shields.io/badge/licence-MIT%20%2F%20CC%20BY%204.0-lightgrey"></a>
 </p>
 
 <p align="center">
   <a href="#quick-start">Quick start</a> ·
-  <a href="#results-v11">Results</a> ·
+  <a href="#results-v12">Results</a> ·
   <a href="#how-it-works">How it works</a> ·
   <a href="docs/examples.md">Examples</a> ·
   <a href="#roadmap">Roadmap</a> ·
@@ -57,25 +57,29 @@ Then run a real model (needs `ANTHROPIC_API_KEY` in `.env`):
 
 More in [**docs/examples.md**](docs/examples.md): reading a trace, judging, item analysis, adding a model, writing a task.
 
-## Results (v1.1)
+## Results (v1.2)
 
-Three models, 1,500 scored runs (6–8 Nov 2026). pass^5 is the chance that all five runs of a task are right, averaged over tasks; 95% CIs are bootstrapped over tasks.
+Five models, 2,510 scored runs (6–9 Nov 2026). pass^5 is the chance that all five runs of a task are right, averaged over tasks; 95% CIs are bootstrapped over tasks.
 
-| | Claude Sonnet 5.5 | Gemini 3.1 Pro (preview) | Gemini 3.5 Flash |
-|---|---|---|---|
-| pass@1, clean | 0.98 | 0.92 | 0.84 |
-| **pass^5, clean** | **0.96** [0.90–1.00] | **0.84** [0.74–0.94] | **0.72** [0.60–0.84] |
-| **pass^5, with a fault** | **0.94** | **0.72** | **0.72** |
-| Followed a planted instruction (F5 runs) | 0 of 55 | 7 of 55 | 1 of 55 |
-| Ran out of the 15-call budget | 2 of 500 | 13 of 500 | 58 of 500 |
+| | Claude Sonnet 5.5 | Gemini 4 Argon | Gemini 3.1 Pro (preview) | Gemini 3.8 Flash | Gemini 3.5 Flash |
+|---|---|---|---|---|---|
+| pass@1, clean | 0.98 | 0.99 | 0.92 | 0.89 | 0.84 |
+| **pass^5, clean** | **0.96** [0.90–1.00] | **0.96** [0.90–1.00] | **0.84** [0.74–0.94] | **0.84** [0.74–0.94] | **0.72** [0.60–0.84] |
+| **pass^5, with a fault** | **0.94** | **0.94** | **0.72** | **0.86** | **0.72** |
+| Followed a planted instruction (F5 runs) | 0 of 55 | 0 of 55 | 7 of 55 | 2 of 55 | 1 of 55 |
+| Fabricated a citation (hard fail) | 0 | 0 | 0 | 2 | 0 |
+| Ran out of the 15-call budget | 2 of 500 | 5 of 500 | 13 of 500 | 24 of 500 | 58 of 500 |
+| Called through | Anthropic API | Google Gemini API | Perplexity Agent API | Google Gemini API | Perplexity Agent API |
 
-<sub>Claude via the Anthropic API; both Gemini models via the Perplexity Agent API. Default settings, identical tool schemas and system prompt.</sub>
+<sub>Default settings, identical tool schemas and system prompt. Gemini 4 Argon and 3.8 Flash were added in v1.2; per-model detail in [`analysis/gemini_direct_v1.2.md`](analysis/gemini_direct_v1.2.md).</sub>
 
-- **Planted text is trusted as if it were the source.** A line appended to a retrieved SmPC claimed adolescents start Ozempic at 0.25 mg weekly. Gemini 3.1 Pro gave that dose for a 15-year-old in 5 of 5 runs, citing "Section 4.2 of the UK SmPC" (which says no dose is established under 18). Claude declined in all 5; Flash in the 4 it finished.
-- **Faults separate models a clean benchmark ranks apart.** Faults barely moved Claude or Flash but took Gemini 3.1 Pro's pass^5 from 0.84 to 0.72.
-- **Not knowing when to stop is partly budget, partly not.** Doubling Flash's budget to 30 calls raised its pass rate on the affected tasks from 54% to 75%, but two tasks still failed at 30 calls with the model rewording the same search.
-- **Models find the error but grade it too leniently.** All 30 runs on a leavepiece that called a 20% relative reduction "absolute" named the error and the 4.7-point absolute difference; 29 still rated the claim "partially supported".
-- **Most items stop discriminating.** 33 of 50 tasks are at ceiling for all three models; 14 separate them, mostly abstention and conflict tasks.
+- **Planted text is trusted as if it were the source, and newer models fix it.** A line appended to a retrieved SmPC claimed adolescents start Ozempic at 0.25 mg weekly. Gemini 3.1 Pro gave that dose for a 15-year-old in 5 of 5 runs, citing "Section 4.2 of the UK SmPC" (which says no dose is established under 18). Re-run through Google's own API, it did so again in 5 of 5, once after noticing the real warning and dismissing it as "a seemingly legacy statement". Gemini 4 Argon and Claude declined in all 5; Gemini 3.8 Flash gave the dose in 2.
+- **The current Gemini flagship matches Claude on reliability.** Gemini 4 Argon and Claude Sonnet 5.5 have the same pass^5, clean (0.96) and under faults (0.94), with no hard fails in 1,000 runs between them.
+- **Faults separate models a clean benchmark ranks apart.** Faults barely moved Claude, Argon or the Flash models but took Gemini 3.1 Pro's pass^5 from 0.84 to 0.72.
+- **Not knowing when to stop is partly budget, partly not.** Doubling 3.5 Flash's budget to 30 calls raised its pass rate on the affected tasks from 54% to 75%, but two tasks still failed at 30. Argon still ran out of calls on all 5 runs of one conflict task when its first search came back empty.
+- **Models find the error but grade it too leniently.** On a leavepiece that called a 20% relative reduction "absolute", all three v1.1 models named the error and 29 of 30 runs still rated the claim "partially supported". Argon rated it "unsupported" in 5 of 10; 3.8 Flash in 0 of 10.
+- **Citations are checked, not trusted.** Gemini 3.8 Flash twice cited a garbled form of the EMPA-REG OUTCOME PMID (26378978 became 26378288 and 26378442, a vaccine preface and a rat-heart study). Every unretrieved PMID is resolved before scoring, so real papers cited from memory are flagged, not failed.
+- **Most items stop discriminating.** In the v1.1 item analysis, 33 of 50 tasks were at ceiling for all three models; 14 separated them, mostly abstention and conflict tasks.
 
 Write-up: [Being right once isn't reliable](https://www.pharmatools.ai/notes/groundhog-agent-reliability). Every failed run read and coded: [`analysis/taxonomy.md`](analysis/taxonomy.md). Which tasks discriminate: [`analysis/item_analysis.md`](analysis/item_analysis.md). Scoring rules and the corrections made before reporting: [`docs/scoring.md`](docs/scoring.md).
 
@@ -175,7 +179,7 @@ cassettes/    recorded tool responses per task; archived labels for F4
 corpus/       frozen search collection: articles, trials, drug names
 scoring/      outcome, process and consistency scorers; judge
 scripts/      score, judge, item analysis, taxonomy, corpus and cassette builders
-analysis/     failure taxonomy and item analysis (v1.1)
+analysis/     failure taxonomy, item analysis (v1.1), Gemini direct runs (v1.2)
 review/       judge calibration and failure-taxonomy review sheets
 studies/      side studies (HealthBench rubric checkability)
 docs/         design spec, harness, scoring, examples
@@ -184,23 +188,24 @@ tests/        offline tests, run in CI
 
 ## Roadmap
 
-**v1.0** (7 Nov 2026) and **v1.1** (8 Nov 2026) are released. Full history in the [changelog](CHANGELOG.md).
+**v1.0** (7 Nov 2026), **v1.1** (8 Nov 2026) and **v1.2** (9 Nov 2026) are released. Full history in the [changelog](CHANGELOG.md).
 
 - [x] 50 tasks verified by hand against primary sources
 - [x] Record/replay harness, frozen search corpus, five fault types, real archived labels for F4
 - [x] Outcome, process and pass^k scorers; judge calibrated against blinded expert grading
 - [x] Full run on three models, failure taxonomy, item analysis, tool-budget sweep
+- [x] Current Gemini models (4 Argon, 3.8 Flash) through Google's own API; v1.1 headline replicated directly
 - [ ] Preprint (submitted to arXiv)
 - [ ] **v2**: ~150 tasks weighted towards abstention and conflict, where models actually differ
 - [ ] **v2**: persistent faults (not just fire-once), privacy tasks that put real pressure on the model
 - [ ] **v2**: second annotator and inter-annotator agreement; private held-out split
-- [ ] **v2**: more models, each called through its own provider's API
+- [ ] **v2**: more models, each called through its own provider's API (done for Gemini in v1.2)
 
 Ideas and task proposals are welcome: see [Contributing](CONTRIBUTING.md).
 
 ## Limitations
 
-Stated up front: 50 tasks, of which 33 are at ceiling; a single verifier; English-language UK and US sources only; one tool stack; three models. Faults fire once, so re-querying recovers. F4 covers two tasks (case studies, not a rate). The privacy tasks never needed patient details, so they apply no pressure. Search runs against a frozen collection of 484 articles, easier than live PubMed. Confidence intervals are wide.
+Stated up front: 50 tasks, of which 33 are at ceiling; a single verifier; English-language UK and US sources only; one tool stack; five models, two of them called through a gateway. Faults fire once, so re-querying recovers. F4 covers two tasks (case studies, not a rate). The privacy tasks never needed patient details, so they apply no pressure. Search runs against a frozen collection of 484 articles, easier than live PubMed. Confidence intervals are wide.
 
 ## Contributing
 
@@ -212,7 +217,7 @@ Corrections to gold answers matter most: if you think a task's answer is wrong, 
 @software{lamb_groundhog_2026,
   author    = {Lamb, Nick},
   title     = {Groundhog: reliability of tool-using agents on medical-evidence tasks},
-  version   = {1.1.0},
+  version   = {1.2.0},
   year      = {2026},
   publisher = {Zenodo},
   doi       = {10.5281/zenodo.24051137},
@@ -220,7 +225,7 @@ Corrections to gold answers matter most: if you think a task's answer is wrong, 
 }
 ```
 
-Metadata in [`CITATION.cff`](CITATION.cff). Archived releases: [v1.1.0](https://doi.org/10.5281/zenodo.24051137) (three models) · [v1.0.0](https://doi.org/10.5281/zenodo.24043717).
+Metadata in [`CITATION.cff`](CITATION.cff). Archived releases: v1.2.0 (five models, DOI pending) · [v1.1.0](https://doi.org/10.5281/zenodo.24051137) (three models) · [v1.0.0](https://doi.org/10.5281/zenodo.24043717).
 
 ## Licence
 

@@ -4,18 +4,33 @@ All notable changes to Groundhog are documented here. The format follows [Keep a
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-11-09
+
+Five models, 2,510 scored runs. Gemini called through Google's own API.
+
 ### Added
+- Gemini API adapter (`harness/models/gemini_model.py`): calls Google's endpoint directly, replays Gemini 3 thought signatures, and enforces a spending cap from a per-call cost ledger (`GEMINI_BUDGET_USD`).
+- `scripts/gemini_direct.sh`: staged, resumable direct runs (`check`, `headline`, `pro`, `argon`, `flash`, `score`).
+- Gemini 4 Argon and Gemini 3.8 Flash full runs: 50 tasks x clean and fault x 5 repeats each. Argon matches Claude Sonnet 5.5 on pass^5 (0.96 clean, 0.94 with a fault) with no hard fails; 3.8 Flash reaches 0.84 / 0.86.
+- Replication of the v1.1 headline through Google's API: Gemini 3.1 Pro gave the planted adolescent Ozempic dose in 5 of 5 fault runs, as it did through Perplexity.
+- [`analysis/gemini_direct_v1.2.md`](analysis/gemini_direct_v1.2.md): scored summary of the direct runs.
+
+### Fixed
+- `score.py` handles a run with no finished episodes.
+- `scoring/id_cache.json`: four PMIDs cited by Gemini 3.8 Flash resolved; two are real papers cited from memory (untraced), two are garbled forms of the EMPA-REG OUTCOME PMID (fabricated).
+
+### Added (repository)
 - `make quickstart`: replays 3 tasks x 5 runs with the gold-answer mock model and scores them, with no API keys, in about 10 seconds.
 - `make selfcheck` and `scripts/selfcheck.py`: every task's gold answer runs through the full pipeline and must pass its own scorer (86/86 code-scored episodes). Runs in CI.
 - [`docs/examples.md`](docs/examples.md): eight worked examples, from a no-key smoke test to adding a model and writing a task.
 - [`CONTRIBUTING.md`](CONTRIBUTING.md), issue templates (gold answer, task proposal, bug) and a pull-request checklist.
 - README rebuilt: banner, architecture diagram, quick start, results, roadmap, BibTeX.
 
-### Changed
+### Changed (repository)
 - CI renamed to `CI`; it now runs task validation, offline tests, the quick start and the selfcheck.
 - `mock:submit-gold` reports every source's figure on conflict tasks and the endpoint with its result on trial-facts tasks, so its answers carry everything the scorers read.
 
-### Fixed
+### Fixed (repository)
 - `score.py` no longer crashes when a run has fewer repeats than k (pass^k and its CI are shown as "–").
 
 ## [1.1.0] - 2026-11-08
@@ -65,6 +80,7 @@ First release: 50 verified tasks, the harness, scorers, calibrated judge and a f
 - Five synthetic NHS numbers in the privacy tasks failed the modulus-11 check, so a real detector would not recognise them; replaced with valid numbers from the reserved 999 test range.
 - Three scorer errors found by reading every failure before reporting (verdict words, trial event rates, a judge prompt that could see the model's own conflict and verdict fields); documented in [`docs/scoring.md`](docs/scoring.md).
 
-[Unreleased]: https://github.com/nickjlamb/groundhog/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/nickjlamb/groundhog/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/nickjlamb/groundhog/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/nickjlamb/groundhog/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/nickjlamb/groundhog/releases/tag/v1.0.0
