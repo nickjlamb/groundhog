@@ -6,7 +6,7 @@ All notable changes to Groundhog are documented here. The format follows [Keep a
 
 ## [1.2.0] - 2026-11-09
 
-Five models, 2,510 scored runs. Gemini called through Google's own API.
+Five models, 2,510 scored runs. Gemini called through Google's own API. DOI [10.5281/zenodo.24076209](https://doi.org/10.5281/zenodo.24076209).
 
 ### Added
 - Gemini API adapter (`harness/models/gemini_model.py`): calls Google's endpoint directly, replays Gemini 3 thought signatures, and enforces a spending cap from a per-call cost ledger (`GEMINI_BUDGET_USD`).

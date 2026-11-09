@@ -8,7 +8,7 @@
 <p align="center">
   <a href="https://github.com/nickjlamb/groundhog/actions/workflows/validate.yml"><img alt="CI" src="https://github.com/nickjlamb/groundhog/actions/workflows/validate.yml/badge.svg"></a>
   <a href="https://github.com/nickjlamb/groundhog/releases/latest"><img alt="Release" src="https://img.shields.io/github/v/release/nickjlamb/groundhog?color=0d7377"></a>
-  <a href="https://doi.org/10.5281/zenodo.24051137"><img alt="DOI" src="https://zenodo.org/badge/DOI/10.5281/zenodo.24051137.svg"></a>
+  <a href="https://doi.org/10.5281/zenodo.24076209"><img alt="DOI" src="https://zenodo.org/badge/DOI/10.5281/zenodo.24076209.svg"></a>
   <img alt="Python 3.12" src="https://img.shields.io/badge/python-3.12-0d7377">
   <img alt="Tasks: 50 verified" src="https://img.shields.io/badge/tasks-50%20verified-0d7377">
   <img alt="Scored runs: 2,510" src="https://img.shields.io/badge/scored%20runs-2%2C510-0d7377">
@@ -220,12 +220,12 @@ Corrections to gold answers matter most: if you think a task's answer is wrong, 
   version   = {1.2.0},
   year      = {2026},
   publisher = {Zenodo},
-  doi       = {10.5281/zenodo.24051137},
+  doi       = {10.5281/zenodo.24076209},
   url       = {https://github.com/nickjlamb/groundhog}
 }
 ```
 
-Metadata in [`CITATION.cff`](CITATION.cff). Archived releases: v1.2.0 (five models, DOI pending) · [v1.1.0](https://doi.org/10.5281/zenodo.24051137) (three models) · [v1.0.0](https://doi.org/10.5281/zenodo.24043717).
+Metadata in [`CITATION.cff`](CITATION.cff). Archived releases: [v1.2.0](https://doi.org/10.5281/zenodo.24076209) (five models) · [v1.1.0](https://doi.org/10.5281/zenodo.24051137) (three models) · [v1.0.0](https://doi.org/10.5281/zenodo.24043717).
 
 ## Licence
 
