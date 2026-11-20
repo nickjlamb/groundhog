@@ -110,6 +110,8 @@ class SubmitGoldModel:
                                                       if k in ("value", "unit", "pmid", "verdict", "abstain", "conflict")}}
         if "result" in gold:                       # trial facts: endpoint and result in one value
             answer["value"] = f"{gold.get('endpoint', '')}: {gold['result']}"
+        if t.get("answer_type") == "partial_abstain":   # part answered, gap stated: the gold detail says both
+            answer["value"] = " ".join(str(gold.get("detail", "")).split())
         if "values" in gold:                       # conflicts: report every source's figure
             answer["rationale"] += ". " + "; ".join(f"{k}: {v}" for k, v in gold["values"].items())
         return {"text": "", "tool_calls": [self._call("submit_answer", answer)], "usage": {}}
