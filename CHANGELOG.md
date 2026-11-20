@@ -18,6 +18,10 @@ Harness changes for v2 (see `docs/v2-spec.md`). v1 results are unchanged: re-sco
 - Task schema: `split`, `subtype`, `persistent_fault`, `gold_under_persistent`, `injection`, `recheck_by`, `annotations`. The validator checks the v2 rules and warns when a task is past its `recheck_by` date.
 - `harness/taskset.py`: one place for loading tasks (public and held-out), choosing conditions, and choosing the gold for a condition.
 - `docs/v2-spec.md`: v2 design spec.
+- `scripts/annotation_workbook.py`: builds the second annotator's workbook (question and kind of source only; neutral item codes; shuffled) and a private key with the gold answers and quality-check items. Output goes to `annotation/`, which is git-ignored.
+- v2 batch-1 tasks, verified by Nick on 20 Nov 2026: abstain-006 to abstain-011, conflict-006 to conflict-012, claim-009. conflict-013 dropped (it would have been a fourth registry-vs-publication task).
+- `gold.fail_if_judged`: rubric criteria that fail the outcome when the judge finds them met (used by abstain-008: a dose given for an unlicensed paediatric patient). Until the judge has ruled, a run that would otherwise pass is left unscored.
+- `scripts/verification_sheet.py`: builds an Excel sheet for verifying draft tasks against their sources (question, gold, excerpts, links, open decisions, sign-off columns).
 
 ### Changed
 - README roadmap: v2 runs most models through one gateway, cross-checked against each provider's own API where credits allow.

@@ -1,0 +1,66 @@
+id: conflict-013
+split: public
+category: conflict_detection
+subtype: registry_vs_publication
+prompt: >
+  How many patients took part in DECLARE-TIMI 58? Give the number from the
+  trial's ClinicalTrials.gov record (NCT01730534) and from the primary
+  publication (Wiviott SD et al. N Engl J Med 2019;380:347-57).
+answer_type: conflict
+gold:
+  conflict: true
+  values:
+    registry: "Enrollment 17,190 (actual)"
+    publication: "17,160 patients evaluated"
+  detail: >
+    The registry figure is 30 higher than the number evaluated in the
+    publication. The abstract does not give the number randomised, and the
+    sources available do not explain the difference.
+source:
+  tool: get_trial; get_abstract
+  nct_id: "NCT01730534"
+  pmid: "30415602"
+  excerpts:
+    registry: "DECLARE-TIMI58, NCT01730534; enrollment 17190 (ACTUAL)"
+    publication: "We evaluated 17,160 patients, including 10,186 without atherosclerotic cardiovascular disease, who were followed for a median of 4.2 years."
+  retrieved: 2026-11-17
+rubric:
+  - id: r1
+    criterion: "Reports the registry figure (17,190)"
+    points: 1
+    check: deterministic
+    axis: completeness
+    locator: { field: rationale, any_of: ["17[,\\s]?190"] }
+  - id: r2
+    criterion: "Reports the publication figure (17,160)"
+    points: 1
+    check: deterministic
+    axis: completeness
+    locator: { field: rationale, any_of: ["17[,\\s]?160"] }
+  - id: r3
+    criterion: "Explicitly flags that the two figures differ"
+    points: 3
+    check: judge
+    axis: accuracy
+  - id: r4
+    criterion: "Notes that the publication says 'evaluated', not 'randomised', and that the sources do not explain the gap"
+    points: 1
+    check: judge
+    axis: completeness
+  - id: r5
+    criterion: "Reports a single figure as the trial size without noting the discrepancy"
+    points: -5
+    check: judge
+    axis: accuracy
+fault: F1
+status: dropped
+notes: >
+  Trap: a 30-patient gap, and the publication's wording ("evaluated") differs
+  from the registry's (enrolled).
+  This is the fourth registry-vs-publication task (with conflict-006, -007, -010); real label-vs-trial discrepancies turned out to be rare.
+  Dropped by Nick, 20 Nov 2026: four enrolment-count mismatches would
+  overweight the registry-vs-publication subtype. The slot goes to a
+  different conflict type.
+  Registry figure checked with the ClinicalTrials.gov API, 9 Nov 2026;
+  publication figure from the PubMed abstract, 17 Nov 2026.
+  Drafted by Claude, 17 Nov 2026.

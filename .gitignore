@@ -25,3 +25,6 @@ studies/*/data/
 private/
 heldout/*
 !heldout/manifest.sha256
+
+# Annotation workbooks and keys (contain gold answers and held-out tasks)
+annotation/

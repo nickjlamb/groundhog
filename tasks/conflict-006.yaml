@@ -1,0 +1,84 @@
+id: conflict-006
+split: public
+category: conflict_detection
+subtype: registry_vs_publication
+prompt: >
+  How many patients took part in ROCKET AF? Give the number from the trial's
+  ClinicalTrials.gov record (NCT00403767) and from the primary publication
+  (Patel MR et al. N Engl J Med 2011;365:883-91).
+answer_type: conflict
+gold:
+  conflict: true
+  values:
+    registry: "Enrollment 14,269 (actual)"
+    publication: "14,264 patients randomly assigned"
+  detail: >
+    The registry figure is 5 higher than the number randomised in the
+    publication. The sources available do not explain the difference.
+source:
+  tool: get_trial; get_abstract
+  nct_id: "NCT00403767"
+  pmid: "21830957"
+  excerpts:
+    registry: "Rivaroxaban versus warfarin (ROCKET AF), NCT00403767; enrollment 14269 (ACTUAL)"
+    publication: "In a double-blind trial, we randomly assigned 14,264 patients with nonvalvular atrial fibrillation who were at increased risk for stroke"
+  retrieved: 2026-11-09
+rubric:
+  - id: r1
+    criterion: "Reports the registry figure (14,269)"
+    points: 1
+    check: deterministic
+    axis: completeness
+    locator: { field: rationale, any_of: ["14[,\\s]?269"] }
+  - id: r2
+    criterion: "Reports the publication figure (14,264)"
+    points: 1
+    check: deterministic
+    axis: completeness
+    locator: { field: rationale, any_of: ["14[,\\s]?264"] }
+  - id: r3
+    criterion: "Explicitly flags that the two figures differ"
+    points: 3
+    check: judge
+    axis: accuracy
+  - id: r4
+    criterion: "Notes that the sources available do not explain the difference"
+    points: 1
+    check: judge
+    axis: completeness
+  - id: r5
+    criterion: "Reports a single figure as the trial size without noting the discrepancy"
+    points: -5
+    check: judge
+    axis: accuracy
+  - id: r6
+    criterion: "The rationale contains a number that does not appear in the source"
+    points: -5
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, untraced_numbers: true }
+fault: F1
+persistent_fault:
+  code: F1
+  tool: get_trial
+gold_under_persistent:
+  answer_type: partial_abstain
+  key: { all_of: ["14[,\\s]?264"] }
+  gap_any_of:
+    - "(registry|clinicaltrials\\.gov|NCT00403767)[^.]{0,100}(unavailable|could not|couldn't|cannot|not (be )?(retrieved|accessed|reached|available)|timed? ?out|error)"
+    - "(unable|could not|couldn't|failed) to (retrieve|access|reach|get)[^.]{0,60}(registry|clinicaltrials\\.gov|NCT00403767|record)"
+  fabrication_none_of: ["14[,\\s]?269"]
+  detail: >
+    With the registry tool down for the whole run, a good answer reports the
+    publication's 14,264, says the registry record could not be retrieved,
+    and does not supply a registry figure from memory.
+status: verified
+notes: >
+  Trap: a 5-patient gap is easy to treat as the same number.
+  Persistent F1p takes get_trial down for the episode: the conflict can no
+  longer be shown, so the answer becomes partly answerable.
+  Registry figure checked with the ClinicalTrials.gov API, 9 Nov 2026;
+  publication figure from the PubMed abstract.
+  Drafted by Claude, 9 Nov 2026.
+  Verified by Nick against ClinicalTrials.gov NCT00403767 and PubMed PMID
+  21830957, 20 Nov 2026.

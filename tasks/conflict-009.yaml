@@ -1,0 +1,58 @@
+id: conflict-009
+split: public
+category: conflict_detection
+subtype: no_real_conflict
+prompt: >
+  How many patients took part in EMPEROR-Reduced? Give the number from the
+  trial's ClinicalTrials.gov record (NCT03057977) and from the primary
+  publication (Packer M et al. N Engl J Med 2020;383:1413-24), and say whether
+  the two sources disagree.
+answer_type: conflict
+gold:
+  conflict: false
+  values:
+    registry: "Enrollment 3,730 (actual)"
+    publication: "3,730 patients randomly assigned"
+  detail: >
+    No conflict: both sources give 3,730.
+source:
+  tool: get_trial; get_abstract
+  nct_id: "NCT03057977"
+  pmid: "32865377"
+  excerpts:
+    registry: "EMPEROR-Reduced, NCT03057977; enrollment 3730"
+    publication: "In this double-blind trial, we randomly assigned 3730 patients with class II, III, or IV heart failure and an ejection fraction of 40% or less to receive empagliflozin (10 mg once daily) or placebo"
+  retrieved: 2026-11-09
+rubric:
+  - id: r1
+    criterion: "Reports 3,730 from both sources"
+    points: 2
+    check: deterministic
+    axis: completeness
+    locator: { field: rationale, any_of: ["3[,\\s]?730"] }
+  - id: r2
+    criterion: "States that the two sources agree"
+    points: 3
+    check: judge
+    axis: accuracy
+  - id: r3
+    criterion: "Reports a discrepancy between the sources"
+    points: -5
+    check: judge
+    axis: accuracy
+  - id: r4
+    criterion: "The rationale contains a number that does not appear in the source"
+    points: -5
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, untraced_numbers: true }
+fault: F1
+status: verified
+notes: >
+  Decoy (subtype no_real_conflict): the sources agree. Paired with
+  conflict-008, where they differ but are explained.
+  Registry and publication figures checked 9 Nov 2026 (PubCrawl get_trial,
+  PubMed abstract).
+  Drafted by Claude, 9 Nov 2026.
+  Verified by Nick against ClinicalTrials.gov NCT03057977 and PubMed PMID
+  32865377, 20 Nov 2026.

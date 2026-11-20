@@ -1,0 +1,70 @@
+id: claim-009
+split: public
+category: claim_checking
+subtype: wrong_source
+prompt: >
+  A draft HCP leavepiece contains this sentence, referenced to Herrington WG
+  et al. N Engl J Med 2023;388:117-27 (EMPA-KIDNEY):
+  "In EMPA-KIDNEY, empagliflozin reduced the risk of kidney disease
+  progression or cardiovascular death by 21% versus placebo (HR 0.79)."
+  Is the sentence supported by the cited paper? Answer supported, partially
+  supported (some parts are supported and some are not) or unsupported,
+  and explain.
+answer_type: verdict
+gold:
+  verdict: unsupported
+  detail: >
+    The cited 2023 paper reports HR 0.72 (95% CI 0.64 to 0.82), a 28%
+    reduction, over a median 2.0 years. HR 0.79 (95% CI 0.72 to 0.87) is
+    from the long-term follow-up (Herrington WG et al. N Engl J Med
+    2025;392:777-87), which combines the active trial with 2 years of
+    post-trial observation. The figure is real but not from the cited paper,
+    and it describes a different period.
+source:
+  tool: get_abstract
+  pmid: "36331190"
+  excerpts:
+    primary: "During a median of 2.0 years of follow-up, progression of kidney disease or death from cardiovascular causes occurred in 432 of 3304 patients (13.1%) in the empagliflozin group and in 558 of 3305 patients (16.9%) in the placebo group (hazard ratio, 0.72; 95% confidence interval [CI], 0.64 to 0.82; P<0.001)."
+    long_term_pmid_39453837: "During the combined active- and post-trial periods, a primary-outcome event occurred in 865 of 3304 patients (26.2%) in the empagliflozin group and in 1001 of 3305 patients (30.3%) in the placebo group (hazard ratio, 0.79; 95% confidence interval [CI], 0.72 to 0.87)."
+  retrieved: 2026-11-17
+rubric:
+  - id: r1
+    criterion: "States that the cited paper reports HR 0.72 (a 28% reduction), not 0.79"
+    points: 3
+    check: judge
+    axis: accuracy
+  - id: r2
+    criterion: "Identifies the 0.79 figure as coming from the long-term follow-up publication, which covers a different period"
+    points: 2
+    check: judge
+    axis: context_awareness
+  - id: r3
+    criterion: "Suggests corrected wording (HR 0.72 from the cited paper, or a corrected reference for 0.79 with its period)"
+    points: 1
+    check: judge
+    axis: communication
+  - id: r4
+    criterion: "Calls the sentence supported because the 0.79 figure exists somewhere in the EMPA-KIDNEY literature"
+    points: -5
+    check: judge
+    axis: accuracy
+  - id: r5
+    criterion: "The rationale contains a number that does not appear in the source"
+    points: -5
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, untraced_numbers: true }
+fault: F2
+status: verified
+notes: >
+  Error type: right trial, wrong publication. The figure is real, so a search
+  for "EMPA-KIDNEY 0.79" confirms it; only checking the cited paper shows the
+  mismatch.
+  By the briefing's definitions the main result's size is wrong for the cited source, so unsupported.
+  Nick decided (20 Nov 2026): unsupported. In HCP copy, attributing the wrong
+  effect size and follow-up period to a cited paper fails substantiation
+  outright.
+  r5 (untraced numbers) only counts numbers the agent did not see; an agent
+  that retrieved the 2025 paper may cite 0.79 legitimately.
+  Drafted by Claude, 17 Nov 2026, from PMIDs 36331190 and 39453837.
+  Verified by Nick against PubMed PMIDs 36331190 and 39453837, 20 Nov 2026.

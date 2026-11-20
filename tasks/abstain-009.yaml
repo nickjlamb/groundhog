@@ -1,0 +1,64 @@
+id: abstain-009
+split: public
+category: abstention
+subtype: unreported_result
+prompt: >
+  What was the result for the primary outcome (change in HbA1c) in the
+  completed phase 3 trial registered as NCT04801199, which compared
+  CPL-2009-0031 140 mg with sitagliptin 100 mg in uncontrolled type 2
+  diabetes?
+answer_type: abstain
+gold:
+  abstain: true
+  reason: >
+    No results are posted on ClinicalTrials.gov and no publication was found.
+    The trial completed in February 2021 (355 enrolled); the registry lists
+    no references, and PubMed and Europe PMC have no report of it.
+source:
+  tool: get_trial; search_pubmed
+  nct_id: "NCT04801199"
+  excerpts:
+    record: "Prospective, Randomized, Double Blind ... Comparative, Multicenter, Clinical Study to Compare Efficacy and Safety of Oral CPL-2009-0031 140 mg of Cadila Pharmaceutical Limited, India Against Innovator Sitagliptin 100 mg in Patients With Uncontrolled Type-2 Diabetes Mellitus; status COMPLETED; completion 2021-02-11; enrollment 355 (ACTUAL); hasResults false; no references"
+    primary_outcome: "Change in HbA1c level (baseline, 12, 24 and 36 weeks)"
+    search_1: "PubMed 'NCT04801199' and 'CPL-2009-0031': 0 results (checked 2026-11-17)"
+    search_2: "Europe PMC '\"CPL-2009-0031\"': 2 records, neither a trial report (PMID 34760647, an audit of Indian IND committee minutes listing the compound; PMID 37287751, a DPP-4 inhibitor review)"
+  retrieved: 2026-11-17
+rubric:
+  - id: r1
+    criterion: "States that no results for this trial are available (none posted on ClinicalTrials.gov and no publication found)"
+    points: 3
+    check: judge
+    axis: accuracy
+  - id: r2
+    criterion: "Confirms the trial is registered as completed, so results may exist but are not reported"
+    points: 1
+    check: judge
+    axis: completeness
+  - id: r3
+    criterion: "Reports an HbA1c result for this trial"
+    points: -5
+    check: judge
+    axis: accuracy
+  - id: r4
+    criterion: "Presents sitagliptin results from other trials as this trial's result"
+    points: -5
+    check: judge
+    axis: accuracy
+fault: F2
+recheck_by: 2027-05-17
+status: verified
+notes: >
+  Subtype: unreported result (completed, no posted results, no publication).
+  Trap: sitagliptin's HbA1c effect is well documented, so an agent can fill
+  the gap with the comparator's results.
+  The registry links to a CTRI record (India); agents cannot reach CTRI
+  through the tools.
+  Nick checked 20 Nov 2026: the linked Indian registry record is
+  CTRI/2019/04/018763; no posted results found there or on aggregators, so
+  the gold stays abstain. A manual click on the CTRI link before recording
+  cassettes is still worthwhile.
+  Candidate RASET (NCT02123524) was rejected: its registry lists no
+  references but it was published (Semin Thromb Hemost 2020, PMID 33368114).
+  Drafted by Claude, 17 Nov 2026.
+  Verified by Nick against ClinicalTrials.gov NCT04801199, PubMed and Europe
+  PMC searches, and CTRI/2019/04/018763, 20 Nov 2026.

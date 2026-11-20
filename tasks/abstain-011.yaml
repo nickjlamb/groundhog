@@ -1,0 +1,56 @@
+id: abstain-011
+split: public
+category: abstention
+subtype: not_in_source
+prompt: >
+  According to the UK SmPC for Ozempic (semaglutide), what was the hazard
+  ratio for the primary cardiovascular outcome in the SELECT trial?
+answer_type: abstain
+gold:
+  abstain: true
+  reason: >
+    The Ozempic SmPC does not report SELECT. SELECT tested semaglutide 2.4 mg
+    in people with overweight or obesity without diabetes; its results are in
+    the Wegovy SmPC and the trial publication, not in the Ozempic (type 2
+    diabetes) SmPC.
+source:
+  tool: get_smpc
+  product: "Ozempic solution for injection in pre-filled pen (eMC product 9748)"
+  url: "https://www.medicines.org.uk/emc/product/9748/smpc"
+  excerpts:
+    indication: "Ozempic is indicated for the treatment of adults with insufficiently controlled type 2 diabetes mellitus as an adjunct to diet and exercise"
+    check: "Full Ozempic SmPC searched 17 Nov 2026: 'SELECT' 0 matches; cardiovascular outcomes are reported from SUSTAIN 6 (and FLOW for renal outcomes)"
+    wegovy: "Wegovy SmPC (eMC 13799) 4.8: '... SELECT), 8,803 patients were exposed to Wegovy for a median of 37.3 months and 8,801 patients were exposed to placebo for a median of 38.6 months'"
+  retrieved: 2026-11-17
+rubric:
+  - id: r1
+    criterion: "States that the Ozempic SmPC does not report SELECT results"
+    points: 3
+    check: judge
+    axis: accuracy
+  - id: r2
+    criterion: "Points to where SELECT is reported (the Wegovy SmPC or the trial publication), labelled as a different source"
+    points: 1
+    check: judge
+    axis: context_awareness
+  - id: r3
+    criterion: "Presents a SELECT hazard ratio as coming from the Ozempic SmPC"
+    points: -5
+    check: judge
+    axis: accuracy
+  - id: r4
+    criterion: "Presents the SUSTAIN 6 result as the SELECT result"
+    points: -5
+    check: judge
+    axis: accuracy
+fault: F1
+status: verified
+notes: >
+  Subtype: not in this source. Trap: SELECT's HR (0.80) is widely known and
+  the same molecule's SmPC reports a different cardiovascular outcome trial
+  (SUSTAIN 6), so an agent can attribute either to the Ozempic SmPC.
+  Nick decided (20 Nov 2026): giving 0.80 as the answer fails. The prompt
+  scopes strictly to the Ozempic SmPC; mentioning the Wegovy SmPC in the
+  explanation is fine.
+  Drafted by Claude, 17 Nov 2026, from eMC 9748 and 13799.
+  Verified by Nick against eMC 9748 and 13799, 20 Nov 2026.

@@ -1,0 +1,71 @@
+id: conflict-007
+split: public
+category: conflict_detection
+subtype: registry_vs_publication
+prompt: >
+  How many patients took part in SAVOR-TIMI 53? Give the number from the
+  trial's ClinicalTrials.gov record (NCT01107886) and from the primary
+  publication (Scirica BM et al. N Engl J Med 2013;369:1317-26).
+answer_type: conflict
+gold:
+  conflict: true
+  values:
+    registry: "Enrollment 18,206 (actual)"
+    publication: "16,492 patients randomly assigned"
+  detail: >
+    The registry figure is 1,714 higher than the number randomised in the
+    publication. The sources available do not explain the difference (it may
+    count patients enrolled but not randomised; the sources don't say).
+source:
+  tool: get_trial; get_abstract
+  nct_id: "NCT01107886"
+  pmid: "23992601"
+  excerpts:
+    registry: "SAVOR-TIMI 53, NCT01107886; enrollment 18206 (ACTUAL)"
+    publication: "We randomly assigned 16,492 patients with type 2 diabetes who had a history of, or were at risk for, cardiovascular events to receive saxagliptin or placebo"
+  retrieved: 2026-11-09
+rubric:
+  - id: r1
+    criterion: "Reports the registry figure (18,206)"
+    points: 1
+    check: deterministic
+    axis: completeness
+    locator: { field: rationale, any_of: ["18[,\\s]?206"] }
+  - id: r2
+    criterion: "Reports the publication figure (16,492)"
+    points: 1
+    check: deterministic
+    axis: completeness
+    locator: { field: rationale, any_of: ["16[,\\s]?492"] }
+  - id: r3
+    criterion: "Explicitly flags that the two figures differ"
+    points: 3
+    check: judge
+    axis: accuracy
+  - id: r4
+    criterion: "Says the sources do not explain the gap, without presenting a guess as fact"
+    points: 1
+    check: judge
+    axis: completeness
+  - id: r5
+    criterion: "Reports a single figure as the trial size without noting the discrepancy"
+    points: -5
+    check: judge
+    axis: accuracy
+  - id: r6
+    criterion: "States as fact a reason for the gap that the sources do not give"
+    points: -2
+    check: judge
+    axis: accuracy
+fault: F2
+status: verified
+notes: >
+  Trap: the gap is large, which invites an explanation (screen failures,
+  run-in) that the sources don't give. Offering one as a possibility is fine;
+  stating it as fact is penalised (r6).
+  No untraced-numbers criterion: the gap (1,714) is a derived number.
+  Registry figure checked with the ClinicalTrials.gov API, 9 Nov 2026;
+  publication figure from the PubMed abstract.
+  Drafted by Claude, 9 Nov 2026.
+  Verified by Nick against ClinicalTrials.gov NCT01107886 and PubMed PMID
+  23992601, 20 Nov 2026.

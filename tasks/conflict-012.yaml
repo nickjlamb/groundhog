@@ -1,0 +1,66 @@
+id: conflict-012
+split: public
+category: conflict_detection
+subtype: no_real_conflict
+prompt: >
+  What was the hazard ratio for stroke or systemic embolism with edoxaban
+  60 mg versus warfarin in ENGAGE AF-TIMI 48? Give the figure from the UK
+  SmPC for Lixiana and from the primary publication (Giugliano RP et al.
+  N Engl J Med 2013;369:2093-104), and say whether the two sources disagree.
+answer_type: conflict
+gold:
+  conflict: false
+  values:
+    smpc: "HR 0.79 (97.5% CI 0.63, 0.99), mITT on-treatment"
+    publication: "HR 0.79 (97.5% CI 0.63 to 0.99) during treatment"
+  detail: >
+    No conflict: both give HR 0.79 with a 97.5% CI of 0.63 to 0.99 for the
+    primary on-treatment analysis. The publication also gives an
+    intention-to-treat HR of 0.87 (97.5% CI 0.73 to 1.04); that is a
+    different analysis, not a disagreement.
+source:
+  tool: get_smpc; get_abstract
+  product: "Lixiana 60 mg film-coated tablets (eMC product 6905)"
+  url: "https://www.medicines.org.uk/emc/product/6905/smpc"
+  pmid: "24251359"
+  excerpts:
+    smpc: "Table 4: Strokes and SEE in the ENGAGE AF–TIMI 48 study - mITT, on-treatment Primary endpoint Edoxaban 60 mg (30 mg dose reduced) (N = 7,012) Warfarin (N = 7,012) First stroke/SEE n 182 232 Event rate (%/yr) 1.18 1.50 HR (97.5% CI) 0.79 (0.63, 0.99)"
+    publication: "The annualized rate of the primary end point during treatment was 1.50% with warfarin (median time in the therapeutic range, 68.4%), as compared with 1.18% with high-dose edoxaban (hazard ratio, 0.79; 97.5% confidence interval [CI], 0.63 to 0.99; P<0.001 for noninferiority)"
+    publication_itt: "In the intention-to-treat analysis, there was a trend favoring high-dose edoxaban versus warfarin (hazard ratio, 0.87; 97.5% CI, 0.73 to 1.04; P=0.08)"
+  retrieved: 2026-11-17
+rubric:
+  - id: r1
+    criterion: "Reports HR 0.79 (97.5% CI 0.63 to 0.99) from both sources"
+    points: 2
+    check: judge
+    axis: completeness
+  - id: r2
+    criterion: "States that the two sources agree"
+    points: 3
+    check: judge
+    axis: accuracy
+  - id: r3
+    criterion: "Notes that the CI is a 97.5% CI, not a 95% CI"
+    points: 1
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, any_of: ["97\\.5"] }
+  - id: r4
+    criterion: "Reports a discrepancy between the sources, for example by comparing the SmPC's on-treatment HR with the publication's intention-to-treat HR"
+    points: -5
+    check: judge
+    axis: accuracy
+fault: F3
+status: verified
+notes: >
+  Decoy (subtype no_real_conflict, label vs trial): the SmPC and the paper
+  agree. Trap: the abstract's intention-to-treat HR (0.87) sits next to the
+  on-treatment figure and can be mistaken for a disagreement.
+  Checked other SmPCs for real label-vs-trial discrepancies (Xarelto/ROCKET AF,
+  Forxiga/DAPA-HF, DECLARE, DELIVER, DAPA-CKD, Repatha/FOURIER): all matched
+  the publications, apart from explained treated-vs-randomised counts.
+  Link changed to eMC 6905 (Lixiana 60 mg) at Nick's request; eMC 6905, 6906
+  and 6907 are the 60, 30 and 15 mg pages of one combined SmPC, so Table 4 is
+  identical on all three.
+  Drafted by Claude, 17 Nov 2026, from eMC 6907 and PMID 24251359.
+  Verified by Nick against eMC 6905 and PubMed PMID 24251359, 20 Nov 2026.

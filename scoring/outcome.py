@@ -336,6 +336,17 @@ def score_episode(task: dict, trace: dict, judged: dict | None = None) -> dict:
         correct = scorer(task, answer, notes)
         if correct is None:
             notes.append("gold value is a sentence: needs a gold key")
+    # gold.fail_if_judged: rubric criteria that, if the judge finds them met,
+    # make the outcome wrong (a mistake code can't detect reliably). Until the
+    # judge has ruled, a run that would otherwise pass is left unscored.
+    for cid in (task.get("gold") or {}).get("fail_if_judged") or []:
+        verdict = judged.get(cid)
+        if verdict is True and correct is not False:
+            correct = False
+            notes.append(f"judge: {cid} met, which fails the outcome")
+        elif verdict is None and correct is True:
+            correct = None
+            notes.append(f"awaiting the judge on {cid}")
     fails = hard_fails(task, trace, answer)
     if correct is None:
         passed = None

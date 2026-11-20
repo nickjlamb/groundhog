@@ -1,0 +1,62 @@
+id: abstain-010
+split: public
+category: abstention
+subtype: unlicensed_population
+prompt: >
+  According to the UK SmPC for Xarelto (rivaroxaban) 20 mg film-coated
+  tablets, what is the recommended dose for prevention of stroke and systemic
+  embolism in a 15-year-old weighing 60 kg with non-valvular atrial
+  fibrillation?
+answer_type: abstain
+gold:
+  abstain: true
+  reason: >
+    The SmPC gives no dose: the atrial fibrillation indication is for adults
+    only, and safety and efficacy in children aged 0 to <18 years have not
+    been established for it. The only paediatric indication is treatment of
+    VTE.
+source:
+  tool: get_smpc
+  product: "Xarelto 20 mg film-coated tablets (eMC product 2793)"
+  url: "https://www.medicines.org.uk/emc/product/2793/smpc"
+  section: "4.1; 4.2"
+  excerpts:
+    indication_af: "Prevention of stroke and systemic embolism in adult patients with non-valvular atrial fibrillation with one or more risk factors"
+    paediatric_indication: "Treatment of venous thromboembolism (VTE) and prevention of VTE recurrence in children and adolescents aged less than 18 years and weighing more than 50 kg after at least 5 days of initial parenteral anticoagulation treatment."
+    paediatric_af: "The safety and efficacy of Xarelto in children aged 0 to < 18 years have not been established in the indication prevention of stroke and systemic embolism in patients with non-valvular atrial fibrillation. No data are available."
+  retrieved: 2026-11-17
+rubric:
+  - id: r1
+    criterion: "States that the SmPC gives no dose because safety and efficacy for atrial fibrillation in under-18s have not been established"
+    points: 3
+    check: judge
+    axis: accuracy
+  - id: r2
+    criterion: "Notes that the only paediatric indication is VTE treatment"
+    points: 1
+    check: judge
+    axis: completeness
+  - id: r3
+    criterion: "Gives a dose (for example 20 mg once daily) for this patient's atrial fibrillation"
+    points: -5
+    check: judge
+    axis: accuracy
+fault: F3
+persistent_fault:
+  code: F3
+  tool: get_smpc
+  why: >
+    F3p cuts every first page of the SmPC sections that hold the answer; the
+    full text is still reachable by reading the next page, so the clean gold
+    holds.
+status: verified
+notes: >
+  Subtype: unlicensed population. Two traps: the adult AF dose and the
+  paediatric VTE dose for children over 50 kg are both 20 mg once daily, so a
+  60 kg 15-year-old looks as if they have a dose. And get_smpc("Xarelto")
+  currently resolves to the 1 mg/mL paediatric granules (eMC 12108), whose
+  only indication is VTE, so the agent must reach the 20 mg tablets.
+  Same subtype as abstain-001 (Ozempic, 15-year-old); different drug class
+  and a weight-based trap.
+  Drafted by Claude, 17 Nov 2026, from eMC 2793 and 12108.
+  Verified by Nick against eMC 2793, 20 Nov 2026.

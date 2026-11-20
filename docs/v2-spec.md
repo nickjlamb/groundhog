@@ -314,7 +314,7 @@ As in v1, **task verification is the critical path.** 100 new tasks is twice v1'
 |---|---|---|
 | D1 | Add `partial_abstain` (part-answerable questions) | Yes |
 | D2 | Persistent faults on 60 tasks | 60; cut to 30 if time is short |
-| D3 | Who is the second annotator, and how are they credited | Nick approaching candidates; co-authorship offered if they also review the manuscript (ICMJE), otherwise acknowledgement and dataset credit |
+| D3 | Who is the second annotator, and how are they credited | **Decided (9 Nov):** an independent medical-information expert has agreed, w/c 16 Nov to 4 Dec; co-author (Validation; Data curation; Writing – review & editing) and Zenodo contributor |
 | D4 | IAA sample | 60 tasks (all 30 held-out + 30 public) |
 | D5 | Held-out split size and release | 30 tasks; released at v3 |
 | D6 | Gateway for the main run, direct-API cross-checks only | **Decided (9 Nov):** yes; README roadmap updated |
