@@ -8,19 +8,24 @@ prompt: >
   (Patel MR et al. N Engl J Med 2011;365:883-91).
 answer_type: conflict
 gold:
-  conflict: true
+  conflict: either   # the figures differ, but the full registry record explains why: either flag passes if both figures are reported
   values:
     registry: "Enrollment 14,269 (actual)"
     publication: "14,264 patients randomly assigned"
   detail: >
-    The registry figure is 5 higher than the number randomised in the
-    publication. The sources available do not explain the difference.
+    The figures differ (14,269 in the registry's enrolment field, 14,264
+    randomised in the publication), but the registry's results section
+    explains why: five patients were randomised twice. PubCrawl's get_trial returns only the enrolment
+    figure, not the participant flow, so an agent sees an unexplained
+    difference. A good answer gives both figures and says which is which;
+    flagging them as a discrepancy or explaining them are both acceptable.
 source:
   tool: get_trial; get_abstract
   nct_id: "NCT00403767"
   pmid: "21830957"
   excerpts:
     registry: "Rivaroxaban versus warfarin (ROCKET AF), NCT00403767; enrollment 14269 (ACTUAL)"
+    registry_participant_flow: "A total of 14,269 patients were randomized in the study. Five patients were randomized twice bringing the number of randomized unique patients to 14,264."
     publication: "In a double-blind trial, we randomly assigned 14,264 patients with nonvalvular atrial fibrillation who were at increased risk for stroke"
   retrieved: 2026-11-09
 rubric:
@@ -42,7 +47,7 @@ rubric:
     check: judge
     axis: accuracy
   - id: r4
-    criterion: "Notes that the sources available do not explain the difference"
+    criterion: "Explains the difference (enrolled vs randomised, or duplicate randomisations), or says the sources it saw do not explain it"
     points: 1
     check: judge
     axis: completeness
@@ -79,6 +84,9 @@ notes: >
   longer be shown, so the answer becomes partly answerable.
   Registry figure checked with the ClinicalTrials.gov API, 9 Nov 2026;
   publication figure from the PubMed abstract.
+  Changed 27 Nov 2026 after batch-1 annotation: the annotator found the
+  explanation in the registry's participant flow (not returned by
+  get_trial). Gold flag set to either, by Nick's decision.
   Drafted by Claude, 9 Nov 2026.
   Verified by Nick against ClinicalTrials.gov NCT00403767 and PubMed PMID
   21830957, 20 Nov 2026.

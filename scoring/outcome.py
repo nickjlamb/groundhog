@@ -121,7 +121,9 @@ def _distinctive_numbers(values: dict):
 def _conflict(task, answer, notes):
     """Flag set and both values reported (spec)."""
     gold = task["gold"]
-    if bool(answer.get("conflict")) != bool(gold.get("conflict")):
+    if gold.get("conflict") == "either":
+        pass                     # the sources explain the difference: either flag is right
+    elif bool(answer.get("conflict")) != bool(gold.get("conflict")):
         notes.append(f"conflict flag {answer.get('conflict')!r}, gold {gold.get('conflict')!r}")
         return False
     got = set(numbers(answer_text(answer)))

@@ -109,13 +109,14 @@ def compare_tasks(returned, key_path):
         match = {True: "yes", False: "no", None: "read it"}[res["correct"]]
         gv = (t.get("gold") or {}).get("verdict")
         kv = VERDICT.get(d.get("Verdict", "").lower())
-        gc = bool((t.get("gold") or {}).get("conflict")) if t.get("answer_type") == "conflict" else False
+        gc = (t.get("gold") or {}).get("conflict") if t.get("answer_type") == "conflict" else False
+        gc = None if gc == "either" else bool(gc)      # "either": both flags count as agreement
         kc = d.get("Sources disagree?", "").lower().startswith("yes") if d.get("Sources disagree?") else None
         row = {"Item": d["Item"], "Task": k["Task"], "QC": k.get("Quality check") or "", "Answer type": t.get("answer_type"),
                "Auto match": match, "Scorer notes": "; ".join(res["notes"]),
                "Verdict (gold / KD)": f"{gv} / {kv}" if gv else "",
                "Not available (gold / KD)": f"{expected_na(t)} / {got_na(d)}",
-               "Sources disagree (gold / KD)": f"{'yes' if gc else 'no'} / {'' if kc is None else 'yes' if kc else 'no'}",
+               "Sources disagree (gold / KD)": f"{'either' if gc is None else 'yes' if gc else 'no'} / {'' if kc is None else 'yes' if kc else 'no'}",
                "KD answer": d.get("Answer", ""), "KD evidence": d.get("Evidence", ""),
                "Gold": k.get("Gold", ""), "Confidence": d.get("Confidence", ""), "Flag": d.get("Flag", ""),
                "Minutes": d.get("Minutes", ""), "KD notes": d.get("Notes", ""),
@@ -130,7 +131,7 @@ def compare_tasks(returned, key_path):
             reasons.append("not-available flag differs")
         elif row["_na3"][1] and row["_na3"][0] != row["_na3"][1]:
             reasons.append("part/all differs")
-        if kc is not None and kc != gc:
+        if kc is not None and gc is not None and kc != gc:
             reasons.append("sources-disagree flag differs")
         if d.get("Flag", "").lower() not in ("", "none"):
             reasons.append(f"flagged: {d['Flag']}")

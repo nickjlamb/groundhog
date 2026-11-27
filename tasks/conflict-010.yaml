@@ -9,19 +9,24 @@ prompt: >
   Med 2015;372:1791-800).
 answer_type: conflict
 gold:
-  conflict: true
+  conflict: either   # the figures differ, but the full registry record explains why: either flag passes if both figures are reported
   values:
     registry: "Enrollment 21,379 (actual)"
     publication: "21,162 patients randomly assigned"
   detail: >
-    The registry figure is 217 higher than the number randomised in the
-    publication. The sources available do not explain the difference.
+    The figures differ (21,379 in the registry's enrolment field, 21,162
+    randomised in the publication), but the registry's results section
+    explains why: the enrolment figure includes patients enrolled but not randomised. PubCrawl's get_trial returns only the enrolment
+    figure, not the participant flow, so an agent sees an unexplained
+    difference. A good answer gives both figures and says which is which;
+    flagging them as a discrepancy or explaining them are both acceptable.
 source:
   tool: get_trial; get_abstract
   nct_id: "NCT01225562"
   pmid: "25773268"
   excerpts:
     registry: "PEGASUS, NCT01225562; enrollment 21379 (ACTUAL)"
+    registry_participant_flow: "The Participant Flow shows patients randomized. This number is different from patients enrolled in the protocol section which includes patients who were enrolled, but not randomized."
     publication: "We randomly assigned, in a double-blind 1:1:1 fashion, 21,162 patients who had had a myocardial infarction 1 to 3 years earlier"
   retrieved: 2026-11-09
 rubric:
@@ -70,6 +75,9 @@ notes: >
   randomisation ratio.
   Registry figure checked with the ClinicalTrials.gov API, 9 Nov 2026;
   publication figure from the PubMed abstract.
+  Changed 27 Nov 2026 after batch-1 annotation: the annotator found the
+  explanation in the registry's participant flow (not returned by
+  get_trial). Gold flag set to either, by Nick's decision.
   Drafted by Claude, 9 Nov 2026.
   Verified by Nick against ClinicalTrials.gov NCT01225562 and PubMed PMID
   25773268, 20 Nov 2026.

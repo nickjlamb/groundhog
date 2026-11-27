@@ -8,20 +8,24 @@ prompt: >
   publication (Scirica BM et al. N Engl J Med 2013;369:1317-26).
 answer_type: conflict
 gold:
-  conflict: true
+  conflict: either   # the figures differ, but the full registry record explains why: either flag passes if both figures are reported
   values:
     registry: "Enrollment 18,206 (actual)"
     publication: "16,492 patients randomly assigned"
   detail: >
-    The registry figure is 1,714 higher than the number randomised in the
-    publication. The sources available do not explain the difference (it may
-    count patients enrolled but not randomised; the sources don't say).
+    The figures differ (18,206 in the registry's enrolment field, 16,492
+    randomised in the publication), but the registry's results section
+    explains why: 18,206 were enrolled, of whom 16,492 were randomised. PubCrawl's get_trial returns only the enrolment
+    figure, not the participant flow, so an agent sees an unexplained
+    difference. A good answer gives both figures and says which is which;
+    flagging them as a discrepancy or explaining them are both acceptable.
 source:
   tool: get_trial; get_abstract
   nct_id: "NCT01107886"
   pmid: "23992601"
   excerpts:
     registry: "SAVOR-TIMI 53, NCT01107886; enrollment 18206 (ACTUAL)"
+    registry_participant_flow: "A total of 18206 subjects were enrolled in the study of which 16492 were randomised."
     publication: "We randomly assigned 16,492 patients with type 2 diabetes who had a history of, or were at risk for, cardiovascular events to receive saxagliptin or placebo"
   retrieved: 2026-11-09
 rubric:
@@ -43,7 +47,7 @@ rubric:
     check: judge
     axis: accuracy
   - id: r4
-    criterion: "Says the sources do not explain the gap, without presenting a guess as fact"
+    criterion: "Explains the difference (enrolled vs randomised), or says the sources it saw do not explain it, without presenting a guess as fact"
     points: 1
     check: judge
     axis: completeness
@@ -66,6 +70,9 @@ notes: >
   No untraced-numbers criterion: the gap (1,714) is a derived number.
   Registry figure checked with the ClinicalTrials.gov API, 9 Nov 2026;
   publication figure from the PubMed abstract.
+  Changed 27 Nov 2026 after batch-1 annotation: the annotator found the
+  explanation in the registry's participant flow (not returned by
+  get_trial). Gold flag set to either, by Nick's decision.
   Drafted by Claude, 9 Nov 2026.
   Verified by Nick against ClinicalTrials.gov NCT01107886 and PubMed PMID
   23992601, 20 Nov 2026.
