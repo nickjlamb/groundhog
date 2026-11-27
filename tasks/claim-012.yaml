@@ -1,0 +1,58 @@
+id: claim-012
+split: public
+category: claim_checking
+subtype: wrong_duration
+prompt: >
+  A draft HCP leavepiece contains this sentence, referenced to Marso SP et al.
+  N Engl J Med 2016;375:1834-44 (SUSTAIN-6):
+  "In SUSTAIN-6, once-weekly semaglutide reduced the risk of cardiovascular
+  death, nonfatal myocardial infarction or nonfatal stroke by 26% versus
+  placebo over 5 years of treatment in patients with type 2 diabetes."
+  Is the sentence supported by the cited paper? Answer supported, partially
+  supported (some parts are supported and some are not) or unsupported,
+  and explain.
+answer_type: verdict
+gold:
+  verdict: partial
+  detail: >
+    Supported: the primary composite was lower with semaglutide, 6.6% vs 8.9%,
+    HR 0.74 (95% CI 0.58 to 0.95), so a 26% reduction is a correct
+    derivation. Unsupported: "over 5 years" - treatment was planned for 104
+    weeks (2 years).
+source:
+  tool: get_abstract
+  pmid: "27633186"
+  excerpts:
+    design: "We randomly assigned 3297 patients with type 2 diabetes who were on a standard-care regimen to receive once-weekly semaglutide (0.5 mg or 1.0 mg) or placebo for 104 weeks."
+    primary: "The primary outcome occurred in 108 of 1648 patients (6.6%) in the semaglutide group and in 146 of 1649 patients (8.9%) in the placebo group (hazard ratio, 0.74; 95% confidence interval [CI], 0.58 to 0.95; P<0.001 for noninferiority)."
+  retrieved: 2026-11-27
+rubric:
+  - id: r1
+    criterion: "States that the treatment period was 104 weeks (about 2 years), not 5 years"
+    points: 3
+    check: judge
+    axis: accuracy
+  - id: r2
+    criterion: "Confirms the primary result (HR 0.74, a 26% reduction) is correctly stated"
+    points: 2
+    check: judge
+    axis: accuracy
+  - id: r3
+    criterion: "Suggests corrected wording for the duration"
+    points: 1
+    check: judge
+    axis: communication
+  - id: r4
+    criterion: "Calls the whole claim unsupported because of the duration, or supported without noticing it"
+    points: -3
+    check: judge
+    axis: accuracy
+fault: F2
+status: draft
+notes: >
+  Error type: wrong duration. Main result right, a secondary detail wrong, so
+  partially supported under the briefing's definitions.
+  The abstract's P value is for noninferiority; its conclusion still says
+  the rate was "significantly lower", which supports "reduced". The full
+  text is not open access, so the tools see only the abstract.
+  Drafted by Claude, 27 Nov 2026, from the PubMed abstract; not yet verified.

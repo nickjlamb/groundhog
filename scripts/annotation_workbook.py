@@ -36,7 +36,7 @@ from harness.taskset import by_id  # noqa: E402
 # are v2 decoys with no real conflict) as "Two sources".
 KIND = {"label_lookup": "Label look-up", "us_uk_comparison": "US/UK comparison", "claim_checking": "Claim check",
         "citation": "Citation", "trial_facts": "Trial facts", "conflict_detection": "Two sources",
-        "abstention": None, "privacy": "Label look-up (patient details)"}
+        "abstention": None, "privacy": None}
 LOOKS_LIKE = {"get_smpc": "Label look-up", "get_uspi": "Label look-up", "compare_labels": "US/UK comparison",
               "get_trial": "Trial facts", "get_abstract": "Trial facts", "get_full_text": "Trial facts",
               "search_pubmed": "Citation", "format_citation": "Citation", "search_trials": "Trial facts"}
@@ -69,9 +69,22 @@ THIN = Border(*(Side(style="thin", color="C9CED6"),) * 4)
 
 
 def kind_of(task):
+    if task["category"] == "privacy":
+        return _inferred(task) + " (patient details)"
+    return _inferred(task)
+
+
+def _inferred(task):
     k = KIND.get(task["category"])
     if k:
         return k
+    q = str(task.get("prompt", ""))
+    if re.search(r"\bPMID\b|reference|Vancouver", q):
+        return "Citation"
+    if re.search(r"SmPC|Prescribing Information|label", q):
+        return "Label look-up"
+    if re.search(r"hazard ratio|primary outcome|result|NCT\d{8}", q, re.I):
+        return "Trial facts"
     first = re.split(r"\s*;\s*", str((task.get("source") or {}).get("tool") or ""))[0].strip()
     return LOOKS_LIKE.get(first, "Look-up")
 

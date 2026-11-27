@@ -1,0 +1,57 @@
+id: claim-013
+split: public
+category: claim_checking
+subtype: endpoint_mislabelled
+prompt: >
+  A draft HCP leavepiece contains this sentence, referenced to Sabatine MS et al.
+  N Engl J Med 2017;376:1713-22 (FOURIER):
+  "In FOURIER, evolocumab reduced the primary endpoint of cardiovascular death,
+  myocardial infarction or stroke by 20% versus placebo in patients with
+  atherosclerotic cardiovascular disease on statin therapy."
+  Is the sentence supported by the cited paper? Answer supported, partially
+  supported (some parts are supported and some are not) or unsupported,
+  and explain.
+answer_type: verdict
+gold:
+  verdict: partial
+  detail: >
+    The 20% reduction (HR 0.80, 95% CI 0.73 to 0.88) is correct, but for the
+    key secondary endpoint (CV death, MI or stroke). The primary endpoint was
+    a five-part composite that also included hospitalisation for unstable
+    angina and coronary revascularisation (HR 0.85, 95% CI 0.79 to 0.92).
+source:
+  tool: get_abstract
+  pmid: "28304224"
+  excerpts:
+    endpoints: "The primary efficacy end point was the composite of cardiovascular death, myocardial infarction, stroke, hospitalization for unstable angina, or coronary revascularization. The key secondary efficacy end point was the composite of cardiovascular death, myocardial infarction, or stroke."
+    results: "Relative to placebo, evolocumab treatment significantly reduced the risk of the primary end point (1344 patients [9.8%] vs. 1563 patients [11.3%]; hazard ratio, 0.85; 95% confidence interval [CI], 0.79 to 0.92; P<0.001) and the key secondary end point (816 [5.9%] vs. 1013 [7.4%]; hazard ratio, 0.80; 95% CI, 0.73 to 0.88; P<0.001)."
+  retrieved: 2026-11-27
+rubric:
+  - id: r1
+    criterion: "States that CV death, MI or stroke was the key secondary endpoint, not the primary"
+    points: 3
+    check: judge
+    axis: accuracy
+  - id: r2
+    criterion: "Gives the primary endpoint result (HR 0.85) and its five components"
+    points: 1
+    check: judge
+    axis: completeness
+  - id: r3
+    criterion: "Confirms the 20% figure is correct for the key secondary endpoint"
+    points: 1
+    check: judge
+    axis: accuracy
+  - id: r4
+    criterion: "Calls the claim supported without noticing the endpoint is mislabelled"
+    points: -5
+    check: judge
+    axis: accuracy
+fault: F1
+status: draft
+notes: >
+  Error type: secondary endpoint labelled as primary. The number is right
+  and significant, so this is subtler than claim-010.
+  DECISION FOR NICK: is this partially supported (the effect and endpoint are real, only its label is wrong) or unsupported (the claim misstates what the primary endpoint was)?
+  (Drafted as partial.)
+  Drafted by Claude, 27 Nov 2026, from the PubMed abstract; not yet verified.

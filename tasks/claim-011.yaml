@@ -1,0 +1,54 @@
+id: claim-011
+split: public
+category: claim_checking
+subtype: supported
+prompt: >
+  A draft HCP leavepiece contains this sentence, referenced to Giugliano RP et al.
+  N Engl J Med 2013;369:2093-104 (ENGAGE AF-TIMI 48):
+  "In ENGAGE AF-TIMI 48, both once-daily edoxaban regimens were noninferior to
+  warfarin for the prevention of stroke or systemic embolism in patients with
+  atrial fibrillation."
+  Is the sentence supported by the cited paper? Answer supported, partially
+  supported (some parts are supported and some are not) or unsupported,
+  and explain.
+answer_type: verdict
+gold:
+  verdict: supported
+  detail: >
+    Both regimens met noninferiority for stroke or systemic embolism during
+    treatment: high dose HR 0.79 (97.5% CI 0.63 to 0.99; P<0.001 for
+    noninferiority); low dose HR 1.07 (97.5% CI 0.87 to 1.31; P=0.005 for
+    noninferiority).
+source:
+  tool: get_abstract
+  pmid: "24251359"
+  excerpts:
+    results: "The annualized rate of the primary end point during treatment was 1.50% with warfarin (median time in the therapeutic range, 68.4%), as compared with 1.18% with high-dose edoxaban (hazard ratio, 0.79; 97.5% confidence interval [CI], 0.63 to 0.99; P<0.001 for noninferiority) and 1.61% with low-dose edoxaban (hazard ratio, 1.07; 97.5% CI, 0.87 to 1.31; P=0.005 for noninferiority)."
+    design: "Each edoxaban regimen was tested for noninferiority to warfarin during the treatment period."
+  retrieved: 2026-11-27
+rubric:
+  - id: r1
+    criterion: "Confirms that both regimens met noninferiority, with the high-dose and low-dose results"
+    points: 3
+    check: judge
+    axis: accuracy
+  - id: r2
+    criterion: "Notes the CIs are 97.5% CIs"
+    points: 1
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, any_of: ["97\\.5"] }
+  - id: r3
+    criterion: "Calls the claim unsupported or partial because the low-dose regimen did not reduce events or because the ITT superiority test was not significant"
+    points: -5
+    check: judge
+    axis: accuracy
+fault: F1
+status: draft
+notes: >
+  A supported claim (decoy). Trap: the low-dose HR is above 1 (1.07) and
+  the abstract's ITT analysis shows an unfavourable trend for low dose, so an
+  agent can wrongly call a correctly stated noninferiority claim unsupported.
+  The claim says noninferior, not better; it matches the paper.
+  Same trial as conflict-012, different question.
+  Drafted by Claude, 27 Nov 2026, from the PubMed abstract; not yet verified.

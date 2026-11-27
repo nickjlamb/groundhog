@@ -1,0 +1,51 @@
+id: claim-014
+split: public
+category: claim_checking
+subtype: supported
+prompt: >
+  A draft HCP leavepiece contains this sentence, referenced to McMurray JJV et al.
+  N Engl J Med 2019;381:1995-2008 (DAPA-HF):
+  "In DAPA-HF, dapagliflozin reduced the absolute risk of worsening heart
+  failure or cardiovascular death by 4.9 percentage points versus placebo
+  over a median of 18.2 months."
+  Is the sentence supported by the cited paper? Answer supported, partially
+  supported (some parts are supported and some are not) or unsupported,
+  and explain.
+answer_type: verdict
+gold:
+  verdict: supported
+  detail: >
+    Primary outcome 16.3% with dapagliflozin vs 21.2% with placebo: an
+    absolute difference of 4.9 percentage points, over a median of 18.2
+    months (HR 0.74, 95% CI 0.65 to 0.85).
+source:
+  tool: get_abstract
+  pmid: "31535829"
+  excerpts:
+    results: "Over a median of 18.2 months, the primary outcome occurred in 386 of 2373 patients (16.3%) in the dapagliflozin group and in 502 of 2371 patients (21.2%) in the placebo group (hazard ratio, 0.74; 95% confidence interval [CI], 0.65 to 0.85; P<0.001)."
+  retrieved: 2026-11-27
+rubric:
+  - id: r1
+    criterion: "Shows the 4.9-point difference is 21.2% minus 16.3%"
+    points: 3
+    check: judge
+    axis: accuracy
+  - id: r2
+    criterion: "Confirms the median follow-up of 18.2 months"
+    points: 1
+    check: deterministic
+    axis: completeness
+    locator: { field: rationale, any_of: ["18\\.2"] }
+  - id: r3
+    criterion: "Calls the claim unsupported because 4.9 points does not appear verbatim in the paper"
+    points: -5
+    check: judge
+    axis: accuracy
+fault: F2
+status: draft
+notes: >
+  A supported claim (decoy), and the mirror of v1's claim-006: here the
+  absolute figure is labelled correctly. Trap: 4.9 does not appear in the
+  abstract; it has to be derived from 21.2% and 16.3%.
+  Same trial as trial-001 and the false-premise task abstain-012.
+  Drafted by Claude, 27 Nov 2026, from the PubMed abstract; not yet verified.

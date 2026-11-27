@@ -1,0 +1,55 @@
+id: claim-015
+split: public
+category: claim_checking
+subtype: wrong_driver
+prompt: >
+  A draft HCP leavepiece contains this sentence, referenced to Anker SD et al.
+  N Engl J Med 2021;385:1451-61 (EMPEROR-Preserved):
+  "In EMPEROR-Preserved, empagliflozin reduced the risk of cardiovascular
+  death or hospitalisation for heart failure by 21% in patients with an
+  ejection fraction above 40%, an effect driven mainly by fewer
+  cardiovascular deaths."
+  Is the sentence supported by the cited paper? Answer supported, partially
+  supported (some parts are supported and some are not) or unsupported,
+  and explain.
+answer_type: verdict
+gold:
+  verdict: partial
+  detail: >
+    Supported: the primary composite, 13.8% vs 17.1%, HR 0.79 (95% CI 0.69 to
+    0.90), in patients with an ejection fraction of more than 40%.
+    Unsupported: the paper says the effect was mainly related to a lower risk
+    of hospitalisation for heart failure, not cardiovascular death.
+source:
+  tool: get_abstract
+  pmid: "34449189"
+  excerpts:
+    results: "Over a median of 26.2 months, a primary outcome event occurred in 415 of 2997 patients (13.8%) in the empagliflozin group and in 511 of 2991 patients (17.1%) in the placebo group (hazard ratio, 0.79; 95% confidence interval [CI], 0.69 to 0.90; P<0.001). This effect was mainly related to a lower risk of hospitalization for heart failure in the empagliflozin group."
+  retrieved: 2026-11-27
+rubric:
+  - id: r1
+    criterion: "States that the paper attributes the effect mainly to fewer hospitalisations for heart failure, not CV deaths"
+    points: 3
+    check: judge
+    axis: accuracy
+  - id: r2
+    criterion: "Confirms the primary result (HR 0.79, a 21% reduction) and population are correctly stated"
+    points: 2
+    check: judge
+    axis: accuracy
+  - id: r3
+    criterion: "Suggests corrected wording"
+    points: 1
+    check: judge
+    axis: communication
+  - id: r4
+    criterion: "Calls the claim supported without noticing the wrong driver"
+    points: -5
+    check: judge
+    axis: accuracy
+fault: F2
+status: draft
+notes: >
+  Error type: wrong driver of a composite effect. Main result right, a
+  secondary statement wrong, so partially supported.
+  Drafted by Claude, 27 Nov 2026, from the PubMed abstract; not yet verified.

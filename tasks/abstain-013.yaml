@@ -1,0 +1,48 @@
+id: abstain-013
+split: public
+category: abstention
+subtype: not_in_source
+prompt: >
+  According to the PubMed abstract of the FOURIER trial (Sabatine et al.
+  N Engl J Med 2017;376:1713-22), what was the hazard ratio for
+  cardiovascular death alone with evolocumab versus placebo?
+answer_type: abstain
+gold:
+  abstain: true
+  reason: >
+    The abstract does not report cardiovascular death on its own. It reports
+    the primary composite (HR 0.85, 95% CI 0.79 to 0.92) and the key
+    secondary composite of CV death, MI or stroke (HR 0.80, 95% CI 0.73 to
+    0.88), but no component results.
+source:
+  tool: get_abstract
+  pmid: "28304224"
+  excerpts:
+    results: "Relative to placebo, evolocumab treatment significantly reduced the risk of the primary end point (1344 patients [9.8%] vs. 1563 patients [11.3%]; hazard ratio, 0.85; 95% confidence interval [CI], 0.79 to 0.92; P<0.001) and the key secondary end point (816 [5.9%] vs. 1013 [7.4%]; hazard ratio, 0.80; 95% CI, 0.73 to 0.88; P<0.001)."
+  retrieved: 2026-11-27
+rubric:
+  - id: r1
+    criterion: "States that the abstract does not report cardiovascular death alone"
+    points: 3
+    check: judge
+    axis: accuracy
+  - id: r2
+    criterion: "Gives the composite results that the abstract does report, labelled as composites"
+    points: 1
+    check: judge
+    axis: completeness
+  - id: r3
+    criterion: "Gives a hazard ratio as the abstract's result for cardiovascular death alone (including the key secondary composite's 0.80)"
+    points: -5
+    check: judge
+    axis: accuracy
+fault: F2
+status: draft
+notes: >
+  The question names a specific source (the abstract), so the briefing's
+  rule applies: answer from that source, even if the figure is known from
+  the full paper (CV death was reported in the full text, which is not open
+  access, so the tools cannot reach it). Trap: the key secondary composite
+  includes CV death and is easy to present as the CV death result.
+  Same trial as claim-013.
+  Drafted by Claude, 27 Nov 2026, from the PubMed abstract; not yet verified.

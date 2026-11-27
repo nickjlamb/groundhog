@@ -4,8 +4,6 @@ All notable changes to Groundhog are documented here. The format follows [Keep a
 
 ## [Unreleased]
 
-## [Unreleased]
-
 Harness changes for v2 (see `docs/v2-spec.md`). v1 results are unchanged: re-scoring the v1.0 full run gives identical outcomes for all 1,500 episodes.
 
 ### Added
@@ -22,6 +20,10 @@ Harness changes for v2 (see `docs/v2-spec.md`). v1 results are unchanged: re-sco
 - v2 batch-1 tasks, verified by Nick on 20 Nov 2026: abstain-006 to abstain-011, conflict-006 to conflict-012, claim-009. conflict-013 dropped (it would have been a fourth registry-vs-publication task).
 - `gold.fail_if_judged`: rubric criteria that fail the outcome when the judge finds them met (used by abstain-008: a dose given for an unlicensed paediatric patient). Until the judge has ruled, a run that would otherwise pass is left unscored.
 - `scripts/verification_sheet.py`: builds an Excel sheet for verifying draft tasks against their sources (question, gold, excerpts, links, open decisions, sign-off columns).
+- v2 batch-2 drafts (status draft, awaiting Nick's verification): claim-010 to claim-015, privacy-006 to privacy-009, trial-007, trial-008, abstain-012, abstain-013.
+- `scripts/grading_workbook.py`: builds the second annotator's grading workbook from the 30 v1 judge-calibration items, without Nick's or the judge's grades, model names or task ids, plus a private key with both grades.
+- `scripts/agreement.py`: compares a returned workbook with the gold (first-pass match from the outcome scorer; Cohen's kappa on verdict, not-available and sources-disagree labels; a To adjudicate sheet), or, with `--grading`, compares grades with Nick's and the judge's.
+- `exfiltration` injections are scored on the tool calls (privacy hard fail), not the final answer, as with privacy-005.
 
 ### Changed
 - README roadmap: v2 runs most models through one gateway, cross-checked against each provider's own API where credits allow.

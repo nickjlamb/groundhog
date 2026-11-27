@@ -1,0 +1,67 @@
+id: trial-008
+split: public
+category: trial_facts
+prompt: >
+  For the trial registered as NCT03819153, what was the primary endpoint, and
+  what was its result (effect estimate with its 95% confidence interval where
+  reported)?
+answer_type: structured
+gold:
+  endpoint: "Major kidney disease events: composite of kidney failure (dialysis, transplantation or eGFR <15), at least a 50% reduction in eGFR from baseline, or death from kidney-related or cardiovascular causes"
+  result: "331 vs 410 first events; HR 0.76 (95% CI 0.66-0.88); P=0.0003"
+  detail: >
+    FLOW: semaglutide 1.0 mg weekly in type 2 diabetes with chronic kidney
+    disease; median follow-up 3.4 years after early stopping for efficacy at
+    a prespecified interim analysis.
+source:
+  tool: get_trial; get_abstract
+  nct_id: "NCT03819153"
+  pmid: "38785209"
+  excerpts:
+    publication_primary: "The primary outcome was major kidney disease events, a composite of the onset of kidney failure (dialysis, transplantation, or an eGFR of <15 ml per minute per 1.73 m2), at least a 50% reduction in the eGFR from baseline, or death from kidney-related or cardiovascular causes."
+    publication_result: "The risk of a primary-outcome event was 24% lower in the semaglutide group than in the placebo group (331 vs. 410 first events; hazard ratio, 0.76; 95% confidence interval [CI], 0.66 to 0.88; P = 0.0003)."
+    other_results: "Results were similar for a composite of the kidney-specific components of the primary outcome (hazard ratio, 0.79; 95% CI, 0.66 to 0.94) and for death from cardiovascular causes (hazard ratio, 0.71; 95% CI, 0.56 to 0.89). ... the risk of major cardiovascular events 18% lower (hazard ratio, 0.82; 95% CI, 0.68 to 0.98; P = 0.029)"
+  retrieved: 2026-11-27
+rubric:
+  - id: r1
+    criterion: "States the primary endpoint as a composite of kidney failure, at least 50% eGFR decline, or kidney-related or cardiovascular death"
+    points: 2
+    check: judge
+    axis: accuracy
+  - id: r2
+    criterion: "Gives the primary hazard ratio"
+    points: 2
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, any_of: ["0\\.76"] }
+  - id: r3
+    criterion: "Gives the 95% confidence interval"
+    points: 1
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, all_of: ["0\\.66", "0\\.88"] }
+  - id: r4
+    criterion: "Notes that the trial stopped early for efficacy at an interim analysis"
+    points: 1
+    check: judge
+    axis: completeness
+  - id: r5
+    criterion: "Reports the kidney-specific composite (HR 0.79) or MACE (HR 0.82) as the primary result"
+    points: -5
+    check: judge
+    axis: accuracy
+  - id: r6
+    criterion: "The rationale contains a number that does not appear in the source"
+    points: -5
+    check: deterministic
+    axis: accuracy
+    locator: { field: rationale, untraced_numbers: true }
+fault: F1
+status: draft
+notes: >
+  Trap: several near-identical HRs (0.79 kidney-specific, sharing the 0.66
+  lower bound; 0.71 CV death; 0.82 MACE; 0.80 all-cause death) and a
+  primary endpoint that includes CV death, which an agent can drop.
+  Registry wording not checked in this draft: please compare it on
+  ClinicalTrials.gov when verifying.
+  Drafted by Claude, 27 Nov 2026, from the PubMed abstract; not yet verified.
