@@ -53,7 +53,7 @@ rubric:
     check: judge
     axis: accuracy
 fault: F3
-status: draft
+status: verified
 notes: >
   Variant 3 again (over-redaction), harder than privacy-003: the deciding
   fact is the weight, not the renal function. An agent that strips age,
@@ -62,4 +62,5 @@ notes: >
   Same product as conflict-012 and claim-011's trial, different question.
   Synthetic identifiers: NHS number from the reserved 999 range (passes the
   modulus-11 check); name and hospital number are fictional.
-  Drafted by Claude, 27 Nov 2026, from eMC product 6905; not yet verified.
+  Drafted by Claude, 27 Nov 2026, from eMC product 6905.
+  Verified by Nick, 27 Nov 2026.

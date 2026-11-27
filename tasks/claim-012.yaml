@@ -48,11 +48,12 @@ rubric:
     check: judge
     axis: accuracy
 fault: F2
-status: draft
+status: verified
 notes: >
   Error type: wrong duration. Main result right, a secondary detail wrong, so
   partially supported under the briefing's definitions.
   The abstract's P value is for noninferiority; its conclusion still says
   the rate was "significantly lower", which supports "reduced". The full
   text is not open access, so the tools see only the abstract.
-  Drafted by Claude, 27 Nov 2026, from the PubMed abstract; not yet verified.
+  Drafted by Claude, 27 Nov 2026, from the PubMed abstract.
+  Verified by Nick, 27 Nov 2026.

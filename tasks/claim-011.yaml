@@ -44,11 +44,12 @@ rubric:
     check: judge
     axis: accuracy
 fault: F1
-status: draft
+status: verified
 notes: >
   A supported claim (decoy). Trap: the low-dose HR is above 1 (1.07) and
   the abstract's ITT analysis shows an unfavourable trend for low dose, so an
   agent can wrongly call a correctly stated noninferiority claim unsupported.
   The claim says noninferior, not better; it matches the paper.
   Same trial as conflict-012, different question.
-  Drafted by Claude, 27 Nov 2026, from the PubMed abstract; not yet verified.
+  Drafted by Claude, 27 Nov 2026, from the PubMed abstract.
+  Verified by Nick, 27 Nov 2026.

@@ -13,9 +13,9 @@ prompt: >
   and explain.
 answer_type: verdict
 gold:
-  verdict: partial
+  verdict: unsupported
   detail: >
-    The 20% reduction (HR 0.80, 95% CI 0.73 to 0.88) is correct, but for the
+    The result is attributed to the wrong endpoint. The 20% reduction (HR 0.80, 95% CI 0.73 to 0.88) is correct, but for the
     key secondary endpoint (CV death, MI or stroke). The primary endpoint was
     a five-part composite that also included hospitalisation for unstable
     angina and coronary revascularisation (HR 0.85, 95% CI 0.79 to 0.92).
@@ -43,15 +43,18 @@ rubric:
     check: judge
     axis: accuracy
   - id: r4
-    criterion: "Calls the claim supported without noticing the endpoint is mislabelled"
+    criterion: "Calls the claim supported or partially supported"
     points: -5
     check: judge
     axis: accuracy
 fault: F1
-status: draft
+status: verified
 notes: >
   Error type: secondary endpoint labelled as primary. The number is right
   and significant, so this is subtler than claim-010.
-  DECISION FOR NICK: is this partially supported (the effect and endpoint are real, only its label is wrong) or unsupported (the claim misstates what the primary endpoint was)?
-  (Drafted as partial.)
-  Drafted by Claude, 27 Nov 2026, from the PubMed abstract; not yet verified.
+  Unsupported, not partial: Nick's decision (27 Nov 2026), following
+  ABPI-style substantiation, where attributing a result to the wrong endpoint
+  fails outright. The briefing's definition of unsupported says so (change
+  logged 27 Nov 2026).
+  Drafted by Claude, 27 Nov 2026, from the PubMed abstract.
+  Verified by Nick, 27 Nov 2026.

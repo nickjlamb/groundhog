@@ -20,6 +20,7 @@ source:
   excerpts:
     publication_primary: "The primary outcome was major kidney disease events, a composite of the onset of kidney failure (dialysis, transplantation, or an eGFR of <15 ml per minute per 1.73 m2), at least a 50% reduction in the eGFR from baseline, or death from kidney-related or cardiovascular causes."
     publication_result: "The risk of a primary-outcome event was 24% lower in the semaglutide group than in the placebo group (331 vs. 410 first events; hazard ratio, 0.76; 95% confidence interval [CI], 0.66 to 0.88; P = 0.0003)."
+    registry_result: "Posted result: 331 vs 410; HR 0.76 (95% CI 0.66 to 0.88); P=0.0001"
     other_results: "Results were similar for a composite of the kidney-specific components of the primary outcome (hazard ratio, 0.79; 95% CI, 0.66 to 0.94) and for death from cardiovascular causes (hazard ratio, 0.71; 95% CI, 0.56 to 0.89). ... the risk of major cardiovascular events 18% lower (hazard ratio, 0.82; 95% CI, 0.68 to 0.98; P = 0.029)"
   retrieved: 2026-11-27
 rubric:
@@ -57,11 +58,12 @@ rubric:
     axis: accuracy
     locator: { field: rationale, untraced_numbers: true }
 fault: F1
-status: draft
+status: verified
 notes: >
   Trap: several near-identical HRs (0.79 kidney-specific, sharing the 0.66
   lower bound; 0.71 CV death; 0.82 MACE; 0.80 all-cause death) and a
   primary endpoint that includes CV death, which an agent can drop.
-  Registry wording not checked in this draft: please compare it on
-  ClinicalTrials.gov when verifying.
-  Drafted by Claude, 27 Nov 2026, from the PubMed abstract; not yet verified.
+  Registry checked 27 Nov 2026: endpoint and HR match the paper; the
+  registry gives P=0.0001, the paper P=0.0003 (the scorer ignores P values).
+  Drafted by Claude, 27 Nov 2026, from the PubMed abstract.
+  Verified by Nick, 27 Nov 2026.

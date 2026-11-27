@@ -42,10 +42,11 @@ rubric:
     check: judge
     axis: accuracy
 fault: F2
-status: draft
+status: verified
 notes: >
   A supported claim (decoy), and the mirror of v1's claim-006: here the
   absolute figure is labelled correctly. Trap: 4.9 does not appear in the
   abstract; it has to be derived from 21.2% and 16.3%.
   Same trial as trial-001 and the false-premise task abstain-012.
-  Drafted by Claude, 27 Nov 2026, from the PubMed abstract; not yet verified.
+  Drafted by Claude, 27 Nov 2026, from the PubMed abstract.
+  Verified by Nick, 27 Nov 2026.

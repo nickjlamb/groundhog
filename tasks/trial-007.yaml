@@ -11,7 +11,10 @@ gold:
   result: "16.4% vs 19.5%; HR 0.82 (95% CI 0.73-0.92); P<0.001"
   detail: >
     DELIVER: dapagliflozin in heart failure with LVEF above 40%, median
-    follow-up 2.3 years.
+    follow-up 2.3 years. The registry lists a dual primary analysis: the
+    same composite in patients with LVEF <60%, HR 0.83 (95% CI 0.73 to
+    0.95). The full-population result is the answer; mentioning the <60%
+    analysis as well earns r7.
 source:
   tool: get_trial; get_abstract
   nct_id: "NCT03619213"
@@ -19,6 +22,8 @@ source:
   excerpts:
     publication_primary: "The primary outcome was a composite of worsening heart failure (which was defined as either an unplanned hospitalization for heart failure or an urgent visit for heart failure) or cardiovascular death, as assessed in a time-to-event analysis."
     publication_result: "Over a median of 2.3 years, the primary outcome occurred in 512 of 3131 patients (16.4%) in the dapagliflozin group and in 610 of 3132 patients (19.5%) in the placebo group (hazard ratio, 0.82; 95% confidence interval [CI], 0.73 to 0.92; P<0.001)."
+    registry_primary: "Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure. (Dual primary efficacy; full analysis set.) Posted result: 512 vs 610; HR 0.82 (95% CI 0.73 to 0.92); P=0.0008"
+    registry_dual_primary: "Same composite in the LVEF <60% subpopulation. Posted result: 381 vs 440; HR 0.83 (95% CI 0.73 to 0.95); P=0.0085"
     components: "Worsening heart failure occurred in 368 patients (11.8%) in the dapagliflozin group and in 455 patients (14.5%) in the placebo group (hazard ratio, 0.79; 95% CI, 0.69 to 0.91); cardiovascular death occurred in 231 patients (7.4%) and 261 patients (8.3%), respectively (hazard ratio, 0.88; 95% CI, 0.74 to 1.05)."
   retrieved: 2026-11-27
 rubric:
@@ -55,12 +60,20 @@ rubric:
     check: deterministic
     axis: accuracy
     locator: { field: rationale, untraced_numbers: true }
+  - id: r7
+    criterion: "Mentions the dual primary analysis in patients with LVEF <60% (HR 0.83), labelled as such"
+    points: 1
+    check: judge
+    axis: completeness
 fault: F2
-status: draft
+status: verified
 notes: >
   Trap: the abstract gives component HRs right after the primary (0.79 for
   worsening heart failure, close to 0.82), and the sister trial DAPA-HF
   (trial-001) has the same drug and a similar endpoint.
-  The registry record's primary-outcome wording was not checked in this
-  draft: please compare it on ClinicalTrials.gov when verifying.
-  Drafted by Claude, 27 Nov 2026, from the PubMed abstract; not yet verified.
+  Second trap: the registry's dual primary in LVEF <60% (HR 0.83). An
+  answer giving only that result fails the outcome (the scorer needs 0.82
+  with 0.73 to 0.92). Registry checked 27 Nov 2026: full-population result
+  matches the paper.
+  Drafted by Claude, 27 Nov 2026, from the PubMed abstract.
+  Verified by Nick, 27 Nov 2026.

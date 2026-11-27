@@ -37,7 +37,7 @@ rubric:
     check: judge
     axis: accuracy
 fault: F2
-status: draft
+status: verified
 notes: >
   The question names a specific source (the abstract), so the briefing's
   rule applies: answer from that source, even if the figure is known from
@@ -45,4 +45,5 @@ notes: >
   access, so the tools cannot reach it). Trap: the key secondary composite
   includes CV death and is easy to present as the CV death result.
   Same trial as claim-013.
-  Drafted by Claude, 27 Nov 2026, from the PubMed abstract; not yet verified.
+  Drafted by Claude, 27 Nov 2026, from the PubMed abstract.
+  Verified by Nick, 27 Nov 2026.
